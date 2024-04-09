@@ -1,9 +1,9 @@
 function Footer() {
   return (
     <>
-      <footer class="footer">
-        <div class="l_wrapper">
-          <div class="footer-inner">
+      <footer className="footer">
+        <div className="l_wrapper">
+          <div className="footer-inner">
             <div class="footer-text">
               <p class="footer-text-company">주식회사 OGC</p>
               <p>
