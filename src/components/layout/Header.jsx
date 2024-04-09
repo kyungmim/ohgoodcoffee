@@ -1,3 +1,6 @@
+import logo from '@/assets/Logo.svg';
+import search from '@/assets/search_icon.svg';
+
 function Header() {
   return (
     <>
@@ -13,9 +16,9 @@ function Header() {
             <li>
               <a href="#">Market</a>
             </li>
-            <li class="logo">
+            <li className="logo">
               <a href="#">
-                <img src="/assets/Logo.svg" alt="로고" />
+                <img src={logo} alt="로고" />
               </a>
             </li>
             <li>
@@ -28,7 +31,7 @@ function Header() {
               <a href="#">Cart</a>
             </li>
             <li>
-              <img className="search_icon" src="./assets/search_icon.svg" alt="돋보기 아이콘" />
+              <img className="search_icon" src={search} alt="돋보기 아이콘" />
             </li>
           </ul>
         </div>
