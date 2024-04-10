@@ -1,5 +1,6 @@
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
+import marketTopLogo from '@/assets/market-top-logo.svg';
 
 function MarketList() {
   return (
@@ -8,7 +9,7 @@ function MarketList() {
       <section className="section type_market">
         <div className="l_wrapper">
           <div className="section-logo">
-            <img className="market-logo" src="./assets/market-top-logo.svg" alt="마켓 손 모양 이미지" />
+            <img className="market-logo" src={marketTopLogo} alt="마켓 손 모양 이미지" />
             <span className="market-logo-slogan">COFFEE.HUMAN.LOVE LIFE</span>
           </div>
 
@@ -28,7 +29,7 @@ function MarketList() {
           <div className="section-grid">
             <ul className="grid">
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -41,7 +42,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -53,7 +54,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -65,20 +66,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -91,7 +79,20 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
+                <div className="card-contents">
+                  <span className="card-brand">지비에이치</span>
+                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
+                </div>
+                <p className="card-price">15,000 원</p>
+                <div className="card-state">
+                  <p className="card-state new">NEW</p>
+                  <p className="card-state best">BEST</p>
+                </div>
+              </li>
+
+              <li className="card">
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -100,7 +101,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -112,7 +113,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -121,7 +122,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -130,7 +131,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -139,7 +140,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -148,7 +149,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -160,7 +161,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -169,7 +170,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -178,7 +179,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -187,7 +188,7 @@ function MarketList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="./assets/GBH-mug.jpeg" alt="머그컵" />
+                <img className="card-cover" src="src/assets/GBH-mug.jpeg" alt="머그컵" />
                 <div className="card-contents">
                   <span className="card-brand">지비에이치</span>
                   <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
