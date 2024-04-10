@@ -1,4 +1,4 @@
-import Mug from '@assets/GBH-mug.jpeg';
+import Mug from '@public/GBH-mug.jpeg';
 
 function UserWishListItem() {
   return (

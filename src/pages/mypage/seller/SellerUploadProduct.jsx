@@ -26,7 +26,7 @@ function SellerUploadProduct() {
                     Product Name<span className="signup-required-point">*</span>
                   </label>
                   <div className="form-input">
-                    <input name="name" id="name" placeholder="이름을 입력해주세요" type="text" />
+                    <input name="name" id="name" placeholder="상품 이름을 입력해주세요." type="text" />
                   </div>
                 </fieldset>
 
@@ -35,7 +35,7 @@ function SellerUploadProduct() {
                     Price<span className="signup-required-point">*</span>
                   </label>
                   <div className="form-input">
-                    <input id="price" placeholder="연락처를 입력해주세요" type="number" />
+                    <input id="price" placeholder="가격을 입력해주세요." type="number" />
                   </div>
                 </fieldset>
 
@@ -44,7 +44,7 @@ function SellerUploadProduct() {
                     Quantity <span className="signup-required-point">*</span>
                   </label>
                   <div className="form-input">
-                    <input name="quantity" id="quantity" placeholder="이메일을 입력해주세요" type="number" />
+                    <input name="quantity" id="quantity" placeholder="수량을 입력해주세요." type="number" />
                   </div>
                 </fieldset>
 
@@ -71,7 +71,7 @@ function SellerUploadProduct() {
               </form>
               <div className="button-area">
                 <button className="button button-large btn-Fill btn-layout" type="submit">
-                  수정하기
+                  등록하기
                 </button>
               </div>
             </div>

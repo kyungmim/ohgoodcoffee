@@ -1,3 +1,4 @@
+import profile from '@public/profile.svg';
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
 
@@ -26,7 +27,7 @@ function UserInfo() {
             </div>
             <div className="inner">
               <div className="user-info">
-                <img className="profile" src="/ohgoodcoffee/assets/profile.svg" alt="회원 프로필 사진" />
+                <img className="profile" src={profile} alt="회원 프로필 사진" />
                 <div className="profile-content">
                   <p className="profile-content-title">
                     <strong>보람3조님</strong> 안녕하세요 :)
