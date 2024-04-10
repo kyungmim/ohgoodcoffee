@@ -26,7 +26,7 @@ function SellerInfo() {
               </ul>
             </div>
             <div className="inner">
-              <div className="main">
+              <div className="user-info">
                 <img className="profile" src={profile} alt="회원 프로필 사진" />
                 <div className="profile-content">
                   <p className="profile-content-title">

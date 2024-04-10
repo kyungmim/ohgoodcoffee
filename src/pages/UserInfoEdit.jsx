@@ -26,7 +26,7 @@ function UserInfoEdit() {
               </ul>
             </div>
             <div className="inner">
-              <div className="main">
+              <div className="user-info">
                 <img className="profile" src={profile} alt="회원 프로필 사진" />
                 <div className="profile-content">
                   <p className="profile-content-title">
@@ -49,27 +49,6 @@ function UserInfoEdit() {
                     </label>
                     <div className="form-input">
                       <input type="file" name="profile" id="profile" />
-                    </div>
-                  </fieldset>
-
-                  <fieldset className="signup-layout">
-                    <label className="signup-sub-title" htmlFor="type">
-                      Type <span className="signup-required-point">*</span>
-                    </label>
-
-                    <div className="signup-type">
-                      <div className="signup-type-item">
-                        <div className="form-input-radio">
-                          <input type="radio" name="type" id="type" />
-                        </div>
-                        <span className="radio-title">User</span>
-                      </div>
-                      <div className="signup-type-item">
-                        <div className="form-input-radio">
-                          <input type="radio" name="type" id="type" />
-                        </div>
-                        <span className="radio-title">Seller</span>
-                      </div>
                     </div>
                   </fieldset>
 
