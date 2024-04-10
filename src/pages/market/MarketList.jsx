@@ -1,6 +1,6 @@
+import marketTopLogo from '@/assets/market-top-logo.svg';
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
-import marketTopLogo from '@/assets/market-top-logo.svg';
 
 function MarketList() {
   return (
