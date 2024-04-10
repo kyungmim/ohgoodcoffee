@@ -1,4 +1,4 @@
-import profile from '@/assets/profile.svg';
+import profile from '@public/profile.svg';
 
 function UserMypageHeader() {
   return (

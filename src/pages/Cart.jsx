@@ -1,5 +1,5 @@
-import PlusIcon from '@/assets/total-plus.svg';
-import EqualIcon from '@/assets/total-equal_icon.svg';
+import PlusIcon from '@public/plus.svg';
+import EqualIcon from '@public/equal_icon.svg';
 import Header from '@components/layout/Header';
 import Footer from '@components/layout/Footer';
 
@@ -27,7 +27,7 @@ function Cart() {
               <div className="cart-layout cart-procuct">
                 <div className="cart-item-info">
                   <div className="cart-item-cover">
-                    <img src="/src/assets/coffee-1.jpg" alt="커피이미지" />
+                    <img src="public/coffee-1.jpg" alt="커피이미지" />
                   </div>
                   <p className="cart-item-title">[프릳츠] Las Moritas Yellow Caturra Washed</p>
                 </div>
@@ -49,7 +49,7 @@ function Cart() {
               <div className="cart-layout cart-procuct">
                 <div className="cart-item-info">
                   <div className="cart-item-cover">
-                    <img src="/src/assets/coffee-2.jpg" alt="커피이미지" />
+                    <img src="public/coffee-2.jpg" alt="커피이미지" />
                   </div>
                   <p className="cart-item-title">(4월의 커피) 온두라스 벤자민 파즈 워시드 200g</p>
                 </div>
@@ -71,7 +71,7 @@ function Cart() {
               <div className="cart-layout cart-procuct">
                 <div className="cart-item-info">
                   <div className="cart-item-cover">
-                    <img src="/src/assets/coffee-3.jpg" alt="커피이미지" />
+                    <img src="public/coffee-3.jpg" alt="커피이미지" />
                   </div>
                   <p className="cart-item-title">[프릳츠] Las Moritas Yellow Caturra Washed</p>
                 </div>

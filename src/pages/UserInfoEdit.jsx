@@ -1,6 +1,6 @@
+import profile from '@public/profile.svg';
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
-import profile from '@/assets/profile.svg';
 
 function UserInfoEdit() {
   return (
@@ -57,7 +57,7 @@ function UserInfoEdit() {
                       Name <span className="signup-required-point">*</span>
                     </label>
                     <div className="form-input">
-                      <input name="name" id="name" placeholder="이름을 입력해주세요" type="text" />
+                      <input name="name" id="name" placeholder="이름을 입력해주세요." type="text" />
                     </div>
                   </fieldset>
 
@@ -66,7 +66,7 @@ function UserInfoEdit() {
                       Phone Number <span className="signup-required-point">*</span>
                     </label>
                     <div className="form-input">
-                      <input id="phonenum" placeholder="연락처를 입력해주세요" type="text" />
+                      <input id="phonenum" placeholder="연락처를 입력해주세요." type="text" />
                     </div>
                   </fieldset>
 
@@ -115,7 +115,7 @@ function UserInfoEdit() {
                       Email <span className="signup-required-point">*</span>
                     </label>
                     <div className="form-input">
-                      <input name="email" id="email" placeholder="이메일을 입력해주세요" type="text" />
+                      <input name="email" id="email" placeholder="이메일을 입력해주세요." type="text" />
                     </div>
                   </fieldset>
 
@@ -125,7 +125,7 @@ function UserInfoEdit() {
                     </label>
                     <div className="signup-password-box">
                       <div className="form-input">
-                        <input name="password" id="password" placeholder="비밀번호를 입력해주세요" type="password" />
+                        <input name="password" id="password" placeholder="비밀번호를 입력해주세요." type="password" />
                       </div>
                       <div className="form-input">
                         <input name="password" id="password" placeholder="비밀번호 확인" type="password" />
@@ -138,7 +138,7 @@ function UserInfoEdit() {
                       Address <span className="signup-required-point">*</span>
                     </label>
                     <div className="form-input">
-                      <input name="address" id="address" placeholder="주소를 입력해주세요" type="text" />
+                      <input name="address" id="address" placeholder="주소를 입력해주세요." type="text" />
                     </div>
                   </fieldset>
                 </form>

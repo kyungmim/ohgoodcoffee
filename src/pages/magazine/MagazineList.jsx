@@ -16,7 +16,7 @@ function MagazineList() {
           <div className="section-grid">
             <ul className="grid">
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type yellow">USEFUL</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -25,7 +25,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type green">FRIENDLY</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -34,7 +34,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type">USEFUL</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -43,7 +43,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type green">FRIENDLY</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -52,7 +52,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type green">FRIENDLY</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -61,7 +61,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type">USEFUL</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -70,7 +70,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type">USEFUL</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
@@ -79,7 +79,7 @@ function MagazineList() {
               </li>
 
               <li className="card">
-                <img className="card-cover" src="src/assets/cafe_coeo.jpeg" alt="" />
+                <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
                 <div className="card-contents">
                   <span className="card-type">USEFUL</span>
                   <h4 className="card-title mini">Achim 스폿 서른 네 번째 파트너, 코에오 커피</h4>
