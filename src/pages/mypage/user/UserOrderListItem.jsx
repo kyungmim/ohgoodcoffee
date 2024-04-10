@@ -1,5 +1,4 @@
-import photo from '@assets/photo.svg';
-import arrow from '@assets/arrow.svg';
+import arrow from '@public/dropup_icon.svg';
 
 function UserOrderListItem() {
   return (
@@ -22,7 +21,7 @@ function UserOrderListItem() {
                   </div>
                   <div className="order-main">
                     <div className="order-main-item-title">
-                      <img src={photo} alt="상품 사진" />
+                      <img src="public/coffee-1.jpg" alt="상품 사진" />
                     </div>
                     <div className="order-main-item-desc">
                       <div className="order-main-item">
