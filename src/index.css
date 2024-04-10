@@ -289,9 +289,13 @@ body {
 
 .main-container {
   display: flex;
-  margin-bottom: 100px;
+  margin-bottom: 50px;
 }
 
+.item-wrapper {
+  margin-left: 220px;
+  margin-bottom: 50px;
+}
 /*  nav-sidebar  */
 
 .sidebar {
@@ -318,6 +322,7 @@ body {
 /* Components */
 
 /*  MYPAGE - user-orderlist, seller-saleslist  */
+
 .inner {
   width: 900px;
   display: flex;
