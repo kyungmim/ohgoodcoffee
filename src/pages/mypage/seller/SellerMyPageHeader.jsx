@@ -8,16 +8,16 @@ function SellerMyPageHeader() {
           <div className="sidebar">
             <ul className="menu-list">
               <li className="menu-item is_active">
-                <a>상품 목록 조회</a>
+                <a href="#">상품 목록 조회</a>
               </li>
               <li className="menu-item">
-                <a>위시리스트</a>
+                <a href="#">위시리스트</a>
               </li>
               <li className="menu-item">
-                <a>상품 등록</a>
+                <a href="#">상품 등록</a>
               </li>
               <li className="menu-item">
-                <a>회원 정보</a>
+                <a href="#">회원 정보</a>
               </li>
             </ul>
           </div>
