@@ -13,7 +13,7 @@ import UserMypageHeader from '@pages/mypage/user/UserMypageHeader';
 import UserOrderList from '@pages/mypage/user/UserOrderList';
 import UserReviewList from '@pages/mypage/user/UserReviewList';
 import UserWishList from '@pages/mypage/user/UserWishList';
-import UserInfo from '@pages/UserInfo';
+import UserInfo from '@pages/mypage/user/UserInfo';
 
 /* TODO: 만들어야하는 페이지 */
 // import Search from '@pages/Search';
