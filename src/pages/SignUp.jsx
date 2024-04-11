@@ -1,4 +1,4 @@
-import Footer from '@components/layout/Footer';
+import ogctopline from '@public/ogc-top-line.svg';
 
 function SignUp() {
   return (
@@ -9,7 +9,7 @@ function SignUp() {
             <div className="contents-header">
               <h2 className="content-title">SIGN UP</h2>
               <div className="contents-header-line">
-                <img src={TopLine} alt="긴 팔 모양" />
+                <img src={ogctopline} alt="긴 팔 모양" />
               </div>
             </div>
 

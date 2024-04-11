@@ -1,33 +1,30 @@
 import Layout from '@components/layout/Index';
+import ErrorPage from '@pages/ErrorPage';
 import Mainpage from '@pages/Mainpage';
-// import About from '@pages/About'; <--- TODO: 만들어야하는 페이지
+import About from '@pages/About';
 import MagazineList from '@pages/magazine/MagazineList';
 import MagazineDetail from '@pages/magazine/MagazineDetail';
 import MarketList from '@pages/market/MarketList';
 import MarketDetail from '@pages/market/MarketDetail';
 import Login from '@pages/Login';
 import SignUp from '@pages/SignUp';
-// import UserInfo from '@pages/UserInfo';
-// import SellerInfo from '@pages/SellerInfo';
 import Cart from '@pages/Cart';
 import UserMypageHeader from '@pages/mypage/user/UserMypageHeader';
 import UserOrderList from '@pages/mypage/user/UserOrderList';
-import UserOrderListItem from '@pages/mypage/user/UserOrderListItem';
-
-// import SellerInfoEdit from '@pages/SellerInfoEdit';
+import UserReviewList from '@pages/mypage/user/UserReviewList';
+import UserWishList from '@pages/mypage/user/UserWishList';
+import UserInfo from '@pages/UserInfo';
 
 /* TODO: 만들어야하는 페이지 */
-// import ErrorPage from '@pages/ErrorPage';
 // import Search from '@pages/Search';
+// import Search from '@pages/SearchList';
 
-import UserInfoEdit from '@pages/UserInfoEdit';
 import { createBrowserRouter } from 'react-router-dom';
-import UserWishList from '@pages/mypage/user/UserWishList';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    // errorElement: <ErrorPage />,
+    errorElement: <ErrorPage />,
     element: <Layout />,
     children: [
       {
@@ -35,8 +32,12 @@ const router = createBrowserRouter([
         element: <Mainpage />,
       },
       {
-        // path: "about",
-        // element: <About />
+        path: 'home',
+        element: <Mainpage />,
+      },
+      {
+        path: 'about',
+        element: <About />,
       },
       {
         path: 'magazine',
@@ -55,19 +56,19 @@ const router = createBrowserRouter([
         element: <MarketDetail />,
       },
       {
-        path: 'user/login',
+        path: 'users/login',
         element: <Login />,
       },
       {
-        path: 'user/signup',
+        path: 'users/signup',
         element: <SignUp />,
       },
       {
-        path: 'cart',
+        path: 'carts',
         element: <Cart />,
       },
       {
-        path: 'mapage',
+        path: 'mypage',
         element: <UserMypageHeader />,
         children: [
           {
@@ -75,12 +76,49 @@ const router = createBrowserRouter([
             element: <UserOrderList />,
           },
           {
-            index: false,
-            path: 'wishlist',
+            index: true,
+            element: <UserReviewList />,
+          },
+          {
+            index: true,
             element: <UserWishList />,
+          },
+          {
+            index: true,
+            element: <UserInfo />,
           },
         ],
       },
+      // {
+      //   path: 'sellers/mapage',
+      //   element: <SellerMyPageHeader />,
+      //   children: [
+      //     {
+      //       index: true,
+      //       element: <SellerSalesList />,
+      //       children: [
+      //         {
+      //           index: true,
+      //           element: <SellerSalesListItem />,
+      //         },
+      //       ],
+      //     },
+      //     {
+      //       // index: false,  <--- 인덱스 값을 어떻게 해야하는지 모르겠음
+      //       element: <SellerUploadProduct />,
+      //     },
+      //     {
+      //       // index: false, <--- 인덱스 값을 어떻게 해야하는지 모르겠음
+      //       element: <SellerInfo />,
+      //       children: [
+      //         {
+      //           index: true,
+      //           element: <SellerInfoEdit />,
+      //         },
+      //       ],
+      //     },
+      //   ],
+      // },
     ],
   },
 ]);

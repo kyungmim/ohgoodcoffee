@@ -9,27 +9,27 @@ function Header() {
         <div className="l_wrapper">
           <ul className="header-nav">
             <li>
-              <Link to="#">About</Link>
+              <Link to="/about">About</Link>
             </li>
             <li>
               <a href="/magazine">Magazine</a>
             </li>
             <li>
-              <a href="#">Market</a>
+              <a href="/market">Market</a>
             </li>
             <li className="logo">
-              <a href="#">
+              <a href="/home">
                 <img src={logo} alt="로고" />
               </a>
             </li>
             <li>
-              <a href="#">Login</a>
+              <a href="/users/login">Login</a>
             </li>
             <li>
-              <a href="#">My</a>
+              <a href="/mypage">My</a>
             </li>
             <li>
-              <a href="#">Cart</a>
+              <a href="/carts">Cart</a>
             </li>
             <li>
               <img className="search_icon" src={search} alt="돋보기 아이콘" />
