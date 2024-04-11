@@ -1,4 +1,5 @@
 import TopLine from '@public/ogc-top-line.svg';
+import MarketListItem from './MarketListItem';
 
 function MarketList() {
   return (
@@ -25,177 +26,18 @@ function MarketList() {
 
           <div className="section-grid">
             <ul className="grid">
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state new">NEW</p>
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state best">BEST</p>
-                </div>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-              </li>
-
-              <li className="card">
-                <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
-                <div className="card-contents">
-                  <span className="card-brand">지비에이치</span>
-                  <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
-                </div>
-                <p className="card-price">15,000 원</p>
-                <div className="card-state">
-                  <p className="card-state best">BEST</p>
-                  <p className="card-state soldout">SOLD OUT</p>
-                </div>
-              </li>
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
+              <MarketListItem />
             </ul>
           </div>
         </div>
