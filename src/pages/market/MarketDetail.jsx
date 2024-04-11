@@ -43,10 +43,10 @@ function MarketDetail() {
               </div>
               <div className="selling-btns">
                 <button className="button button-large btn-Fill" type="submit">
-                  구매하기
+                  Buying
                 </button>
                 <button className="button button-large btn-null" type="submit">
-                  장바구니
+                  Cart
                 </button>
               </div>
             </div>
