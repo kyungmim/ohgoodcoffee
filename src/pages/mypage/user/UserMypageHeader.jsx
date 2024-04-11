@@ -9,16 +9,16 @@ function UserMypageHeader() {
           <div className="sidebar">
             <ul className="menu-list">
               <li className="menu-item is_active">
-                <a>주문 내역 조회</a>
+                <a href="">주문 내역 조회</a>
               </li>
               <li className="menu-item">
-                <a>위시리스트</a>
+                <a href="#">위시리스트</a>
               </li>
               <li className="menu-item">
-                <a>내가 쓴 리뷰</a>
+                <a href="#">내가 쓴 리뷰</a>
               </li>
               <li className="menu-item">
-                <a>회원정보</a>
+                <a href="#">회원정보</a>
               </li>
             </ul>
           </div>
