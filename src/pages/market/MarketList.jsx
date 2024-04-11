@@ -1,11 +1,8 @@
 import TopLine from '@public/ogc-top-line.svg';
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function MarketList() {
   return (
     <>
-      <Header />
       <section className="section type_market">
         <div className="l_wrapper">
           <div className="section-logo">
@@ -203,7 +200,6 @@ function MarketList() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

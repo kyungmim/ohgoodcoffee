@@ -1,11 +1,7 @@
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function MagazineList() {
   return (
     <>
-      <Header />
-
       <section className="section type_magazine">
         <div className="l_wrapper">
           <div className="section-filter">
@@ -90,8 +86,6 @@ function MagazineList() {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 }

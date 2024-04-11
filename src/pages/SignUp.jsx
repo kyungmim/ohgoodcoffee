@@ -1,11 +1,8 @@
 import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
-import TopLine from '@public/ogc-top-line.svg';
 
 function SignUp() {
   return (
     <>
-      <Header />
       <div className="contents-signup">
         <div className="l_wrapper">
           <div className="signup">
@@ -145,7 +142,6 @@ function SignUp() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
