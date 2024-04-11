@@ -1,12 +1,9 @@
 import PlusIcon from '@public/plus.svg';
 import EqualIcon from '@public/equal_icon.svg';
-import Header from '@components/layout/Header';
-import Footer from '@components/layout/Footer';
 
 function Cart() {
   return (
     <>
-      <Header />
       <div className="contents-cart">
         <div className="l_wrapper">
           <div className="cart">
@@ -130,7 +127,6 @@ function Cart() {
         </div>
         {/* <!-- l_wrapper --> */}
       </div>
-      <Footer />
     </>
   );
 }

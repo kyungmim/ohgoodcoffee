@@ -1,10 +1,6 @@
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
-
 function Login() {
   return (
     <>
-      <Header />
       <div className="contents-login">
         <div className="l_wrapper">
           <div className="login">
@@ -43,7 +39,6 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

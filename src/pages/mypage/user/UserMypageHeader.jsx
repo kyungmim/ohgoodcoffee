@@ -1,4 +1,5 @@
 import profile from '@public/profile.svg';
+import { Outlet } from 'react-router-dom';
 
 function UserMypageHeader() {
   return (
@@ -31,12 +32,7 @@ function UserMypageHeader() {
                 <p className="profile-content-desc">누적금액 : 0원</p>
               </div>
             </div>
-            <div className="main-title">
-              <p className="main-contents-title">주문 내역 조회</p>
-            </div>
-            {/* <div className="main-content is_empty">
-						<p className="empty-content">저장된 위시리스트가 없습니다.</p>
-					</div>  */}
+            <Outlet />
           </div>
         </div>
       </div>

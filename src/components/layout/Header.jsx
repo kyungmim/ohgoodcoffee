@@ -1,5 +1,6 @@
 import logo from '@public/Logo.svg';
 import search from '@public/search_icon.svg';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
@@ -8,10 +9,10 @@ function Header() {
         <div className="l_wrapper">
           <ul className="header-nav">
             <li>
-              <a href="#">About</a>
+              <Link to="#">About</Link>
             </li>
             <li>
-              <a href="#">Magazine</a>
+              <a href="/magazine">Magazine</a>
             </li>
             <li>
               <a href="#">Market</a>

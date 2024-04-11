@@ -1,11 +1,7 @@
 import profile from '@public/profile.svg';
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
-
 function SellerInfo() {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="l_wrapper">
           <div className="main-container">
@@ -76,7 +72,6 @@ function SellerInfo() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
