@@ -1,9 +1,6 @@
-import SellerMyPageHeader from '@pages/mypage/seller/SellerMyPageHeader';
-
 function SellerUploadProduct() {
   return (
     <>
-      <SellerMyPageHeader />
       <div className="container">
         <div className="l_wrapper">
           <div className="item-wrapper">

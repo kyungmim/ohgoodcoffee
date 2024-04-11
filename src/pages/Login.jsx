@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Login() {
   return (
     <>
@@ -18,7 +20,7 @@ function Login() {
                 </div>
               </div>
               <div className="login-find">
-                <a href="#">아이디/비밀번호 찾기</a>
+                <Link to="#">아이디/비밀번호 찾기</Link>
               </div>
               <button className="button button-large btn-Fill" type="submit">
                 LOGIN

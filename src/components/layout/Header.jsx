@@ -12,24 +12,27 @@ function Header() {
               <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/magazine">Magazine</a>
+              <Link to="/magazine">Magazine</Link>
             </li>
             <li>
-              <a href="/market">Market</a>
+              <Link to="/market">Market</Link>
             </li>
             <li className="logo">
-              <a href="/home">
+              <Link to="/home">
                 <img src={logo} alt="로고" />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="/users/login">Login</a>
+              <Link to="/users/login">Login</Link>
             </li>
             <li>
-              <a href="/mypage">My</a>
+              <Link to="/mypage">My</Link>
             </li>
             <li>
-              <a href="/carts">Cart</a>
+              <Link to="/seller/mypage">Seller My</Link>
+            </li>
+            <li>
+              <Link to="/carts">Cart</Link>
             </li>
             <li>
               <img className="search_icon" src={search} alt="돋보기 아이콘" />

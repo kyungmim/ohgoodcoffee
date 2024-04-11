@@ -1,4 +1,3 @@
-
 function MagazineDetail() {
   return (
     <>
