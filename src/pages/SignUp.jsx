@@ -1,4 +1,4 @@
-import Footer from '@components/layout/Footer';
+import TopLine from '@public/ogc-top-line.svg';
 
 function SignUp() {
   return (
