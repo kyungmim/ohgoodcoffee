@@ -1,10 +1,7 @@
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function MagazineDetail() {
   return (
     <>
-      <Header />
       <section className="section type_magazine-desc">
         <div className="l_wrapper">
           <div className="magazine-desc-header">
@@ -59,7 +56,6 @@ function MagazineDetail() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

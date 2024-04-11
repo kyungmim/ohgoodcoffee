@@ -1,12 +1,9 @@
 import Plus from '@public/plus.svg';
 import Minus from '@public/dash_icon.svg';
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function MarketDetail() {
   return (
     <>
-      <Header />
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
@@ -59,7 +56,6 @@ function MarketDetail() {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 }

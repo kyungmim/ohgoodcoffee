@@ -1,11 +1,8 @@
 import profile from '@public/profile.svg';
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function UserInfo() {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="l_wrapper">
           <div className="main-container">
@@ -73,7 +70,6 @@ function UserInfo() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

@@ -1,11 +1,8 @@
 import profile from '@public/profile.svg';
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 
 function UserInfoEdit() {
   return (
     <>
-      <Header />
       <div className="container">
         <div className="l_wrapper">
           <div className="main-container">
@@ -152,7 +149,6 @@ function UserInfoEdit() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

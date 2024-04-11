@@ -1,11 +1,8 @@
-import Footer from '@components/layout/Footer';
-import Header from '@components/layout/Header';
 import SellerMyPageHeader from '@pages/mypage/seller/SellerMyPageHeader';
 
 function SellerUploadProduct() {
   return (
     <>
-      <Header />
       <SellerMyPageHeader />
       <div className="container">
         <div className="l_wrapper">
@@ -78,7 +75,6 @@ function SellerUploadProduct() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }
