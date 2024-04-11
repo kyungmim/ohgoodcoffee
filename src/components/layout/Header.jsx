@@ -1,5 +1,5 @@
-import logo from '@/assets/Logo.svg';
-import search from '@/assets/search_icon.svg';
+import logo from '@public/Logo.svg';
+import search from '@public/search_icon.svg';
 
 function Header() {
   return (

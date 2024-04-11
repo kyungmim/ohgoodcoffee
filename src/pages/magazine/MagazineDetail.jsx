@@ -12,7 +12,7 @@ function MagazineDetail() {
             <p className="magazine-desc-header-date">2024-04-04 조회 72</p>
           </div>
           <div className="magazine-desc-contents">
-            <img className="magazine-desc-img" src="src/assets/cafe_coeo.jpeg" />
+            <img className="magazine-desc-img" src="public/cafe_coeo.jpeg" />
             <h3 className="magazine-desc-subheading">소제목입니당 소제목~</h3>
             <p className="magazine-desc-paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Ut enim ad
@@ -23,7 +23,7 @@ function MagazineDetail() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <img className="magazine-desc-img" src="src/assets/cafe_coeo.jpeg" />
+            <img className="magazine-desc-img" src="public/cafe_coeo.jpeg" />
             <p className="magazine-desc-paragraph">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
@@ -31,7 +31,7 @@ function MagazineDetail() {
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </p>
-            <img className="magazine-desc-img" src="src/assets/cafe_coeo.jpeg" />
+            <img className="magazine-desc-img" src="public/cafe_coeo.jpeg" />
             <p className="magazine-desc-paragraph third">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />

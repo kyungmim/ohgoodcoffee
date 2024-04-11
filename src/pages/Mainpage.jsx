@@ -7,7 +7,7 @@ function Mainpage() {
       <Header />
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src="/src/assets/cover-1.jpg" alt="커피 커버 이미지" />
+          <img className="main-cover" src="public/cover-1.jpg" alt="커피 커버 이미지" />
         </div>
 
         <div className="main-contents">
@@ -19,7 +19,7 @@ function Mainpage() {
             <div className="main-coverstory">
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="/src/assets/coffee-1.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src="public/coffee-1.jpg" alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -41,7 +41,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="/src/assets/coffee-2.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src="public/coffee-2.jpg" alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -63,7 +63,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="/src/assets/coffee-3.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src="public/coffee-3.jpg" alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -90,7 +90,7 @@ function Mainpage() {
               </div>
               <ul className="grid">
                 <li className="card">
-                  <img className="card-cover" src="/src/assets/GBH-mug.jpeg" alt="머그컵" />
+                  <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
                   <div className="card-contents">
                     <span className="card-brand">지비에이치</span>
                     <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -103,7 +103,7 @@ function Mainpage() {
                 </li>
 
                 <li className="card">
-                  <img className="card-cover" src="/src/assets/GBH-mug.jpeg" alt="머그컵" />
+                  <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
                   <div className="card-contents">
                     <span className="card-brand">지비에이치</span>
                     <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -115,7 +115,7 @@ function Mainpage() {
                 </li>
 
                 <li className="card">
-                  <img className="card-cover" src="/src/assets/GBH-mug.jpeg" alt="머그컵" />
+                  <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
                   <div className="card-contents">
                     <span className="card-brand">지비에이치</span>
                     <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
@@ -127,7 +127,7 @@ function Mainpage() {
                 </li>
 
                 <li className="card">
-                  <img className="card-cover" src="/src/assets/GBH-mug.jpeg" alt="머그컵" />
+                  <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
                   <div className="card-contents">
                     <span className="card-brand">지비에이치</span>
                     <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>

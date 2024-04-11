@@ -206,6 +206,7 @@ body {
 .button {
   font-size: 1.1rem;
   font-weight: 500;
+  transition: all 0.3s;
 }
 
 .button:hover {
@@ -247,7 +248,6 @@ body {
 }
 
 .button-area.with_margin {
-  margin-top: 100px;
   display: flex;
   justify-content: center;
 }
@@ -454,6 +454,13 @@ body {
   border-bottom: solid 2px var(--color-gray-20);
 }
 
+.order-main-item-title {
+  width: 130px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
 .order-main-item-desc {
   display: flex;
   width: 100%;
@@ -568,13 +575,14 @@ body {
 .review-content-time {
   font-weight: var(--fw-medium);
   color: var(--color-gray-30);
+  font-size: 14px;
 }
 
 /*  user, seller - viewProfile  */
 
 .profile-settings {
   padding: 0 30px 0 30px;
-  margin-top: 70px;
+  margin-top: 30px;
 }
 
 .profile-setting {
@@ -614,7 +622,7 @@ body {
   gap: 1.5rem;
   max-width: 900px;
   width: 100%;
-  margin-top: 70px;
+  margin-top: 50px;
 }
 
 .signup-layout {
@@ -655,7 +663,7 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(./assets/check-nor.svg);
+  background-image: url(public/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px;
@@ -666,7 +674,7 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: var(--color-black-10);
-  background-image: url(./assets/check-sel.svg);
+  background-image: url(public/check-sel.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px;
@@ -683,7 +691,6 @@ body {
 .signup-select-box-item {
   position: relative;
   width: 150px;
-  height: 34px;
   border: 1px solid var(--color-gray-10);
   background-color: var(--color-white);
 }
@@ -817,7 +824,7 @@ body {
 }
 
 .drop-menu {
-  background-image: url(./assets/drop-menu-arrow.png);
+  background-image: url(public/drop-menu-arrow.png);
   background-repeat: no-repeat;
   background-size: 10px 6px;
   background-position: right 10px center;
@@ -1202,10 +1209,10 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(./assets/check-nor.svg);
+  background-image: url(public/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px;
+  background-size: 12px;
   cursor: pointer;
 }
 
@@ -1213,10 +1220,10 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: var(--color-black-10);
-  background-image: url(./assets/check-sel.svg);
+  background-image: url(public/check-sel.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px;
+  background-size: 12px;
   cursor: pointer;
 }
 
@@ -1436,10 +1443,10 @@ body {
   height: 16px;
   background-repeat: no-repeat;
   background-size: 16px;
-  background-image: url(./assets/naver_inner_icon.svg);
+  background-image: url(public/naver_inner_icon.svg);
 }
 .btn-kakao::before {
-  background-image: url(./assets/kakao_inner_icon.svg);
+  background-image: url(public/kakao_inner_icon.svg);
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -1465,22 +1472,6 @@ body {
 
 .contents-header-line {
   width: 900px;
-}
-
-.signup_form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1.5rem;
-  max-width: 900px;
-  width: 100%;
-  margin-top: 70px;
-}
-
-.signup-layout {
-  width: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .type_start {
@@ -1515,16 +1506,16 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(./assets/check-nor.svg);
+  background-image: url(public/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 14px;
+  background-size: 12px;
   cursor: pointer;
 }
 
 .form-input-radio [type='radio']:checked {
   background-color: var(--color-black-10);
-  background-image: url(./assets/check-sel.svg);
+  background-image: url(public/check-sel.svg);
 }
 
 .signup-select-box {
@@ -1540,7 +1531,7 @@ body {
   padding: 10px 0 10px 10px;
   border: 1px solid var(--color-gray-10);
   background-color: var(--color-white);
-  background-image: url(./assets/common_dropdown_icon.svg);
+  background-image: url(public/dropdown_icon.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: right 10px center;

@@ -1,4 +1,4 @@
-import profile from '@/assets/profile.svg';
+import profile from '@public/profile.svg';
 import Footer from '@components/layout/Footer';
 import Header from '@components/layout/Header';
 
