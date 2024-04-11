@@ -20,14 +20,9 @@ import UserOrderListItem from '@pages/mypage/user/UserOrderListItem';
 // import ErrorPage from '@pages/ErrorPage';
 // import Search from '@pages/Search';
 
-
 import UserInfoEdit from '@pages/UserInfoEdit';
 import { createBrowserRouter } from 'react-router-dom';
-
-
-
-
-
+import UserWishList from '@pages/mypage/user/UserWishList';
 
 const router = createBrowserRouter([
   {
@@ -37,57 +32,56 @@ const router = createBrowserRouter([
     children: [
       {
         index: true,
-        element: <Mainpage />
+        element: <Mainpage />,
       },
       {
         // path: "about",
         // element: <About />
       },
       {
-        path: "magazine",
+        path: 'magazine',
         element: <MagazineList />,
       },
       {
-        path: "magazine/detail",
+        path: 'magazine/detail',
         element: <MagazineDetail />,
       },
       {
-        path: "market",
+        path: 'market',
         element: <MarketList />,
       },
       {
-        path: "market/detail",
+        path: 'market/detail',
         element: <MarketDetail />,
       },
       {
-        path: "user/login",
-        element: <Login />
+        path: 'user/login',
+        element: <Login />,
       },
       {
-        path: "user/signup",
-        element: <SignUp />
+        path: 'user/signup',
+        element: <SignUp />,
       },
       {
-        path: "cart",
-        element: <Cart />
+        path: 'cart',
+        element: <Cart />,
       },
       {
-        path: "mapage/user/:_id",
-        element: <UserMypageHeader/>,
+        path: 'mapage',
+        element: <UserMypageHeader />,
         children: [
           {
             index: true,
-            element: <UserOrderList/>
+            element: <UserOrderList />,
           },
           {
             index: false,
-            path: "",
-            element: <UserOrderListItem/>
+            path: 'wishlist',
+            element: <UserWishList />,
           },
-
-        ]
+        ],
       },
-    ]
+    ],
   },
 ]);
 

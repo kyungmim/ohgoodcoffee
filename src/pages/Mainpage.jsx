@@ -1,10 +1,6 @@
-import Header from '@components/layout/Header';
-import Footer from '@components/layout/Footer';
-
 function Mainpage() {
   return (
     <>
-      <Header />
       <main className="main">
         <div className="main-header">
           <img className="main-cover" src="public/cover-1.jpg" alt="커피 커버 이미지" />
@@ -144,7 +140,6 @@ function Mainpage() {
           {/* <!-- l wrapper --> */}
         </div>
       </main>
-      <Footer />
     </>
   );
 }
