@@ -4,7 +4,7 @@ import useUserStore from '@zustand/store';
 import { Link } from 'react-router-dom';
 
 function Header() {
-  const user = useUserStore((state) => state.user);
+  const { token } = useUserStore();
   return (
     <>
       <header className="header">
@@ -24,7 +24,10 @@ function Header() {
                 <img src={logo} alt="로고" />
               </Link>
             </li>
-            <li>{user ? <Link to="/users/login">Login</Link> : <Link to="/users/login">LogOut</Link>}</li>
+            <li>{token ? <Link to="/users/login">Logout</Link> : <Link to="/users/login">Login</Link>}</li>
+            {/* <li>
+              <Link to="/users/login">Login</Link>
+            </li> */}
             <li>
               <Link to="/mypage">My</Link>
             </li>
