@@ -1,12 +1,12 @@
 import MarketListItem from '@pages/market/MarketListItem';
-// import cover from '@public/cover-1.jpg';
+import cover from '@public/cover-1.jpg';
 
 function Mainpage() {
   return (
     <>
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src="public/cover-1.jpg" alt="커피 커버 이미지" />
+          <img className="main-cover" src={cover} alt="커피 커버 이미지" />
         </div>
 
         <div className="main-contents">

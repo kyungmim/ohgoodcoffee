@@ -4,7 +4,7 @@ function MagazineListItem() {
   return (
     <>
       <li>
-        <Link className="card" href="/magazine/detail">
+        <Link className="card" to="/magazine/detail">
           <img className="card-cover" src="public/cafe_coeo.jpeg" alt="" />
           <div className="card-contents">
             <span className="card-type yellow">USEFUL</span>
