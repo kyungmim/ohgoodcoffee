@@ -18,7 +18,7 @@ function Header() {
               <Link to="/market">Market</Link>
             </li>
             <li className="logo">
-              <Link to="/home">
+              <Link to="/mainpage">
                 <img src={logo} alt="로고" />
               </Link>
             </li>
