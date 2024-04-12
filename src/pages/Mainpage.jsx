@@ -1,4 +1,5 @@
 import MarketListItem from '@pages/market/MarketListItem';
+// import cover from '@public/cover-1.jpg';
 
 function Mainpage() {
   return (

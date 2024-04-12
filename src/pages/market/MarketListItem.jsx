@@ -1,8 +1,10 @@
+import { Link } from 'react-router-dom';
+
 function MarketListItem() {
   return (
     <>
       <li>
-        <a className="card" href="/market/detail">
+        <Link className="card" to="/market/detail">
           <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
           <div className="card-contents">
             <span className="card-brand">지비에이치</span>
@@ -13,7 +15,7 @@ function MarketListItem() {
             <p className="card-state new">NEW</p>
             <p className="card-state best">BEST</p>
           </div>
-        </a>
+        </Link>
       </li>
     </>
   );
