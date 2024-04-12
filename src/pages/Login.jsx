@@ -70,9 +70,9 @@ function Login() {
               <button className="button button-large btn-Fill" type="submit">
                 LOGIN
               </button>
-              <button className="button button-large btn-null" type="button">
+              <Link to={'/users/signup'} className="button button-large btn-null">
                 SIGN UP
-              </button>
+              </Link>
             </form>
 
             <div className="login-line">
