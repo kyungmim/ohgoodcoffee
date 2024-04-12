@@ -1,8 +1,10 @@
 import logo from '@public/Logo.svg';
 import search from '@public/search_icon.svg';
+import useUserStore from '@zustand/store';
 import { Link } from 'react-router-dom';
 
 function Header() {
+  const user = useUserStore((state) => state.user);
   return (
     <>
       <header className="header">
@@ -22,9 +24,7 @@ function Header() {
                 <img src={logo} alt="로고" />
               </Link>
             </li>
-            <li>
-              <Link to="/users/login">Login</Link>
-            </li>
+            <li>{user ? <Link to="/users/login">Login</Link> : <Link to="/users/login">LogOut</Link>}</li>
             <li>
               <Link to="/mypage">My</Link>
             </li>

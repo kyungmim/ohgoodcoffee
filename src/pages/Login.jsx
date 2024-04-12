@@ -1,6 +1,30 @@
-import { Link } from 'react-router-dom';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
+import { useForm } from 'react-hook-form';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
+  const { register, handleSubmit } = useForm({
+    values: {
+      email: 'u1@market.com',
+      password: '11111111',
+    },
+  });
+  const navigate = useNavigate();
+  const axios = useCustomAxios();
+  const setuser = useUserStore((state) => state.setuser);
+  console.log(setuser);
+
+  const onSubmit = async (formData) => {
+    try {
+      const res = await axios.post('/users/login', formData);
+      alert(res.data.item.name + '님 로그인되었습니다 :)');
+      navigate(location.state?.from ? location.state?.from : '/');
+    } catch (err) {
+      alert(err.response?.data.message);
+    }
+  };
+
   return (
     <>
       <div className="contents-login">
@@ -10,13 +34,31 @@ function Login() {
               <h2 className="content-title">LOGIN</h2>
             </div>
 
-            <form className="login_form">
+            <form onSubmit={handleSubmit(onSubmit)} className="login_form">
               <div className="login-input-section">
                 <div className="form-input">
-                  <input id="email" placeholder="이메일" type="text" />
+                  <input
+                    placeholder="이메일"
+                    type="text"
+                    id="email"
+                    {...register('email', {
+                      pattern: {
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: '이메일 형식이 아닙니다.',
+                      },
+                    })}
+                  />
                 </div>
                 <div className="form-input">
-                  <input id="password" placeholder="비밀번호" type="password" />
+                  <input
+                    placeholder="비밀번호"
+                    type="password"
+                    id="password"
+                    {...register('password', {
+                      required: '비밀번호는 필수 입니다.',
+                      minLength: 8,
+                    })}
+                  />
                 </div>
               </div>
               <div className="login-find">
