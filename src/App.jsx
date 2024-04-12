@@ -1,12 +1,14 @@
-import Footer from '@components/layout/Footer';
+import { RouterProvider } from 'react-router-dom';
 import './App.css';
-import Header from '@components/layout/Header';
+import { Suspense } from 'react';
+import router from '@/routes';
 
 function App() {
   return (
     <>
-      <Header />
-      <Footer />
+      <Suspense>
+        <RouterProvider router={router} />
+      </Suspense>
     </>
   );
 }
