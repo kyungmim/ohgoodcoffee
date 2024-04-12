@@ -12,13 +12,16 @@ function Login() {
   });
   const navigate = useNavigate();
   const axios = useCustomAxios();
-  const setuser = useUserStore((state) => state.setuser);
-  console.log(setuser);
+  const { setToken } = useUserStore();
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.post('/users/login', formData);
       alert(res.data.item.name + '님 로그인되었습니다 :)');
+      console.log(res);
+      const token = res.data.item.token.accessToken;
+      setToken(token);
+      console.log(token);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
       alert(err.response?.data.message);
