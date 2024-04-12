@@ -1,3 +1,4 @@
+import Mug from '@public/GBH-mug.jpeg';
 import { Link } from 'react-router-dom';
 
 function MarketListItem() {
@@ -5,7 +6,7 @@ function MarketListItem() {
     <>
       <li>
         <Link className="card" to="/market/detail">
-          <img className="card-cover" src="public/GBH-mug.jpeg" alt="머그컵" />
+          <img className="card-cover" src={Mug} alt="머그컵" />
           <div className="card-contents">
             <span className="card-brand">지비에이치</span>
             <h4 className="card-title mini">GBH X NIKKO CUP & SAUCER</h4>
