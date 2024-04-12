@@ -14,13 +14,16 @@ import UserOrderList from '@pages/mypage/user/UserOrderList';
 import UserReviewList from '@pages/mypage/user/UserReviewList';
 import UserWishList from '@pages/mypage/user/UserWishList';
 import UserInfo from '@pages/mypage/user/UserInfo';
+import SellerMyPageHeader from '@pages/mypage/seller/SellerMyPageHeader';
+import SellerSalesList from '@pages/mypage/seller/SellerSalesList';
+import SellerUploadProduct from '@pages/mypage/seller/SellerUploadProduct';
+import SellerInfo from '@pages/mypage/seller/SellerInfo';
 
 /* TODO: 만들어야하는 페이지 */
 // import Search from '@pages/Search';
 // import Search from '@pages/SearchList';
 
 import { createBrowserRouter } from 'react-router-dom';
-
 const router = createBrowserRouter([
   {
     path: '/',
@@ -32,7 +35,7 @@ const router = createBrowserRouter([
         element: <Mainpage />,
       },
       {
-        path: 'home',
+        path: 'mainpage',
         element: <Mainpage />,
       },
       {
@@ -76,49 +79,37 @@ const router = createBrowserRouter([
             element: <UserOrderList />,
           },
           {
-            index: true,
+            path: 'review',
             element: <UserReviewList />,
           },
           {
-            index: true,
+            path: 'wishlist',
             element: <UserWishList />,
           },
           {
-            index: true,
+            path: 'userinfo',
             element: <UserInfo />,
           },
         ],
       },
-      // {
-      //   path: 'sellers/mapage',
-      //   element: <SellerMyPageHeader />,
-      //   children: [
-      //     {
-      //       index: true,
-      //       element: <SellerSalesList />,
-      //       children: [
-      //         {
-      //           index: true,
-      //           element: <SellerSalesListItem />,
-      //         },
-      //       ],
-      //     },
-      //     {
-      //       // index: false,  <--- 인덱스 값을 어떻게 해야하는지 모르겠음
-      //       element: <SellerUploadProduct />,
-      //     },
-      //     {
-      //       // index: false, <--- 인덱스 값을 어떻게 해야하는지 모르겠음
-      //       element: <SellerInfo />,
-      //       children: [
-      //         {
-      //           index: true,
-      //           element: <SellerInfoEdit />,
-      //         },
-      //       ],
-      //     },
-      //   ],
-      // },
+      {
+        path: 'seller/mypage',
+        element: <SellerMyPageHeader />,
+        children: [
+          {
+            index: true,
+            element: <SellerSalesList />,
+          },
+          {
+            path: 'upload',
+            element: <SellerUploadProduct />,
+          },
+          {
+            path: 'sellerinfo',
+            element: <SellerInfo />,
+          },
+        ],
+      },
     ],
   },
 ]);

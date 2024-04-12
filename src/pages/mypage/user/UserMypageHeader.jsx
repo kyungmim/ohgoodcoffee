@@ -1,5 +1,5 @@
 import profile from '@public/profile.svg';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 function UserMypageHeader() {
   return (
@@ -9,16 +9,16 @@ function UserMypageHeader() {
           <div className="sidebar">
             <ul className="menu-list">
               <li className="menu-item is_active">
-                <a href="">주문 내역 조회</a>
+                <Link to="/mypage">주문 내역 조회</Link>
               </li>
               <li className="menu-item">
-                <a href="#">위시리스트</a>
+                <Link to="/mypage/wishlist">위시리스트</Link>
               </li>
               <li className="menu-item">
-                <a href="#">내가 쓴 리뷰</a>
+                <Link to="/mypage/review">내가 쓴 리뷰</Link>
               </li>
               <li className="menu-item">
-                <a href="#">회원정보</a>
+                <Link to="/mypage/userinfo">회원정보</Link>
               </li>
             </ul>
           </div>

@@ -1,5 +1,6 @@
 import PlusIcon from '@public/plus.svg';
 import EqualIcon from '@public/equal_icon.svg';
+import { Link } from 'react-router-dom';
 
 function Cart() {
   return (
@@ -120,9 +121,9 @@ function Cart() {
 
             <button className="button button-large btn-null btn-layout">주문하기</button>
 
-            <a className="cart-more" href="#">
+            <Link to="/mainpage" className="cart-more">
               계속 쇼핑하기
-            </a>
+            </Link>
           </div>
         </div>
         {/* <!-- l_wrapper --> */}
