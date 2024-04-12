@@ -1,4 +1,5 @@
 import arrow from '@public/dropup_icon.svg';
+import coffee_1 from '@public/coffee-1.jpg';
 
 function UserOrderListItem() {
   return (
@@ -20,7 +21,7 @@ function UserOrderListItem() {
                 </div>
                 <div className="order-main">
                   <div className="order-main-item-title">
-                    <img src="public/coffee-1.jpg" alt="상품 사진" />
+                    <img src={coffee_1} alt="상품 사진" />
                   </div>
                   <div className="order-main-item-desc">
                     <div className="order-main-item">

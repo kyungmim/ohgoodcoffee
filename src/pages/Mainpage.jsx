@@ -1,5 +1,8 @@
-import MarketListItem from '@pages/market/MarketListItem';
 import cover from '@public/cover-1.jpg';
+import coffee_1 from '@public/coffee-1.jpg';
+import coffee_2 from '@public/coffee-2.jpg';
+import coffee_3 from '@public/coffee-3.jpg';
+import MarketListItem from '@pages/market/MarketListItem';
 
 function Mainpage() {
   return (
@@ -18,7 +21,7 @@ function Mainpage() {
             <div className="main-coverstory">
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-1.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_1} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -40,7 +43,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-2.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_2} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -62,7 +65,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-3.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_3} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
