@@ -1,6 +1,44 @@
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import TopLine from '@public/ogc-top-line.svg';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+// import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
+  const { register, handleSubmit, setError } = useForm({
+    values: {
+      email: 'gg@market.com',
+      name: '마라탕',
+      password: '11111111',
+      type: 'user',
+      phone: '1234567890',
+      address: '서울시 강남구 역삼동 123',
+    },
+  });
+  const axios = useCustomAxios();
+  // const navigate = useNavigate();
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = () => {
+    setIsChecked(!isChecked);
+  };
+
+  const onSubmit = async (formData) => {
+    try {
+      const res = await axios.post('/users', formData);
+      alert(res.data.item.name + '님 회원가입이 완료 되었습니다.\n로그인 후에 이용하세요.');
+      console.log(formData);
+      // navigate('/users/login');
+    } catch (err) {
+      if (err.response?.data.errors) {
+        // API 서버가 응답한 에러
+        err.response?.data.errors.forEach((error) => setError(error.path, { message: error.msg }));
+      } else if (err.response?.data.message) {
+        alert(err.response?.data.message);
+      }
+    }
+  };
+
   return (
     <>
       <div className="contents-signup">
@@ -13,15 +51,15 @@ function SignUp() {
               </div>
             </div>
 
-            <form className="signup_form">
-              <fieldset className="signup-layout">
+            <form onSubmit={handleSubmit(onSubmit)} className="signup_form">
+              {/* <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="profile">
                   Profile
                 </label>
                 <div className="form-input">
                   <input type="file" name="profile" id="profile" />
                 </div>
-              </fieldset>
+              </fieldset> */}
 
               <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="type">
@@ -31,15 +69,19 @@ function SignUp() {
                 <div className="signup-type">
                   <div className="signup-type-item">
                     <div className="form-input-radio">
-                      <input type="radio" name="type" id="type" />
+                      <input type="radio" name="type" id="user" onChange={handleChange} />
                     </div>
-                    <span className="radio-title">User</span>
+                    <label htmlFor="user" className="radio-title">
+                      User
+                    </label>
                   </div>
                   <div className="signup-type-item">
                     <div className="form-input-radio">
-                      <input type="radio" name="type" id="type" />
+                      <input type="radio" name="type" id="seller" />
                     </div>
-                    <span className="radio-title">Seller</span>
+                    <label htmlFor="seller" className="radio-title">
+                      Seller
+                    </label>
                   </div>
                 </div>
               </fieldset>
@@ -49,21 +91,37 @@ function SignUp() {
                   Name <span className="signup-required-point">*</span>
                 </label>
                 <div className="form-input">
-                  <input name="name" id="name" placeholder="이름을 입력해주세요" type="text" />
+                  <input
+                    placeholder="이름을 입력해주세요."
+                    type="text"
+                    id="name"
+                    {...register('name', {
+                      required: '이름은 필수 입니다.',
+                      minLength: 2,
+                    })}
+                  />
                 </div>
               </fieldset>
 
               <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="phonenum">
+                <label className="signup-sub-title" htmlFor="phone">
                   Phone Number
                   <span className="signup-required-point">*</span>
                 </label>
                 <div className="form-input">
-                  <input id="phonenum" placeholder="연락처를 입력해주세요" type="text" />
+                  <input
+                    placeholder="전화번호를 입력해주세요."
+                    type="text"
+                    id="phone"
+                    {...register('phone', {
+                      required: '전화번호는 필수 입니다.',
+                      minLength: 11,
+                    })}
+                  />
                 </div>
               </fieldset>
 
-              <fieldset className="signup-layout">
+              {/* <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="phonenum">
                   Birth <span className="signup-required-point">*</span>
                 </label>
@@ -101,14 +159,24 @@ function SignUp() {
                     </select>
                   </div>
                 </div>
-              </fieldset>
+              </fieldset> */}
 
               <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="email">
                   Email <span className="signup-required-point">*</span>
                 </label>
                 <div className="form-input">
-                  <input name="email" id="email" placeholder="이메일을 입력해주세요" type="text" />
+                  <input
+                    placeholder="이메일을 입력해주세요."
+                    type="text"
+                    id="email"
+                    {...register('email', {
+                      pattern: {
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: '이메일 형식이 아닙니다.',
+                      },
+                    })}
+                  />
                 </div>
               </fieldset>
 
@@ -118,10 +186,15 @@ function SignUp() {
                 </label>
                 <div className="signup-password-box">
                   <div className="form-input">
-                    <input name="password" id="password" placeholder="비밀번호를 입력해주세요" type="password" />
-                  </div>
-                  <div className="form-input">
-                    <input name="password" id="password" placeholder="비밀번호 확인" type="password" />
+                    <input
+                      placeholder="비밀번호를 입력해주세요."
+                      type="password"
+                      id="password"
+                      {...register('password', {
+                        required: '비밀번호는 필수 입니다.',
+                        minLength: 8,
+                      })}
+                    />
                   </div>
                 </div>
               </fieldset>
@@ -131,7 +204,15 @@ function SignUp() {
                   Address <span className="signup-required-point">*</span>
                 </label>
                 <div className="form-input">
-                  <input name="address" id="address" placeholder="주소를 입력해주세요" type="text" />
+                  <input
+                    placeholder="주소를 입력해주세요."
+                    type="text"
+                    id="address"
+                    {...register('address', {
+                      required: '주소는 필수 입니다.',
+                      minLength: 11,
+                    })}
+                  />
                 </div>
               </fieldset>
 
