@@ -1,5 +1,5 @@
 // hooks/useCustomAxios.js
-import useUserStore from '@zustand/store';
+import useUserStore from '@zustand/store.js';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 
