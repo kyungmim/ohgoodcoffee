@@ -24,6 +24,7 @@ import SellerInfo from '@pages/mypage/seller/SellerInfo';
 
 import { createBrowserRouter } from 'react-router-dom';
 import CartList from '@pages/CartList';
+import PaymentComplete from '@pages/PaymentComplete';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -69,6 +70,10 @@ const router = createBrowserRouter([
       {
         path: 'carts',
         element: <CartList />,
+      },
+      {
+        path: 'orders',
+        element: <PaymentComplete />,
       },
       {
         path: 'mypage',
