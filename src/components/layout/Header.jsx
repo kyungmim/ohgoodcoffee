@@ -1,8 +1,21 @@
 import logo from '@public/Logo.svg';
 import search from '@public/search_icon.svg';
-import { Link } from 'react-router-dom';
+import useUserStore from '@zustand/store.js';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
+  const { token } = useUserStore();
+  const clearUserIdStorage = useUserStore.persist.clearStorage;
+  const navigate = useNavigate();
+
+  const onClickLogout = () => {
+    if (token) {
+      navigate('mainpage');
+      window.location.reload();
+      clearUserIdStorage();
+    }
+  };
+
   return (
     <>
       <header className="header">
@@ -22,9 +35,7 @@ function Header() {
                 <img src={logo} alt="로고" />
               </Link>
             </li>
-            <li>
-              <Link to="/users/login">Login</Link>
-            </li>
+            <li>{token ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
             <li>
               <Link to="/mypage">My</Link>
             </li>

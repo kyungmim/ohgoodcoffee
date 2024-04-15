@@ -120,6 +120,11 @@ body {
 }
 /* Common */
 
+.err-text {
+  font-size: 14px;
+  color: var(--color-warning);
+}
+
 /* header, footer */
 .header {
   background-color: var(--color-primary);
@@ -618,7 +623,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.7rem;
   max-width: 900px;
   width: 100%;
   margin-top: 50px;
@@ -627,7 +632,13 @@ body {
 .signup-layout {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.signup-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .type_start {
@@ -662,7 +673,7 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(public/check-nor.svg);
+  background-image: url(assets/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px;
@@ -673,7 +684,7 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: var(--color-black-10);
-  background-image: url(public/check-sel.svg);
+  background-image: url(assets/check-sel.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 14px;
@@ -706,12 +717,6 @@ body {
   background-color: var(--color-white);
   color: var(--color-black-20);
   padding: 3px 0;
-}
-
-.signup-password-box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 /*  magazine, market  */
@@ -823,7 +828,7 @@ body {
 }
 
 .drop-menu {
-  background-image: url(public/drop-menu-arrow.png);
+  background-image: url(assets/drop-menu-arrow.png);
   background-repeat: no-repeat;
   background-size: 10px 6px;
   background-position: right 10px center;
@@ -1208,7 +1213,7 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(public/check-nor.svg);
+  background-image: url(assets/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px;
@@ -1219,7 +1224,7 @@ body {
   width: 1rem;
   height: 1rem;
   background-color: var(--color-black-10);
-  background-image: url(public/check-sel.svg);
+  background-image: url(assets/check-sel.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px;
@@ -1442,10 +1447,10 @@ body {
   height: 16px;
   background-repeat: no-repeat;
   background-size: 16px;
-  background-image: url(public/naver_inner_icon.svg);
+  background-image: url(assets/naver_inner_icon.svg);
 }
 .btn-kakao::before {
-  background-image: url(public/kakao_inner_icon.svg);
+  background-image: url(assets/kakao_inner_icon.svg);
   background-size: 20px;
   width: 20px;
   height: 20px;
@@ -1505,7 +1510,7 @@ body {
   height: 1.2rem;
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
-  background-image: url(public/check-nor.svg);
+  background-image: url(assets/check-nor.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 12px;
@@ -1514,7 +1519,7 @@ body {
 
 .form-input-radio [type='radio']:checked {
   background-color: var(--color-black-10);
-  background-image: url(public/check-sel.svg);
+  background-image: url(assets/check-sel.svg);
 }
 
 .signup-select-box {
@@ -1530,7 +1535,7 @@ body {
   padding: 10px 0 10px 10px;
   border: 1px solid var(--color-gray-10);
   background-color: var(--color-white);
-  background-image: url(public/dropdown_icon.svg);
+  background-image: url(assets/dropdown_icon.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: right 10px center;
@@ -1549,4 +1554,24 @@ body {
   display: flex;
   flex-direction: column;
   gap: 20px;
+}
+
+.quantity-button {
+  display: flex;
+
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+.quantity-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
 }
