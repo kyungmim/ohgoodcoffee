@@ -1,30 +1,42 @@
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
+import { useEffect, useState } from 'react';
+
 function UserInfo() {
+  const { user } = useUserStore();
+
+  // const item = data && data?.item?.map((item) => item);
+  // console.log(item);
+
   return (
     <>
       <div className="l_wrapper">
         <div className="item-wrapper">
+          <div className="main-title">
+            <p className="main-contents-title">회원정보</p>
+          </div>
           <div className="main-content">
             <div className="profile-settings">
               <div className="profile-setting">
                 <div className="profile-item">
                   <h1 className="profile-item-title">Type</h1>
-                  <p>User</p>
+                  <p>{user.type}</p>
                 </div>
                 <div className="profile-item">
                   <h1 className="profile-item-title">Name</h1>
-                  <p>보람3조</p>
+                  <p>{user.name}</p>
                 </div>
                 <div className="profile-item">
                   <h1 className="profile-item-title">Email</h1>
-                  <p>u1@market.com</p>
+                  <p>{user.email}</p>
                 </div>
                 <div className="profile-item">
                   <h1 className="profile-item-title">Phone Number</h1>
-                  <p>010-1234-1234</p>
+                  <p>{user.phone}</p>
                 </div>
                 <div className="profile-item">
                   <h1 className="profile-item-title">Address</h1>
-                  <p>서울시 강남구 역삼동 123</p>
+                  <p>{user.address}</p>
                 </div>
               </div>
             </div>
