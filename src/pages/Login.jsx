@@ -1,5 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import useUserStore from '@zustand/store';
+import useUserStore from '@zustand/store.js';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -12,16 +12,15 @@ function Login() {
   });
   const navigate = useNavigate();
   const axios = useCustomAxios();
-  const { setToken } = useUserStore();
+  const { setUserId } = useUserStore();
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.post('/users/login', formData);
       alert(res.data.item.name + '님 로그인되었습니다 :)');
       console.log(res);
-      const token = res.data.item.token.accessToken;
-      setToken(token);
-      console.log(token);
+      const accToken = res.data.item.token.accessToken;
+      setUserId(accToken);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
       alert(err.response?.data.message);
@@ -70,9 +69,9 @@ function Login() {
               <button className="button button-large btn-Fill" type="submit">
                 LOGIN
               </button>
-              <button className="button button-large btn-null" type="button">
+              <Link to="/users/signup" className="button button-large btn-null" type="button">
                 SIGN UP
-              </button>
+              </Link>
             </form>
 
             <div className="login-line">
