@@ -1,5 +1,5 @@
-import { Link, Outlet } from 'react-router-dom';
 import profile from '@public/profile.svg';
+import { Link, Outlet } from 'react-router-dom';
 
 function SellerMyPageHeader() {
   return (

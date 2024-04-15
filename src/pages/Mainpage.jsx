@@ -1,12 +1,31 @@
+import cover from '@public/cover-1.jpg';
+import coffee_1 from '@public/coffee-1.jpg';
+import coffee_2 from '@public/coffee-2.jpg';
+import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
-// import cover from '@public/cover-1.jpg';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function Mainpage() {
+  const axios = useCustomAxios();
+
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+  });
+
+  let itemList = [];
+  if (data?.length > 0) {
+    let newData = data.filter((item) => item.extra?.isNew).slice(0, 4);
+    itemList = newData.map((item) => <MarketListItem key={item._id} item={item} />);
+  }
+
   return (
     <>
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src="public/cover-1.jpg" alt="커피 커버 이미지" />
+          <img className="main-cover" src={cover} alt="커피 커버 이미지" />
         </div>
 
         <div className="main-contents">
@@ -18,7 +37,7 @@ function Mainpage() {
             <div className="main-coverstory">
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-1.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_1} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -40,7 +59,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-2.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_2} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -62,7 +81,7 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src="public/coffee-3.jpg" alt="커피이미지" />
+                  <img className="coverstory-list-cover-src" src={coffee_3} alt="커피이미지" />
                 </div>
 
                 <div className="coverstory-list-item">
@@ -87,12 +106,7 @@ function Mainpage() {
               <div className="contents-header">
                 <h2 className="content-title">NEW PRODUCT</h2>
               </div>
-              <ul className="grid">
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-              </ul>
+              <ul className="grid">{itemList}</ul>
             </div>
           </div>
           {/* <!-- l wrapper --> */}

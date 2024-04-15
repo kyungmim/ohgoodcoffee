@@ -8,7 +8,6 @@ import MarketList from '@pages/market/MarketList';
 import MarketDetail from '@pages/market/MarketDetail';
 import Login from '@pages/Login';
 import SignUp from '@pages/SignUp';
-import Cart from '@pages/Cart';
 import UserMypageHeader from '@pages/mypage/user/UserMypageHeader';
 import UserOrderList from '@pages/mypage/user/UserOrderList';
 import UserReviewList from '@pages/mypage/user/UserReviewList';
@@ -24,6 +23,8 @@ import SellerInfo from '@pages/mypage/seller/SellerInfo';
 // import Search from '@pages/SearchList';
 
 import { createBrowserRouter } from 'react-router-dom';
+import CartList from '@pages/CartList';
+import PaymentComplete from '@pages/PaymentComplete';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
         element: <MarketList />,
       },
       {
-        path: 'market/detail',
+        path: 'market/detail/:_id',
         element: <MarketDetail />,
       },
       {
@@ -68,7 +69,11 @@ const router = createBrowserRouter([
       },
       {
         path: 'carts',
-        element: <Cart />,
+        element: <CartList />,
+      },
+      {
+        path: 'orders',
+        element: <PaymentComplete />,
       },
       {
         path: 'mypage',
