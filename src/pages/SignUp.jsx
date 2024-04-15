@@ -1,41 +1,48 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import TopLine from '@public/ogc-top-line.svg';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-// import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 function SignUp() {
-  const { register, handleSubmit, setError } = useForm({
-    values: {
-      email: 'gg@market.com',
-      name: '마라탕',
-      password: '11111111',
-      type: 'user',
-      phone: '1234567890',
-      address: '서울시 강남구 역삼동 123',
-    },
-  });
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
   const axios = useCustomAxios();
-  // const navigate = useNavigate();
-  const [isChecked, setIsChecked] = useState(false);
+  const navigate = useNavigate();
 
-  const handleChange = () => {
-    setIsChecked(!isChecked);
-  };
+  console.log(errors);
 
-  const onSubmit = async (formData) => {
+  const onSignup = async (formData) => {
+    console.log(formData);
     try {
+      if (formData.profileImage.length > 0) {
+        // 프로필 이미지를 추가한 경우
+        const imageFormData = new FormData();
+        imageFormData.append('attach', formData.profileImage[0]);
+
+        const fileRes = await axios('/files', {
+          method: 'post',
+          headers: {
+            // 파일 업로드시 필요한 설정
+            'Content-Type': 'multipart/form-data',
+          },
+          data: imageFormData,
+        });
+        console.log(fileRes);
+        // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
+        formData.profileImage = fileRes.data.item[0].name;
+      } else {
+        // profileImage 속성을 제거
+        delete formData.profileImage;
+      }
       const res = await axios.post('/users', formData);
       alert(res.data.item.name + '님 회원가입이 완료 되었습니다.\n로그인 후에 이용하세요.');
-      console.log(formData);
-      // navigate('/users/login');
+      navigate('/users/login');
     } catch (err) {
-      if (err.response?.data.errors) {
-        // API 서버가 응답한 에러
-        err.response?.data.errors.forEach((error) => setError(error.path, { message: error.msg }));
-      } else if (err.response?.data.message) {
-        alert(err.response?.data.message);
-      }
+      console.log(err);
+      alert(err.response?.data.message);
     }
   };
 
@@ -51,38 +58,72 @@ function SignUp() {
               </div>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="signup_form">
-              {/* <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="profile">
+            <form onSubmit={handleSubmit(onSignup)} className="signup_form">
+              <div className="signup-layout">
+                <label className="signup-sub-title" htmlFor="profileImage">
                   Profile
                 </label>
                 <div className="form-input">
-                  <input type="file" name="profile" id="profile" />
+                  <input type="file" name="profile" id="profileImage" {...register('profileImage')} />
                 </div>
-              </fieldset> */}
+              </div>
 
               <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="type">
                   Type <span className="signup-required-point">*</span>
                 </label>
+                <div className="signup-select-box">
+                  <div className="signup-select-box-item">
+                    <select className="select" id="type" {...register('type')}>
+                      <option value="user">User</option>
+                      <option value="seller">Seller</option>
+                    </select>
+                  </div>
+                </div>
+              </fieldset>
+              <fieldset className="signup-layout">
+                <label className="signup-sub-title" htmlFor="email">
+                  Email <span className="signup-required-point">*</span>
+                </label>
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="이메일을 입력해주세요."
+                      type="text"
+                      id="email"
+                      {...register('email', {
+                        required: '이메일은 필수 입니다.',
+                        pattern: {
+                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: '이메일 형식이 아닙니다.',
+                        },
+                      })}
+                    />
+                  </div>
+                  {errors.email && <p className="err-text">{errors.email.message}</p>}
+                </div>
+              </fieldset>
 
-                <div className="signup-type">
-                  <div className="signup-type-item">
-                    <div className="form-input-radio">
-                      <input type="radio" name="type" id="user" onChange={handleChange} />
-                    </div>
-                    <label htmlFor="user" className="radio-title">
-                      User
-                    </label>
+              <fieldset className="signup-layout type_start">
+                <label className="signup-sub-title" htmlFor="password">
+                  Password <span className="signup-required-point">*</span>
+                </label>
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="비밀번호를 입력해주세요."
+                      type="password"
+                      id="password"
+                      {...register('password', {
+                        required: '비밀번호는 필수 입니다.',
+                        minLength: {
+                          value: 8,
+                          message: '8자리 이상 입력하세요.',
+                        },
+                      })}
+                    />
                   </div>
-                  <div className="signup-type-item">
-                    <div className="form-input-radio">
-                      <input type="radio" name="type" id="seller" />
-                    </div>
-                    <label htmlFor="seller" className="radio-title">
-                      Seller
-                    </label>
-                  </div>
+                  {errors.password && <p className="err-text">{errors.password.message}</p>}
                 </div>
               </fieldset>
 
@@ -90,16 +131,22 @@ function SignUp() {
                 <label className="signup-sub-title" htmlFor="name">
                   Name <span className="signup-required-point">*</span>
                 </label>
-                <div className="form-input">
-                  <input
-                    placeholder="이름을 입력해주세요."
-                    type="text"
-                    id="name"
-                    {...register('name', {
-                      required: '이름은 필수 입니다.',
-                      minLength: 2,
-                    })}
-                  />
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="이름을 입력해주세요."
+                      type="text"
+                      id="name"
+                      {...register('name', {
+                        required: '이름을 입력하세요.',
+                        minLength: {
+                          value: 2,
+                          message: '이름을 2글자 이상 입력하세요.',
+                        },
+                      })}
+                    />
+                  </div>
+                  {errors.name && <p className="err-text">{errors.name.message}</p>}
                 </div>
               </fieldset>
 
@@ -108,94 +155,22 @@ function SignUp() {
                   Phone Number
                   <span className="signup-required-point">*</span>
                 </label>
-                <div className="form-input">
-                  <input
-                    placeholder="전화번호를 입력해주세요."
-                    type="text"
-                    id="phone"
-                    {...register('phone', {
-                      required: '전화번호는 필수 입니다.',
-                      minLength: 11,
-                    })}
-                  />
-                </div>
-              </fieldset>
-
-              {/* <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="phonenum">
-                  Birth <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-select-box">
-                  <div className="signup-select-box-item">
-                    <select className="select">
-                      <option value="1992">1992</option>
-                      <option value="1993">1993</option>
-                      <option value="1994">1994</option>
-                      <option value="1995">1995</option>
-                      <option value="1996">1996</option>
-                      <option value="1997">1997</option>
-                      <option value="1998">1998</option>
-                      <option value="1999">1999</option>
-                    </select>
-                  </div>
-
-                  <div className="signup-select-box-item">
-                    <select className="select">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                  </div>
-
-                  <div className="signup-select-box-item">
-                    <select className="select">
-                      <option value="1">1</option>
-                      <option value="2">2</option>
-                      <option value="3">3</option>
-                      <option value="4">4</option>
-                      <option value="5">5</option>
-                    </select>
-                  </div>
-                </div>
-              </fieldset> */}
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="email">
-                  Email <span className="signup-required-point">*</span>
-                </label>
-                <div className="form-input">
-                  <input
-                    placeholder="이메일을 입력해주세요."
-                    type="text"
-                    id="email"
-                    {...register('email', {
-                      pattern: {
-                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                        message: '이메일 형식이 아닙니다.',
-                      },
-                    })}
-                  />
-                </div>
-              </fieldset>
-
-              <fieldset className="signup-layout type_start">
-                <label className="signup-sub-title" htmlFor="password">
-                  Password <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-password-box">
+                <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="비밀번호를 입력해주세요."
-                      type="password"
-                      id="password"
-                      {...register('password', {
-                        required: '비밀번호는 필수 입니다.',
-                        minLength: 8,
+                      placeholder="전화번호를 입력해주세요."
+                      type="text"
+                      id="phone"
+                      {...register('phone', {
+                        required: '전화번호는 필수 입니다.',
+                        minLength: {
+                          value: 10,
+                          message: '10자리 이상 입력하세요.',
+                        },
                       })}
                     />
                   </div>
+                  {errors.phone && <p className="err-text">{errors.phone.message}</p>}
                 </div>
               </fieldset>
 
@@ -203,16 +178,22 @@ function SignUp() {
                 <label className="signup-sub-title" htmlFor="address">
                   Address <span className="signup-required-point">*</span>
                 </label>
-                <div className="form-input">
-                  <input
-                    placeholder="주소를 입력해주세요."
-                    type="text"
-                    id="address"
-                    {...register('address', {
-                      required: '주소는 필수 입니다.',
-                      minLength: 11,
-                    })}
-                  />
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="주소를 입력해주세요."
+                      type="text"
+                      id="address"
+                      {...register('address', {
+                        required: '주소는 필수 입니다.',
+                        minLength: {
+                          value: 10,
+                          message: '10자리 이상 입력하세요.',
+                        },
+                      })}
+                    />
+                  </div>
+                  {errors.address && <p className="err-text">{errors.address.message}</p>}
                 </div>
               </fieldset>
 
