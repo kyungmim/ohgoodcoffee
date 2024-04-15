@@ -12,7 +12,7 @@ function Login() {
   });
   const navigate = useNavigate();
   const axios = useCustomAxios();
-  const { setUserId } = useUserStore();
+  const { setUserId, setUser } = useUserStore();
 
   const onSubmit = async (formData) => {
     try {
@@ -20,7 +20,9 @@ function Login() {
       alert(res.data.item.name + '님 로그인되었습니다 :)');
       console.log(res);
       const accToken = res.data.item.token.accessToken;
+      const user = res.data.item;
       setUserId(accToken);
+      setUser(user);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
       alert(err.response?.data.message);
