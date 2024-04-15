@@ -2,16 +2,18 @@ import Plus from '@public/plus.svg';
 import Minus from '@public/dash_icon.svg';
 import Wishlist_Dis from '@public/wishlist_dis.svg';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import { useParams } from 'react-router-dom';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import Api from '@utils/Api';
+import useUserStore from '@zustand/store';
 
 function MarketDetail() {
   const axios = useCustomAxios();
   const { _id } = useParams();
+  const { user } = useUserStore();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [productQuantity, setProductQuantity] = useState(1);
-  const { postCart } = Api();
 
   const { data } = useQuery({
     queryKey: ['products', _id],
@@ -22,10 +24,41 @@ function MarketDetail() {
 
   const item = data?.item;
 
-  const handelSubmitCart = async () => {
+  console.log('USER', user);
+
+  async function handleSubmitCart() {
     let cart = { product_id: Number(_id), quantity: productQuantity };
-    await postCart(cart);
-  };
+    await axios.post('/carts', cart);
+    alert('해당 상품이 장바구니에 추가되었습니다.');
+  }
+
+  async function handleSubmitBuy() {
+    let userData = user;
+    if (userData) {
+      let order = {
+        products: [
+          {
+            _id: Number(_id),
+            quantity: productQuantity,
+          },
+        ],
+        address: {
+          value: userData.address,
+        },
+      };
+      try {
+        const response = await axios.post('/orders', order);
+        console.log(response);
+        const gotoPaymentComplete = confirm(`${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`);
+        gotoPaymentComplete && navigate('/orders', { state: { from: location.pathname } });
+      } catch (err) {
+        alert(err.response?.data.message);
+      }
+    } else {
+      const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
+      gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
+    }
+  }
 
   return (
     <>
@@ -67,10 +100,10 @@ function MarketDetail() {
                 </div>
               </div>
               <div className="selling-btns">
-                <button className="button button-large btn-Fill" type="submit">
+                <button className="button button-large btn-Fill" type="submit" onClick={handleSubmitBuy}>
                   Buying
                 </button>
-                <button className="button button-large btn-null" type="submit" onClick={handelSubmitCart}>
+                <button className="button button-large btn-null" type="submit" onClick={handleSubmitCart}>
                   Cart
                 </button>
               </div>
