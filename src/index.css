@@ -120,6 +120,11 @@ body {
 }
 /* Common */
 
+.err-text {
+  font-size: 14px;
+  color: var(--color-warning);
+}
+
 /* header, footer */
 .header {
   background-color: var(--color-primary);
@@ -618,7 +623,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.7rem;
   max-width: 900px;
   width: 100%;
   margin-top: 50px;
@@ -627,7 +632,13 @@ body {
 .signup-layout {
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+}
+
+.signup-input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
 .type_start {
@@ -706,12 +717,6 @@ body {
   background-color: var(--color-white);
   color: var(--color-black-20);
   padding: 3px 0;
-}
-
-.signup-password-box {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
 }
 
 /*  magazine, market  */
