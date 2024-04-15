@@ -5,7 +5,7 @@ UserReviewItem.propTypes = {
 };
 
 function UserReviewItem({ item }) {
-  console.log('item', item);
+  // console.log('item', item);
 
   return (
     <>
