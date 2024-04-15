@@ -1,30 +1,17 @@
 import TopLine from '@public/ogc-top-line.svg';
 import MarketListItem from './MarketListItem';
-import Api from '@utils/Api';
-import { useEffect } from 'react';
-import useUserStore from '@zustand/store';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function MarketList() {
-  const { products, setProducts } = useUserStore();
-  const { useGetProducts } = Api();
-  // const { data } = useQuery({
-  //   queryKey: ['products'],
-  //   queryFn: () => axios.get('/products'),
-  //   select: (response) => response.data,
-  // });
-  const { data } = useGetProducts();
+  const axios = useCustomAxios();
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+  });
 
-  useEffect(() => {
-    console.log('DAtA', data);
-    setProducts(data);
-  }, [data]);
-  // useGetProducts()
-
-  const itemList = products?.map((item) => <MarketListItem key={item._id} item={item} />);
-
-  // // const itemList = data?.item.map((item) => <MarketListItem key={item._id} item={item} />);
-
-  // console.log('itemList', itemList);
+  const itemList = data?.map((item) => <MarketListItem key={item._id} item={item} />);
 
   return (
     <>
