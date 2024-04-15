@@ -1,14 +1,16 @@
 import logo from '@public/Logo.svg';
 import search from '@public/search_icon.svg';
 import useUserStore from '@zustand/store.js';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
   const { token } = useUserStore();
   const clearUserIdStorage = useUserStore.persist.clearStorage;
+  const navigate = useNavigate();
 
   const onClickLogout = () => {
     if (token) {
+      navigate('mainpage');
       window.location.reload();
       clearUserIdStorage();
     }
