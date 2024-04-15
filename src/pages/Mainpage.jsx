@@ -3,8 +3,23 @@ import coffee_1 from '@public/coffee-1.jpg';
 import coffee_2 from '@public/coffee-2.jpg';
 import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
+import { useEffect } from 'react';
+import Api from '@utils/Api';
+import useUserStore from '@zustand/store';
 
 function Mainpage() {
+  const { newProducts, setNewProducts } = useUserStore();
+  const { useGetProducts } = Api();
+
+  const { data } = useGetProducts();
+
+  useEffect(() => {
+    // console.log('DAtA', data);
+    setNewProducts(data);
+  }, [data]);
+
+  const itemList = newProducts?.map((item) => <MarketListItem key={item._id} item={item} />);
+
   return (
     <>
       <main className="main">
@@ -90,12 +105,7 @@ function Mainpage() {
               <div className="contents-header">
                 <h2 className="content-title">NEW PRODUCT</h2>
               </div>
-              <ul className="grid">
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-              </ul>
+              <ul className="grid">{itemList}</ul>
             </div>
           </div>
           {/* <!-- l wrapper --> */}

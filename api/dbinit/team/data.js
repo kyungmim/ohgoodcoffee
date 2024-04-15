@@ -570,8 +570,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_01.jpg`,
-            fileName: 'bonanzacoffee_products_01.jpg',
+            url: `/files/bonanzacoffee_products_01.png`,
+            fileName: 'bonanzacoffee_products_01.png',
           },
         ],
         detailImages: [
@@ -611,8 +611,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_02.jpg`,
-            fileName: 'bonanzacoffee_products_02.jpg',
+            url: `/files/bonanzacoffee_products_02.png`,
+            fileName: 'bonanzacoffee_products_02.png',
           },
         ],
         detailImages: [
@@ -704,8 +704,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_04.jpg`,
-            fileName: 'bonanzacoffee_products_04.jpg',
+            url: `/files/bonanzacoffee_products_04.webp`,
+            fileName: 'bonanzacoffee_products_04.webp',
           },
         ],
         detailImages: [
@@ -747,8 +747,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_05.jpg`,
-            fileName: 'bonanzacoffee_products_05.jpg',
+            url: `/files/bonanzacoffee_products_05.png`,
+            fileName: 'bonanzacoffee_products_05.png',
           },
         ],
         detailImages: [
