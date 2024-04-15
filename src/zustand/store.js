@@ -20,11 +20,15 @@ const useUserStore = create(
       },
       setCartProducts: (data) => {
         console.log('CART', data);
-        if (data.item) {
-          const filteredData = data.item.filter((item) => item.quantity > 0);
-          set({ cartProducts: filteredData });
+        if (data) {
+          set({ cartProducts: data });
         }
+        // if (data.item) {
+        //   const filteredData = data.item.filter((item) => item.quantity > 0);
+        //   set({ cartProducts: filteredData });
+        // }
       },
+
       setUserId: (token) => set({ token }),
       setUser: (user) => set({ user }),
     }),
