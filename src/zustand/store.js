@@ -3,7 +3,7 @@ import { persist } from 'zustand/middleware';
 
 const useUserStore = create(
   persist(
-    (set, get) => ({
+    (set) => ({
       products: [],
       newProducts: [],
       cartProducts: [],
@@ -35,4 +35,3 @@ const useUserStore = create(
 );
 
 export default useUserStore;
-

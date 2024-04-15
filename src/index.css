@@ -1550,3 +1550,23 @@ body {
   flex-direction: column;
   gap: 20px;
 }
+
+.quantity-button {
+  display: flex;
+
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+  
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+
+.quantity-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
