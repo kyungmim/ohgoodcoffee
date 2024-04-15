@@ -1,20 +1,23 @@
 import PlusIcon from '@public/plus.svg';
 import EqualIcon from '@public/equal_icon.svg';
 import { Link } from 'react-router-dom';
-import Api from '@utils/Api';
 import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
 import CartListItem from '@pages/CartListItem';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function CartList() {
-  const { cartProducts, setCartProducts } = useUserStore();
+  const axios = useCustomAxios();
   const { user } = useUserStore();
   const [fetch, setFetch] = useState(false);
-  const { useGetCartProducts } = Api();
 
-  console.log('USER', user);
-
-  const { data } = useGetCartProducts(fetch);
+  const { data } = useQuery({
+    queryKey: ['carts'],
+    queryFn: () => axios.get('/carts'),
+    select: (response) => response.data.item,
+    enabled: fetch,
+  });
 
   useEffect(() => {
     if (user) {
@@ -22,29 +25,7 @@ function CartList() {
     }
   }, [user]);
 
-  useEffect(() => {
-    if (data) {
-      console.log('DAtA111', data);
-      setCartProducts(data);
-    }
-  }, [data]);
-
-  // useEffect(() => {
-  //   console.log('API Data received:', data);
-  //   if (data) {
-  //     setCartProducts(data);
-  //   }
-  // }, [data]);
-
-  useEffect(() => {
-    console.log('Updated cart products in store:', cartProducts);
-  }, [cartProducts]);
-
-  const itemList = cartProducts?.map((item) => <CartListItem key={item._id} item={item} />);
-
-  console.log('itemList1', itemList);
-
-  // console.log(Array.isArray(cartProducts));
+  const itemList = data?.map((item) => <CartListItem key={item._id} item={item} />);
 
   return (
     <>

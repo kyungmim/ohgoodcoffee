@@ -1,4 +1,4 @@
-import Api from '@utils/Api';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 
@@ -7,10 +7,8 @@ CartListItem.propTypes = {
 };
 
 function CartListItem({ item }) {
+  const axios = useCustomAxios();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
-  const { postCart, getCartProducts } = Api();
-
-  console.log("cartListItem", item)
 
   useEffect(() => {
     console.log('productQuantity', productQuantity, 'id', item._id);
@@ -24,8 +22,8 @@ function CartListItem({ item }) {
   }, [productQuantity]);
 
   async function handleRequest(cart) {
-    await postCart(cart);
-    await getCartProducts();
+    await axios.post('/carts', cart);
+    await axios.get('/carts');
   }
 
   return (

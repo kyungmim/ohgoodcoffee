@@ -5,13 +5,11 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useState } from 'react';
-import Api from '@utils/Api';
 
 function MarketDetail() {
   const axios = useCustomAxios();
   const { _id } = useParams();
   const [productQuantity, setProductQuantity] = useState(1);
-  const { postCart } = Api();
 
   const { data } = useQuery({
     queryKey: ['products', _id],
@@ -24,7 +22,8 @@ function MarketDetail() {
 
   const handelSubmitCart = async () => {
     let cart = { product_id: Number(_id), quantity: productQuantity };
-    await postCart(cart);
+    await axios.post('/carts', cart);
+    alert('해당 상품이 장바구니에 추가되었습니다.');
   };
 
   return (

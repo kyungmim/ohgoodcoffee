@@ -6,10 +6,6 @@ MarketListItem.propTypes = {
 };
 
 function MarketListItem({ item }) {
-  // console.log('item', item._id);
-
-  // console.log('itemURL', item.mainImages[0]?.fileName);
-
   return (
     <>
       <li>

@@ -3,22 +3,23 @@ import coffee_1 from '@public/coffee-1.jpg';
 import coffee_2 from '@public/coffee-2.jpg';
 import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
-import { useEffect } from 'react';
-import Api from '@utils/Api';
-import useUserStore from '@zustand/store';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function Mainpage() {
-  const { newProducts, setNewProducts } = useUserStore();
-  const { useGetProducts } = Api();
+  const axios = useCustomAxios();
 
-  const { data } = useGetProducts();
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+  });
 
-  useEffect(() => {
-    // console.log('DAtA', data);
-    setNewProducts(data);
-  }, [data]);
-
-  const itemList = newProducts?.map((item) => <MarketListItem key={item._id} item={item} />);
+  let itemList = [];
+  if (data?.length > 0) {
+    let newData = data.filter((item) => item.extra?.isNew).slice(0, 4);
+    itemList = newData.map((item) => <MarketListItem key={item._id} item={item} />);
+  }
 
   return (
     <>
