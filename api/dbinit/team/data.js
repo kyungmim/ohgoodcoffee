@@ -1925,7 +1925,12 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '버터 팻 트리오 Butter Fat Trio',
-            image: `/files/anthracitecoffee_product_01.jpg`,
+            mainImages: [
+              {
+                url: `/files/anthracitecoffee_product_01.jpg`,
+                fileName: 'anthracitecoffee_product_01.jpg',
+              },
+            ],
             quantity: 1,
             price: 13000,
             reply_id: 3,
@@ -1957,7 +1962,12 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '히스토리 미스터리 History Mystery',
-            image: `/files/anthracitecoffee_product_02.jpg`,
+            mainImages: [
+              {
+                url: `/files/anthracitecoffee_product_02.jpg`,
+                fileName: 'anthracitecoffee_product_02.jpg',
+              },
+            ],
             quantity: 1,
             price: 12000,
             reply_id: 3,
@@ -1989,7 +1999,12 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '케냐 AA Top 키리아이니 Kenya AA Top Kiriaini',
-            image: `/files/anthracitecoffee_product_04.jpg`,
+            mainImages: [
+              {
+                url: `/files/anthracitecoffee_product_04.jpg`,
+                fileName: 'anthracitecoffee_product_04.jpg',
+              },
+            ],
             quantity: 1,
             price: 17000,
             reply_id: 3,
@@ -2021,7 +2036,12 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 24개입 [3종]',
-            image: `/files/bonanzacoffee_products_01.jpg`,
+            mainImages: [
+              {
+                url: `/files/bonanzacoffee_products_01.jpg`,
+                fileName: 'bonanzacoffee_products_01.jpg',
+              },
+            ],
             quantity: 1,
             price: 32000,
             reply_id: 3,
@@ -2053,7 +2073,12 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 블렌드 콜롬비아 & 브라질 250g',
-            image: `/files/bonanzacoffee_products_02.jpg`,
+            mainImages: [
+              {
+                url: `/files/bonanzacoffee_products_02.jpg`,
+                fileName: 'bonanzacoffee_products_02.jpg',
+              },
+            ],
             quantity: 1,
             price: 18900,
             reply_id: 3,
@@ -2085,7 +2110,12 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: `/files/bonanzacoffee_products_03.jpg`,
+            mainImages: [
+              {
+                url: `/files/bonanzacoffee_products_03.jpg`,
+                fileName: 'bonanzacoffee_products_03.jpg',
+              },
+            ],
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2117,7 +2147,12 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: `/files/bonanzacoffee_products_03.jpg`,
+            mainImages: [
+              {
+                url: `/files/bonanzacoffee_products_03.jpg`,
+                fileName: 'bonanzacoffee_products_03.jpg',
+              },
+            ],
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2149,7 +2184,12 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: `/files/bonanzacoffee_products_03.jpg`,
+            mainImages: [
+              {
+                url: `/files/bonanzacoffee_products_03.jpg`,
+                fileName: 'bonanzacoffee_products_03.jpg',
+              },
+            ],
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2181,8 +2221,13 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '히스토리 미스터리 History Mystery',
-            image: `/files/anthracitecoffee_product_02.jpg`,
-            quantity: 1, 
+            mainImages: [
+              {
+                url: `/files/anthracitecoffee_product_02.jpg`,
+                fileName: 'anthracitecoffee_product_02.jpg',
+              },
+            ],
+            quantity: 1,
             price: 12000,
             reply_id: 3,
           },
