@@ -1,5 +1,8 @@
 import Plus from '@public/plus.svg';
 import Minus from '@public/dash_icon.svg';
+import Wishlist_Dis from '@public/wishlist_dis.svg';
+import yozm from '@public/yozm.png';
+import yozm_Descs from '@public/yozm-descs.png';
 
 function MarketDetail() {
   return (
@@ -7,14 +10,14 @@ function MarketDetail() {
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img className="market-overview-cover" src="public/yozm.png" alt="요즘 그릭요거트" />
+            <img className="market-overview-cover" src={yozm} alt="요즘 그릭요거트" />
             <div className="market-overview-desc">
               <div className="overview-header">
                 <p className="overview-title">카카오그래놀라 그릭요거트 120g X 3개</p>
                 <div className="overview-row">
                   <p className="overview-price">35,000 원</p>
                   <div className="overview-wishlist">
-                    <img className="wishlist-icon" src="src/assets/wishlist.png" />
+                    <img className="wishlist-icon" src={Wishlist_Dis} />
                     <p className="wishlist-count">0</p>
                   </div>
                 </div>
@@ -52,7 +55,7 @@ function MarketDetail() {
             </div>
           </div>
           <div className="market-overview-bottom">
-            <img src="public/yozm-descs.png" alt="yozm 상세정보" />
+            <img src={yozm_Descs} alt="yozm 상세정보" />
           </div>
         </div>
       </section>

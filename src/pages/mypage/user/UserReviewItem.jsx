@@ -1,4 +1,12 @@
-function UserReviewItem() {
+import PropTypes from 'prop-types';
+
+UserReviewItem.propTypes = {
+  item: PropTypes.object.isRequired,
+};
+
+function UserReviewItem({ item }) {
+  console.log('item', item);
+
   return (
     <>
       <div className="l_wrapper">
@@ -6,10 +14,10 @@ function UserReviewItem() {
           <div className="main-content">
             <div className="review-list">
               <div className="review">
-                <p>brand</p>
+                <p>{item.brand}</p>
                 <div className="review-contents">
-                  <p className="review-content-desc">만족해요~!</p>
-                  <p className="review-content-time">2024-02-20</p>
+                  <p className="review-content-desc">{item.contents}</p>
+                  <p className="review-content-time">{item.createdAt}</p>
                 </div>
               </div>
               <div className="review">
