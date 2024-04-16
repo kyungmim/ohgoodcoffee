@@ -1,6 +1,14 @@
 import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
-function MagazineListItem() {
+MagazineListItem.propTypes = {
+  item: PropTypes.shape({
+    _id: PropTypes.number,
+    title: PropTypes.string,
+  }),
+};
+
+function MagazineListItem({ item }) {
   return (
     <>
       <li>
