@@ -2107,6 +2107,102 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-6, -60 * 60 * 3),
         updatedAt: getTime(-6, -60 * 60 * 3),
       },
+      {
+        _id: await nextSeq('order'),
+        user_id: 2,
+        state: 'OS020',
+        products: [
+          {
+            _id: 1,
+            seller_id: 2,
+            state: 'OS020',
+            name: '보난자 드립백 5개입 3종 + 드립 어시스트',
+            image: `/files/bonanzacoffee_products_03.jpg`,
+            quantity: 2,
+            price: 45000,
+            reply_id: 3,
+          },
+        ],
+        cost: {
+          products: 45000,
+          shippingFees: 3000,
+          discount: {
+            products: 0,
+            shippingFees: 0,
+          },
+          total: 48000,
+        },
+        address: {
+          name: '회사',
+          value: '서울시 강남구 신사동 234',
+        },
+        createdAt: getTime(-6, -60 * 60 * 3),
+        updatedAt: getTime(-6, -60 * 60 * 3),
+      },
+      {
+        _id: await nextSeq('order'),
+        user_id: 2,
+        state: 'OS020',
+        products: [
+          {
+            _id: 1,
+            seller_id: 2,
+            state: 'OS020',
+            name: '보난자 드립백 5개입 3종 + 드립 어시스트',
+            image: `/files/bonanzacoffee_products_03.jpg`,
+            quantity: 2,
+            price: 45000,
+            reply_id: 3,
+          },
+        ],
+        cost: {
+          products: 45000,
+          shippingFees: 3000,
+          discount: {
+            products: 0,
+            shippingFees: 0,
+          },
+          total: 48000,
+        },
+        address: {
+          name: '회사',
+          value: '서울시 강남구 신사동 234',
+        },
+        createdAt: getTime(-6, -60 * 60 * 3),
+        updatedAt: getTime(-6, -60 * 60 * 3),
+      },
+      {
+        _id: await nextSeq('order'),
+        user_id: 2,
+        state: 'OS020',
+        products: [
+          {
+            _id: 1,
+            seller_id: 1,
+            state: 'OS020',
+            name: '히스토리 미스터리 History Mystery',
+            image: `/files/anthracitecoffee_product_02.jpg`,
+            quantity: 1, 
+            price: 12000,
+            reply_id: 3,
+          },
+        ],
+        cost: {
+          products: 12000,
+          shippingFees: 3000,
+          discount: {
+            products: 0,
+            shippingFees: 0,
+          },
+          total: 15000,
+        },
+        address: {
+          name: '회사',
+          value: '서울시 강남구 신사동 234',
+        },
+        createdAt: getTime(-6, -60 * 60 * 3),
+        updatedAt: getTime(-6, -60 * 60 * 3),
+      },
     ],
     // 후기
     reply: [
@@ -2350,7 +2446,7 @@ export const initData = async (nextSeq) => {
     cart: [
       {
         _id: await nextSeq('cart'),
-        user_id: 4,
+        user_id: 1,
         product_id: 1,
         quantity: 2,
         createdAt: getTime(-7, -60 * 30),
@@ -2358,7 +2454,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 4,
+        user_id: 1,
         product_id: 2,
         quantity: 1,
         createdAt: getTime(-4, -60 * 30),
@@ -2366,7 +2462,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 2,
+        user_id: 1,
         product_id: 3,
         quantity: 2,
         createdAt: getTime(-3, -60 * 60 * 4),
