@@ -1,10 +1,18 @@
 import { create } from 'zustand';
+import { persist } from 'zustand/middleware';
 
-const useUserStore = create((set) => ({
-  user: null,
-  setUser: (user) => set({ user }), // 사용자 상태 업데이트 함수 수정
-  token: null,
-  setToken: (newToken) => set({ token: newToken }),
-}));
+const useUserStore = create(
+  persist(
+    (set) => ({
+      token: null,
+      user: null,
+      setUserId: (token) => set({ token }),
+      setUser: (user) => set({ user }),
+    }),
+    {
+      name: 'Acctoken',
+    },
+  ),
+);
 
 export default useUserStore;
