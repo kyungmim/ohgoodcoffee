@@ -19,19 +19,15 @@ function SellerInfoEdit() {
       address: `${user.address}`,
     },
   });
+  console.log('업뎃전', user);
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.patch(`/users/${user._id}`, formData);
-      const newInfo = res.data.updated;
-      setUser({
-        name: newInfo.name,
-        email: newInfo.email,
-        phone: newInfo.phone,
-        address: newInfo.address,
-      });
+      setUser((user.name = res.name));
       // window.location.reload();
-      // navigate('/sellerinfo');
+      // navigate('/sellerinfo');```
+      console.log('업뎃후', user);
     } catch (err) {
       console.log(err);
     }

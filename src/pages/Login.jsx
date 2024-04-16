@@ -1,7 +1,7 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store.js';
 import { useForm } from 'react-hook-form';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 function Login() {
   const { register, handleSubmit } = useForm({
@@ -12,21 +12,19 @@ function Login() {
   });
   const navigate = useNavigate();
   const axios = useCustomAxios();
-  const { setUserId, setUser } = useUserStore();
+  const { setUser } = useUserStore();
+  const location = useLocation();
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.post('/users/login', formData);
       alert(res.data.item.name + '님 로그인되었습니다 :)');
-      console.log(res);
-      const accToken = res.data.item.token.accessToken;
       const user = res.data.item;
-      setUserId(accToken);
-      setUser(user);
       console.log(user);
+      setUser(user);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
-      alert(err.response?.data.message);
+      console.log(err.response?.data.message);
     }
   };
 

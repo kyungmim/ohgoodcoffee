@@ -4,12 +4,12 @@ import useUserStore from '@zustand/store.js';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
-  const { token } = useUserStore();
+  const { user } = useUserStore();
   const clearUserIdStorage = useUserStore.persist.clearStorage;
   const navigate = useNavigate();
 
   const onClickLogout = () => {
-    if (token) {
+    if (user) {
       navigate('mainpage');
       window.location.reload();
       clearUserIdStorage();
@@ -35,7 +35,7 @@ function Header() {
                 <img src={logo} alt="로고" />
               </Link>
             </li>
-            <li>{token ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+            <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
             <li>
               <Link to="/mypage">My</Link>
             </li>

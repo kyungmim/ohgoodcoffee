@@ -10,8 +10,6 @@ function SellerInfo() {
     setInfo(!info);
   };
 
-  console.log(user);
-
   return (
     <>
       <div className="l_wrapper">
