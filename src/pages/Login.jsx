@@ -23,6 +23,7 @@ function Login() {
       const user = res.data.item;
       setUserId(accToken);
       setUser(user);
+      console.log(user);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
       alert(err.response?.data.message);

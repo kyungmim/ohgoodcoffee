@@ -12,8 +12,6 @@ function SignUp() {
   const axios = useCustomAxios();
   const navigate = useNavigate();
 
-  console.log(errors);
-
   const onSignup = async (formData) => {
     console.log(formData);
     try {

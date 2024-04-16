@@ -3,6 +3,9 @@ function SellerUploadProduct() {
     <>
       <div className="l_wrapper">
         <div className="item-wrapper">
+          <div className="main-title">
+            <p className="main-contents-title">상품 등록</p>
+          </div>
           <div className="main-content">
             <form className="signup_form">
               <fieldset className="signup-layout">

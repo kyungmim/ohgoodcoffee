@@ -125,6 +125,10 @@ body {
   color: var(--color-warning);
 }
 
+.menu-item {
+  cursor: pointer;
+}
+
 /* header, footer */
 .header {
   background-color: var(--color-primary);
@@ -134,6 +138,10 @@ body {
   box-sizing: border-box;
   display: flex;
   align-items: center;
+}
+
+.header-nav > li {
+  cursor: pointer;
 }
 
 .l_wrapper {
@@ -1563,11 +1571,10 @@ body {
   height: 26px;
   align-items: center;
   justify-content: center;
-  
+
   border: 1px solid black;
   cursor: pointer;
 }
-
 
 .quantity-row {
   display: flex;
