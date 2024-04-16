@@ -30,9 +30,21 @@ textarea {
   display: block;
   width: 100%;
 }
+/* 스크롤바 커스텀 시작 */
+::-webkit-scrollbar {
+  width: 6px;
+}
 
-textarea::-webkit-scrollbar {
-  width: 30px;
+/* 스크롤바 핸들 */
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-black-30);
+  border-radius: 12px;
+}
+
+/* 스크롤바 배경 */
+::-webkit-scrollbar-track {
+  background-color: var(--color-gray-30);
+  border-radius: 12px;
 }
 
 /* textarea::-webkit-scrollbar-track {
@@ -625,6 +637,10 @@ body {
   border: 1px solid var(--color-gray-10);
   padding: 10px 1rem;
   box-sizing: border-box;
+}
+
+.type-textarea {
+  height: 120px;
 }
 
 .signup_form {

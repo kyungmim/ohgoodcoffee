@@ -20,7 +20,6 @@ function Login() {
       const res = await axios.post('/users/login', formData);
       alert(res.data.item.name + '님 로그인되었습니다 :)');
       const user = res.data.item;
-      console.log(user);
       setUser(user);
       navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
