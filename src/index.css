@@ -526,7 +526,6 @@ body {
   padding: 10px;
   border-bottom: solid 2px var(--color-gray-20);
   margin-top: 20px;
-  /* display: none; */
 }
 
 .order-header {
@@ -591,11 +590,10 @@ body {
 /* user-orderlist-arcodian-section */
 
 .accordion_wrap {
-  /* display: none; */
+  /* display: hidden; */
 }
 
 .order-detail {
-  /* display: hidden; */
   padding: 0 20px;
 }
 
@@ -626,7 +624,6 @@ body {
 .order-footer {
   margin-top: 20px;
   padding: 0 20px;
-  /* display: none; */
 }
 
 .order-footer-title {
