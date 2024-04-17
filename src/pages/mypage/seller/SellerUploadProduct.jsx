@@ -1,5 +1,7 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
+import { useNavigate } from 'react-router-dom';
 
 function SellerUploadProduct() {
   const {
@@ -17,6 +19,8 @@ function SellerUploadProduct() {
     },
   });
   const axios = useCustomAxios();
+  const openModal = useModalStore((state) => state.openModal);
+  const navigate = useNavigate();
 
   const onSubmit = async (formData) => {
     try {
@@ -34,18 +38,25 @@ function SellerUploadProduct() {
           data: imageFormData,
         });
         console.log(fileRes);
-        // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
+        // 서버로부터 응답받은 이미지 이름을  정보에 포함
         formData.mainImages = fileRes.data.item[0].name;
       } else {
-        // profileImage 속성을 제거
+        // mainImages 속성을 제거
         delete formData.mainImages;
       }
-      const res = await axios.post('/seller/products', formData);
+      const res = await axios.post('seller/products', formData);
       console.log(res);
-      // alert(res.data.item.name + '이 등록 되었습니다.');
+      openModal({
+        content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
+        callbackButton: {
+          확인: () => {
+            navigate('/seller/mypage', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
     } catch (err) {
       console.log(err);
-      // alert(err.response?.data.message);
     }
   };
 
