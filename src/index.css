@@ -426,7 +426,6 @@ body {
   width: 100%;
   padding: 30px;
   box-sizing: border-box;
-  padding-bottom: 40px;
   border-bottom: solid 2px var(--color-gray-30);
 }
 
