@@ -531,27 +531,24 @@ body {
 }
 
 .order {
-  border-bottom: solid 2px var(--color-gray-30);
   margin-bottom: 100px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
 }
 
 .order-list {
-  margin-top: 30px;
   background-color: var(--color-white);
   width: 100%;
-  padding: 30px;
   box-sizing: border-box;
-  border-bottom: solid 2px var(--color-gray-30);
+  /* border-bottom: solid 2px var(--color-gray-30); */
 }
 
 .order-item-container {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 10px;
+  padding: 10px;
   border-bottom: solid 2px var(--color-gray-20);
+  margin-top: 20px;
 }
 
 .order-header {
@@ -560,12 +557,17 @@ body {
 }
 
 .order-number {
-  flex-basis: 200px;
+  flex-basis: 70px;
   color: var(--color-gray-30);
 }
 
 .order-date {
-  flex-basis: 200px;
+  flex-basis: 70px;
+  color: var(--color-gray-30);
+  margin-left: auto;
+}
+
+.date.type_gray {
   color: var(--color-gray-30);
 }
 
@@ -573,7 +575,7 @@ body {
   margin-top: 20px;
   display: flex;
   gap: 10px;
-  padding-bottom: 20px;
+  padding: 0 20px 20px 20px;
   border-bottom: solid 2px var(--color-gray-20);
 }
 
@@ -610,8 +612,12 @@ body {
 
 /* user-orderlist-arcodian-section */
 
-.order-detail {
+.accordion_wrap {
   /* display: hidden; */
+}
+
+.order-detail {
+  padding: 0 20px;
 }
 
 .order-detail-title {
@@ -640,7 +646,7 @@ body {
 
 .order-footer {
   margin-top: 20px;
-  /* display: none; */
+  padding: 0 20px;
 }
 
 .order-footer-title {
@@ -670,7 +676,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
   cursor: pointer;
-  /* display: hidden; */
+  border-bottom: solid 1px var(--color-gray-30);
 }
 
 /*  user, seller - wishlist  */
