@@ -1,7 +1,18 @@
 import TopLine from '@public/ogc-top-line.svg';
 import MarketListItem from './MarketListItem';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function MarketList() {
+  const axios = useCustomAxios();
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+  });
+
+  const itemList = data?.map((item) => <MarketListItem key={item._id} item={item} />);
+
   return (
     <>
       <section className="section type_market">
@@ -13,7 +24,7 @@ function MarketList() {
 
           <div className="section-filter">
             <p className="section-count">POSTING</p>
-            <span className="section-count num">16</span>
+            <span className="section-count num">{itemList?.length}</span>
             <div className="section-aside">
               <select className="drop-menu" id="type">
                 <option selected>등록순</option>
@@ -25,20 +36,7 @@ function MarketList() {
           </div>
 
           <div className="section-grid">
-            <ul className="grid">
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-              <MarketListItem />
-            </ul>
+            <ul className="grid">{itemList}</ul>
           </div>
         </div>
       </section>

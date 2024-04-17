@@ -3,8 +3,24 @@ import coffee_1 from '@public/coffee-1.jpg';
 import coffee_2 from '@public/coffee-2.jpg';
 import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
+import { useQuery } from '@tanstack/react-query';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function Mainpage() {
+  const axios = useCustomAxios();
+
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+  });
+
+  let itemList = [];
+  if (data?.length > 0) {
+    let newData = data.filter((item) => item.extra?.isNew).slice(0, 4);
+    itemList = newData.map((item) => <MarketListItem key={item._id} item={item} />);
+  }
+
   return (
     <>
       <main className="main">
@@ -90,12 +106,7 @@ function Mainpage() {
               <div className="contents-header">
                 <h2 className="content-title">NEW PRODUCT</h2>
               </div>
-              <ul className="grid">
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-                <MarketListItem />
-              </ul>
+              <ul className="grid">{itemList}</ul>
             </div>
           </div>
           {/* <!-- l wrapper --> */}

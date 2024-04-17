@@ -11,6 +11,7 @@ export default defineConfig({
       { find: '@public', replacement: '/public/' },
       { find: '@components', replacement: '/src/components' },
       { find: '@pages', replacement: '/src/pages' },
+      { find: '@utils', replacement: '/src/utils' },
       { find: '@hooks', replacement: '/src/hooks' },
       { find: '@zustand', replacement: '/src/zustand' },
     ],

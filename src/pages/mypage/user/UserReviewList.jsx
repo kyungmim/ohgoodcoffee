@@ -1,19 +1,36 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import UserReviewItem from '@pages/mypage/user/UserReviewItem';
-import { useQuery } from '@tanstack/react-query';
+import { useEffect, useState } from 'react';
 
 function UserReviewList() {
   const axios = useCustomAxios();
+  const [data, setData] = useState();
+  console.log(data);
 
-  const { data } = useQuery({
-    queryKey: ['/replies'],
-    queryFn: () => axios.get('/replies'),
-    select: (response) => response.data,
-  });
+  const list = async () => {
+    const response = await axios.get('/replies');
+    setData(response.data);
+  };
 
-  const itemList = data?.item.map((item) => <UserReviewItem key={item._id} item={item} />);
+  useEffect(() => {
+    console.log(list());
+  }, []);
 
-  return <>{itemList}</>;
+  const item = data?.item?.map((item) => <UserReviewItem key={item._id} item={item} />);
+
+  // return <UserReviewItem itemlist={itemlist} />;
+  return (
+    <div className="l_wrapper">
+      <div className="item-wrapper">
+        <div className="main-title">
+          <p className="main-contents-title">내가 쓴 리뷰</p>
+        </div>
+        <div className="main-content">
+          <div className="review-list">{item}</div>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default UserReviewList;
