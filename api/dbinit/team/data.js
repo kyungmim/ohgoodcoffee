@@ -54,6 +54,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '04-23',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -81,6 +82,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC03',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -108,6 +110,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -130,6 +133,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -152,6 +156,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-28',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -174,6 +179,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -196,6 +202,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
+          images: [],
           addressBook: [
             {
               id: 1,
@@ -220,6 +227,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
+                images: [],
                 addressBook: [
                   {
                     id: 1,
@@ -242,6 +250,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
+                images: [],
                 addressBook: [
                   {
                     id: 1,
@@ -264,6 +273,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
+                images: [],
                 addressBook: [
                   {
                     id: 1,
@@ -570,8 +580,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_01.png`,
-            fileName: 'bonanzacoffee_products_01.png',
+            url: `/files/bonanzacoffee_products_01.jpg`,
+            fileName: 'bonanzacoffee_products_01.jpg',
           },
         ],
         detailImages: [
@@ -887,6 +897,42 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
+        seller_id: 3,
+        price: 55000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '킵댓 스무스 블렌드(Smooth) 1kg [원산지:국산(경기도 수원시 팔달구)]',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/keepthatcoffee_products_04.jpg`,
+            fileName: 'keepthatcoffee_products_04.jpg',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/keepthatcoffee_products_04_fullpage.png`,
+            fileName: 'keepthatcoffee_products_04_fullpage.png',
+          },
+        ],
+        content: `
+          <div class="product-detail">
+            <p>생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.</p>
+          </div>`,
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: false,
+          isBest: false,
+          category: ['coffee'],
+          brand: 'keepthatcoffee',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
         seller_id: 4,
         price: 2000,
         shippingFees: 3000,
@@ -1005,8 +1051,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_04.jpg`,
-            fileName: 'milestonecoffee_products_04.jpg',
+            url: `/files/milestonecoffee_products_04.jpeg`,
+            fileName: 'milestonecoffee_products_04.jpeg',
           },
         ],
         detailImages: [
@@ -1881,37 +1927,6 @@ export const initData = async (nextSeq) => {
           sort: 2,
         },
       },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 5,
-        price: 12000,
-        shippingFees: 3000,
-        show: false,
-        active: true,
-        name: '오리지널 스무스 피넛버터',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/sample-dog.jpg`,
-            fileName: 'sample-dog.jpg',
-            orgName: '스턴트 독.jpg',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p> 땅콩, 소금으로만 만든 잼. 단맛은 거의 없고 땅콩 특유의 고소한 맛이 진해요. 추천 레시피는 오트밀과의 조합! 냉장고에서 바로 꺼내 즐기면 카라멜처럼 꾸덕하고, 실온에 잠시 꺼내두면 스프레드처럼 연하고 부드러워지니 취향에 맞게 즐겨주세요. </p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['goods'],
-          brand: '넛셰드',
-          sort: 3,
-        },
-      },
     ],
     // 주문
     order: [
@@ -2182,7 +2197,7 @@ export const initData = async (nextSeq) => {
             state: 'OS020',
             name: '히스토리 미스터리 History Mystery',
             image: `/files/anthracitecoffee_product_02.jpg`,
-            quantity: 1, 
+            quantity: 1,
             price: 12000,
             reply_id: 3,
           },
