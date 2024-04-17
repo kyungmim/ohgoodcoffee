@@ -8,9 +8,8 @@ UserOrderListItem.propTypes = {
 };
 
 function UserOrderListItem({ item }) {
-  // console.log(item);
+  console.log(item);
   const { user } = useUserStore();
-  const orders = item?.products?.map();
 
   return (
     <>
