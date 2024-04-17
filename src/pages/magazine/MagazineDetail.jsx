@@ -7,7 +7,7 @@ function MagazineDetail() {
         <div className="l_wrapper">
           <div className="magazine-desc-header">
             <h2 className="magazine-desc-header-title">편안함 속에서 공유하는 즐거움, COEO(코에오)</h2>
-            <p className="magazine-desc-header-date">2024-04-01 조회 72</p>
+            <p className="magazine-desc-header-date">2024-04-01 조회 70</p>
           </div>
           <div className="magazine-desc-contents">
             <img className="magazine-desc-img" src={cafeCoeo} />

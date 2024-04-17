@@ -2515,7 +2515,7 @@ export const initData = async (nextSeq) => {
           title: '편안함 속에서 공유하는 즐거움, COEO(코에오)',
           content: `<div className="magazine-desc-contents">
           <img className="magazine-desc-img" src={cafeCoeo} />
-          <h3 className="magazine-desc-subheading">COFFEE.HUMAN.LOVE LIFE</h3>
+          <h3 className="magazine-desc-subheading">COFFEE.HUMAN.LOVE LIFEe</h3>
           <h4 className="magazine-desc-subheading">편안함 속에서 공유하는 즐거움, COEO(코에오)</h4>
           <p className="magazine-desc-paragraph">
             에디터/포토 지우탁
