@@ -263,10 +263,6 @@ body {
   margin-bottom: 70px;
 }
 
-.button.with_padding {
-  padding: 0 10px;
-}
-
 /*  Layouts  */
 
 .grid {
@@ -417,9 +413,11 @@ body {
 }
 
 .order {
-  background-color: var(--color-white);
   border-bottom: solid 2px var(--color-gray-30);
   margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .order-list {
@@ -495,6 +493,10 @@ body {
 
 /* user-orderlist-arcodian-section */
 
+.order-detail {
+  /* display: hidden; */
+}
+
 .order-detail-title {
   color: var(--color-gray-30);
   padding: 20px 0;
@@ -521,6 +523,7 @@ body {
 
 .order-footer {
   margin-top: 20px;
+  /* display: none; */
 }
 
 .order-footer-title {
@@ -550,6 +553,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
   cursor: pointer;
+  /* display: hidden; */
 }
 
 /*  user, seller - wishlist  */
@@ -1239,24 +1243,11 @@ body {
   margin: 70px 0;
 }
 
-.cart-button {
-  display: flex;
-  justify-content: end;
-  gap: 10px;
-  font-size: 18px;
-  height: 50px;
-  box-sizing: border-box;  
-  font-weight: var(--fw-medium);
-  margin-bottom: 14px;
-}
-
-  
 .cart {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 
 .cart-title {
   width: 100%;
@@ -1276,7 +1267,7 @@ body {
   justify-content: center;
   flex-basis: 100px;
   flex-shrink: 0;
-  /* padding: 0 12px; */
+  padding: 0 12px;
 }
 
 .cart-procuct {
@@ -1286,10 +1277,6 @@ body {
 
 .cart-price {
   flex-basis: 200px;
-}
-
-.cart-text {
-  padding-left: 4px
 }
 
 .cart-item {
@@ -1584,7 +1571,7 @@ body {
   height: 26px;
   align-items: center;
   justify-content: center;
-  
+
   border: 1px solid black;
   cursor: pointer;
 }
@@ -1595,4 +1582,3 @@ body {
   align-items: center;
   justify-content: center;
 }
-
