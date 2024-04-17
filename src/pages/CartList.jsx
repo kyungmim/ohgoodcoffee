@@ -119,10 +119,9 @@ function CartList() {
   }
 
   const allChecked = () => {
-    console.log("ALLCHECKED :",selectedCartItem.length === items.length)
-    console.log("selectedCartItem.length", selectedCartItem.length)
+    console.log('ALLCHECKED :', selectedCartItem.length === items.length);
+    console.log('selectedCartItem.length', selectedCartItem.length);
     if (selectedCartItem.length === items.length) {
-
       setAllSelect(true);
     } else {
       setAllSelect(false);
@@ -138,10 +137,10 @@ function CartList() {
       <div className="contents-cart">
         <div className="l_wrapper">
           <div className="cart-button">
-            <button className="btn-null button with_padding" onClick={handleCleanUp}>
+            <button className="btn-null button-small button type-small-btn " onClick={handleCleanUp}>
               전체 삭제
             </button>
-            <button className="btn-Fill button-small">선택 삭제</button>
+            <button className="button btn-Fill button-small type-small-btn ">선택 삭제</button>
           </div>
           <div className="cart">
             <div className="cart-title">

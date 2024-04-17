@@ -20,26 +20,26 @@ function SellerUploadProduct() {
 
   const onSubmit = async (formData) => {
     try {
-      // if (formData.mainImages.length > 0) {
-      //   // 프로필 이미지를 추가한 경우
-      //   const imageFormData = new FormData();
-      //   imageFormData.append('attach', formData.mainImages[0]);
+      if (formData.mainImages.length > 0) {
+        // 프로필 이미지를 추가한 경우
+        const imageFormData = new FormData();
+        imageFormData.append('attach', formData.mainImages[0]);
 
-      //   const fileRes = await axios('/files', {
-      //     method: 'post',
-      //     headers: {
-      //       // 파일 업로드시 필요한 설정
-      //       'Content-Type': 'multipart/form-data',
-      //     },
-      //     data: imageFormData,
-      //   });
-      //   console.log(fileRes);
-      //   // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
-      //   formData.mainImages = fileRes.data.item[0].name;
-      // } else {
-      //   // profileImage 속성을 제거
-      //   delete formData.mainImages;
-      // }
+        const fileRes = await axios('/files', {
+          method: 'post',
+          headers: {
+            // 파일 업로드시 필요한 설정
+            'Content-Type': 'multipart/form-data',
+          },
+          data: imageFormData,
+        });
+        console.log(fileRes);
+        // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
+        formData.mainImages = fileRes.data.item[0].name;
+      } else {
+        // profileImage 속성을 제거
+        delete formData.mainImages;
+      }
       const res = await axios.post('/seller/products', formData);
       console.log(res);
       // alert(res.data.item.name + '이 등록 되었습니다.');
@@ -58,14 +58,14 @@ function SellerUploadProduct() {
           </div>
           <div className="main-content">
             <form className="signup_form" onSubmit={handleSubmit(onSubmit)}>
-              {/* <fieldset className="signup-layout">
+              <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="mainImages">
                   Photo<span className="signup-required-point">*</span>
                 </label>
                 <div className="form-input">
                   <input type="file" id="mainImages" {...register('mainImages')} />
                 </div>
-              </fieldset> */}
+              </fieldset>
 
               <fieldset className="signup-layout">
                 <label className="signup-sub-title" htmlFor="name">

@@ -1,4 +1,3 @@
-import logo from '@public/Logo.svg';
 import search from '@public/search_icon.svg';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
@@ -60,7 +59,8 @@ function Header() {
             </li>
             <li className="logo">
               <Link to="/mainpage">
-                <img src={logo} alt="로고" />
+                {/* <img src={logo} alt="로고" /> */}
+                Oh Good Coffee
               </Link>
             </li>
             <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
