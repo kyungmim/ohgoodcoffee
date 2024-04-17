@@ -26,6 +26,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC03',
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -54,7 +55,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '04-23',
           membershipClass: 'MC01',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -82,7 +83,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC03',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -133,7 +134,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -156,7 +157,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-28',
           membershipClass: 'MC01',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -179,7 +180,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -202,7 +203,7 @@ export const initData = async (nextSeq) => {
         extra: {
           birthday: '03-23',
           membershipClass: 'MC01',
-          images: [],
+          image: '',
           addressBook: [
             {
               id: 1,
@@ -227,7 +228,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
-                images: [],
+                image: '',
                 addressBook: [
                   {
                     id: 1,
@@ -250,7 +251,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
-                images: [],
+                image: '',
                 addressBook: [
                   {
                     id: 1,
@@ -273,7 +274,7 @@ export const initData = async (nextSeq) => {
               extra: {
                 birthday: '03-23',
                 membershipClass: 'MC01',
-                images: [],
+                image: '',
                 addressBook: [
                   {
                     id: 1,
@@ -1932,7 +1933,7 @@ export const initData = async (nextSeq) => {
     order: [
       {
         _id: await nextSeq('order'),
-        user_id: 1,
+        user_id: 2,
         state: 'OS020',
         products: [
           {
@@ -1940,12 +1941,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '버터 팻 트리오 Butter Fat Trio',
-            mainImages: [
-              {
-                url: `/files/anthracitecoffee_product_01.jpg`,
-                fileName: 'anthracitecoffee_product_01.jpg',
-              },
-            ],
+            image: 'anthracitecoffee_product_01.jpg',
             quantity: 1,
             price: 13000,
             reply_id: 3,
@@ -1969,7 +1965,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('order'),
-        user_id: 1,
+        user_id: 2,
         state: 'OS020',
         products: [
           {
@@ -1977,12 +1973,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '히스토리 미스터리 History Mystery',
-            mainImages: [
-              {
-                url: `/files/anthracitecoffee_product_02.jpg`,
-                fileName: 'anthracitecoffee_product_02.jpg',
-              },
-            ],
+            image: 'anthracitecoffee_product_02.jpg',
             quantity: 1,
             price: 12000,
             reply_id: 3,
@@ -2006,7 +1997,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('order'),
-        user_id: 1,
+        user_id: 2,
         state: 'OS020',
         products: [
           {
@@ -2014,12 +2005,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '케냐 AA Top 키리아이니 Kenya AA Top Kiriaini',
-            mainImages: [
-              {
-                url: `/files/anthracitecoffee_product_04.jpg`,
-                fileName: 'anthracitecoffee_product_04.jpg',
-              },
-            ],
+            image: 'anthracitecoffee_product_04.jpg',
             quantity: 1,
             price: 17000,
             reply_id: 3,
@@ -2043,7 +2029,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('order'),
-        user_id: 1,
+        user_id: 3,
         state: 'OS020',
         products: [
           {
@@ -2051,12 +2037,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 24개입 [3종]',
-            mainImages: [
-              {
-                url: `/files/bonanzacoffee_products_01.jpg`,
-                fileName: 'bonanzacoffee_products_01.jpg',
-              },
-            ],
+            image: 'bonanzacoffee_products_01.jpg',
             quantity: 1,
             price: 32000,
             reply_id: 3,
@@ -2088,12 +2069,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 블렌드 콜롬비아 & 브라질 250g',
-            mainImages: [
-              {
-                url: `/files/bonanzacoffee_products_02.jpg`,
-                fileName: 'bonanzacoffee_products_02.jpg',
-              },
-            ],
+            image: 'bonanzacoffee_products_02.png',
             quantity: 1,
             price: 18900,
             reply_id: 3,
@@ -2117,7 +2093,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('order'),
-        user_id: 1,
+        user_id: 3,
         state: 'OS020',
         products: [
           {
@@ -2125,12 +2101,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            mainImages: [
-              {
-                url: `/files/bonanzacoffee_products_03.jpg`,
-                fileName: 'bonanzacoffee_products_03.jpg',
-              },
-            ],
+            fileName: 'bonanzacoffee_products_03.jpg',
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2162,12 +2133,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            mainImages: [
-              {
-                url: `/files/bonanzacoffee_products_03.jpg`,
-                fileName: 'bonanzacoffee_products_03.jpg',
-              },
-            ],
+            image: 'bonanzacoffee_products_03.png',
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2191,7 +2157,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('order'),
-        user_id: 2,
+        user_id: 3,
         state: 'OS020',
         products: [
           {
@@ -2199,12 +2165,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            mainImages: [
-              {
-                url: `/files/bonanzacoffee_products_03.jpg`,
-                fileName: 'bonanzacoffee_products_03.jpg',
-              },
-            ],
+            image: 'bonanzacoffee_products_03.png',
             quantity: 2,
             price: 45000,
             reply_id: 3,
