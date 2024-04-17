@@ -433,9 +433,35 @@ body {
 
 .profile-content {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+}
+
+.profile-left {
+  display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 10px;
+}
+
+.profile-type {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-white);
+  text-transform: capitalize;
+  padding: 8px 12px;
+  background-color: var(--color-black-10);
+  width: 60px;
+  margin-left: auto;
+  margin-right: 30px;
+  text-align: center;
+}
+
+.profile-left > p > strong {
+  font-weight: 700;
+  font-size: 18px;
 }
 
 .profile-content-title {

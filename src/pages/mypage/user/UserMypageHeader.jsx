@@ -37,10 +37,13 @@ function UserMypageHeader() {
               <div className="user-info">
                 <img className="profile" src={profile} alt="회원 프로필 사진" />
                 <div className="profile-content">
-                  <p className="profile-content-title">
-                    <strong>{user.name}</strong> 안녕하세요 :)
-                  </p>
-                  <p className="profile-content-desc">누적금액 : 0원</p>
+                  <div className="profile-left">
+                    <p>
+                      <strong>{user.name}</strong>님 안녕하세요 :)
+                    </p>
+                    <p>누적 구매 금액 : 0원</p>
+                  </div>
+                  <p className="profile-type">{user.type}</p>
                 </div>
               </div>
 
