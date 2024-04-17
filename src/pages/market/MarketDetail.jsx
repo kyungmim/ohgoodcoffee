@@ -65,7 +65,7 @@ function MarketDetail() {
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`} alt={`${item.name} 상품 사진`} />
+            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages?.fileName}`} alt={`${item.name} 상품 사진`} />
             <div className="market-overview-desc">
               <div className="overview-header">
                 <p className="overview-title">{item.name}</p>
@@ -110,7 +110,7 @@ function MarketDetail() {
             </div>
           </div>
           <div className="market-overview-bottom">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
+            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
           </div>
         </div>
       </section>
