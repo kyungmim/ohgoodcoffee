@@ -15,7 +15,7 @@ function Mainpage() {
   });
 
   let itemList = [];
-  if (data?.length > 0) {
+  if (data && data?.length > 0) {
     let newData = data.filter((item) => item.extra?.isNew).slice(0, 4);
     itemList = newData.map((item) => <MarketListItem key={item._id} item={item} />);
   }
