@@ -5,6 +5,7 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 
 function MarketList() {
   const axios = useCustomAxios();
+
   const { data } = useQuery({
     queryKey: ['products'],
     queryFn: () => axios.get('/products'),
