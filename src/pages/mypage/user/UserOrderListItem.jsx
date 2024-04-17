@@ -8,19 +8,26 @@ UserOrderListItem.propTypes = {
 };
 
 function UserOrderListItem({ item }) {
-  console.log(item);
   const { user } = useUserStore();
 
   const productsList = item.products.map((product) => <UserOrderProductItem key={product._id} product={item.products[0]} />);
 
   return (
     <>
+      <div className="order-item-container">
+        <div className="order-header">
+          <p className="order-number">주문번호</p>
+          <p>20240404123456</p>
+        </div>
+        <div className="order-header">
+          <p className="order-date">주문일자</p>
+          <p className="date type_gray">2024-04-04</p>
+        </div>
+      </div>
       <div className="order-list">
         {productsList}
         {/* <!-- 아래부터 아코디언으로 오픈 예정 --> */}
-        {/* <div className="order-main-item-price">{item.cost.shippingFees}원</div>
-        <div className="order-main-item-status">주문완료</div> */}
-        <div className="Accordion_wrap">
+        <div className="accordion_wrap">
           <div className="order-detail">
             <div className="order-detail-title">구매자 정보</div>
             <div className="order-detail-list">
