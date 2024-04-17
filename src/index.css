@@ -21,12 +21,12 @@ a {
 
 fieldset,
 hr,
-textarea,
 button {
   all: unset;
 }
 
 textarea {
+  all: unset;
   display: block;
   width: 100%;
 }
@@ -78,7 +78,9 @@ img {
   max-width: 100%;
 }
 
-input {
+input[type='text'],
+input[type='file'],
+input[type='password'] {
   all: unset;
   display: block;
   inline-size: 100%;
@@ -101,10 +103,6 @@ body {
   background-color: #f6f6f8;
   color: #222222;
 }
-
-/* body:has(.modal.is_active) {
-  overflow: hidden;
-} */
 
 /* Variables */
 :root {
@@ -139,7 +137,6 @@ body {
   position: fixed;
   background-color: rgb(0 0 0 / 0.8);
 
-  /* 가득 채우기 */
   inset: 0;
 
   display: flex;
@@ -774,29 +771,6 @@ body {
   gap: 8px;
 }
 
-.form-input-radio {
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 2px solid var(--color-black-10);
-  box-sizing: border-box;
-  background-image: url(assets/check-nor.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px;
-  cursor: pointer;
-}
-
-.form-input-radio [type='radio']:checked {
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--color-black-10);
-  background-image: url(assets/check-sel.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 14px;
-  cursor: pointer;
-}
-
 .signup-select-box {
   display: flex;
   gap: 1.5rem;
@@ -816,8 +790,6 @@ body {
   background: transparent;
   border: 0 none;
   outline: 0 none;
-  position: relative;
-  z-index: 3;
 }
 .select option {
   background-color: var(--color-white);
@@ -1313,29 +1285,6 @@ body {
 
 /* Cart */
 
-.form-input-radio {
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 2px solid var(--color-black-10);
-  box-sizing: border-box;
-  background-image: url(assets/check-nor.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px;
-  cursor: pointer;
-}
-
-.form-input-radio [type='checkbox']:checked {
-  width: 1rem;
-  height: 1rem;
-  background-color: var(--color-black-10);
-  background-image: url(assets/check-sel.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px;
-  cursor: pointer;
-}
-
 .contents-cart {
   margin: 70px 0;
 }
@@ -1529,9 +1478,8 @@ body {
   gap: 30px;
 }
 
-.btn-naver,
 .btn-kakao {
-  background-color: #03c75a;
+  background-color: #ffe812;
   color: var(--color-white);
   font-size: 1.1rem;
   font-weight: 500;
@@ -1544,25 +1492,14 @@ body {
   gap: 6px;
 }
 
-.btn-naver::before,
 .btn-kakao::before {
   content: '';
   display: block;
-  width: 16px;
-  height: 16px;
-  background-repeat: no-repeat;
-  background-size: 16px;
-  background-image: url(assets/naver_inner_icon.svg);
-}
-.btn-kakao::before {
   background-image: url(assets/kakao_inner_icon.svg);
+  background-repeat: no-repeat;
   background-size: 20px;
   width: 20px;
   height: 20px;
-}
-
-.btn-kakao {
-  background-color: #ffe812;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@  signup  @@@@@@@@@@@@@@@@@@@@*/
@@ -1610,23 +1547,6 @@ body {
   gap: 8px;
 }
 
-.form-input-radio {
-  width: 1.2rem;
-  height: 1.2rem;
-  border: 2px solid var(--color-black-10);
-  box-sizing: border-box;
-  background-image: url(assets/check-nor.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px;
-  cursor: pointer;
-}
-
-.form-input-radio [type='radio']:checked {
-  background-color: var(--color-black-10);
-  background-image: url(assets/check-sel.svg);
-}
-
 .signup-select-box {
   display: flex;
   gap: 8px;
@@ -1644,15 +1564,6 @@ body {
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: right 10px center;
-}
-.select {
-  width: inherit;
-  height: inherit;
-  background: transparent;
-  border: 0 none;
-  outline: 0 none;
-  position: relative;
-  z-index: 3;
 }
 
 .signup-password-box {
