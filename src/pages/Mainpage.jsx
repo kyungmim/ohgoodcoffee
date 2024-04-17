@@ -51,7 +51,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>
@@ -73,7 +73,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>
@@ -95,7 +95,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>

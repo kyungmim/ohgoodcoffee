@@ -6,6 +6,9 @@ function SellerSalesListItem() {
     <>
       <div className="l_wrapper">
         <div className="item-wrapper">
+          <div className="main-title">
+            <p className="main-contents-title">상품 목록 조회</p>
+          </div>
           <div className="main-content">
             <div className="order">
               <div className="order-list">
