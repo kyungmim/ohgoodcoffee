@@ -1,11 +1,13 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
+import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 function SellerInfoEdit() {
   const axios = useCustomAxios();
   const { user, setUser } = useUserStore();
+  const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
   const {
     register,
@@ -24,15 +26,17 @@ function SellerInfoEdit() {
     try {
       const res = await axios.patch(`/users/${user._id}`, formData);
       setUser({ ...user, ...res.data.updated });
-      window.location.reload();
-      alert(`${user.name}님 회원정보가 수정되었습니다. :)`);
-      navigate('/sellerinfo');
-      console.log('업뎃후', user);
+      openModal({
+        content: `${res.data.updated.name}님 회원정보가 수정되었습니다. :)`,
+        callbackButton: {
+          확인: () => {
+            navigate(window.location.reload(), { state: { from: window.location.reload() } });
+          },
+        },
+      });
     } catch (err) {
       console.log(err);
     }
-
-    console.log(user);
   };
   return (
     <>
