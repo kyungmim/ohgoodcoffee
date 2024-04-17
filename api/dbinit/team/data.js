@@ -2508,7 +2508,36 @@ export const initData = async (nextSeq) => {
       },
     ],
     // QnA, 공지사항, 게시판
-    post: [],
+    post: [
+      [
+        {
+          _id: 1,
+          title: '연습용 매거진 장소',
+          content: '연습용 매거진 장소를 만들었다..!',
+          type: 'magazine',
+          extra: {
+            articleType: 'USEFUL',
+            images: ['cafe_coeo.jpeg', 'coffee-1.jpg'],
+          },
+          views: 2000,
+          createdAt: '2024.04.16 17:29:19',
+          updatedAt: '2024.04.16 17:29:19',
+        },
+        {
+          _id: 2,
+          title: '연습용 매거진 장소2',
+          content: '연습용 매거진 장소2를 만들었다..!',
+          type: 'magazine',
+          extra: {
+            articleType: 'FIENDLY',
+            images: ['cafe_coeo.jpeg', 'coffee-1.jpg'],
+          },
+          views: 50,
+          createdAt: '2024.04.16 17:29:07',
+          updatedAt: '2024.04.16 17:29:07',
+        },
+      ],
+    ],
     // 코드
     code: [
       {

@@ -1,0 +1,26 @@
+meta {
+  name: 매거진 등록
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{url}}/posts
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "title": "명소1",
+    "content": "아무거나1",
+    "type": "magazine",
+    "extra": {
+      "articleType": "FIENDLY",
+      "images": ["cafe_coeo.jpeg","coffee-1.jpg"]
+      
+    }
+  }
+  
+  
+}
