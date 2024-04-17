@@ -8,14 +8,20 @@ function SignUp() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    values: {
+      email: 'test30@market.com',
+      password: '11111111',
+      name: 'test',
+      address: '경기도 남양주시 어딘가',
+      phone: '01012345678',
+      type: 'seller',
+    },
+  });
   const axios = useCustomAxios();
   const navigate = useNavigate();
 
-  console.log(errors);
-
   const onSignup = async (formData) => {
-    console.log(formData);
     try {
       if (formData.profileImage.length > 0) {
         // 프로필 이미지를 추가한 경우

@@ -1,11 +1,11 @@
 meta {
-  name: 필수-구매 상세 조회
+  name: 필수-주문 상세 조회
   type: http
-  seq: 3
+  seq: 8
 }
 
-get {=
-  url: {{url}}/orders/
+get {
+  url: {{url}}/seller/orders/4
   body: none
   auth: bearer
 }

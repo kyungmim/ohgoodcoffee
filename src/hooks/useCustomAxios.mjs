@@ -1,5 +1,6 @@
 // hooks/useCustomAxios.js
 import useUserStore from '@zustand/store.js';
+import useModalStore from '@zustand/useModalStore.mjs';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 
@@ -12,6 +13,7 @@ function useCustomAxios() {
 
   // Zustand 스토어에서 사용자 정보 가져오기 및 설정하기
   const { user, setUser } = useUserStore();
+  const openModal = useModalStore((state) => state.openModal);
 
   // ajax 통신에 사용할 공통 설정 지정
   const instance = axios.create({
@@ -43,8 +45,21 @@ function useCustomAxios() {
       const { config, response } = err;
       if (response?.status === 401) {
         if (config.url === REFRESH_URL) {
-          const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
-          gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
+          // const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
+          // gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
+
+          // const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
+          // gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
+          openModal({
+            title: '로그인 알림',
+            content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+            callbackButton: {
+              확인: () => {
+                navigate('/users/login', { state: { from: location.pathname } });
+              },
+              취소: '',
+            },
+          });
         } else {
           const accessToken = await getAccessToken(instance);
           if (accessToken) {

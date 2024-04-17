@@ -1,12 +1,7 @@
-import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
-import { useEffect, useState } from 'react';
 
 function UserInfo() {
   const { user } = useUserStore();
-
-  // const item = data && data?.item?.map((item) => item);
-  // console.log(item);
 
   return (
     <>

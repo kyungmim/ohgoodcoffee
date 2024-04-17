@@ -1,5 +1,6 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store.js';
+import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 
@@ -11,21 +12,26 @@ function Login() {
     },
   });
   const navigate = useNavigate();
+  const openModal = useModalStore((state) => state.openModal);
   const axios = useCustomAxios();
-  const { setUserId, setUser } = useUserStore();
+  const { setUser } = useUserStore();
+  // const location = useLocation();
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.post('/users/login', formData);
-      alert(res.data.item.name + '님 로그인되었습니다 :)');
-      console.log(res);
-      const accToken = res.data.item.token.accessToken;
+      openModal({
+        content: `${res.data.item.name}님 로그인되었습니다 :)`,
+        callbackButton: {
+          확인: () => {
+            navigate('/', { state: { from: '/' } });
+          },
+        },
+      });
       const user = res.data.item;
-      setUserId(accToken);
       setUser(user);
-      navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
-      alert(err.response?.data.message);
+      console.log(err.response?.data.message);
     }
   };
 
@@ -81,7 +87,6 @@ function Login() {
             </div>
 
             <div className="social-btn">
-              <button className="button-large btn-naver">네이버 로그인</button>
               <button className="button-large btn-kakao">카카오 로그인</button>
             </div>
           </div>
