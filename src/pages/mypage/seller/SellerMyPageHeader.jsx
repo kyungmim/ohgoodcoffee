@@ -33,10 +33,13 @@ function SellerMyPageHeader() {
             <div className="user-info">
               <img className="profile" src={profile} alt="회원 프로필 사진" />
               <div className="profile-content">
-                <p>
-                  <strong>{user.name}</strong> 안녕하세요 :)
-                </p>
-                <p>누적 판매 금액 : 0원</p>
+                <div className="profile-left">
+                  <p>
+                    <strong>{user.name}</strong>님 안녕하세요 :)
+                  </p>
+                  <p>누적 판매 금액 : 0원</p>
+                </div>
+                <p className="profile-type">{user.type}</p>
               </div>
             </div>
 
