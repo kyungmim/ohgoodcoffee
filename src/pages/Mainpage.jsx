@@ -1,4 +1,3 @@
-import cover from '@public/cover-1.jpg';
 import coffee_1 from '@public/coffee-1.jpg';
 import coffee_2 from '@public/coffee-2.jpg';
 import coffee_3 from '@public/coffee-3.jpg';
@@ -16,7 +15,7 @@ function Mainpage() {
   });
 
   let itemList = [];
-  if (data?.length > 0) {
+  if (data && data?.length > 0) {
     let newData = data.filter((item) => item.extra?.isNew).slice(0, 4);
     itemList = newData.map((item) => <MarketListItem key={item._id} item={item} />);
   }
@@ -25,7 +24,7 @@ function Mainpage() {
     <>
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src={cover} alt="커피 커버 이미지" />
+          <img className="main-cover" src="src/assets/main-cover.jpg" alt="커피 커버 이미지" />
         </div>
 
         <div className="main-contents">
@@ -51,7 +50,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>
@@ -73,7 +72,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>
@@ -95,7 +94,7 @@ function Mainpage() {
                     ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                   </p>
 
-                  <button className="button button-small btn-null" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button">
                     MORE
                   </button>
                 </div>

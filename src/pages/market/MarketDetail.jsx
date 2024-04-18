@@ -1,5 +1,3 @@
-import Plus from '@public/plus.svg';
-import Minus from '@public/dash_icon.svg';
 import Wishlist_Dis from '@public/wishlist_dis.svg';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
@@ -23,8 +21,6 @@ function MarketDetail() {
   });
 
   const item = data?.item;
-
-  console.log('USER', user);
 
   async function handleSubmitCart() {
     let cart = { product_id: Number(_id), quantity: productQuantity };
@@ -60,12 +56,19 @@ function MarketDetail() {
     }
   }
 
+  const handleReduceQuantity = () => {
+    if (productQuantity > 1) {
+      setProductQuantity((prev) => prev - 1);
+    }
+  };
+
   return (
     <>
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`} alt={`${item.name} 상품 사진`} />
+            <img className="card-cover type-detail" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`} alt={`${item.name} 상품 사진`} />
+
             <div className="market-overview-desc">
               <div className="overview-header">
                 <p className="overview-title">{item.name}</p>
@@ -85,7 +88,7 @@ function MarketDetail() {
                 <div>
                   <div className="selling-row">
                     <div className="quantity-row">
-                      <div className="quantity-button" onClick={() => setProductQuantity((prev) => prev - 1)}>
+                      <div className="quantity-button" onClick={handleReduceQuantity}>
                         -{/* <img className="selling-icon down" src={Minus} />  */}
                       </div>
                       <div>
@@ -110,7 +113,7 @@ function MarketDetail() {
             </div>
           </div>
           <div className="market-overview-bottom">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
+            <img className="card-cover " src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
           </div>
         </div>
       </section>
