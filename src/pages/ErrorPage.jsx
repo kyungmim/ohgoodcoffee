@@ -1,8 +1,12 @@
 function ErrorPage() {
   return (
     <div>
-      <h2>에러 발생</h2>
-      <p>잠시후 다시 이용해 주세요.</p>
+      <div className="error-text">
+        <h1 className="error-code">404</h1>
+        <p className="error-text-item">Error Sever</p>
+        <p className="error-text-item type-error-small">"Sorry. Please try again."</p>
+      </div>
+      <img src="src/assets/error-img.png" alt="에러 이미지" />
     </div>
   );
 }

@@ -98,14 +98,13 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
 
   return (
     <div className="cart-item">
-      <div className="cart-layout cart-procuct">
+      <div className="cart-layout cart-check" onClick={() => handleCartCheck()}>
+        <div className="form-input-radio">
+          <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
+        </div>
+      </div>
+      <div className="cart-layout">
         <div className="cart-item-info">
-          <div className="cart-layout cart-check" onClick={() => handleCartCheck()}>
-            <div className="form-input-radio">
-              <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
-            </div>
-            {/* <CheckBox check={check} /> */}
-          </div>
           <div className="cart-item-cover">
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.fileName}`} alt="커피이미지" />
           </div>
@@ -113,20 +112,22 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
             PID{item._id} | {item.product?.name}
           </p>
         </div>
-        {/* <!-- cart-item-info --> */}
       </div>
-      <div className="quantity-button" onClick={handleReduceQuantity}>
-        -{/* <img className="selling-icon down" src={Minus} />  */}
+      <div className="cart-layout cart-quantity">
+        <div className="quantity-button" onClick={handleReduceQuantity}>
+          -
+        </div>
+        <div>
+          <p>{productQuantity}</p>
+        </div>
+        <div className="quantity-button" onClick={handleAddQuantity}>
+          +
+        </div>
       </div>
-      <div>
-        <p className="cart-layout cart-quantity">{productQuantity}</p>
-      </div>
-      <div className="quantity-button" onClick={handleAddQuantity}>
-        +{/* <img className="selling-icon up" src={Plus} /> */}
-      </div>
+
       <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
-      {/* <p className="cart-layout cart-delivery">배송비</p> */}
-      <p className="btn-null button-small" onClick={() => handleDeleteItem(item._id)}>
+
+      <p className="button type-btn-cart button-small type-modal-btn" onClick={() => handleDeleteItem(item._id)}>
         삭제
       </p>
     </div>
