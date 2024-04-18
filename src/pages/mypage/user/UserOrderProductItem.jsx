@@ -5,7 +5,6 @@ UserOrderProductItem.propTypes = {
 };
 
 function UserOrderProductItem({ product }) {
-  console.log(product);
   return (
     <>
       <div className="order-main">
