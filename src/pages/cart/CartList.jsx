@@ -26,9 +26,10 @@ function CartList() {
       let newCartArr = items
         .filter((item) => selectedCartItem.includes(item._id))
         .map((item) => ({
-          product_id: item.product_id, // product_id 값을 새 객체에 저장
+          _id: Number(item.product_id), // product_id 값을 새 객체에 저장
           quantity: item.quantity, // quantity 값을 새 객체에 저장
         }));
+      console.log('newCartArr', newCartArr);
       setProductDetail(newCartArr);
     } else {
       let newCartArr = [];
@@ -36,24 +37,31 @@ function CartList() {
     }
   }
 
-  // useEffect(() => {
-  //   handleSetOrderItem();
-  // }, [selectedCartItem]);
+  useEffect(() => {
+    handleSetOrderItem();
+  }, [selectedCartItem]);
 
   const handleSubmitOrder = async () => {
-    // if (!user && productDetails === []){
-    //   alert('상품을 선택해주세요')
-    // }
+    if (!user || !productDetails || productDetails.length === 0) {
+      alert('구매할 상품을 선택해주세요');
+      return;
+    }
 
     const orderForm = {
       type: 'cart',
       products: productDetails,
-      address: user.address,
+      address: {
+        name: user.name,
+        value: user.address,
+      },
     };
 
     try {
       const response = await axios.post('/orders', orderForm);
       console.log('Order Response:', response);
+      alert('주문에 성공했습니다.');
+      setSelectedCartItem([]);
+      setProductDetail([]);
     } catch (error) {
       console.error('Order Submission Failed:', error);
     }
@@ -74,7 +82,6 @@ function CartList() {
       const productsResponse = await axios.get('/carts');
       await setItemsCost(productsResponse.data.cost);
       await setItems(productsResponse.data.item);
-      // await handleSubmitCartBuy();
     } catch (error) {
       console.error('Failed to fetch data:', error);
     }
