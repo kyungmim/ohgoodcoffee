@@ -329,9 +329,20 @@ body {
   padding: 1.7rem 0;
 }
 
+.sales-button {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
 .type-btn-cart {
   padding: 4px 10px;
   border: 1px solid var(--color-gray-30);
+}
+
+.type-sales {
+  margin-left: auto;
+  box-shadow: inset 0 0 10px saddlebrown;
 }
 
 /*  Layouts  */
@@ -1167,7 +1178,6 @@ body {
 
 .card-title {
   font-weight: 700;
-
 }
 
 .card-contents {

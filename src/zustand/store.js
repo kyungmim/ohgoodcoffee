@@ -6,6 +6,10 @@ const useUserStore = create(
     (set) => ({
       user: null,
       setUser: (user) => set({ user }),
+      itemId: null,
+      setItemId: (itemId) => set({ itemId }),
+      product: null,
+      setProduct: (product) => set({ product }),
     }),
     {
       name: 'Acctoken',

@@ -1,23 +1,27 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 function SellerSalesListEdit() {
+  const productData = async () => {
+    const res = await axios.get(`/seller/products/${itemId}`);
+    setProduct(res.data.item);
+  };
+
+  const { itemId, product, setProduct } = useUserStore();
+
+  useEffect(() => {
+    productData();
+  }, []);
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    values: {
-      price: '30000',
-      quantity: '10',
-      name: 'test상품',
-      content: '테스트 상품입니다요요요.',
-      shippingFees: '3000',
-      type: 'new',
-    },
-  });
+  } = useForm();
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
@@ -44,13 +48,12 @@ function SellerSalesListEdit() {
         // mainImages 속성을 제거
         delete formData.mainImages;
       }
-      const res = await axios.post('seller/products', formData);
-      console.log(res);
+      await axios.patch(`/seller/products/${itemId}`, formData);
       openModal({
-        content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
+        content: `${product.name}  <br />상품이 수정되었습니다. <br />상품 목록을 확인하시겠습니까? :)`,
         callbackButton: {
           확인: () => {
-            navigate('/seller/mypage', { state: { from: '/' } });
+            navigate(window.location.reload(), { state: { from: '/' } });
           },
           취소: '',
         },
@@ -85,7 +88,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="상품 이름을 입력해주세요."
                       id="name"
                       type="text"
                       {...register('name', {
@@ -109,7 +111,6 @@ function SellerSalesListEdit() {
                   <div className="form-input ">
                     <textarea
                       className="type-textarea"
-                      placeholder="상품 설명을 입력해주세요."
                       id="content"
                       type="text"
                       {...register('content', {
@@ -132,7 +133,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="가격을 입력해주세요."
                       id="price"
                       type="text"
                       {...register('price', {
@@ -155,7 +155,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="수량을 입력해주세요."
                       id="quantity"
                       type="text"
                       {...register('quantity', {
@@ -177,7 +176,6 @@ function SellerSalesListEdit() {
                 </label>
                 <div className="form-input">
                   <input
-                    placeholder="배송비를 입력해주세요."
                     id="shippingFees"
                     type="text"
                     {...register('shippingFees', {
@@ -206,6 +204,15 @@ function SellerSalesListEdit() {
                   </div>
                 </div>
               </fieldset>
+
+              {/* <div className="button-box">
+                <button className="button button-large btn-Fill btn-layout" type="submit">
+                  등록하기
+                </button>
+                <button className="button button-large btn-null btn-layout" type="button">
+                  삭제하기
+                </button>
+              </div> */}
               <button className="button button-large btn-Fill btn-layout" type="submit">
                 등록하기
               </button>

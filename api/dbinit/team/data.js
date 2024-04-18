@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 function getTime(day = 0, second = 0) {
-  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ssy = 0')
+  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ssy = 0');
 }
 
 export const initData = async (nextSeq) => {
@@ -989,7 +989,7 @@ export const initData = async (nextSeq) => {
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
-          isBest: new,
+          isBest: false,
           category: ['coffee'],
           brand: 'milestonecoffee',
           sort: 2,
