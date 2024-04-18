@@ -1,5 +1,6 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import TopLine from '@public/ogc-top-line.svg';
+import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
@@ -8,14 +9,21 @@ function SignUp() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    values: {
+      email: 'test30@market.com',
+      password: '11111111',
+      name: 'test',
+      address: '경기도 남양주시 어딘가',
+      phone: '01012345678',
+      type: 'seller',
+    },
+  });
   const axios = useCustomAxios();
+  const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
 
-  console.log(errors);
-
   const onSignup = async (formData) => {
-    console.log(formData);
     try {
       if (formData.profileImage.length > 0) {
         // 프로필 이미지를 추가한 경우
@@ -38,11 +46,16 @@ function SignUp() {
         delete formData.profileImage;
       }
       const res = await axios.post('/users', formData);
-      alert(res.data.item.name + '님 회원가입이 완료 되었습니다.\n로그인 후에 이용하세요.');
-      navigate('/users/login');
+      openModal({
+        content: `${res.data.item.name}님 회원가입이 완료 되었습니다. <br /> 로그인 후 이용가능합니다. :)`,
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/users/login' } });
+          },
+        },
+      });
     } catch (err) {
-      console.log(err);
-      alert(err.response?.data.message);
+      console.log(err.response?.data.message);
     }
   };
 

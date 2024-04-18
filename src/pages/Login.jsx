@@ -1,31 +1,48 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store.js';
+import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Login() {
-  const { register, handleSubmit } = useForm({
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
     values: {
       email: 'u1@market.com',
       password: '11111111',
     },
   });
   const navigate = useNavigate();
+  const openModal = useModalStore((state) => state.openModal);
   const axios = useCustomAxios();
-  const { setUserId, setUser } = useUserStore();
+  const { setUser } = useUserStore();
+  // const location = useLocation();
 
   const onSubmit = async (formData) => {
     try {
       const res = await axios.post('/users/login', formData);
-      alert(res.data.item.name + '님 로그인되었습니다 :)');
-      console.log(res);
-      const accToken = res.data.item.token.accessToken;
+      openModal({
+        content: `${res.data.item.name}님 로그인되었습니다 :)`,
+        callbackButton: {
+          확인: () => {
+            navigate('/', { state: { from: '/' } });
+          },
+        },
+      });
       const user = res.data.item;
-      setUserId(accToken);
       setUser(user);
-      navigate(location.state?.from ? location.state?.from : '/');
     } catch (err) {
-      alert(err.response?.data.message);
+      openModal({
+        content: `${err.response?.data.message}`,
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/users/login' } });
+          },
+        },
+      });
     }
   };
 
@@ -40,29 +57,39 @@ function Login() {
 
             <form onSubmit={handleSubmit(onSubmit)} className="login_form">
               <div className="login-input-section">
-                <div className="form-input">
-                  <input
-                    placeholder="이메일"
-                    type="text"
-                    id="email"
-                    {...register('email', {
-                      pattern: {
-                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                        message: '이메일 형식이 아닙니다.',
-                      },
-                    })}
-                  />
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="이메일"
+                      type="text"
+                      id="email"
+                      {...register('email', {
+                        required: '이메일은 필수 입니다.',
+                        pattern: {
+                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                          message: '이메일 형식이 아닙니다.',
+                        },
+                      })}
+                    />
+                  </div>
+                  {errors.email && <p className="err-text">{errors.email.message}</p>}
                 </div>
-                <div className="form-input">
-                  <input
-                    placeholder="비밀번호"
-                    type="password"
-                    id="password"
-                    {...register('password', {
-                      required: '비밀번호는 필수 입니다.',
-                      minLength: 8,
-                    })}
-                  />
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      placeholder="비밀번호"
+                      type="password"
+                      id="password"
+                      {...register('password', {
+                        required: '비밀번호는 필수 입니다.',
+                        minLength: {
+                          value: 8,
+                          message: '8자리 이상 입력하세요.',
+                        },
+                      })}
+                    />
+                  </div>
+                  {errors.password && <p className="err-text">{errors.password.message}</p>}
                 </div>
               </div>
               <div className="login-find">
@@ -81,7 +108,6 @@ function Login() {
             </div>
 
             <div className="social-btn">
-              <button className="button-large btn-naver">네이버 로그인</button>
               <button className="button-large btn-kakao">카카오 로그인</button>
             </div>
           </div>
