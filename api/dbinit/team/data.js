@@ -950,14 +950,23 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_01_fullpage.png`,
-            fileName: 'milestonecoffee_products_01_fullpage.png',
+            url: `/files/milestonecoffee_products_01-1.png`,
+            fileName: 'milestonecoffee_products_01-1.png',
+          },
+          {
+            url: `/files/milestonecoffee_products_01-2.png`,
+            fileName: 'milestonecoffee_products_01-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>누구나, 언제 어디서나, 너무나도 쉽게 마일스톤 커피를 경험하실 수 있습니다.고품질의 커피를 즐기실 수 있도록 커피를 가득 담아 맛과 향이 풍부합니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `THE SIMPLEST WAY TO MAKE QUALITY FILTER COFFEE.\n 마일스톤 커피 드립백\n This Dripbag is super simple and delicious, just need hot water.\n Perfect for home, the campsite, the office, everywhere! \n "쉽고 맛있게! \n 마일스톤 커피 드립백 하나면 어디서든 쉽고 맛있게, 스페셜티 드립커피를 즐길 수 있어요."`,
+          },
+          {
+            d2: `박스가 아닌 낱개로 구입하실 수 있는 제품입니다.\n 싱글오리진의 경우 이번 달 라인업으로 준비됩니다.`,
+          },
+          { d3: `드립백 뒷면에는 드시는 방법이 그려져 있어 쉽게 따라하실 수 있습니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -980,20 +989,29 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_02.jpg`,
-            fileName: 'milestonecoffee_products_02.jpg',
+            url: `/files/milestonecoffee_products_02.png`,
+            fileName: 'milestonecoffee_products_02.png',
           },
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_02_fullpage.png`,
-            fileName: 'milestonecoffee_products_02_fullpage.png',
+            url: `/files/milestonecoffee_products_02-1.png`,
+            fileName: 'milestonecoffee_products_02-1.png',
+          },
+          {
+            url: `/files/milestonecoffee_products_02-2.png`,
+            fileName: 'milestonecoffee_products_02-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>누구나, 언제 어디서나, 너무나도 쉽게 마일스톤 커피를 경험하실 수 있습니다.고품질의 커피를 즐기실 수 있도록 커피를 가득 담아 맛과 향이 풍부합니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `"마일스톤의 시그니처 블랜드인 하나비블랜드는\n마일스톤에서 기본 블랙커피로 제공되는 원두입니다.\n고소함과 향긋함을 가지고 있고 전체적인 밸런스가 좋습니다. \n첫맛의 고소함이 낮은톤의 산미를 묵직하게 눌러주면서 깔끔하게 남아있는 후미가 인상적입니다."`,
+          },
+          {
+            d2: `초콜릿과 견과류를 넘나드는 고소함에 낮은 톤의 산미를 담아 맛의 균형감이 좋습니다.\n 불꽃놀이 라는 이름을 가진 만큼 다채로운 맛이 조화롭게 나타납니다.\n 무엇보다도 좋은 밸런스와 바디감이 일관되게 유지되어,\n 누구나 편하게 마실 수 있습니다.`,
+          },
+          { d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1011,7 +1029,7 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '마일스톤 커피 원두 1kg',
+        name: '마일스톤 커피 원두 - 아키 블렌드 1kg',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
@@ -1022,14 +1040,23 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_03_fullpage.png`,
-            fileName: 'milestonecoffee_products_03_fullpage.png',
+            url: `/files/milestonecoffee_products_03-1.png`,
+            fileName: 'milestonecoffee_products_03-1.png',
+          },
+          {
+            url: `/files/milestonecoffee_products_03-2.png`,
+            fileName: 'milestonecoffee_products_03-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>누구나, 언제 어디서나, 너무나도 쉽게 마일스톤 커피를 경험하실 수 있습니다.고품질의 커피를 즐기실 수 있도록 커피를 가득 담아 맛과 향이 풍부합니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `"매장에서 기본 라떼 베이스로 제공되는 원두입니다.\n 잘익은 오렌지와 바닐라시럽과 같은 단맛이 느껴지는 커피입니다.\n 특히 우유나 오트밀크와 만났을 때 한층 더 나타나는 고소한 풍미가 인상적입니다.\n 핸드드립이나 아메리카노로 드실 때에는 향긋하게 드실 수 있습니다."`,
+          },
+          {
+            d2: `지친 일상 속에서 작은 선물같은 기분 좋은 단맛과 향긋함\n 그리고 깔끔함에 초점을 맞췄습니다.`,
+          },
+          { d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1058,14 +1085,25 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_04_fullpage.png`,
-            fileName: 'milestonecoffee_products_04_fullpage.png',
+            url: `/files/milestonecoffee_products_04-1.png`,
+            fileName: 'milestonecoffee_products_04-1.png',
+          },
+          {
+            url: `/files/milestonecoffee_products_04-2.png`,
+            fileName: 'milestonecoffee_products_04-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>누구나, 언제 어디서나, 너무나도 쉽게 마일스톤 커피를 경험하실 수 있습니다.고품질의 커피를 즐기실 수 있도록 커피를 가득 담아 맛과 향이 풍부합니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `올해로 10주년을 맞이하는 마일스톤의 2024년을 기념하는 의미로 만들어진 '10주년 블렌드'입니다.\n 10년동안 우리의 고민은 어떻게 하면 즐겁게 일할지, 어떤 마음가짐으로 임할지,\n 어떠한 환대로 대할지, 더 맛있는 커피를 위해 무엇을 해야할지였습니다.\n 그 고민을 알아봐주시기라도 하듯 많은 사랑을 받았고, 그 사랑에 보답하고자 우리의 10주년 스페셜 블렌드로 만들었습니다.`,
+          },
+          {
+            d2: `'마일스톤스러움'을 커피로 녹여내면 어떤 맛일까 고민하다 우리 팀의 이야기를 담았습니다.\n 팀 마일스톤은 활기찬 에너지로 가득차 있습니다.\n 커피라는 것은 결국 사람을 위한 것이고, 사람이 가장 중요하기에\n 우리의 팀은 늘 친절하고 열심히 일하면서도 프로페셔널함을 잃지 않습니다.\n 각양각색의 매력과 능력을 가진 사람들이 커피라는 공통점으로 모여 \n '마일스톤' 이라는 원 팀으로 움직이는 우리처럼,\n 이 커피는 다채로운 맛이 모여 조화롭고 완성도 높은 풍미를 가지고 있습니다.`,
+          },
+          {
+            d3: `복합적인 과일주스같은 이 커피는 청사과와 키위의 싱그러움, 그리고 잘 익은 베리류의 향미가 좋습니다.\n 흑설탕같은 묵직한 단맛과 고소함, 편안함을 갖고 있기도 합니다.\n 특히, 한 모금 머금었을 때 느껴지는 실키한 질감과 바디감이 인상적입니다.\n 지나온 10년을 축하하며, 다가올 10년을 기대하는 마음으로 만들었습니다.\n 우리의 커피를 사랑해주시는 모든 분들께 항상 감사드리며,\n 우리의 10주년 블렌드가 오늘의 여러분께 소박하지만 확실한 행복이 되었으면 합니다.\n\n [Tasting Notes]\n 청사과, 흑설탕, 키위, 과일주스, 라운드바디\n\n [Roasting Point]\n 약배전(light-roasted)\n\n [Espresso Guide]\n 바스켓 사이즈: 18g(IMS기준)\n 추출온도:92~93도\n 도정량: 20g\n 추출시간: 17~20초 내외\n 추출량:26~30g\n\n [Brewing Guide]\n 기준: 하리오 V60(푸어오버)\n 추출온도:92~93도\n 도정량: HOT 16g/ICED 20g\n 물 양: HOT 240g/ICED 180g`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1094,14 +1132,25 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_05_fullpage.png`,
-            fileName: 'milestonecoffee_products_05_fullpage.png',
+            url: `/files/milestonecoffee_products_05-1.png`,
+            fileName: 'milestonecoffee_products_05-1.png',
+          },
+          {
+            url: `/files/milestonecoffee_products_05-2.png`,
+            fileName: 'milestonecoffee_products_05-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>누구나, 언제 어디서나, 너무나도 쉽게 마일스톤 커피를 경험하실 수 있습니다.고품질의 커피를 즐기실 수 있도록 커피를 가득 담아 맛과 향이 풍부합니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `마일스톤 로고 텀블러 12oz (Black / White)\n 마일스톤 커피 로스터스의 로고가 새겨진 첫번째 텀블러입니다.\n 글로벌 브랜드 ‘ MIIR ‘ 사의 베큠 인슐레이티드와 함께하였습니다.\n\n"Timeless , Function, Beautiful Simple, Sustainable."\n\nTHERMO 3D 이중벽 진공 단열재 기술로 제작된 베큠 인슐레이터 스테인레스 텀블러는 뚜껑을 닫아 음료를 더 시원하고 따뜻하게 즐기 실 수 있으며, 일상생활이나 여행하실 때 편리하게 사용하실 수 있습니다.\n\n(※tip! 마일스톤 커피 텀블러를 가지고 매장에 방문하시면 전체금액의 -1000원 DC 해드려요!)`,
+          },
+          {
+            d2: `보온 보냉에 탁월한 이중벽 진공 단열재 기술로 깨지지 않고 위생적인\n 스테인레스 소재를 사용하여 마일스톤 커피를 더욱 맛있게 오래 즐기실 수 있습니다.\n\n차가운 음료나 뜨거운 음료를 넣었을 경우 겉면이 쉽게 뜨거워지거나 습기가 차지 않습니다.\n입구가 넓어 손 쉽게 청소하실 수 있고 뚜껑은 여닫기 쉬운 슬라이드로 되어 있습니다.`,
+          },
+          {
+            d3: `사이즈 : 직경 70 * 높이 147mm\n 용량 : 12oz(355ml)\n 재질 : 뚜껑- 폴리시클로헥산-1, 4-디메틸렌테레프탈레이트, 실리콘\n 본체 - 18-8 스테인레스\n 원산지 : 중국\n\n 취급 시 주의사항\n\n - 식기세척기 사용이 불가합니다.\n\n - 본 제품은 완전 밀폐용기가 아닙니다.\n 강한 흔들림 발생시에 음료가 새어나올 수 있습니다.\n - 제품 목적 이외의 용도로 사용할 경우 사고 발생에 주의해주십시오.\n - 스텐레스 가열의 경우 화상 및 변색이 있을 수 있습니다.\n - 유리, 도자기의 경우 무리한 가열 및 냉동하여 사용시 파열 및 변색이 있을 수 있습니다.\n - 강한 충격시 파손될 수 있습니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1131,16 +1180,23 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_01_fullpage.png`,
-            fileName: 'protokoll_products_01_fullpage.png',
-            orgName: '',
+            url: `/files/protokoll_products_01-1.png`,
+            fileName: 'protokoll_products_01-1.png',
+          },
+          {
+            url: `/files/protokoll_products_01-2.png`,
+            fileName: 'protokoll_products_01-2.png',
           },
         ],
-
-        content: `
-          <div class="product-detail">
-            <p>Volcan Azul은 해발 1,500m 이상에 위치한 농장으로, 19세기부터 현재까지 5대째 내려오는 전통을 자랑합니다.비옥한 화산 토양과 따뜻한 날씨가 뛰어난 품질의 커피를 생산하기 적합해 다양한 품종을 심고 있습니다. 또한 이 농장은 체리를 5일 동안 탱크에 넣은 후 12일간 천천히 건조하는 등 특별한 가공 방식을 꾸준히 연구하고 있습니다.그 결과로 2017년 COE 2위, 2018년 COE 34위, 그리고 2020년 COE 4위와 12위를 수상하였습니다.이 커피는 사과, 자두, 라즈베리와 같은 빨간색 계열의 과일들이 잘 연상됩니다.기존 코스타리카 커피에서 연상되는 혹은 프로토콜에서 다양하게 선보인 언에어로빅 커피들에 비해 조금 더 깔끔하고 선명한 뉘앙스의 커피일 것입니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `Volcan Azul은 해발 1,500m 이상에 위치한 농장으로, 19세기부터 현재까지 5대째 내려오는 전통을 자랑합니다.\n 비옥한 화산 토양과 따뜻한 날씨가 뛰어난 품질의 커피를 생산하기 적합해 다양한 품종을 심고 있습니다.\n 또한 이 농장은 체리를 5일 동안 탱크에 넣은 후 12일간 천천히 건조하는 등 특별한 가공 방식을 꾸준히 연구하고 있습니다.\n 그 결과로 2017년 COE 2위, 2018년 COE 34위, 그리고 2020년 COE 4위와 12위를 수상하였습니다.\n\n 이 커피는 사과, 자두, 라즈베리와 같은 빨간색 계열의 과일들이 잘 연상됩니다.\n 기존 코스타리카 커피에서 연상되는 혹은 프로토콜에서 다양하게 선보인 언에어로빅 커피들에 비해 조금 더 깔끔하고 선명한 뉘앙스의 커피일 것입니다.`,
+          },
+          {
+            d2: `원산지 Costa Rica\n\n 원종 Ethiopian\n\n 지역 Volcan Azul\n\n 고도 1,500m\n\n 가공 Anaerobic Natural\n\n\n\n커핑노트 Cupping Note\n\n 사과 ・ 자두 ・ 라즈베리 ・ 와인\n\n Apple ・ Plum ・ Raspberry ・ Wine`,
+          },
+          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1170,24 +1226,25 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_02_fullpage.png`,
-            fileName: 'protokoll_products_02_fullpage.png',
-            orgName: '',
+            url: `/files/protokoll_products_02-1.png`,
+            fileName: 'protokoll_products_02-1.png',
+          },
+          {
+            url: `/files/protokoll_products_02-2.png`,
+            fileName: 'protokoll_products_02-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>프로토콜 캡슐 커피가 출시되었습니다.
-            집에서 커피가 마시고 싶을 때
-            드립백으로 많은 분들의 커피 내리기 귀찮음을 해결해 드리고 싶었지만
-            역시 집에서는 캡슐커피가 최고인듯합니다.
-            저도 애정합니다.
-            버튼 몇 번으로 쉽고 간편하게 프로토콜 커피를 즐겨보시길요.
-            네스프레소 오리지널 머신만 호환 가능합니다. 캡슐 구매 전 캡슐의 타입과 호환 가능 여부를 꼭 확인해 주시기 바랍니다.
-            (네스프레소 버츄오, 일리, 돌체구스토 호환 불가)
-            6g * 10ea
-            </p>
-          </div>`,
+        content: [
+          {
+            d1: `프로토콜 캡슐 커피가 출시되었습니다.\n 집에서 커피가 마시고 싶을 때\n 드립백으로 많은 분들의 커피 내리기 귀찮음을 해결해 드리고 싶었지만\n 역시 집에서는 캡슐커피가 최고인듯합니다.\n 버튼 몇 번으로 쉽고 간편하게 프로토콜 커피를 즐겨보시길요.\n 네스프레소 오리지널 머신만 호환 가능합니다. 캡슐 구매 전 캡슐의 타입과 호환 가능 여부를 꼭 확인해 주시기 바랍니다.\n (네스프레소 버츄오, 일리, 돌체구스토 호환 불가)\n\n 6g * 10ea`,
+          },
+          {
+            d2: `매일 한 잔의 커피만 마셔야 한다면\n 어떤 커피여야 하는가에 관한 고민에서 탄생한\n 프로토콜의 첫 번째 블렌드\n ‘SUPER NORMAL’ 입니다.\n\n 묵직하되 그 묵직함이 과하지 않고 선명한 단맛을 지녔다는 것이\n 이 블렌드의 특징입니다.\n\n 원두에서 느껴지는 다크한 초콜릿 맛과\n 미미한 산미가 좋은 밸런스를 느끼게 합니다.\n 데일리 커피로서 역할을 잘 해내리라 자부합니다.\n\n 소비기한 : 상품후면 별도표시\n\n\n
+            커핑노트 Cupping Note\n\n 다크 초콜릿 ・ 구운 아몬드 ・ 흑설탕 ・ 묵직함\n\n Dark Chocolate ・ Roasted Almond ・ Brown Sugar ・ Good Body\n\n\n
+            블렌딩 Blending\n Brazil 40%, Colombia 40%, Indonesia 20%`,
+          },
+          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1217,20 +1274,25 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_03_fullpage.png`,
-            fileName: 'protokoll_products_03_fullpage.png',
-            orgName: '',
+            url: `/files/protokoll_products_03-1.png`,
+            fileName: 'protokoll_products_03-1.png',
+          },
+          {
+            url: `/files/protokoll_products_03-2.png`,
+            fileName: 'protokoll_products_03-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>프로토콜의 블렌드 SUPER NORMAL을 드립백에 담았습니다.
-            언제 어디서든 대충 물 넣어도 좀 맛있는 커피.
-            그래서 나 커피 좀 하는 사람인 듯 착각하게 만들어 줄 수 있는 커피.
-            무엇보다 집에서도 프로토콜 맛 느낌 나는 커피.
-            ‘홈 스위트 홈 커피 타임’ 프로토콜 드립백이 해드릴게요
-            12g x 6ea</p>
-          </div>`,
+        content: [
+          {
+            d1: `프로토콜의 블렌드 SUPER NORMAL을 드립백에 담았습니다.\n 언제 어디서든 대충 물 넣어도 좀 맛있는 커피.\n 그래서 나 커피 좀 하는 사람인 듯 착각하게 만들어 줄 수 있는 커피.\n 무엇보다 집에서도 프로토콜 맛 느낌 나는 커피.\n 홈 스위트 홈 커피 타임’ 프로토콜 드립백이 해드릴게요.\n 12g x 6ea`,
+          },
+          {
+            d2: `매일 한 잔의 커피만 마셔야 한다면\n 어떤 커피여야 하는가에 관한 고민에서 탄생한\n 프로토콜의 첫 번째 블렌드\n ‘SUPER NORMAL’ 입니다.\n\n 묵직하되 그 묵직함이 과하지 않고 선명한 단맛을 지녔다는 것이\n 이 블렌드의 특징입니다.\n\n 원두에서 느껴지는 다크한 초콜릿 맛과\n 미미한 산미가 좋은 밸런스를 느끼게 합니다.\n 데일리 커피로서 역할을 잘 해내리라 자부합니다.\n\n 소비기한 : 상품후면 별도표시\n\n\n
+            커핑노트 Cupping Note\n\n 다크 초콜릿 ・ 구운 아몬드 ・ 흑설탕 ・ 묵직함\n\n Dark Chocolate ・ Roasted Almond ・ Brown Sugar ・ Good Body\n\n\n
+            블렌딩 Blending\n Brazil 40%, Colombia 40%, Indonesia 20%`,
+          },
+          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1260,20 +1322,23 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_04_fullpage.png`,
-            fileName: 'protokoll_products_04_fullpage.png',
-            orgName: '',
+            url: `/files/protokoll_products_04-1.png`,
+            fileName: 'protokoll_products_04-1.png',
+          },
+          {
+            url: `/files/protokoll_products_04-2.png`,
+            fileName: 'protokoll_products_04-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>프로토콜의 로고가 새겨진 리유저블 컵입니다.
-            집, 회사 등 어디서나 사용하기 편한 컵을 만들어 보고 싶은 욕심에 출시했습니다.
-            프로토콜 하면 떠올릴 수 있는 블랙과 화이트로 말이지요.
-            (저는 블랙이 좋지만 많은 분들은 화이트를 좋아합니다.)
-            프로토콜 텀블러와 마찬가지로,
-            이 컵을 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능도 탑재되어 있습니다. </p>
-          </div>`,
+        content: [
+          {
+            d1: `프로토콜의 로고가 새겨진 리유저블 컵입니다.\n 집, 회사 등 어디서나 사용하기 편한 컵을 만들어 보고 싶은 욕심에 출시했습니다.\n 프로토콜 하면 떠올릴 수 있는 블랙과 화이트로 말이지요.\n\n (저는 블랙이 좋지만 많은 분들은 화이트를 좋아합니다.)`,
+          },
+          {
+            d2: `프로토콜 텀블러와 마찬가지로,\n 이 컵을 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능도 탑재되어 있습니다.\n\n 용량: 473ml\n 온도: -20도(내냉) ~ 120도(내열)\n 재질: 무독성PP `,
+          },
+          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1303,17 +1368,23 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_05_fullpage.png`,
-            fileName: 'protokoll_products_05_fullpage.png',
-            orgName: '',
+            url: `/files/protokoll_products_05-1.png`,
+            fileName: 'protokoll_products_05-1.png',
+          },
+          {
+            url: `/files/protokoll_products_05-2.png`,
+            fileName: 'protokoll_products_05-2.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>프로토콜 로고가 새겨진 스테인리스 텀블러입니다.
-            빨대가 내장되어 있고 보온,보냉이 가능합니다.
-            또, 이 텀블러를 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능까지 갖춘 다재다능한 텀블러입니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `프로토콜 로고가 새겨진 스테인리스 텀블러입니다.\n 집, 회사 등 어디서나 사용하기 편한 컵을 만들어 보고 싶은 욕심에 출시했습니다.\n 빨대가 내장되어 있고 보온,보냉이 가능합니다.\n`,
+          },
+          {
+            d2: `프로토콜 리유저블 컵과 마찬가지로,\n 이 텀블러를 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능도 탑재되어 있습니다.\n\n 용량: 500ml\n 사이즈: 7 X 19cm\n 재질: 스테인리스 `,
+          },
+          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
@@ -1327,192 +1398,254 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('product'),
         seller_id: 6,
-        price: 38000,
+        price: 11000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: 'VISIONSTROLL HANDCRAFT GLASS CUP 비전스트롤 핸드크래프트 유리컵',
+        name: 'NEST hoji 네스트 호지차 [원산지:국산(경상남도 하동군)]',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/visionstroll_products_01.jpg`,
-            fileName: 'visionstroll_products_01.jpg',
+            url: `/files/nest_products_01.png`,
+            fileName: 'nest_products_01.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/visionstroll_products_01_fullpage.png`,
-            fileName: 'visionstrolll_products_01_fullpage.png',
+            url: `/files/nest_products_01-1.png`,
+            fileName: 'nest_products_01-1.png',
+            orgName: '',
+          },
+          {
+            url: `/files/nest_products_01-2.png`,
+            fileName: 'nest_products_01-2.png',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>리사이클유리로 수작업을 통하여 제작되어진 비전스트롤의 메인컵입니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `호지차는 일반적으로 일본에서 주로 마시는 차입니다.\n 녹차를 볶아서 만들기 때문에 찻잎의 색이 진한 갈색이며 고소한 향이 특징입니다.\n\n 네스트의 호지차는 한국의 차 시배지인 하동에서 만들어졌습니다.\n 찻잎이 아니라 어린 차 나무의 줄기로 만들어져서\n 찻잎의 형태가 길쭉한 바늘모양입니다.\n\n 찻잎과는 또 다른 풍미를 가득 느끼실 수 있습니다.\n `,
+          },
+          {
+            d2: `네스트는 차 tea를 본질로 시작한 공간입니다.\n\n 다양한 기호 식품들 사이에서\n 우리의 차가 바로 설자리를 고민하고\n 여러분에게 더 좋은 차를 소개하겠습니다.\n\n 지속 가능한 라이프 스타일의 둥지,\n be rest, in our nest\n\n\n\n떫은맛이 거의 없으며 로스팅 된 차의 고소한 맛과 풍미가 특징입니다.\n\n 진하게 우려내어도 떫은맛이 연하기 때문에\n 여름에 진하게 우려 얼음과 같이 희석해서 드시는 것도 추천드립니다.\n\n 서촌 네스트 카페테리아 매장에서는 호지 밀크티로도 즐기실 수 있습니다.`,
+          },
+          {
+            d3: `틴 타입 24g\n (약 8회 분량)\n\n\n\n\n 유리병/틴/파우치 3가지 타입에서\n 틴 타입 단독으로 리뉴얼 되었습니다.\n 구매에 참고 부탁드립니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: true,
           category: ['goods'],
-          brand: '비전스트롤',
+          brand: '네스트',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 6,
-        price: 55000,
+        price: 11000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: 'VISIONSTROLL OLDPEACE BLEND 비전스트롤 올드피스 블렌드 1kg [원산지:에티오피아]',
+        name: 'NEST ssug 네스트 쑥차 [원산지:국산(경상남도 하동군)]',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/visionstroll_products_02.jpg`,
-            fileName: 'visionstroll_products_02.jpg',
+            url: `/files/nest_products_02.png`,
+            fileName: 'nest_products_02.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/visionstroll_products_02_fullpage.png`,
-            fileName: 'visionstrolll_products_02_fullpage.png',
+            url: `/files/nest_products_02-1.png`,
+            fileName: 'nest_products_02-1.png',
+            orgName: '',
+          },
+          {
+            url: `/files/nest_products_02-2.png`,
+            fileName: 'nest_products_02-2.png',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>올드피스는 화사함과 묵직함 동시에 느끼실 수 있는 커피입니다.건포도와 입안에 카라멜을 머금고 있는 기분좋은 스윗함을 경험하실 수 있고, 은은하게 퍼지는 꽃향기의 긴 여운을 느끼실 수 있습니다.2022 올해의 커피는 OLD PEACE 입니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `하루를 마무리하는 시간에 잘 어울리는 네스트 쑥차입니다.\n 매년 3월 초 손으로 직접 채취한 어린쑥잎으로 만들어낸 차입니다.\n\n 여리고 고운 쑥잎에 녹차의 제다 방식을 접목해 만들어\n 부드럽고 구수한 맛이 특징입니다.\n\n 
+            여린쑥이 가지고 있는 땅의 올곧고 당찬 기운을\n 따뜻한 차 한 잔으로 느껴보시길 추천드립니다. \n 
+            하루를 마무리하는 나를 위한 휴식에 네스트 쑥차와 함께하세요.`,
+          },
+          {
+            d2: `네스트는 차 tea를 본질로 시작한 공간입니다.\n\n 다양한 기호 식품들 사이에서\n 우리의 차가 바로 설자리를 고민하고\n 여러분에게 더 좋은 차를 소개하겠습니다.\n\n 지속 가능한 라이프 스타일의 둥지,\n be rest, in our nest\n\n\n\n 네스트 쑥차 원물은 어린 쑥을 그대로 말려낸 모습입니다.\n 어린 쑥이 가지고 있는 향긋함과 부드러운 털이 그대로 있습니다.\n\n 수색은 투명하고 강한 갈색입니다.\n 사용한 거름망에 따라서 어린 쑥이 가지고 있는 호(잎 표면의 털)가\n 찻물 표면에 떠 있을 수 있습니다. 어린잎일수록 호가 많으며\n 섭취에는 문제가 없습니다.\n (우리는 조건과 시간에 따라서 수색은 다양하게 나타날 수 있습니다.)`,
+          },
+          {
+            d3: `틴 타입 16g\n (약 8회 분량)\n\n\n\n\n 유리병/틴/파우치 3가지 타입에서\n 틴 타입 단독으로 리뉴얼 되었습니다.\n 구매에 참고 부탁드립니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: true,
           category: ['goods'],
-          brand: '비전스트롤',
+          brand: '네스트',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 6,
-        price: 20000,
+        price: 14000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: 'DRIP BAG BOX SET 10 비전스트롤 드립백 박스셋 10개 [원산지:에티오피아]',
+        name: 'bird 티 인퓨저',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/visionstroll_products_03.jpg`,
-            fileName: 'visionstroll_products_03.jpg',
+            url: `/files/nest_products_03.png`,
+            fileName: 'nest_products_03.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/visionstroll_products_03_fullpage.png`,
-            fileName: 'visionstrolll_products_03_fullpage.png',
+            url: `/files/nest_products_03-1.png`,
+            fileName: 'nest_products_03-1.png',
+            orgName: '',
+          },
+          {
+            url: `/files/nest_products_03-2.png`,
+            fileName: 'nest_products_03-2.png',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>드립백 박스를 이용해 선물해보세요.드립백 종류 상관없이 10개 구매시 박스가 제공 되어집니다.원하시는 종류를 선택해서 10개를 선택하셔서 주문해주시면 됩니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: `티백 제품 외의 잎차를 우려 마실 때\n 사용하기 좋은 스테인리스 인퓨저 입니다.\n\n 차를 우리지 않아도 가만히 곁에 두면\n 눈길이 스칠 때마다 귀여운 모습에 흐뭇하기도 합니다-!`,
+          },
+          {
+            d2: `네스트는 차 tea를 본질로 시작한 공간입니다.\n\n 다양한 기호 식품들 사이에서\n 우리의 차가 바로 설자리를 고민하고\n 여러분에게 더 좋은 차를 소개하겠습니다.\n\n 지속 가능한 라이프 스타일의 둥지,\n be rest, in our nest\n\n\n\n 1인 분량의 차를 우릴 수 있는\n 아주 작은 사이즈입니다.\n\n 구매 전 꼭 상세 사이즈를 확인해 주세요.`,
+          },
+          {
+            d3: `소형 인퓨저 특성상\n 잎이 많이 부풀어나는 차(철관음 등) 또는\n 아주 잘게 분쇄된 아쌈, 루이보스 등의 차는 추천하지 않습니다.\n\n 중간 정도로 분쇄된 블렌딩 티에 가장 적합합니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: true,
           category: ['joinus'],
-          brand: '비전스트롤',
+          brand: '네스트',
           sort: 4,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 6,
-        price: 43000,
+        price: 30000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: 'VISIONSTROLL TUMBLER 500ML 비전스트롤 텀블러',
+        name: '오리지널 리프티 샘플러 [원산지:국산(경상남도 하동군)]',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/visionstroll_products_04.jpg`,
-            fileName: 'visionstroll_products_04.jpg',
+            url: `/files/nest_products_04.png`,
+            fileName: 'nest_products_04.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/visionstroll_products_04_fullpage.png`,
-            fileName: 'visionstrolll_products_04_fullpage.png',
+            url: `/files/nest_products_04-1.png`,
+            fileName: 'nest_products_04-1.png',
+            orgName: '',
+          },
+          {
+            url: `/files/nest_products_04-2.png`,
+            fileName: 'nest_products_04-2.png',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>첫 출시 텀블러입니다.비전스트롤의 유니크한 디자인 독보이는 텀블러입니다.
-            </p>
-          </div>`,
+        content: [
+          {
+            d1: `네스트 오리지널 리프티 대표 상품 중\n 8종의 티백으로 구성된 샘플러입니다.\n\n 티백 구성은 계절에 따라 변경됩니다.\n\n\n 네스트는 다른 곳에서 만나기 어려운\n 한국의 좋은 차를 쉬운 방법으로 소개합니다.\n\n 좋은 재료와 바른 방법이라는 본질에 집중하면\n 방법과 형태는 얼마든지 쉬워도 된다고 생각합니다.\n\n\n 어려운 것은 저희가 고민할 테니\n 편안히 좋은 차를 즐겨주세요.`,
+          },
+          {
+            d2: `네스트는 차 tea를 본질로 시작한 공간입니다.\n\n 다양한 기호 식품들 사이에서\n 우리의 차가 바로 설자리를 고민하고\n 여러분에게 더 좋은 차를 소개하겠습니다.\n\n 지속 가능한 라이프 스타일의 둥지,\n be rest, in our nest\n\n\n\n
+            본품 내부에는 네스트 오리지널 리프티\n 티백 8종이 담겨있습니다.\n\n 단정한 패키지로 어디에나 어울리고\n 다 드실 때까지 본품 그대로 보관하시기에도 좋습니다.\n\n 다 드신 본품 패키지는 중간 지지대를 제거하시고\n 오래 보관하고 싶은 편지나 소품을 담아두시기에도 좋습니다.`,
+          },
+          {
+            d3: `선물용으로 많이 찾아주시길 바라는 마음을 담아\n구성했습니다.\n\n 디카페인 차 4개와\n 카페인이 포함된 네스트 블렌딩 티 4개로 구성되어 있습니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['joinus'],
-          brand: '비전스트롤',
+          brand: '네스트',
           sort: 4,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 6,
-        price: 38000,
+        price: 10000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: 'VISIONSTROLL YOUPAY KEYRIG 비전스트롤 유페이 키링',
+        name: 'NEST homemade granola 홈메이드 그래놀라 [원산지:상세설명에 표시]',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/visionstroll_products_05.jpg`,
-            fileName: 'visionstroll_products_05.jpg',
+            url: `/files/nest_products_05.png`,
+            fileName: 'nest_products_05.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/visionstroll_products_05_fullpage.png`,
-            fileName: 'visionstrolll_products_05_fullpage.png',
+            url: `/files/nest_products_05-1.png`,
+            fileName: 'nest_products_05-1.png',
+            orgName: '',
+          },
+          {
+            url: `/files/nest_products_05-2.png`,
+            fileName: 'nest_products_05-2.png',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>비전스트롤의 굿즈 유페이 키링입니다.두께감이 있어서 가벼워 보이지 않고 다양한 용도로 활용가능합니다.
-            </p>
-          </div>`,
+        content: [
+          {
+            d1: `네스트 홈메이드 그래놀라는\n 티카페 네스트의 브런치 메뉴중\n 요거트 플레이트의 메인 재료입니다.\n\n 네스트 키친에서 매일 처음부터 직접 구워내는\n 그래놀라로 본연의 재료를 그대로 느끼실 수 있습니다.\n\n 가장 큰 특징으로\n 압착하지 않은 귀리를 사용합니다.\n\n 시중의 대부분 그래놀라는 압착 귀리를 메인 재료로\n 다양한 재료가 혼합됩니다.\n 압착 귀리 특유의 단단함과 맛은 덜어내고\n\n 가볍고\n 바삭하고\n 고소하게 드실 수 있는점이 매력입니다.`,
+          },
+          {
+            d2: `카페 네스트를 찾아주시는\n 손님분들의 관심과 요청으로\n 드 디 어\n 그래놀라가 온라인 스토어에 찾아왔습니다.\n\n\n\n
+            ingredients\n재료\n\n\n 귀리, 아몬드, 호두, 호박씨, 해바라기씨\n메이플시럽, 비정제설탕`,
+          },
+          {
+            d3: `보관 방법\n\n 밀폐 후 서늘한 곳에 보관해주세요\n 개봉 후에는 최대한 빨리 섭취해주시고\n 습기가 걱정되신다면 냉동 보관을 추천드립니다.\n\n\n\n 권장 섭취기한\n 3개월 `,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['goods'],
-          brand: '비전스트롤',
+          brand: '네스트',
           sort: 3,
         },
       },
