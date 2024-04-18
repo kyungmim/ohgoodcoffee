@@ -39,20 +39,19 @@ function SellerSalesList() {
           <div className="item-wrapper">
             <div className="main-title">
               <p className="main-contents-title">상품 목록 조회</p>
-
-              <div className="main-contents-btn-box">
+            </div>
+            {/* <div className="main-contents-btn-box">
                 <button className="button button-small btn-Fill type-small-btn" onClick={clickEdit}>
                   상품 수정
                 </button>
                 <button className="button button-small btn-null type-small-btn">상품 삭제</button>
-              </div>
-            </div>
-            <div className="main-content">
-              <div className="card-container">
-                <ul className="grid" onClick={menuClick} ref={ulRef}>
-                  {salesList}
-                </ul>
-              </div>
+              </div> */}
+          </div>
+          <div className="main-content">
+            <div className="card-container">
+              <ul className="grid" onClick={menuClick} ref={ulRef}>
+                {salesList}
+              </ul>
             </div>
           </div>
         </div>

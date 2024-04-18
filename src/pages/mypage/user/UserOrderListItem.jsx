@@ -43,12 +43,11 @@ function UserOrderListItem({ item }) {
         <div className="accordion-header">
           <div className="order-item-container">
             <div className="order-header">
-              <p className="order-number">주문번호</p>
-              <p>20240404123456</p>
+              <p>주문번호</p>
+              <p className="order-number">20240404123456</p>
             </div>
             <div className="order-header">
-              <p className="order-date">주문일자</p>
-              <p className="date type_gray">2024-04-04</p>
+              <p className="order-date">주문일자 2024-04-04</p>
             </div>
           </div>
           <div className="order-list">{productsList}</div>
