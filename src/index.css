@@ -199,7 +199,7 @@ body {
   cursor: pointer;
 }
 
-/* header, footer */
+/* @@@@@@@@@@@@@@@@@@@@ header, footer @@@@@@@@@@@@@@@@@@@@ */
 .header {
   background-color: var(--color-primary);
   max-height: 80px;
@@ -290,7 +290,8 @@ body {
   gap: 0.8rem;
 }
 
-/* button */
+/* @@@@@@@@@@@@@@@@@@@@ button @@@@@@@@@@@@@@@@@@@@ */
+
 .button {
   font-size: 1.1rem;
   font-weight: 500;
@@ -372,6 +373,7 @@ body {
   width: 100%;
   margin: 50px auto 0 auto;
   color: var(--color-black-20);
+  min-height: 100vh;
 }
 
 .container.isFlex {
@@ -387,8 +389,9 @@ body {
 }
 
 .item-wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 50px; /*  ===  */
 }
+
 /*  nav-sidebar  */
 
 .sidebar {
@@ -414,7 +417,7 @@ body {
 
 /* Components */
 
-/*  MYPAGE - user-orderlist, seller-saleslist  */
+/* @@@@@@@@@@ MYPAGE - user-orderlist, seller-saleslist @@@@@@@@@@ */
 
 .inner {
   width: 900px;
@@ -503,9 +506,7 @@ body {
 
 .main-contents-title {
   font-size: 24px;
-  padding-left: 20px;
   padding-bottom: 10px;
-  border-bottom: solid 2px var(--color-black-20);
 }
 
 .main-contents {
@@ -531,24 +532,23 @@ body {
 }
 
 .order {
-  margin-bottom: 100px;
+  margin: 20px 0 100px 0;
   display: flex;
   flex-direction: column;
+  gap: 26px;
 }
 
 .order-list {
   background-color: var(--color-white);
   width: 100%;
   box-sizing: border-box;
-  /* border-bottom: solid 2px var(--color-gray-30); */
 }
 
 .order-item-container {
   display: flex;
   justify-content: space-between;
-  padding: 10px;
+  padding-bottom: 10px;
   border-bottom: solid 2px var(--color-gray-20);
-  margin-top: 20px;
 }
 
 .order-header {
@@ -572,10 +572,9 @@ body {
 }
 
 .order-main {
-  margin-top: 20px;
   display: flex;
   gap: 10px;
-  padding: 0 20px 20px 20px;
+  padding: 10px 20px;
   border-bottom: solid 2px var(--color-gray-20);
 }
 
@@ -610,10 +609,19 @@ body {
   justify-content: center;
 }
 
-/* user-orderlist-arcodian-section */
+/* @@@@@@@@@@@@@@@@@@@@ user-orderlist-arcodian-section @@@@@@@@@@@@@@@@@@@@ */
 
-.accordion_wrap {
-  /* display: hidden; */
+.accordion-header {
+  cursor: pointer;
+}
+
+.accordion-contents {
+  background-color: var(--color-white);
+  display: none;
+}
+
+.accordion-item.active .accordion-contents {
+  display: block;
 }
 
 .order-detail {
@@ -679,7 +687,7 @@ body {
   border-bottom: solid 1px var(--color-gray-30);
 }
 
-/*  user, seller - wishlist  */
+/* @@@@@@@@@@@@@@@@@@@@ user, seller - wishlist @@@@@@@@@@@@@@@@@@@@ */
 
 .review-list {
   padding: 20px;
@@ -713,7 +721,7 @@ body {
   font-size: 14px;
 }
 
-/*  user, seller - viewProfile  */
+/* @@@@@@@@@@@@@@@@@@@@ user, seller - viewProfile @@@@@@@@@@@@@@@@@@@@ */
 
 .profile-settings {
   padding: 0 30px 0 30px;
@@ -740,7 +748,7 @@ body {
   flex-basis: 250px;
 }
 
-/*  register, user, seller - profileEdit  */
+/* @@@@@@@@@@@ register, user, seller - profileEdit @@@@@@@@@@@ */
 
 .form-input {
   width: 500px;
@@ -829,7 +837,7 @@ body {
   padding: 3px 0;
 }
 
-/*  magazine, market  */
+/* @@@@@@@@@@@@@@@@@@@@ magazine, market @@@@@@@@@@@@@@@@@@@@ */
 
 .section.type_magazine {
   margin: 70px 0;
@@ -1058,7 +1066,8 @@ body {
   padding: 60px;
 }
 
-/* 버튼 */
+/* @@@@@@@@@@@@@@@@@@@@ 버튼 @@@@@@@@@@@@@@@@@@@@ */
+
 .selling-btns {
   display: flex;
   flex-direction: row;
@@ -1129,7 +1138,7 @@ body {
   margin-top: 30px;
 }
 
-/* 마켓 목록 & 매거진 목록  */
+/* @@@@@@@@@@@@@@@@@@@@ 마켓 목록 & 매거진 목록 @@@@@@@@@@@@@@@@@@@@ */
 
 .card {
   display: flex;
@@ -1141,6 +1150,7 @@ body {
 
 .card-cover {
   aspect-ratio: 1 / 1;
+  object-fit: contain;
 }
 
 .card-contents {
@@ -1196,7 +1206,7 @@ body {
   padding: 4px 10px;
 }
 
-/* paymentComplete */
+/* @@@@@@@@@@@@@@@@@@@@ paymentComplete @@@@@@@@@@@@@@@@@@@@ */
 
 .complete-container {
   max-width: 600px;
@@ -1247,7 +1257,7 @@ body {
   color: var(--color-gray-30);
 }
 
-/*  main   */
+/* @@@@@@@@@@@@@@@@@@@@ main @@@@@@@@@@@@@@@@@@@@ */
 .content-title {
   font-size: 26px;
   font-weight: 700;
@@ -1315,10 +1325,11 @@ body {
   line-height: 1.5rem;
 }
 
-/* Cart */
+/* @@@@@@@@@@@@@@@@@@@@ Cart @@@@@@@@@@@@@@@@@@@@ */
 
 .contents-cart {
   margin: 70px 0;
+  min-height: 100vh;
 }
 
 .cart {
