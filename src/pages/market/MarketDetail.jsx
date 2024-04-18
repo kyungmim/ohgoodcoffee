@@ -108,7 +108,7 @@ function MarketDetail() {
             </div>
           </div>
           <div className="market-overview-bottom">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
+            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.fileName}`} alt={`${item.name} 상품 상세페이지`} />
           </div>
         </div>
       </section>
