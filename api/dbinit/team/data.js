@@ -299,7 +299,7 @@ export const initData = async (nextSeq) => {
         active: true,
         name: '버터 팻 트리오 Butter Fat Trio',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 0,
         mainImages: [
           {
             url: `/files/anthracitecoffee_product_01.jpg`,
@@ -2536,7 +2536,7 @@ export const initData = async (nextSeq) => {
     cart: [
       {
         _id: await nextSeq('cart'),
-        user_id: 1,
+        user_id: 2,
         product_id: 1,
         quantity: 2,
         createdAt: getTime(-7, -60 * 30),
@@ -2544,7 +2544,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 1,
+        user_id: 2,
         product_id: 2,
         quantity: 1,
         createdAt: getTime(-4, -60 * 30),
@@ -2552,7 +2552,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 1,
+        user_id: 2,
         product_id: 3,
         quantity: 2,
         createdAt: getTime(-3, -60 * 60 * 4),
@@ -2560,7 +2560,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 2,
+        user_id: 3,
         product_id: 4,
         quantity: 3,
         createdAt: getTime(-2, -60 * 60 * 12),
@@ -2568,8 +2568,8 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('cart'),
-        user_id: 2,
-        product_id: 4,
+        user_id: 3,
+        product_id: 5,
         quantity: 3,
         createdAt: getTime(-2, -60 * 60 * 12),
         updatedAt: getTime(-1, -60 * 60 * 20),
