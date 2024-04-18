@@ -45,7 +45,7 @@ function SellerInfo() {
                   </div>
                 </div>
               </div>
-              <div className="button-area">
+              <div className="button-info-box">
                 <button onClick={onClick} className="button button-large btn-Fill btn-layout" type="button">
                   수정하기
                 </button>

@@ -85,11 +85,11 @@ function CartList() {
       let cartData = {
         carts: selectedCartItem,
       };
-      await axios.delete('/carts', {data: cartData});
+      await axios.delete('/carts', { data: cartData });
       const response = await axios.get('/carts');
       if (response.data.item) {
         setItems(response.data.item);
-        setSelectedCartItem([])
+        setSelectedCartItem([]);
       }
     }
   }
@@ -135,14 +135,6 @@ function CartList() {
     <>
       <div className="contents-cart">
         <div className="l_wrapper">
-          <div className="cart-button">
-            <button className="btn-null button-small button type-small-btn " onClick={handleCleanUp}>
-              전체 삭제
-            </button>
-            <button className="button btn-Fill button-small type-small-btn" onClick={handleDeleteSelectedItems}>
-              선택 삭제
-            </button>
-          </div>
           <div className="cart">
             <div className="cart-title">
               <div className="cart-layout cart-check" onClick={handleSelectAll}>
@@ -154,17 +146,20 @@ function CartList() {
               <h3 className="cart-layout cart-procuct">상품 정보</h3>
               <h3 className="cart-layout cart-quantity">수량</h3>
               <h3 className="cart-layout cart-price">주문 금액</h3>
-              {/* <h3 className="cart-layout cart-delivery">배송비</h3> */}
-              <h3 className="cart-layout"></h3>
             </div>
-            {/* <!-- cart-title --> */}
-
             {itemList}
 
-            {/* <!-- cart-item 3 --> */}
+            <div className="cart-button">
+              <button className="button button-small type-btn-cart" onClick={handleCleanUp}>
+                전체 삭제
+              </button>
+              <button className="button button-small type-btn-cart" onClick={handleDeleteSelectedItems}>
+                선택 삭제
+              </button>
+            </div>
 
             <div className="cart-total">
-              <p className="cart-total-title">총 주문 상태 {items?.length > 0 ? <span className="cart-total-point">{items.length}개</span> : null}</p>
+              <p className="cart-total-title">총 주문 상태 {items?.length > 0 ? <span className="cart-total-point">{items.length}</span> : null}개</p>
 
               <div className="cart-total-list">
                 <div className="cart-tota-item">
@@ -190,7 +185,6 @@ function CartList() {
                   <p className="cart-total-txt">총 주문 금액</p>
                 </div>
               </div>
-              {/* <!-- total --> */}
             </div>
 
             <button className="button button-large btn-null btn-layout" onClick={handleSubmitOrder}>
