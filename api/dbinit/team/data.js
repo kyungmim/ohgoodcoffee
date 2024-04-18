@@ -1,11 +1,7 @@
 import moment from 'moment';
 
-// function getDay(day = 0) {
-//   return moment().add(day, 'days').format('YYYY.MM.DD');
-// }
-
 function getTime(day = 0, second = 0) {
-  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ss');
+  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ssy = 0')
 }
 
 export const initData = async (nextSeq) => {
@@ -24,9 +20,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC03',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -53,9 +48,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '04-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -81,9 +75,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC03',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -109,9 +102,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          images: [],
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -132,9 +124,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -155,9 +146,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-28',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -178,9 +168,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -201,9 +190,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -229,9 +217,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -252,9 +239,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -275,9 +261,8 @@ export const initData = async (nextSeq) => {
         createdAt: getTime(-100, -60 * 60 * 3),
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
-          birthday: '03-23',
           membershipClass: 'MC01',
-          image: '',
+          image: 'profile.svg',
           addressBook: [
             {
               id: 1,
@@ -293,103 +278,95 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('product'),
         seller_id: 1,
-        price: 13000,
+        price: 12000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '버터 팻 트리오 Butter Fat Trio',
-        quantity: 310,
-        buyQuantity: 0,
+        name: '[센터커피] 에티오피아 디카페인 콜드브루 300ml',
+        quantity: 30,
+        buyQuantity: 5,
         mainImages: [
           {
-            url: `/files/anthracitecoffee_product_01.jpg`,
-            fileName: 'anthracitecoffee_product_01.jpg',
+            url: `/files/centercoffee_01.png`,
+            fileName: 'centercoffee_01.png',
           },
         ],
         detailImages: [
           {
-            url: `/files/anthracitecoffee_product_01_fullpage.png`,
-            fileName: 'anthracitecoffee_product_01_fullpage.png',
+            url: `/files/centercoffee_01.png`,
+            fileName: 'centercoffee_01.png',
+          },
+          {
+            url: `/files/centercoffee_01_detail.png`,
+            fileName: 'centercoffee_01_detail.png',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>“안 돼요, 슈피넬씨. 쓸데 없어요. 
-            내가 훌륭한 것을 연주하기를 기대하고 계실는지 누가 알겠어요! 
-            그런데 나는 배운 것을 모두 잊어버렸는걸요. 정말입니다. 
-            악보를 보지 않고는 거의 아무것도 칠 수 없어요.” 
-            “그러시면, 그 ‘거의 아무 것도 없는’ 바로 그것을 쳐 주십시오!” 
-            – 토마스 만, 『트리스탄』 중에서 </p>
-            
-            <p> 음표는 악보에 표시되어 그 탄생을 알리고 움직이는 아름다움을 갖게 됩니다. 모든 악기에서 파생된 소리는 곧 하나의 연주를 위해 존재하게 됩니다. 토마스 만의 작품에 등장하는 곡들은 작품의 전체적 흐름을 이끌어가는 역할을 합니다. 그의 문장들은 마치 하나의 곡의 형태를 만들며 작곡을 하듯 묘사하고 있습니다. 존재의 이유를 아는 소리는 자유롭고 악보 안에서 자신의 위치를 정확히 잡아냅니다. 이 다양한 소리의 연주처럼 각기 다른 대륙이 조화를 갖도록 만들었습니다. 중남미의 균형감, 아시아의 묵직한 풍미, 아프리카의 다채로운 향미를 담아낸 버터 팻 트리오입니다. 
-            버터 팻 트리오는 커피가 가진 묵직한 질감과 진한 풍미를 만들기 위해, 중남미의 커피를 베이스로 사용하여 모든 산지의 커피를 최대한 활용했습니다. 견과류의 노트와 단맛이 지배적인 브라질 커피를 베이스로 하며, 콜롬비아와 과테말라를 추가하여 복합성과 질감을 더했습니다. 에티오피아는 다크로스팅 단계에서도 그 본연의 과일 풍미를 놓치지 않도록 잡아주고, 인도네시아의 이국적 향신료와 같이 그 쌉싸름한 풍미로 마무리합니다. 버터 팻 트리오는 균형감이 좋은 진한 커피를 지향합니다. 단단하면서도 힘 있는 풍미로 스파이시한 다크 초콜릿의 여운으로 완성됩니다. </p>
-            
-            <p>구성 : 브라질 Brazil / 에티오피아 Ethiopia / 콜롬비아 Colombia / 과테말라 Guatemala / 인도네시아 Indonesia
-            로스팅 레벨 : 미디움 다크 Medium Dark
-            플레이버 : 볶은 견과, 스파이시, 다크 초콜렛
-            노트 : 버터 팻 트리오는 균형잡힌 진한 커피를 지향합니다. 단단하면서도 묵직한 풍미는 스파이시한 다크 초콜렛의 여운으로 완성됩니다.</p>
-          </div>`,
+        content: [
+          {
+            d1: '액상커피로 어디서든 간편하게 맛있는 커피를 즐겨보세요! ',
+          },
+          {
+            d2: '처음부터 게이샤와 같은 품종의 커피에 집중하여 고품질의 커피를 생산하고 있는 농장입니다.\n특히 이 농장은 건조과정과 보관까지 품질 관리를 심혈을 기울여 좋은결과물을 만들어 내기 위해 노력하고 있습니다. ',
+          },
+          {
+            d3: '물과 만나면서 퍼지는 은은한 자스민 향이 좋은 콜드브루 커피입니다.\n 살구의 플레이버와 함께 청사과의 기분 좋은 산미가 입안 가득 퍼지며 맛을 다채롭게 만들어줍니다.\n 마지막에 느껴지는 밀크초콜릿의 단맛이 입안을 은은하게 정리해주면서 긴 여운을 남겨줍니다.',
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['coffee'],
-          brand: 'anthracitecoffee',
+          brand: '센터커피',
           sort: 2,
-          weight: ['200g', '500g'],
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 1,
-        price: 12000,
+        price: 12500,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '히스토리 미스터리 History Mystery',
+        name: '[센터커피] 게이샤 콜드브루 200ml',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/anthracitecoffee_product_02.jpg`,
-            fileName: 'anthracitecoffee_product_02.jpg',
+            url: `/files/centercoffee_02.png`,
+            fileName: 'centercoffee_02.png',
           },
         ],
         detailImages: [
           {
-            url: `/files/anthracitecoffee_product_02_fullpage.png`,
-            fileName: 'anthracitecoffee_product_02_fullpage.png',
+            url: `/files/centercoffee_02.png`,
+            fileName: '/files/centercoffee_02.png',
+          },
+          {
+            url: `/files/centercoffee_02_detail.png`,
+            fileName: 'centercoffee_02_detail.png',
           },
         ],
-        content: `
-            <div class="product-detail">
-              <p>밤, 덤불과 나무 사이,
-              집 한 채 한 창가에 희미하게 빛이 비쳤다.
-              보이지 않는 그 방에서
-              누군가 서서 플루트를 불었다.
-              오래전부터 널리 알려진 선율이었다.
-              그 노래는 밤 속으로 무척이나 온화하게 흘러들었다.
-              마치 모든 지역이 고향인 것처럼.
-              마치 모든 길이 완성된 것처럼.
-              – 헤르만 헤세의 『플루트 연주』 중에서</p>
-              <p>커피는 단조로울 수 없습니다. 우리의 매일이 다르듯 강렬하거나 혹은 가볍게, 여러 가지의 느낌으로 다가옵니다. 지금의 시간과 장소, 이 순간의 음악과 소리 모두가 현재와 과거를 만들고 있습니다. 함께 있는 사람과 주변의 사물들에 따라 한 잔의 커피에는 또 다른 역사가 생겨납니다. 온화한 플루트의 음율로 표현되는 헤세의 문장은 오랜 시간이 만들어낸 긴 파동을 연상하게 합니다. 그 이야기가 더해진 과거와 역사, 이 자체가 오늘의 커피를 만들 수 있습니다. 가장 보편적이며 기본을 유지해내는 클래식한 완성도의 히스토리 미스터리입니다.
-              히스토리 미스터리는 중남미 커피를 중점으로 부드럽고 짙은 풍미와 아프리카의 섬세한 향미를 느낄 수 있습니다. 고소한 풍미와 단맛이 좋은 브라질을 베이스로 하여, 과테말라와 에티오피아로 커피의 질감과 향미의 밸런스를 맞췄습니다. 보편적 커피가 주는 향미와 의미에 집중하길 원합니다. 가장 기본적인 것을 잡아내기 위해 부드럽고 고소함으로 무게감을 만들었습니다. 우리는 그 속에 어떤 결합된 지점을 넣길 원했고, 이 복합적인 향미를 놓치지 않으며 부드러움과 깊이감을 유지하도록 설계한 커피입니다.</p>
-              <p>구성 : 브라질 Brazil / 콜롬비아 Colombia / 과테말라 Guatemala <hr />
-              로스팅 레벨 : 다크 Dark <hr />
-              플레이버 : 견과류, 브라운 슈가, 카카오 <hr />
-              노트 : 히스토리 미스터리는 부드러운 질감의 커피 입니다. 볶은 견과류, 갈색설탕
-              의 단맛과 카카오의 깊은 향이 있습니다.</p>
-            </div>`,
+        content: [
+          {
+            d1: '액상커피로 어디서든 간편하게 맛있는 커피를 즐겨보세요! ',
+          },
+          {
+            d2: '처음부터 게이샤와 같은 품종의 커피에 집중하여 고품질의 커피를 생산하고 있는 농장입니다.\n특히 이 농장은 건조과정과 보관까지 품질 관리를 심혈을 기울여 좋은결과물을 만들어 내기 위해 노력하고 있습니다. ',
+          },
+          {
+            d3: '물과 만나면서 퍼지는 은은한 자스민 향이 좋은 콜드브루 커피입니다.\n 살구의 플레이버와 함께 청사과의 기분 좋은 산미가 입안 가득 퍼지며 맛을 다채롭게 만들어줍니다.\n 마지막에 느껴지는 밀크초콜릿의 단맛이 입안을 은은하게 정리해주면서 긴 여운을 남겨줍니다.',
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['coffee'],
-          brand: 'anthracitecoffee',
+          brand: '센터커피',
           sort: 2,
-          weight: ['200g', '500g'],
         },
       },
       {
@@ -399,174 +376,179 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '케냐 AA Top 키리아이니 Kenya AA Top Kiriaini',
-        quantity: 310,
-        buyQuantity: 200,
+        name: '[센터커피] 로고 담요',
+        quantity: 100,
+        buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/anthracitecoffee_product_04.jpg`,
-            fileName: 'anthracitecoffee_product_04.jpg',
+            url: `/files/centercoffee_03.jpg`,
+            fileName: 'centercoffee_03.jpg',
           },
         ],
         detailImages: [
           {
-            url: `/files/anthracitecoffee_product_03_fullpage.png`,
-            fileName: 'anthracitecoffee_product_03_fullpage.png',
+            url: `/files/centercoffee_03.jpg`,
+            fileName: 'centercoffee_03.jpg',
           },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>지역 : Kikuyu <hr />
-            품종 : SL34, SL28 <hr />
-            고도 : 1,700m - 1,800m <hr />
-            등급 : AA Top <hr />
-            로스팅레벨 : Light Medium <hr />
-            가공방식 : Washed <hr />
-            노트 :  Grapefruit, Pecan, Maplesyrup, Creamy <hr />
-            중량 : 200g</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['coffee'],
-          brand: 'anthracitecoffee',
-          sort: 2,
-          weight: ['200g'],
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 1,
-        price: 12000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: 'Blend Drip Bag Set',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
           {
-            url: `/files/anthracitecoffee_product_04.jpg`,
-            fileName: 'anthracitecoffee_product_04.jpg',
+            url: `/files/centercoffee_03_detail.jpg`,
+            fileName: 'centercoffee_03_detail.jpg',
           },
         ],
-        detailImages: [
-          {
-            url: `/files/anthracitecoffee_product_04_fullpage.png`,
-            fileName: 'anthracitecoffee_product_04_fullpage.png',
-          },
+        content: [
+          { d1: '연베이지, 진한샐몬,진청카키, 옐로우 총 4가지의 따듯한 색상으로 제작된 센터커피 블랭킷으로 일상적인 공간에 작은 변화를 느껴보세요.' },
+          { d2: '센터커피 블랭킷은 박스에 담아 전달합니다.\n 박스를 뜯고 블랭킷을 펼치는 순간, 일상적인 공간이 다채로운으로 가득하기를 희망합니다.' },
+          { d3: 'size: 가로 100 * 세로 75(cm)\n Meterial: 아크릴 100%\n Country of Origin: 대한민국' },
         ],
-        content: `
-          <div class="product-detail">
-            <p>지역 : Kikuyu <hr />
-            품종 : SL34, SL28 <hr />
-            고도 : 1,700m - 1,800m <hr />
-            등급 : AA Top <hr />
-            로스팅레벨 : Light Medium <hr />
-            가공방식 : Washed <hr />
-            노트 :  Grapefruit, Pecan, Maplesyrup, Creamy <hr />
-            중량 : 200g</p> 
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['coffee'],
-          brand: 'anthracitecoffee',
-          sort: 2,
-          weight: ['200g'],
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 1,
-        price: 15000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: 'COLD BREW 윌리엄 블레이크',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/anthracitecoffee_product_05.jpg`,
-            fileName: 'anthracitecoffee_product_05.jpg',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/anthracitecoffee_product_05_fullpage.png`,
-            fileName: 'anthracitecoffee_product_05_fullpage.png',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>윌리엄 블레이크의 시 정신은 이미 우리가 알고 있는 인간의 내면입니다.
-            모든 대상을 자각할 때, 떠오르는 이미지와 상상을 넘어 
-            우리에게 존재하는 내면의 거주자와 다시 만납니다. 
-            다크로스팅의 다양한 향미와 묵직한 단맛을 갖고 있으며
-            절인 대추야자, 블랜커런트, 카카오닙의 여운으로 
-            깊고 깨끗한 질감을 가진 완성도 있는 블랜드, 윌리엄 블레이크 입니다.</p>
-            <p>구성 : 케냐 Kenya / 과테말라 Guatemala / 에티오피아 Ethiopia <hr />
-            로스팅 레벨 : 다크 Dark <hr />
-            노트 : cacao, melt, roasted almond, roasted peanut, chocolate, smooth-body</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['coffee'],
-          brand: 'anthracitecoffee',
-          sort: 2,
-          weight: ['300ml'],
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 1,
-        price: 45000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: 'Anthracite x S well 오닉스 텀블러 (470ml)',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/anthracitecoffee_product_06.jpg`,
-            fileName: 'anthracitecoffee_product_06.jpg',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/anthracitecoffee_product_06_fullpage.png`,
-            fileName: 'anthracitecoffee_product_06_fullpage.png',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>무엇이든 더 오래도록 따듯하고, 시원하게 유지할 수 있는 S’WELL 텀블러
-            물 튀김 방지 슬라이드 오픈 뚜껑과 손잡이로 쉽게 휴대하고 마실 수 있습니다 .
-            오닉스는 고급 18-8 스테인리스 스틸 사용으로 그 어떤 제품보다 음료를 더 차갑게 또는 뜨겁게 유지합니다. 
-            뛰어난 성능, 세련된 실루엣, 다양한 디자인을 보유하고 있습니다.</p>
-            <p>[ 상세 사이즈 ] <hr />
-            사이즈(cm) 너비 9.5 높이 13.5 <hr />
-            용량 약 470ml <hr />
-            무게 312g <hr />
-            보온 3시간 / 보냉 10시간 가능</p>
-          </div>`,
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['goods'],
-          brand: 'anthracitecoffee',
-          sort: 3,
+          brand: '센터커피',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 1,
+        price: 9900,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[센터커피] 에티오피아 디카페인 네스프레소 캡슐',
+        quantity: 100,
+        buyQuantity: 10,
+        mainImages: [
+          {
+            url: `/files/centercoffee_04.png`,
+            fileName: 'centercoffee_04.png',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/centercoffee_04.png`,
+            fileName: 'centercoffee_04.png',
+          },
+          {
+            url: `/files/centercoffee_04_detail.png`,
+            fileName: 'centercoffee_04_detail.png',
+          },
+        ],
+        content: [
+          {
+            d1: '처음 한모금에 다크초콜릿과 캐러멜의 단맛이 느껴지고, 이후에 커피가 식을수록 건자두의 플레이버가 입안을 채워줍니다. 마지막으로 세련되고 깔끔한 뒷맛이 전체적인 밸런스를 잡아주는 커피입니다. ',
+          },
+          {
+            d2: '처음부터 게이샤와 같은 품종의 커피에 집중하여 고품질의 커피를 생산하고 있는 농장입니다.\n특히 이 농장은 건조과정과 보관까지 품질 관리를 심혈을 기울여 좋은결과물을 만들어 내기 위해 노력하고 있습니다. ',
+          },
+          {
+            d3: '중남미 커피를 중점으로 부드럽고 짙은 풍미와 아프리카의 섬세한 향미를 느낄 수 있습니다. 고소한 풍미와 단맛이 좋은 브라질을 베이스로 하여, 과테말라와 에티오피아로 커피의 질감과 향미의 밸런스를 맞췄습니다. 보편적 커피가 주는 향미와 의미에 집중하길 원합니다. 가장 기본적인 것을 잡아내기 위해 부드럽고 고소함으로 무게감을 만들었습니다. 우리는 그 속에 어떤 결합된 지점을 넣길 원했고, 이 복합적인 향미를 놓치지 않으며 부드러움과 깊이감을 유지하도록 설계한 커피입니다.',
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['coffee'],
+          brand: '센터커피',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 1,
+        price: 20000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[센터커피] 프라이데이 블랜드 네스프레소 캡슐',
+        quantity: 100,
+        buyQuantity: 0,
+        mainImages: [
+          {
+            url: `/files/centercoffee_05.png`,
+            fileName: 'centercoffee_05.png',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/centercoffee_05.png`,
+            fileName: 'centercoffee_05.png',
+          },
+          {
+            url: `/files/centercoffee_05_detail.png`,
+            fileName: 'centercoffee_05_detail.png',
+          },
+        ],
+        content: [
+          {
+            d1: '처음 한모금에 다크초콜릿과 캐러멜의 단맛이 느껴지고, 이후에 커피가 식을수록 건자두의 플레이버가 입안을 채워줍니다. 마지막으로 세련되고 깔끔한 뒷맛이 전체적인 밸런스를 잡아주는 커피입니다. ',
+          },
+          {
+            d2: '처음부터 게이샤와 같은 품종의 커피에 집중하여 고품질의 커피를 생산하고 있는 농장입니다.\n특히 이 농장은 건조과정과 보관까지 품질 관리를 심혈을 기울여 좋은결과물을 만들어 내기 위해 노력하고 있습니다. ',
+          },
+          {
+            d3: '중남미 커피를 중점으로 부드럽고 짙은 풍미와 아프리카의 섬세한 향미를 느낄 수 있습니다. 고소한 풍미와 단맛이 좋은 브라질을 베이스로 하여, 과테말라와 에티오피아로 커피의 질감과 향미의 밸런스를 맞췄습니다. 보편적 커피가 주는 향미와 의미에 집중하길 원합니다. 가장 기본적인 것을 잡아내기 위해 부드럽고 고소함으로 무게감을 만들었습니다. 우리는 그 속에 어떤 결합된 지점을 넣길 원했고, 이 복합적인 향미를 놓치지 않으며 부드러움과 깊이감을 유지하도록 설계한 커피입니다.',
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['coffee'],
+          brand: '센터커피',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 1,
+        price: 20000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[센터커피] 클레버 커피 드리퍼',
+        quantity: 100,
+        buyQuantity: 30,
+        mainImages: [
+          {
+            url: `/files/centercoffee_06.png`,
+            fileName: 'centercoffee_06.png',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/centercoffee_06.png`,
+            fileName: 'centercoffee_06.png',
+          },
+          {
+            url: `/files/centercoffee_06_detail.png`,
+            fileName: 'centercoffee_06_detail.png',
+          },
+        ],
+        content: [
+          {
+            d1: '프렌치 프레스와 핸드드립의 장점을 모아 만든 커피 드리퍼입니다.\n 센터커피 로고가 각인되어 있고,  내리는 방법이 간단하여 누구나 내릴 수 있고, 좋은 원두라면 그 원두의 맛을 고스란히 담을 수 있습니다.',
+          },
+          {
+            d2: '처음부터 게이샤와 같은 품종의 커피에 집중하여 고품질의 커피를 생산하고 있는 농장입니다.\n특히 이 농장은 건조과정과 보관까지 품질 관리를 심혈을 기울여 좋은결과물을 만들어 내기 위해 노력하고 있습니다. ',
+          },
+          {
+            d3: '사이즈: 윗지름 11.5 / 밑지름 10.5 / 높이 12cm\n 색상: White\n 재질: 아크릴로나트릴스티렌, 실리콘수지, 폴리스티렌\n 제조국: 대만\n 품질보증기간: 미사용시 7일이내 환불 가능',
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['coffee'],
+          brand: '센터커피',
+          sort: 2,
         },
       },
       {
@@ -576,9 +558,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '보난자 드립백 24개입 [3종]',
+        name: '[보난자커피] 보난자 드립백 24개입 [3종]',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 290,
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_01.jpg`,
@@ -587,26 +569,26 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_01_fuillpage.png`,
-            fileName: 'bonanzacoffee_products_01_fuillpage.png',
+            url: `/files/bonanzacoffee_products_01_detail_01.jpg`,
+            fileName: 'bonanzacoffee_products_01_detail_01.jpg',
+          },
+          {
+            url: `/files/bonanzacoffee_products_01_detail_02.jpg`,
+            fileName: 'bonanzacoffee_products_01_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>DRIP BAG 24ea [3 types]
-            원두의 향미는 간직하면서도, 간편히 내려 마시기 좋은 보난자 드립백. 넉넉한 용량과 합리적인 가격으로 구성된 24개입은 오피스에서 나누어 마시거나, 스페셜티 커피를 즐기는 분께 집들이 선물로 추천드려요. 개별 포장으로 보관 및 휴대가 편리해 집에 두고 마시기에도 좋습니다. <hr />
-            보난자 블렌드 Bonanza Blend : 초콜렛 트러플, 다크 체리 <hr />
-            보난자 싱글 오리진 Bonanza Single Origin: 플로럴, 베리, 백설탕 <hr />
-            보난자 디카페인 Bonanza Decaf : 꿀, 배, 자두</p>
-            
-          </div>`,
+        content: [
+          { d1: '언제든 내려마시기 좋은 보난자커피 드립백 24개입과 드립 어시스트 세트\n 산뜻한맛과 향, 부드러운 질감. \n 원두의 향미를 간직한 드립커피 한 잔을 더욱 편하게 즐기세요. ' },
+          { d2: '드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했다면, 다양한 컵에 거치할 수 있는 드립 어시스트를 이용하세요. ' },
+          { d3: '몰입이나 휴식이 필요할 때 언제든 개별포장으로 보관이 편리해 언제 어디서든 꺼내어 마시기 좋습니다. ' },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['coffee'],
-          brand: 'bonanzacoffee',
+          brand: '보난자커피',
           sort: 2,
         },
       },
@@ -617,9 +599,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '보난자 블렌드 콜롬비아 & 브라질 250g',
+        name: '[보난자커피] 보난자 블렌드 콜롬비아 & 브라질 250g',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 100,
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_02.png`,
@@ -628,30 +610,33 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_02_fuillpage.png`,
-            fileName: 'bonanzacoffee_products_02_fuillpage.png',
+            url: `/files/bonanzacoffee_products_02_detail_01.jpg`,
+            fileName: 'bonanzacoffee_products_02_detail_01.jpg',
+          },
+          {
+            url: `/files/bonanzacoffee_products_02_detail_02.jpg`,
+            fileName: 'bonanzacoffee_products_02_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>BONANZA BLEND COLOMBIA & BRAZIL 250g <hr />
-            보난자커피 스테디 셀러. 초콜렛 트러플, 다크 체리  <hr />
-            보난자 블렌드 원두 1개 구매 시 10% 할인  <hr />
-            보난자 블렌드 원두 2개 이상 구매 시 10% 할인 + 원두 리필 보틀 증정 *한정 수량  <hr />
-            Origin | Colombia | Brazil  <hr />
-            Region | Pitalito, Huila | Minas Gerais  <hr />
-            Varietal | Caturra, Castillo | Mixed  <hr />
-            Process | Fully Washed | Natural  <hr />
-            지속가능한 커피 문화를 위해 보난자커피는 매해 커피 수확 철이면 더욱 투명하고 공정한 방식을 취하는 농장을 찾습니다. 이번 보난자 블렌드는 풍부한 플레이버와 부드러운 바디감이 돋보이는 브라질 Sitio Santa Clara 농장의 커피, 그리고 오랜 시간 거래를 이어왔던 콜롬비아 El Carmen 농장의 커피를 블렌딩하여 더욱 균형감이 좋은 커피를 소개해 드릴 수 있게 되었습니다. 부드러운 질감 아래 초콜렛 트러플의 쌉싸름함, 다크 체리의 농후한 단맛이 느껴지는 블렌드입니다. </p>
-            
-          </div>`,
+        content: [
+          {
+            d1: '보난자커피 스테디 셀러. 초콜렛 트러플, 다크 체리\n Origin | Colombia | Brazil\n Region | Pitalito, Huila | Minas Gerais\n Varietal | Caturra, Castillo | Mixed\n Process | Fully Washed | Natural',
+          },
+          {
+            d2: '지속가능한 커피 문화를 위해 보난자커피는 매해 커피 수확 철이면 더욱 투명하고 공정한 방식을 취하는 농장을 찾습니다. 이번 보난자 블렌드는 풍부한 플레이버와 부드러운 바디감이 돋보이는 브라질 Sitio Santa Clara 농장의 커피, 그리고 오랜 시간 거래를 이어왔던 콜롬비아 El Carmen 농장의 커피를 블렌딩하여 더욱 균형감이 좋은 커피를 소개해 드릴 수 있게 되었습니다. 부드러운 질감 아래 초콜렛 트러플의 쌉싸름함, 다크 체리의 농후한 단맛이 느껴지는 블렌드입니다. ',
+          },
+          {
+            d3: '그라인더 사용 시 주의사항\n 보난자커피는 커피 생두 특유의 향미를 담아내기 위해 라이트 로스팅을 지향합니다.\n 라이트 로스팅 특성상, 원두 밀도가 높아 일부 그라인더에서 분쇄가 어려울 수 있으니 구매에 참고해 주세요.',
+          },
+        ],
+
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['coffee'],
-          brand: 'bonanzacoffee',
+          brand: '보난자커피',
           sort: 2,
         },
       },
@@ -662,9 +647,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-        quantity: 310,
-        buyQuantity: 200,
+        name: '[보난자커피]보난자 드립백 5개입 3종 + 드립 어시스트',
+        quantity: 100,
+        buyQuantity: 70,
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_03.jpg`,
@@ -673,33 +658,31 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_03_fuillpage.png`,
-            fileName: 'bonanzacoffee_products_03_fuillpage.png',
+            url: `/files/bonanzacoffee_products_03_detail_01.jpg`,
+            fileName: 'bonanzacoffee_products_03_detail_01.jpg',
+          },
+          {
+            url: `/files/bonanzacoffee_products_03_detail_02.jpg`,
+            fileName: 'bonanzacoffee_products_03_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>DRIP BAG SET [3 types] + DRIP ASSIST
-            구성 | 드립백 5개입 3박스 + 드립 어시스트
-            원두 본연의 향미를 간직한 드립 커피 한 잔, 이제 더욱 편하게 즐기세요. 
-            개별 포장으로 보관 및 휴대가 편리해, 
-            언제 어디에서든 가볍게 내려 마시기 좋은 드립백과 드립 어시스트 세트입니다. 
-            드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했던 분들을 위해, 
-            다양한 컵에 거치할 수 있는 드립 어시스트를 함께 구성했어요. 
-            평소 드립백 커피를 즐겨 드시는 분들께 선물용으로 추천드려요. 
-            *보난자커피의 시그니처 원두 3종 중 원하는 종류를 골라 구성하실 수 있습니다. <hr />
-            보난자 블렌드 Bonanza Blend : 초콜렛 트러플, 다크 체리 <hr />
-            보난자 싱글 오리진 Bonanza Single Origin: 플로럴, 베리, 백설탕 <hr />
-            보난자 디카페인 Bonanza Decaf : 꿀, 배, 자두 </p>
-            
-          </div>`,
+        content: [
+          { d1: 'DRIP BAG SET [3 types] + DRIP ASSIST\n 구성 | 드립백 5개입 3박스 + 드립 어시스트\n 원두 본연의 향미를 간직한 드립 커피 한 잔, 이제 더욱 편하게 즐기세요.' },
+          {
+            d2: '개별 포장으로 보관 및 휴대가 편리해, \n 언제 어디에서든 가볍게 내려 마시기 좋은 드립백과 드립 어시스트 세트입니다. \n 드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했던 분들을 위해, \n 다양한 컵에 거치할 수 있는 드립 어시스트를 함께 구성했어요. \n평소 드립백 커피를 즐겨 드시는 분들께 선물용으로 추천드려요. ',
+          },
+          {
+            d3: '*보난자커피의 시그니처 원두 3종 중 원하는 종류를 골라 구성하실 수 있습니다.\n 보난자 블렌드 Bonanza Blend : 초콜렛 트러플, 다크 체리\n 보난자 싱글 오리진 Bonanza Single Origin: 플로럴, 베리, 백설탕\n 보난자 디카페인 Bonanza Decaf : 꿀, 배, 자두\n *교환 및 반품 안내는 [문의] > [자주 묻는 질문] 통해 확인 부탁드립니다.',
+          },
+        ],
+
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
           category: ['coffee'],
-          brand: 'bonanzacoffee',
+          brand: '보난자커피',
           sort: 2,
         },
       },
@@ -710,9 +693,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '[ ACME x BONANZA COFFEE ] 보난자 머그잔 L [350ml]',
-        quantity: 310,
-        buyQuantity: 200,
+        name: '[보난자커피] ACME x BONANZA COFFEE 보난자 머그잔 L [350ml]',
+        quantity: 100,
+        buyQuantity: 30,
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_04.webp`,
@@ -721,35 +704,37 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_04_fuillpage.png`,
-            fileName: 'bonanzacoffee_products_04_fuillpage.png',
+            url: `/files/bonanzacoffee_products_04_detail_01webp`,
+            fileName: 'bonanzacoffee_products_04_detail_01.webp',
+          },
+          {
+            url: `/files/bonanzacoffee_products_04_detail_02.webp`,
+            fileName: 'bonanzacoffee_products_04_detail_02.webp',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>ACME x BONANZA COFFEE MUG L [350ml] <hr />
-            Ø 12cm x H 6cm <hr />
-            ‘Unnecessarily Large’ 라지 사이즈의 머그잔과 소서 세트입니다. 보난자커피의 이상적인 라떼 레시피를 구현할 수 있는 커피잔을 만들기 위해, 클래식한 디자인과 튼튼한 내구성을 갖추어 많은 바리스타들이 사랑하는 브랜드 ACME와 함께 제작했습니다.
-            또한 잔 입구가 넓어 바리스타들이 라떼 아트 실력을 보여주기에 최적화된 디자인으로, 라떼아트 챔피언들이 주로 사용하는 Vertex Bowl 라떼 잔의 특징을 반영했습니다.
-            350ml 용량의 사이즈로, 따뜻한 커피를 기존 커피잔보다 더 오래동안 맛있게 즐길 수 있습니다. <hr />
-            *소서에 새겨진 문구는 모두 수작업으로 이루어져 제품에 따라 위치가 상이할 수 있습니다. 이로 인한 교환, 환불은 어려우니 구매 시 참고해 주세요.
-            *별도 박스 구성 없이 종이 완충재로 포장해 보내드립니다. </p>
-            
-          </div>`,
+        content: [
+          { d1: 'ACME x BONANZA COFFEE MUG L [350ml]\n Ø 12cm x H 6cm' },
+          {
+            d2: 'Unnecessarily Large 라지 사이즈의 머그잔과 소서 세트입니다. 보난자커피의 이상적인 라떼 레시피를 구현할 수 있는 커피잔을 만들기 위해, 클래식한 디자인과 튼튼한 내구성을 갖추어 많은 바리스타들이 사랑하는 브랜드 ACME와 함께 제작했습니다.\n 또한 잔 입구가 넓어 바리스타들이 라떼 아트 실력을 보여주기에 최적화된 디자인으로, 라떼아트 챔피언들이 주로 사용하는 Vertex Bowl 라떼 잔의 특징을 반영했습니다.\n 350ml 용량의 사이즈로, 따뜻한 커피를 기존 커피잔보다 더 오래동안 맛있게 즐길 수 있습니다.',
+          },
+          {
+            d3: '*소서에 새겨진 문구는 모두 수작업으로 이루어져 제품에 따라 위치가 상이할 수 있습니다. 이로 인한 교환, 환불은 어려우니 구매 시 참고해 주세요.\n *별도 박스 구성 없이 종이 완충재로 포장해 보내드립니다.',
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: true,
           category: ['goods'],
-          brand: 'bonanzacoffee',
+          brand: '보난자커피',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 2,
-        price: 45000,
+        price: 38000,
         shippingFees: 3000,
         show: true,
         active: true,
@@ -764,23 +749,29 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_04_fuillpage.png`,
-            fileName: 'bonanzacoffee_products_04_fuillpage.png',
+            url: `/files/bonanzacoffee_products_05_detail_01.jpg`,
+            fileName: 'bonanzacoffee_products_05_detail_01.jpg',
+          },
+          {
+            url: `/files/bonanzacoffee_products_05_detail_02.jpg`,
+            fileName: 'bonanzacoffee_products_05_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>TEAM BONANZA T-SHIRT [WHITE] 
-            보난자커피 슬로건과 로고가 앞뒤로 새겨진 보난자 유니폼 긴팔 티셔츠입니다. </p>
-            
-          </div>`,
+        content: [
+          { d1: 'TEAM BONANZA T-SHIRT [WHITE]\n 보난자커피 슬로건과 로고가 앞뒤로 새겨진 보난자 유니폼 반팔 티셔츠입니다.' },
+          { d2: 'Who in their right mind would devote their whole life to coffee?' },
+          {
+            d3: '14수 면 100% 반팔티셔츠입니다.\n 사이즈는 측정 방법과 위치에 따라 1~3cm 오차가 발생할 수 있습니다. \n 기재된 사이즈 차이로 인한 교환 및 환불은 불가합니다.\n 드라이크리닝, 손세탁이 가능하며 세탁기 이용시 찬물로 세탁하시기를 바랍니다.',
+          },
+        ],
+
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: false,
           category: ['goods'],
-          brand: 'bonanzacoffee',
+          brand: '보난자커피',
           sort: 3,
         },
       },
@@ -791,9 +782,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '스테킹 머그컵의 원조 브랜드 킵댓',
-        quantity: 310,
-        buyQuantity: 200,
+        name: '[킵댓커피] 스테킹 머그컵의 원조 브랜드 킵댓',
+        quantity: 200,
+        buyQuantity: 60,
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_01.jpg`,
@@ -802,24 +793,30 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_01_fullpage.png`,
-            fileName: 'keepthatcoffee_products_01_fullpage.png',
+            url: `/files/keepthatcoffee_products_01_detail_01.jpg`,
+            fileName: 'keepthatcoffee_products_01_detail_01.jpg',
+          },
+          {
+            url: `/files/keepthatcoffee_products_01_detail_02.jpg`,
+            fileName: 'keepthatcoffee_products_01_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>스테킹 머그컵의 원조 브랜드 킵댓
-            독보적인 컬러감과 전통적인 머그의 디자인으로 어느 공간에나 잘 어울립니다.
-            커피, 차 어떤 음료와도 잘 어울리고 인테리어 소품으로도 좋은 제품 입니다. </p>
-            
-          </div>`,
+        content: [
+          {
+            d1: '스테킹 머그컵의 원조 브랜드 킵댓\n 독보적인 컬러감과 전통적인 머그의 디자인으로 어느 공간에나 잘 어울립니다.\n 커피, 차 어떤 음료와도 잘 어울리고 인테리어 소품으로도 좋은 제품 입니다.',
+          },
+          { d2: '용량: 330ml / 200ml\n 재질: 도자기\n 사이즈: 330ml 지름 8cm 높이 9.7cm' },
+          {
+            d3: '식기세척 사용이 가능하나 로고 및 제품 스크레치 현상이 발생할 수 있습니다.\n 도자기 제품은 기포, 돌기, 파임, 찍힘 색 번짐은 자연스러운 유약 흐름 등의 특성이 있을수 있으며,\n 이는 불량이 아니므로 이로 인한 사항은 단순 변심으로 교환/환불이 되지 않습니다.',
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: false,
           category: ['goods'],
-          brand: 'keepthatcoffee',
+          brand: '킵댓커피',
           sort: 3,
         },
       },
@@ -830,9 +827,9 @@ export const initData = async (nextSeq) => {
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '킵댓 스터코 블렌드(Strong) 200g [원산지:국산(경기도 수원시 팔달구)]',
-        quantity: 310,
-        buyQuantity: 200,
+        name: '[킵댓커피] 킵댓 스터코 블렌드(Strong) 200g [원산지:국산(경기도 수원시 팔달구)]',
+        quantity: 100,
+        buyQuantity: 80,
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_02.jpg`,
@@ -841,22 +838,28 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_02_fullpage.png`,
-            fileName: 'keepthatcoffee_products_02_fullpage.png',
+            url: `/files/keepthatcoffee_products_02_detail_01.jpg`,
+            fileName: 'keepthatcoffee_products_02_detail_01.jpg',
+          },
+          {
+            url: `/files/keepthatcoffee_products_02_detail_02.jpg`,
+            fileName: 'keepthatcoffee_products_02_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>에스프레소 본질적인 고유의 특성을 잃지 않기 위한 고전적인 에스프레소 블렌드를 재해석 하였습니다.스터코 라이언중 Strong(강하다) 이라는 명칭을 담당하는 원두로써 무게감에 큰 중점을 두었습니다.강배전 원두의 특징인 탄맛 또는 과도한 쓴맛만 강조되는 것을 방지하며, 건식과 수세식 가공방식의 원두를 적절히 조합하여 마일드하면서도 강배전 특유의 무게감을 잃지 않는 결과물을 만들어냈습니다.</p>
-            
-          </div>`,
+        content: [
+          {
+            d1: '에스프레소 본질적인 고유의 특성을 잃지 않기 위한 고전적인 에스프레소 블렌드를 재해석 하였습니다.\n 스터코 라이언중 Strong(강하다) 이라는 명칭을 담당하는 원두로써 무게감에 큰 중점을 두었습니다.\n 강배전 원두의 특징인 탄맛 또는 과도한 쓴맛만 강조되는 것을 방지하며, 건식과 수세식 가공방식의 원두를\n 적절히 조합하여 마일드하면서도 강배전 특유의 무게감을 잃지 않는 결과물을 만들어냈습니다. ',
+          },
+          { d2: '원산지: Brazil 50%, Ethiopia 35%, Colombia 15%\n 가공방식:  Natural 50%, Washed 50%(Mix)' },
+          { d3: 'Cup note\n caramel, almond, dark chocolate, good body\n 달콤 쌉싸름함과 묵직한 바디감을 자랑합니다. 남녀노소 연령대를 불문한 대중적인 커피 입니다.' },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
           isBest: false,
           category: ['coffee'],
-          brand: 'keepthatcoffee',
+          brand: '킵댓커피',
           sort: 2,
         },
       },
@@ -869,7 +872,7 @@ export const initData = async (nextSeq) => {
         active: true,
         name: '킵댓 스무스 블렌드(Smooth) 1kg [원산지:국산(경기도 수원시 팔달구)]',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 300,
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_03.jpg`,
@@ -878,21 +881,29 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_fullpage.png`,
-            fileName: 'keepthatcoffee_products_03_fullpage.png',
+            url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
+            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+          },
+          {
+            url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
+            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.</p>
-          </div>`,
+        content: [
+          { d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.' },
+          {
+            d2: '스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.\n 로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후\n 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.',
+          },
+          { d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%' },
+        ],
+
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
-          isBest: false,
+          isBest: true,
           category: ['coffee'],
-          brand: 'keepthatcoffee',
+          brand: '킵댓커피',
           sort: 2,
         },
       },
@@ -904,8 +915,8 @@ export const initData = async (nextSeq) => {
         show: true,
         active: true,
         name: '킵댓 스무스 블렌드(Smooth) 1kg [원산지:국산(경기도 수원시 팔달구)]',
-        quantity: 310,
-        buyQuantity: 200,
+        quantity: 150,
+        buyQuantity: 50,
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_04.jpg`,
@@ -914,21 +925,28 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_04_fullpage.png`,
-            fileName: 'keepthatcoffee_products_04_fullpage.png',
+            url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
+            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+          },
+          {
+            url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
+            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.</p>
-          </div>`,
+        content: [
+          { d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.' },
+          {
+            d2: '스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.\n 로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후\n 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.',
+          },
+          { d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%' },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
-          isBest: false,
+          isBest: true,
           category: ['coffee'],
-          brand: 'keepthatcoffee',
+          brand: '킵댓커피',
           sort: 2,
         },
       },
@@ -941,7 +959,7 @@ export const initData = async (nextSeq) => {
         active: true,
         name: '마일스톤 커피 드립백 낱개 DRIP BAG 1EA',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 190,
         mainImages: [
           {
             url: `/files/milestonecoffee_products_01.jpg`,
@@ -971,7 +989,7 @@ export const initData = async (nextSeq) => {
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
-          isBest: false,
+          isBest: new,
           category: ['coffee'],
           brand: 'milestonecoffee',
           sort: 2,
@@ -1657,8 +1675,8 @@ export const initData = async (nextSeq) => {
         show: true,
         active: true,
         name: '[프릳츠] 샷글라스 120ml',
-        quantity: 310,
-        buyQuantity: 200,
+        quantity: 100,
+        buyQuantity: 0,
         mainImages: [
           {
             url: `/files/ac52478dc537888fa75932fd30390a0a.jpg`,
@@ -2073,10 +2091,10 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 1,
             state: 'OS020',
-            name: '버터 팻 트리오 Butter Fat Trio',
-            image: 'anthracitecoffee_product_01.jpg',
+            name: '[센터커피] 게이샤 콜드브루 200ml',
+            image: 'centercoffee_02.png',
             quantity: 1,
-            price: 13000,
+            price: 12500,
             reply_id: 3,
           },
         ],
@@ -2105,8 +2123,8 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 1,
             state: 'OS020',
-            name: '히스토리 미스터리 History Mystery',
-            image: 'anthracitecoffee_product_02.jpg',
+            name: '[센터커피] 에티오피아 디카페인 콜드브루 300ml',
+            image: 'centercoffee_01.png',
             quantity: 1,
             price: 12000,
             reply_id: 3,
@@ -2137,21 +2155,21 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 1,
             state: 'OS020',
-            name: '케냐 AA Top 키리아이니 Kenya AA Top Kiriaini',
-            image: 'anthracitecoffee_product_04.jpg',
+            name: '[센터커피] 프라이데이 블랜드 네스프레소 캡슐',
+            image: 'centercoffee_05.png',
             quantity: 1,
-            price: 17000,
+            price: 20000,
             reply_id: 3,
           },
         ],
         cost: {
-          products: 17000,
+          products: 20000,
           shippingFees: 3000,
           discount: {
             products: 0,
             shippingFees: 0,
           },
-          total: 20000,
+          total: 23000,
         },
         address: {
           name: '회사',
@@ -2233,21 +2251,21 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 2,
             state: 'OS020',
-            name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            fileName: 'bonanzacoffee_products_03.jpg',
+            name: '[킵댓커피] 킵댓 스터코 블렌드(Strong) 200g [원산지:국산(경기도 수원시 팔달구)]',
+            fileName: 'keepthatcoffee_products_02.jpg',
             quantity: 2,
-            price: 45000,
+            price: 20000,
             reply_id: 3,
           },
         ],
         cost: {
-          products: 45000,
+          products: 30000,
           shippingFees: 3000,
           discount: {
             products: 0,
             shippingFees: 0,
           },
-          total: 48000,
+          total: 33000,
         },
         address: {
           name: '회사',
@@ -2329,31 +2347,31 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 2,
             state: 'OS020',
-            name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: 'bonanzacoffee_products_03.jpg',
+            name: '킵댓 스무스 블렌드(Smooth) 1kg [원산지:국산(경기도 수원시 팔달구)]',
+            image: 'keepthatcoffee_products_03.jpg',
             quantity: 2,
-            price: 45000,
+            price: 55000,
             reply_id: 3,
           },
           {
             _id: 2,
             seller_id: 1,
             state: 'OS020',
-            name: '버터 팻 트리오 Butter Fat Trio',
-            image: 'anthracitecoffee_product_01.jpg',
+            name: 'VISIONSTROLL HANDCRAFT GLASS CUP 비전스트롤 핸드크래프트 유리컵',
+            image: 'visionstroll_products_01.jpg',
             quantity: 1,
-            price: 13000,
+            price: 38000,
             reply_id: 3,
           },
         ],
         cost: {
-          products: 90000,
+          products: 151000,
           shippingFees: 3000,
           discount: {
             products: 0,
             shippingFees: 0,
           },
-          total: 103000,
+          total: 154000,
         },
         address: {
           name: '회사',
@@ -2371,15 +2389,15 @@ export const initData = async (nextSeq) => {
             _id: 1,
             seller_id: 2,
             state: 'OS020',
-            name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: 'bonanzacoffee_products_03.jpg',
+            name: '[프릳츠] 샷글라스 120ml',
+            image: 'ac52478dc537888fa75932fd30390a0a.jpg',
             quantity: 2,
-            price: 45000,
+            price: 8500,
             reply_id: 3,
           },
         ],
         cost: {
-          products: 45000,
+          products: 20000,
           shippingFees: 3000,
           discount: {
             products: 0,
