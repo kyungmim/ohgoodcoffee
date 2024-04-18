@@ -23,7 +23,7 @@ import SellerInfo from '@pages/mypage/seller/SellerInfo';
 // import Search from '@pages/SearchList';
 
 import { createBrowserRouter } from 'react-router-dom';
-import CartList from '@pages/CartList';
+import CartList from '@pages/cart/CartList';
 import PaymentComplete from '@pages/PaymentComplete';
 const router = createBrowserRouter([
   {
