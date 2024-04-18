@@ -82,7 +82,6 @@ function CartList() {
       const productsResponse = await axios.get('/carts');
       await setItemsCost(productsResponse.data.cost);
       await setItems(productsResponse.data.item);
-      // await handleSubmitCartBuy();
     } catch (error) {
       console.error('Failed to fetch data:', error);
     }
