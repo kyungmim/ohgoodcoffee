@@ -10,11 +10,11 @@ function UserReviewItem({ item }) {
   return (
     <>
       <div className="review">
-        <p>{item.user.name}</p>
         <div className="review-contents">
-          <p className="review-content-desc">{item.content}</p>
+          <p>{item.user.name}</p>
           <p className="review-content-time">{item.createdAt}</p>
         </div>
+        <p className="review-content-desc">{item.content}</p>
       </div>
     </>
   );

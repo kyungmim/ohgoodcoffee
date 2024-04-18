@@ -34,7 +34,7 @@ function PaymentComplete() {
                 <p>택배</p>
               </div>
             </div>
-            <div className="button-area no_margin">
+            <div className="">
               <button className="button button-large btn-Fill" type="submit">
                 주문 상세 보기
               </button>

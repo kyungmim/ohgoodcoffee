@@ -31,7 +31,11 @@ function SellerMyPageHeader() {
           </div>
           <div className="inner">
             <div className="user-info">
-              <img className="profile" src={profile} alt="회원 프로필 사진" />
+              <div className="profile">
+                <div className="profile-cover">
+                  <img className="profile-cover-src" src={profile} alt="회원 프로필 사진" />
+                </div>
+              </div>
               <div className="profile-content">
                 <div className="profile-left">
                   <p>
