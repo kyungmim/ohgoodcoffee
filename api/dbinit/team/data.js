@@ -1,7 +1,7 @@
 import moment from 'moment';
 
 function getTime(day = 0, second = 0) {
-  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ssy = 0')
+  return moment().add(day, 'days').add(second, 'seconds').format('YYYY.MM.DD HH:mm:ssy = 0');
 }
 
 export const initData = async (nextSeq) => {
@@ -287,18 +287,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 5,
         mainImages: [
           {
-            url: `/files/centercoffee_01.png`,
-            fileName: 'centercoffee_01.png',
+            url: `/files/centercoffee_01.webp`,
+            fileName: 'centercoffee_01.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_01.png`,
-            fileName: 'centercoffee_01.png',
+            url: `/files/centercoffee_01.webp`,
+            fileName: 'centercoffee_01.webp',
           },
           {
-            url: `/files/centercoffee_01_detail.png`,
-            fileName: 'centercoffee_01_detail.png',
+            url: `/files/centercoffee_01_detail.webp`,
+            fileName: 'centercoffee_01_detail.webp',
           },
         ],
         content: [
@@ -334,18 +334,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/centercoffee_02.png`,
-            fileName: 'centercoffee_02.png',
+            url: `/files/centercoffee_02.webp`,
+            fileName: 'centercoffee_02.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_02.png`,
-            fileName: '/files/centercoffee_02.png',
+            url: `/files/centercoffee_02.webp`,
+            fileName: '/files/centercoffee_02.webp',
           },
           {
-            url: `/files/centercoffee_02_detail.png`,
-            fileName: 'centercoffee_02_detail.png',
+            url: `/files/centercoffee_02_detail.webp`,
+            fileName: 'centercoffee_02_detail.webp',
           },
         ],
         content: [
@@ -381,24 +381,30 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/centercoffee_03.jpg`,
-            fileName: 'centercoffee_03.jpg',
+            url: `/files/centercoffee_03.webp`,
+            fileName: 'centercoffee_03.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_03.jpg`,
-            fileName: 'centercoffee_03.jpg',
+            url: `/files/centercoffee_03.webp`,
+            fileName: 'centercoffee_03.webp',
           },
           {
-            url: `/files/centercoffee_03_detail.jpg`,
-            fileName: 'centercoffee_03_detail.jpg',
+            url: `/files/centercoffee_03_detail.webp`,
+            fileName: 'centercoffee_03_detail.webp',
           },
         ],
         content: [
-          { d1: '연베이지, 진한샐몬,진청카키, 옐로우 총 4가지의 따듯한 색상으로 제작된 센터커피 블랭킷으로 일상적인 공간에 작은 변화를 느껴보세요.' },
-          { d2: '센터커피 블랭킷은 박스에 담아 전달합니다.\n 박스를 뜯고 블랭킷을 펼치는 순간, 일상적인 공간이 다채로운으로 가득하기를 희망합니다.' },
-          { d3: 'size: 가로 100 * 세로 75(cm)\n Meterial: 아크릴 100%\n Country of Origin: 대한민국' },
+          {
+            d1: '연베이지, 진한샐몬,진청카키, 옐로우 총 4가지의 따듯한 색상으로 제작된 센터커피 블랭킷으로 일상적인 공간에 작은 변화를 느껴보세요.',
+          },
+          {
+            d2: '센터커피 블랭킷은 박스에 담아 전달합니다.\n 박스를 뜯고 블랭킷을 펼치는 순간, 일상적인 공간이 다채로운으로 가득하기를 희망합니다.',
+          },
+          {
+            d3: 'size: 가로 100 * 세로 75(cm)\n Meterial: 아크릴 100%\n Country of Origin: 대한민국',
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -422,18 +428,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 10,
         mainImages: [
           {
-            url: `/files/centercoffee_04.png`,
-            fileName: 'centercoffee_04.png',
+            url: `/files/centercoffee_04.webp`,
+            fileName: 'centercoffee_04.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_04.png`,
-            fileName: 'centercoffee_04.png',
+            url: `/files/centercoffee_04.webp`,
+            fileName: 'centercoffee_04.webp',
           },
           {
-            url: `/files/centercoffee_04_detail.png`,
-            fileName: 'centercoffee_04_detail.png',
+            url: `/files/centercoffee_04_detail.webp`,
+            fileName: 'centercoffee_04_detail.webp',
           },
         ],
         content: [
@@ -469,18 +475,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/centercoffee_05.png`,
-            fileName: 'centercoffee_05.png',
+            url: `/files/centercoffee_05.webp`,
+            fileName: 'centercoffee_05.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_05.png`,
-            fileName: 'centercoffee_05.png',
+            url: `/files/centercoffee_05.webp`,
+            fileName: 'centercoffee_05.webp',
           },
           {
-            url: `/files/centercoffee_05_detail.png`,
-            fileName: 'centercoffee_05_detail.png',
+            url: `/files/centercoffee_05_detail.webp`,
+            fileName: 'centercoffee_05_detail.webp',
           },
         ],
         content: [
@@ -516,18 +522,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 30,
         mainImages: [
           {
-            url: `/files/centercoffee_06.png`,
-            fileName: 'centercoffee_06.png',
+            url: `/files/centercoffee_06.webp`,
+            fileName: 'centercoffee_06.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/centercoffee_06.png`,
-            fileName: 'centercoffee_06.png',
+            url: `/files/centercoffee_06.webp`,
+            fileName: 'centercoffee_06.webp',
           },
           {
-            url: `/files/centercoffee_06_detail.png`,
-            fileName: 'centercoffee_06_detail.png',
+            url: `/files/centercoffee_06_detail.webp`,
+            fileName: 'centercoffee_06_detail.webp',
           },
         ],
         content: [
@@ -563,24 +569,30 @@ export const initData = async (nextSeq) => {
         buyQuantity: 290,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_01.jpg`,
-            fileName: 'bonanzacoffee_products_01.jpg',
+            url: `/files/bonanzacoffee_products_01.webp`,
+            fileName: 'bonanzacoffee_products_01.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_01_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_01_detail_01.jpg',
+            url: `/files/bonanzacoffee_products_01_detail_01.webp`,
+            fileName: 'bonanzacoffee_products_01_detail_01.webp',
           },
           {
-            url: `/files/bonanzacoffee_products_01_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_01_detail_02.jpg',
+            url: `/files/bonanzacoffee_products_01_detail_02.webp`,
+            fileName: 'bonanzacoffee_products_01_detail_02.webp',
           },
         ],
         content: [
-          { d1: '언제든 내려마시기 좋은 보난자커피 드립백 24개입과 드립 어시스트 세트\n 산뜻한맛과 향, 부드러운 질감. \n 원두의 향미를 간직한 드립커피 한 잔을 더욱 편하게 즐기세요. ' },
-          { d2: '드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했다면, 다양한 컵에 거치할 수 있는 드립 어시스트를 이용하세요. ' },
-          { d3: '몰입이나 휴식이 필요할 때 언제든 개별포장으로 보관이 편리해 언제 어디서든 꺼내어 마시기 좋습니다. ' },
+          {
+            d1: '언제든 내려마시기 좋은 보난자커피 드립백 24개입과 드립 어시스트 세트\n 산뜻한맛과 향, 부드러운 질감. \n 원두의 향미를 간직한 드립커피 한 잔을 더욱 편하게 즐기세요. ',
+          },
+          {
+            d2: '드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했다면, 다양한 컵에 거치할 수 있는 드립 어시스트를 이용하세요. ',
+          },
+          {
+            d3: '몰입이나 휴식이 필요할 때 언제든 개별포장으로 보관이 편리해 언제 어디서든 꺼내어 마시기 좋습니다. ',
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -604,18 +616,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 100,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_02.png`,
-            fileName: 'bonanzacoffee_products_02.png',
+            url: `/files/bonanzacoffee_products_02.webp`,
+            fileName: 'bonanzacoffee_products_02.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_02_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_02_detail_01.jpg',
+            url: `/files/bonanzacoffee_products_02_detail_01.webp`,
+            fileName: 'bonanzacoffee_products_02_detail_01.webp',
           },
           {
-            url: `/files/bonanzacoffee_products_02_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_02_detail_02.jpg',
+            url: `/files/bonanzacoffee_products_02_detail_02.webp`,
+            fileName: 'bonanzacoffee_products_02_detail_02.webp',
           },
         ],
         content: [
@@ -652,22 +664,24 @@ export const initData = async (nextSeq) => {
         buyQuantity: 70,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_03.jpg`,
-            fileName: 'bonanzacoffee_products_03.jpg',
+            url: `/files/bonanzacoffee_products_03.webp`,
+            fileName: 'bonanzacoffee_products_03.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_03_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_03_detail_01.jpg',
+            url: `/files/bonanzacoffee_products_03_detail_01.webp`,
+            fileName: 'bonanzacoffee_products_03_detail_01.webp',
           },
           {
-            url: `/files/bonanzacoffee_products_03_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_03_detail_02.jpg',
+            url: `/files/bonanzacoffee_products_03_detail_02.webp`,
+            fileName: 'bonanzacoffee_products_03_detail_02.webp',
           },
         ],
         content: [
-          { d1: 'DRIP BAG SET [3 types] + DRIP ASSIST\n 구성 | 드립백 5개입 3박스 + 드립 어시스트\n 원두 본연의 향미를 간직한 드립 커피 한 잔, 이제 더욱 편하게 즐기세요.' },
+          {
+            d1: 'DRIP BAG SET [3 types] + DRIP ASSIST\n 구성 | 드립백 5개입 3박스 + 드립 어시스트\n 원두 본연의 향미를 간직한 드립 커피 한 잔, 이제 더욱 편하게 즐기세요.',
+          },
           {
             d2: '개별 포장으로 보관 및 휴대가 편리해, \n 언제 어디에서든 가볍게 내려 마시기 좋은 드립백과 드립 어시스트 세트입니다. \n 드립백으로 커피를 내릴 때 아랫부분이 잠겨 불편했던 분들을 위해, \n 다양한 컵에 거치할 수 있는 드립 어시스트를 함께 구성했어요. \n평소 드립백 커피를 즐겨 드시는 분들께 선물용으로 추천드려요. ',
           },
@@ -713,7 +727,9 @@ export const initData = async (nextSeq) => {
           },
         ],
         content: [
-          { d1: 'ACME x BONANZA COFFEE MUG L [350ml]\n Ø 12cm x H 6cm' },
+          {
+            d1: 'ACME x BONANZA COFFEE MUG L [350ml]\n Ø 12cm x H 6cm',
+          },
           {
             d2: 'Unnecessarily Large 라지 사이즈의 머그잔과 소서 세트입니다. 보난자커피의 이상적인 라떼 레시피를 구현할 수 있는 커피잔을 만들기 위해, 클래식한 디자인과 튼튼한 내구성을 갖추어 많은 바리스타들이 사랑하는 브랜드 ACME와 함께 제작했습니다.\n 또한 잔 입구가 넓어 바리스타들이 라떼 아트 실력을 보여주기에 최적화된 디자인으로, 라떼아트 챔피언들이 주로 사용하는 Vertex Bowl 라떼 잔의 특징을 반영했습니다.\n 350ml 용량의 사이즈로, 따뜻한 커피를 기존 커피잔보다 더 오래동안 맛있게 즐길 수 있습니다.',
           },
@@ -743,23 +759,27 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_05.png`,
-            fileName: 'bonanzacoffee_products_05.png',
+            url: `/files/bonanzacoffee_products_05.webp`,
+            fileName: 'bonanzacoffee_products_05.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/bonanzacoffee_products_05_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_05_detail_01.jpg',
+            url: `/files/bonanzacoffee_products_05_detail_01.webp`,
+            fileName: 'bonanzacoffee_products_05_detail_01.webp',
           },
           {
-            url: `/files/bonanzacoffee_products_05_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_05_detail_02.jpg',
+            url: `/files/bonanzacoffee_products_05_detail_02.webp`,
+            fileName: 'bonanzacoffee_products_05_detail_02.webp',
           },
         ],
         content: [
-          { d1: 'TEAM BONANZA T-SHIRT [WHITE]\n 보난자커피 슬로건과 로고가 앞뒤로 새겨진 보난자 유니폼 반팔 티셔츠입니다.' },
-          { d2: 'Who in their right mind would devote their whole life to coffee?' },
+          {
+            d1: 'TEAM BONANZA T-SHIRT [WHITE]\n 보난자커피 슬로건과 로고가 앞뒤로 새겨진 보난자 유니폼 반팔 티셔츠입니다.',
+          },
+          {
+            d2: 'Who in their right mind would devote their whole life to coffee?',
+          },
           {
             d3: '14수 면 100% 반팔티셔츠입니다.\n 사이즈는 측정 방법과 위치에 따라 1~3cm 오차가 발생할 수 있습니다. \n 기재된 사이즈 차이로 인한 교환 및 환불은 불가합니다.\n 드라이크리닝, 손세탁이 가능하며 세탁기 이용시 찬물로 세탁하시기를 바랍니다.',
           },
@@ -787,25 +807,27 @@ export const initData = async (nextSeq) => {
         buyQuantity: 60,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_01.jpg`,
-            fileName: 'keepthatcoffee_products_01.jpg',
+            url: `/files/keepthatcoffee_products_01.webp`,
+            fileName: 'keepthatcoffee_products_01.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_01_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_01_detail_01.jpg',
+            url: `/files/keepthatcoffee_products_01_detail_01.webp`,
+            fileName: 'keepthatcoffee_products_01_detail_01.webp',
           },
           {
-            url: `/files/keepthatcoffee_products_01_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_01_detail_02.jpg',
+            url: `/files/keepthatcoffee_products_01_detail_02.webp`,
+            fileName: 'keepthatcoffee_products_01_detail_02.webp',
           },
         ],
         content: [
           {
             d1: '스테킹 머그컵의 원조 브랜드 킵댓\n 독보적인 컬러감과 전통적인 머그의 디자인으로 어느 공간에나 잘 어울립니다.\n 커피, 차 어떤 음료와도 잘 어울리고 인테리어 소품으로도 좋은 제품 입니다.',
           },
-          { d2: '용량: 330ml / 200ml\n 재질: 도자기\n 사이즈: 330ml 지름 8cm 높이 9.7cm' },
+          {
+            d2: '용량: 330ml / 200ml\n 재질: 도자기\n 사이즈: 330ml 지름 8cm 높이 9.7cm',
+          },
           {
             d3: '식기세척 사용이 가능하나 로고 및 제품 스크레치 현상이 발생할 수 있습니다.\n 도자기 제품은 기포, 돌기, 파임, 찍힘 색 번짐은 자연스러운 유약 흐름 등의 특성이 있을수 있으며,\n 이는 불량이 아니므로 이로 인한 사항은 단순 변심으로 교환/환불이 되지 않습니다.',
           },
@@ -832,26 +854,30 @@ export const initData = async (nextSeq) => {
         buyQuantity: 80,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_02.jpg`,
-            fileName: 'keepthatcoffee_products_02.jpg',
+            url: `/files/keepthatcoffee_products_02.webp`,
+            fileName: 'keepthatcoffee_products_02.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_02_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_02_detail_01.jpg',
+            url: `/files/keepthatcoffee_products_02_detail_01.webp`,
+            fileName: 'keepthatcoffee_products_02_detail_01.webp',
           },
           {
-            url: `/files/keepthatcoffee_products_02_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_02_detail_02.jpg',
+            url: `/files/keepthatcoffee_products_02_detail_02.webp`,
+            fileName: 'keepthatcoffee_products_02_detail_02.webp',
           },
         ],
         content: [
           {
             d1: '에스프레소 본질적인 고유의 특성을 잃지 않기 위한 고전적인 에스프레소 블렌드를 재해석 하였습니다.\n 스터코 라이언중 Strong(강하다) 이라는 명칭을 담당하는 원두로써 무게감에 큰 중점을 두었습니다.\n 강배전 원두의 특징인 탄맛 또는 과도한 쓴맛만 강조되는 것을 방지하며, 건식과 수세식 가공방식의 원두를\n 적절히 조합하여 마일드하면서도 강배전 특유의 무게감을 잃지 않는 결과물을 만들어냈습니다. ',
           },
-          { d2: '원산지: Brazil 50%, Ethiopia 35%, Colombia 15%\n 가공방식:  Natural 50%, Washed 50%(Mix)' },
-          { d3: 'Cup note\n caramel, almond, dark chocolate, good body\n 달콤 쌉싸름함과 묵직한 바디감을 자랑합니다. 남녀노소 연령대를 불문한 대중적인 커피 입니다.' },
+          {
+            d2: '원산지: Brazil 50%, Ethiopia 35%, Colombia 15%\n 가공방식:  Natural 50%, Washed 50%(Mix)',
+          },
+          {
+            d3: 'Cup note\n caramel, almond, dark chocolate, good body\n 달콤 쌉싸름함과 묵직한 바디감을 자랑합니다. 남녀노소 연령대를 불문한 대중적인 커피 입니다.',
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -875,26 +901,30 @@ export const initData = async (nextSeq) => {
         buyQuantity: 300,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_03.jpg`,
-            fileName: 'keepthatcoffee_products_03.jpg',
+            url: `/files/keepthatcoffee_products_03.webp`,
+            fileName: 'keepthatcoffee_products_03.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
+            fileName: 'keepthatcoffee_products_03_detail_01.webp',
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
+            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
+            fileName: 'keepthatcoffee_products_03_detail_02.webp',
           },
         ],
         content: [
-          { d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.' },
+          {
+            d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.',
+          },
           {
             d2: '스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.\n 로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후\n 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.',
           },
-          { d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%' },
+          {
+            d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%',
+          },
         ],
 
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -919,26 +949,30 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_04.jpg`,
-            fileName: 'keepthatcoffee_products_04.jpg',
+            url: `/files/keepthatcoffee_products_04.webp`,
+            fileName: 'keepthatcoffee_products_04.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
+            fileName: 'keepthatcoffee_products_03_detail_01.webp',
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
+            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
+            fileName: 'keepthatcoffee_products_03_detail_02.webp',
           },
         ],
         content: [
-          { d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.' },
+          {
+            d1: '생두도 하나의 농산품이며, 수확시기와 제철이 존재합니다.\n 매 시기 좋은 재료들을 가지고 산뜻한 커피를 만들고 있습니다.',
+          },
           {
             d2: '스터코 라인업 중 Smooth(부드러운) 라는 명칭을 담당하는 원두로써 질감과 향에 큰 중점을 두었습니다.\n 로스팅시 열의 역활을 확실하게 구분하여 무너지거나 특징없는 마일드함만을 추구하는것이 아닌, 1차 크랙 이후\n 2차 크랙 중간지점의 구간을 충분한 시간으로 구성하여 원두의 향미, 산미, 단맛, 밸런스를 살릴 수 있도록 구현하였습니다.',
           },
-          { d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%' },
+          {
+            d3: '원산지: Brazil 55%, Kenya 45%\n 가공방식:  Natural 55%, Washed 45%',
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -962,18 +996,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 190,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_01.jpg`,
-            fileName: 'milestonecoffee_products_01.jpg',
+            url: `/files/milestonecoffee_products_01.webp`,
+            fileName: 'milestonecoffee_products_01.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_01-1.png`,
-            fileName: 'milestonecoffee_products_01-1.png',
+            url: `/files/milestonecoffee_products_01-1.webp`,
+            fileName: 'milestonecoffee_products_01-1.webp',
           },
           {
-            url: `/files/milestonecoffee_products_01-2.png`,
-            fileName: 'milestonecoffee_products_01-2.png',
+            url: `/files/milestonecoffee_products_01-2.webp`,
+            fileName: 'milestonecoffee_products_01-2.webp',
           },
         ],
         content: [
@@ -983,13 +1017,15 @@ export const initData = async (nextSeq) => {
           {
             d2: `박스가 아닌 낱개로 구입하실 수 있는 제품입니다.\n 싱글오리진의 경우 이번 달 라인업으로 준비됩니다.`,
           },
-          { d3: `드립백 뒷면에는 드시는 방법이 그려져 있어 쉽게 따라하실 수 있습니다.` },
+          {
+            d3: `드립백 뒷면에는 드시는 방법이 그려져 있어 쉽게 따라하실 수 있습니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: false,
-          isBest: new,
+          isBest: false,
           category: ['coffee'],
           brand: 'milestonecoffee',
           sort: 2,
@@ -1007,18 +1043,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_02.png`,
-            fileName: 'milestonecoffee_products_02.png',
+            url: `/files/milestonecoffee_products_02.webp`,
+            fileName: 'milestonecoffee_products_02.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_02-1.png`,
-            fileName: 'milestonecoffee_products_02-1.png',
+            url: `/files/milestonecoffee_products_02-1.webp`,
+            fileName: 'milestonecoffee_products_02-1.webp',
           },
           {
-            url: `/files/milestonecoffee_products_02-2.png`,
-            fileName: 'milestonecoffee_products_02-2.png',
+            url: `/files/milestonecoffee_products_02-2.webp`,
+            fileName: 'milestonecoffee_products_02-2.webp',
           },
         ],
         content: [
@@ -1028,7 +1064,9 @@ export const initData = async (nextSeq) => {
           {
             d2: `초콜릿과 견과류를 넘나드는 고소함에 낮은 톤의 산미를 담아 맛의 균형감이 좋습니다.\n 불꽃놀이 라는 이름을 가진 만큼 다채로운 맛이 조화롭게 나타납니다.\n 무엇보다도 좋은 밸런스와 바디감이 일관되게 유지되어,\n 누구나 편하게 마실 수 있습니다.`,
           },
-          { d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.` },
+          {
+            d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1052,18 +1090,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_03.jpg`,
-            fileName: 'milestonecoffee_products_03.jpg',
+            url: `/files/milestonecoffee_products_03.webp`,
+            fileName: 'milestonecoffee_products_03.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_03-1.png`,
-            fileName: 'milestonecoffee_products_03-1.png',
+            url: `/files/milestonecoffee_products_03-1.webp`,
+            fileName: 'milestonecoffee_products_03-1.webp',
           },
           {
-            url: `/files/milestonecoffee_products_03-2.png`,
-            fileName: 'milestonecoffee_products_03-2.png',
+            url: `/files/milestonecoffee_products_03-2.webp`,
+            fileName: 'milestonecoffee_products_03-2.webp',
           },
         ],
         content: [
@@ -1073,7 +1111,9 @@ export const initData = async (nextSeq) => {
           {
             d2: `지친 일상 속에서 작은 선물같은 기분 좋은 단맛과 향긋함\n 그리고 깔끔함에 초점을 맞췄습니다.`,
           },
-          { d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.` },
+          {
+            d3: `*생두 가격 대폭 인상으로 인해 소비자가가 다소 변동되었습니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1103,12 +1143,12 @@ export const initData = async (nextSeq) => {
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_04-1.png`,
-            fileName: 'milestonecoffee_products_04-1.png',
+            url: `/files/milestonecoffee_products_04-1.webp`,
+            fileName: 'milestonecoffee_products_04-1.webp',
           },
           {
-            url: `/files/milestonecoffee_products_04-2.png`,
-            fileName: 'milestonecoffee_products_04-2.png',
+            url: `/files/milestonecoffee_products_04-2.webp`,
+            fileName: 'milestonecoffee_products_04-2.webp',
           },
         ],
         content: [
@@ -1144,18 +1184,18 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_05.jpg`,
-            fileName: 'milestonecoffee_products_05.jpg',
+            url: `/files/milestonecoffee_products_05.webp`,
+            fileName: 'milestonecoffee_products_05.webp',
           },
         ],
         detailImages: [
           {
-            url: `/files/milestonecoffee_products_05-1.png`,
-            fileName: 'milestonecoffee_products_05-1.png',
+            url: `/files/milestonecoffee_products_05-1.webp`,
+            fileName: 'milestonecoffee_products_05-1.webp',
           },
           {
-            url: `/files/milestonecoffee_products_05-2.png`,
-            fileName: 'milestonecoffee_products_05-2.png',
+            url: `/files/milestonecoffee_products_05-2.webp`,
+            fileName: 'milestonecoffee_products_05-2.webp',
           },
         ],
         content: [
@@ -1191,19 +1231,19 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_01.jpg`,
-            fileName: 'protokoll_products_01.jpg',
+            url: `/files/protokoll_products_01.webp`,
+            fileName: 'protokoll_products_01.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_01-1.png`,
-            fileName: 'protokoll_products_01-1.png',
+            url: `/files/protokoll_products_01-1.webp`,
+            fileName: 'protokoll_products_01-1.webp',
           },
           {
-            url: `/files/protokoll_products_01-2.png`,
-            fileName: 'protokoll_products_01-2.png',
+            url: `/files/protokoll_products_01-2.webp`,
+            fileName: 'protokoll_products_01-2.webp',
           },
         ],
         content: [
@@ -1213,7 +1253,9 @@ export const initData = async (nextSeq) => {
           {
             d2: `원산지 Costa Rica\n\n 원종 Ethiopian\n\n 지역 Volcan Azul\n\n 고도 1,500m\n\n 가공 Anaerobic Natural\n\n\n\n커핑노트 Cupping Note\n\n 사과 ・ 자두 ・ 라즈베리 ・ 와인\n\n Apple ・ Plum ・ Raspberry ・ Wine`,
           },
-          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+          {
+            d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1237,19 +1279,19 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_02.jpg`,
-            fileName: 'protokoll_products_02.jpg',
+            url: `/files/protokoll_products_02.webp`,
+            fileName: 'protokoll_products_02.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_02-1.png`,
-            fileName: 'protokoll_products_02-1.png',
+            url: `/files/protokoll_products_02-1.webp`,
+            fileName: 'protokoll_products_02-1.webp',
           },
           {
-            url: `/files/protokoll_products_02-2.png`,
-            fileName: 'protokoll_products_02-2.png',
+            url: `/files/protokoll_products_02-2.webp`,
+            fileName: 'protokoll_products_02-2.webp',
           },
         ],
         content: [
@@ -1261,7 +1303,9 @@ export const initData = async (nextSeq) => {
             커핑노트 Cupping Note\n\n 다크 초콜릿 ・ 구운 아몬드 ・ 흑설탕 ・ 묵직함\n\n Dark Chocolate ・ Roasted Almond ・ Brown Sugar ・ Good Body\n\n\n
             블렌딩 Blending\n Brazil 40%, Colombia 40%, Indonesia 20%`,
           },
-          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+          {
+            d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1285,19 +1329,19 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_03.jpg`,
-            fileName: 'protokoll_products_03.jpg',
+            url: `/files/protokoll_products_03.webp`,
+            fileName: 'protokoll_products_03.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_03-1.png`,
-            fileName: 'protokoll_products_03-1.png',
+            url: `/files/protokoll_products_03-1.webp`,
+            fileName: 'protokoll_products_03-1.webp',
           },
           {
-            url: `/files/protokoll_products_03-2.png`,
-            fileName: 'protokoll_products_03-2.png',
+            url: `/files/protokoll_products_03-2.webp`,
+            fileName: 'protokoll_products_03-2.webp',
           },
         ],
         content: [
@@ -1309,7 +1353,9 @@ export const initData = async (nextSeq) => {
             커핑노트 Cupping Note\n\n 다크 초콜릿 ・ 구운 아몬드 ・ 흑설탕 ・ 묵직함\n\n Dark Chocolate ・ Roasted Almond ・ Brown Sugar ・ Good Body\n\n\n
             블렌딩 Blending\n Brazil 40%, Colombia 40%, Indonesia 20%`,
           },
-          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+          {
+            d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1333,19 +1379,19 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_04.jpg`,
-            fileName: 'protokoll_products_04.jpg',
+            url: `/files/protokoll_products_04.webp`,
+            fileName: 'protokoll_products_04.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_04-1.png`,
-            fileName: 'protokoll_products_04-1.png',
+            url: `/files/protokoll_products_04-1.webp`,
+            fileName: 'protokoll_products_04-1.webp',
           },
           {
-            url: `/files/protokoll_products_04-2.png`,
-            fileName: 'protokoll_products_04-2.png',
+            url: `/files/protokoll_products_04-2.webp`,
+            fileName: 'protokoll_products_04-2.webp',
           },
         ],
         content: [
@@ -1355,7 +1401,9 @@ export const initData = async (nextSeq) => {
           {
             d2: `프로토콜 텀블러와 마찬가지로,\n 이 컵을 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능도 탑재되어 있습니다.\n\n 용량: 473ml\n 온도: -20도(내냉) ~ 120도(내열)\n 재질: 무독성PP `,
           },
-          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+          {
+            d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1379,19 +1427,19 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_05.jpg`,
-            fileName: 'protokoll_products_05.jpg',
+            url: `/files/protokoll_products_05.webp`,
+            fileName: 'protokoll_products_05.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/protokoll_products_05-1.png`,
-            fileName: 'protokoll_products_05-1.png',
+            url: `/files/protokoll_products_05-1.webp`,
+            fileName: 'protokoll_products_05-1.webp',
           },
           {
-            url: `/files/protokoll_products_05-2.png`,
-            fileName: 'protokoll_products_05-2.png',
+            url: `/files/protokoll_products_05-2.webp`,
+            fileName: 'protokoll_products_05-2.webp',
           },
         ],
         content: [
@@ -1401,7 +1449,9 @@ export const initData = async (nextSeq) => {
           {
             d2: `프로토콜 리유저블 컵과 마찬가지로,\n 이 텀블러를 지니고 프로토콜 매장을 방문하면 프로토콜 멤버들에게 감동을 선사하는 기능도 탑재되어 있습니다.\n\n 용량: 500ml\n 사이즈: 7 X 19cm\n 재질: 스테인리스 `,
           },
-          { d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.` },
+          {
+            d3: `배송 Delivery\n\n 프로토콜의 모든 원두는 로스팅 후 7일 이내의 것만 판매합니다.\n\n 오후 2시 이전 결제완료건에 한해 익일 출고됩니다.\n\n 배송 완료까지 1-2 영업일 소요됩니다.`,
+          },
         ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
@@ -1425,20 +1475,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_01.png`,
-            fileName: 'nest_products_01.png',
+            url: `/files/nest_products_01.webp`,
+            fileName: 'nest_products_01.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/nest_products_01-1.png`,
-            fileName: 'nest_products_01-1.png',
+            url: `/files/nest_products_01-1.webp`,
+            fileName: 'nest_products_01-1.webp',
             orgName: '',
           },
           {
-            url: `/files/nest_products_01-2.png`,
-            fileName: 'nest_products_01-2.png',
+            url: `/files/nest_products_01-2.webp`,
+            fileName: 'nest_products_01-2.webp',
             orgName: '',
           },
         ],
@@ -1475,20 +1525,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_02.png`,
-            fileName: 'nest_products_02.png',
+            url: `/files/nest_products_02.webp`,
+            fileName: 'nest_products_02.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/nest_products_02-1.png`,
-            fileName: 'nest_products_02-1.png',
+            url: `/files/nest_products_02-1.webp`,
+            fileName: 'nest_products_02-1.webp',
             orgName: '',
           },
           {
-            url: `/files/nest_products_02-2.png`,
-            fileName: 'nest_products_02-2.png',
+            url: `/files/nest_products_02-2.webp`,
+            fileName: 'nest_products_02-2.webp',
             orgName: '',
           },
         ],
@@ -1527,20 +1577,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_03.png`,
-            fileName: 'nest_products_03.png',
+            url: `/files/nest_products_03.webp`,
+            fileName: 'nest_products_03.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/nest_products_03-1.png`,
-            fileName: 'nest_products_03-1.png',
+            url: `/files/nest_products_03-1.webp`,
+            fileName: 'nest_products_03-1.webp',
             orgName: '',
           },
           {
-            url: `/files/nest_products_03-2.png`,
-            fileName: 'nest_products_03-2.png',
+            url: `/files/nest_products_03-2.webp`,
+            fileName: 'nest_products_03-2.webp',
             orgName: '',
           },
         ],
@@ -1577,20 +1627,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_04.png`,
-            fileName: 'nest_products_04.png',
+            url: `/files/nest_products_04.webp`,
+            fileName: 'nest_products_04.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/nest_products_04-1.png`,
-            fileName: 'nest_products_04-1.png',
+            url: `/files/nest_products_04-1.webp`,
+            fileName: 'nest_products_04-1.webp',
             orgName: '',
           },
           {
-            url: `/files/nest_products_04-2.png`,
-            fileName: 'nest_products_04-2.png',
+            url: `/files/nest_products_04-2.webp`,
+            fileName: 'nest_products_04-2.webp',
             orgName: '',
           },
         ],
@@ -1628,20 +1678,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_05.png`,
-            fileName: 'nest_products_05.png',
+            url: `/files/nest_products_05.webp`,
+            fileName: 'nest_products_05.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/nest_products_05-1.png`,
-            fileName: 'nest_products_05-1.png',
+            url: `/files/nest_products_05-1.webp`,
+            fileName: 'nest_products_05-1.webp',
             orgName: '',
           },
           {
-            url: `/files/nest_products_05-2.png`,
-            fileName: 'nest_products_05-2.png',
+            url: `/files/nest_products_05-2.webp`,
+            fileName: 'nest_products_05-2.webp',
             orgName: '',
           },
         ],
@@ -1670,412 +1720,551 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('product'),
         seller_id: 7,
-        price: 8500,
+        price: 40000,
         shippingFees: 3000,
         show: true,
         active: true,
-        name: '[프릳츠] 샷글라스 120ml',
+        name: '[매뉴팩트커피] Oreum / 오름',
         quantity: 100,
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/ac52478dc537888fa75932fd30390a0a.jpg`,
-            fileName: 'ac52478dc537888fa75932fd30390a0a.jpg',
+            url: `/files/manufactcoffee_products_01.webp`,
+            fileName: 'manufactcoffee_products_01.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E90EC82ACEBAAB0.png',
+            url: `/files/manufactcoffee_products_01-1.webp`,
+            fileName: 'manufactcoffee_products_01-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_01-2.webp`,
+            fileName: 'manufactcoffee_products_01-2.webp',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>용량: 120ml (4oz)
-            크기: 지름 6cm / 높이 6.4cm
-            * 전자레인지에 사용할 수 있습니다.
-            * 식기세척기 사용 시 금색의 펄 재질이 벗겨질 수 있습니다.
-            </p>
-          </div>`,
+        content: [
+          {
+            d1: `# 원산지와 블랜딩 비율 : 브라질 60%, 에티오피아20%, 탄자니아20%\n # 컵 노트 : 다크초콜릿, 카라멜, 메이플 시럽, 당밀, 맥아, 너트, 민트 등\n # 구분 : 아라비카\n\n # 품종 : Red Catuai, Heirloom, Bourbon Kent\n # 애그트론 값 : 분쇄전 42 / 분쇄후 45`,
+          },
+          {
+            d2: `한라산과 더불어 산봉우리라고 불리우는 작은 산, 오름은 산의 정상까지 오르기가 쉽고 수고에 비해 산이 주는 만족감이 매우 큰 장소입니다. 300개가 넘는 제주의 오름은 어느 정상에 올라가더라도 한라산을 비롯한 사방의 풍경과 끝없이 펼쳐진 바다의 풍광을 허락합니다. 매뉴팩트의 네 번째 블랜딩 커피인 '오름'은 그 작은 산이 주는 의미를 바탕으로 사용자에게 쉽고 만족감이 높은 커피를 제공하기 위해 만들어졌습니다.\n\n 좋은 맛을 기본으로 합리적 가격과 품질을 더하고 더불어 운용의 안정성 등의 사용자가 필요하고 요구하는 부분들을 채움으로 기업의 성장을 도모케 하는 마음을 커피에 담고자 하였습니다.\n\n '오름'은\n 첫째, 제주의 오름이 가지는 의미를 뜻하며\n 둘째, '오르다'의 어원을 통해 커피의 품질 향상과 사용자의 매출 및 브랜드의 가치가 상승하길 기대하는 마음을 담고\n 셋째, '옳음'이라는 동일한 발음의 뜻을 따라 우리의 커피를 선택한 것이 최종적으로 사업자에게 좋은 선택이었길 바라는 의미를\n 가지고 있습니다.`,
+          },
+          {
+            d3: `블랜딩 오름은 커피하면 떠오르는 브라질과 에티오피아를 베이스로 하여 초콜릿과 고소하고 풍부한 단맛을 표현 했으며, 탄자니아 커피를 더하여 커피의 좋은 쓴맛과 풍부한 향을 만들었습니다. 따라서 오름 블렌딩은 기본기가 탄탄한 커피를 통해 기업의 성장과 안정성을 영위 하고자 하는 사업자분들과 매일 같이 맛있는 커피를 즐기고자 하는 소비자에게 적합한 커피입니다.`,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
-          category: ['goods'],
-          brand: '프릳츠',
+          category: ['coffee'],
+          brand: '매뉴팩트커피',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 7,
-        price: 32000,
+        price: 18000,
         shippingFees: 3000,
         show: false,
         active: true,
-        name: '[프릳츠] 물빛 잔과 소서',
+        name: '[매뉴팩트커피] ColdBrew Once / 콜드브루 온세 _11주년 기념 시즌 블랜딩 콜드브루 커피',
         quantity: 310,
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/15ea96b0060027f0569b3047e80e108a.jpg`,
-            fileName: '15ea96b0060027f0569b3047e80e108a.jpg',
+            url: `/files/manufactcoffee_products_02.webp`,
+            fileName: 'manufactcoffee_products_02.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/EC9E94EAB3BCEC868CEC849C_EBACBCEBB99B_EC8381EC84B828EC9E90EC82ACEBAAB029.png`,
-            fileName: 'EC9E94EAB3BCEC868CEC849C_EBACBCEBB99B_EC8381EC84B828EC9E90EC82ACEBAAB029.png',
+            url: `/files/manufactcoffee_products_02.webp`,
+            fileName: 'manufactcoffee_products_02.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_02-1.webp`,
+            fileName: 'manufactcoffee_products_02-1.webp',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>재질: 도자기제
-            크기: 잔 - 바깥지름 7.2cm / 안지름 5.7cm / 높이 7.5cm, 소서 - 지름 13.7cm / 높이 2cm
-            용량: 160ml</p>
-          </div>`,
+        content: [
+          {
+            d1: `# Origin : Colombia, Honduras | 콜롬비아, 온두라스\n # Cup note : Apple, Cinnamon, Mango, Grape, Spice, Chocolate, Chai | 사과, 시나몬, 망고, 포도, 향신료, 초콜릿, 차이\n # Information : Agtron 56/60 | 애그트론 56/60\n Colombia Las Flores 40% : Pink Bourbon, Anaerobic Washed | 콜롬비아 라스 플로레스 40%, 핑크 버번, 무산소 워시드 가공\n # Honduras El Monarca 60% : IH90, Washed | 온두라스 엘 모나르카 60%,IH90, 워시드 가공\n # 저온 자외선 살균`,
+          },
+          {
+            d2: `매뉴팩트의 콜드브루는 가열하지 않은 정수물을 정해진 시간 동안 분쇄된 원두에 얹어 대기압상에서 커피가 가지고 있는 원래의 성분을 추출해낸 액상커피 입니다. 매뉴팩트 콜드브루 시스템은 독자적 개발에 의한 양조 기술로 다양한 산지 커피의 적절한 로스팅 정도를 파악하여 일관성 있는 최적의 커피를 만들어내고 있습니다.`,
+          },
+          {
+            d3: `온수로 추출하는 커피와는 다르게 차가운 물로 추출하는 콜드브루는 카페인 용해가 비교적 적어 몸에 부담이 덜하며 성분과 향의 파괴가 최소화 되므로 향미의 깊이가 있고 떫은 맛을 내는 탄닌산이 적어 부드럽고 뒷맛이 깨끗합니다.  콜드브루는 특성상 장기간 보관(냉장 보관시 3개월)이 가능 하므로 오랫동안 음료를 즐기실 수 있습니다. `,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
-          category: ['goods'],
-          brand: '프릳츠',
+          category: ['coffee'],
+          brand: '매뉴팩트커피',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 7,
-        price: 48000,
+        price: 18000,
         shippingFees: 3000,
         show: false,
         active: true,
-        name: '[프릳츠] 솟솟리버스X프릳츠 물병가방',
+        name: '[매뉴팩트커피] ColdBrew Guatemala Decaf / 콜드브루 과테말라 디카페인',
         quantity: 310,
         buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/7ca6724ba612ccd1d8c140cdeaec68aa.jpg`,
-            fileName: '7ca6724ba612ccd1d8c140cdeaec68aa.jpg',
+            url: `/files/manufactcoffee_products_03.webp`,
+            fileName: 'manufactcoffee_products_03.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/EC869FEC869F-EBACBCEBB391EAB080EBB0A91-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC869FEC869F-EBACBCEBB391EAB080EBB0A91-EC9E90EC82ACEBAAB0.png',
+            url: `/files/manufactcoffee_products_03-1.webp`,
+            fileName: 'manufactcoffee_products_03-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_03-2.webp`,
+            fileName: 'manufactcoffee_products_03-2.webp',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>솟솟리버스X프릳츠 물병가방입니다.
-            </p>
-          </div>`,
+        content: [
+          {
+            d1: `# Origin : Guatemala\n # Cup note : Toast, Walnut, Brown Sugar, Dark Chocolate, Smoky\n # Information : Antigua | Arabica | Caturra, Bourbon | Natural CO2\n # Processing | 저온 자외선 살균`,
+          },
+          {
+            d2: `매뉴팩트의 콜드브루는 가열하지 않은 정수물을 정해진 시간 동안 분쇄된 원두에 얹어 대기압상에서 커피가 가지고 있는 원래의 성분을 추출해낸 액상커피 입니다. 매뉴팩트 콜드브루 시스템은 독자적 개발에 의한 양조 기술로 다양한 산지 커피의 적절한 로스팅 정도를 파악하여 일관성 있는 최적의 커피를 만들어내고 있습니다. `,
+          },
+          {
+            d3: `온수로 추출하는 커피와는 다르게 차가운 물로 추출하는 콜드브루는 카페인 용해가 비교적 적어 몸에 부담이 덜하며 성분과 향의 파괴가 최소화 되므로 향미의 깊이가 있고 떫은 맛을 내는 탄닌산이 적어 부드럽고 뒷맛이 깨끗합니다.  콜드브루는 특성상 장기간 보관(냉장 보관시 3개월)이 가능 하므로 오랫동안 음료를 즐기실 수 있습니다. `,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
-          category: ['goods'],
-          brand: '프릳츠',
+          category: ['coffee'],
+          brand: '매뉴팩트커피',
           sort: 3,
         },
       },
       {
         _id: await nextSeq('product'),
         seller_id: 7,
-        price: 38000,
-        shippingFees: 3000,
-        show: false,
-        active: true,
-        name: '[프릳츠] 솟솟리버스X프릳츠 볼캡',
-        quantity: 310,
-        buyQuantity: 310,
-        mainImages: [
-          {
-            url: `/files/a60a5da6831e6b5e0f0ba524433c38df.jpg`,
-            fileName: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>솟솟리버스X프릳츠 볼캡입니다.
-            </p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['goods'],
-          brand: '프릳츠',
-          sort: 3,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 7,
-        price: 16000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: '[프릳츠] 서울 시네마 200g',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/a60a5da6831e6b5e0f0ba524433c38df.jpg`,
-            fileName: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/EC869FEC869F-EBB3BCECBAA1-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC869FEC869F-EBB3BCECBAA1-EC9E90EC82ACEBAAB0.png',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>커피는 과일입니다.
-            <서울시네마>에서는 커피가 가진
-            고유한 밝은 산미와 깨끗한 단맛을 즐겨주시길.</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: false,
-          category: ['coffee'],
-          brand: '프릳츠',
-          sort: 2,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 7,
-        price: 16000,
-        shippingFees: 3000,
-        show: false,
-        active: true,
-        name: '[프릳츠] 잘 되어가시나 200g',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/d42cd7b0d298579692e80638fa6dd6ed.jpg`,
-            fileName: 'd42cd7b0d298579692e80638fa6dd6ed.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>단맛을 바탕으로 훌륭한 밸런스를
-            <잘 되어가시나 Everything Good >에서 구현합니다.
-            길고 달콤한 애프터 테이스트도 더불어.</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: false,
-          isBest: false,
-          category: ['coffee'],
-          brand: '프릳츠',
-          sort: 2,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 8,
-        price: 30000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: '주연셀렉션 part.5 초코 빌카문도',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/95793b84d779e6456f4eb1829538742d.jpg`,
-            fileName: '95793b84d779e6456f4eb1829538742d.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/8632006192a0a3e28657df057c906be7.jpg`,
-            fileName: '8632006192a0a3e28657df057c906be7.jpg',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>기본 정보
-            배송비	2,500원 (40,000원 이상 구매 시 무료)
-            조성	에콰도르 100%
-            노트	-노리아 게이샤: 오렌지 블라썸, 아카시아 꿀, 바닐라, 우아함
-            -엘리자 시드라: 노란꽃, 황도복숭아, 망고, 애플 사이다</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: false,
-          isBest: false,
-          category: ['goods'],
-          brand: '모모스커피',
-          sort: 3,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 8,
-        price: 14000,
-        shippingFees: 3000,
-        show: false,
-        active: true,
-        name: '원두 에스쇼콜라',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/fd073ab0619e246c92a02e5fad0d4fb2.jpg`,
-            fileName: 'fd073ab0619e246c92a02e5fad0d4fb2.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/6b09e09ef39522bd9c5d8f901023f637.jpg`,
-            fileName: '6b09e09ef39522bd9c5d8f901023f637.jpg',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>기본 정보
-            배송비	2,500원 (40,000원 이상 구매 시 무료)
-            조성	- 콜롬비아 모모스 셀렉션 라 플라타 블렌드 워시드 50%
-            - 과테말라 산 주앙 보스코 카투아이 워시드 35%
-            - 코스타리카 엘 벤다발 카투아이 화이트 허니 10%
-            - 엘살바도르 돈 헥터 파카스 워시드 5%
-            노트	초콜릿, 프랄린피칸, 크리미 </p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: false,
-          isBest: true,
-          category: ['coffee'],
-          brand: '모모스커피',
-          sort: 2,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 8,
-        price: 14000,
-        shippingFees: 3000,
-        show: true,
-        active: true,
-        name: '원두 프루티봉봉',
-        quantity: 310,
-        buyQuantity: 200,
-        mainImages: [
-          {
-            url: `/files/9a245b17ce5b24d94fe622f6eeec2a45.jpg`,
-            fileName: '9a245b17ce5b24d94fe622f6eeec2a45.jpg',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/fb88988a5193f8c75a46811d29c456be.jpg`,
-            fileName: 'fb88988a5193f8c75a46811d29c456be.jpg',
-            orgName: '',
-          },
-        ],
-        content: `
-          <div class="product-detail">
-            <p>기본 정보
-            배송비	2,500원 (40,000원 이상 구매 시 무료)
-            조성	- 에티오피아 예가체프 반코 타라투 워시드 애너로빅 60%
-            - 케냐 티리리카 눈두 AA 풀리 워시드 20%
-            - 케냐 이노이 키안데리 풀리 워시드 20%
-            노트	살구, 만다린, 블랙티, 카라멜</p>
-          </div>`,
-        createdAt: getTime(-41, -60 * 60 * 2),
-        updatedAt: getTime(-40, -60 * 15),
-        extra: {
-          isNew: true,
-          isBest: true,
-          category: ['coffee'],
-          brand: '모모스커피',
-          sort: 2,
-        },
-      },
-      {
-        _id: await nextSeq('product'),
-        seller_id: 8,
         price: 15000,
         shippingFees: 3000,
-        show: true,
+        show: false,
         active: true,
-        name: '원두 므쵸베리',
+        name: '[매뉴팩트커피] Flat White Glass / 플랫화이트 컵',
         quantity: 310,
-        buyQuantity: 200,
+        buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/498525b4eb33ec6987e81d1702d8f2fd.jpg`,
-            fileName: '498525b4eb33ec6987e81d1702d8f2fd.jpg',
+            url: `/files/manufactcoffee_products_04.webp`,
+            fileName: 'manufactcoffee_products_04.webp',
             orgName: '',
           },
         ],
         detailImages: [
           {
-            url: `/files/2f816e99dc29f707c24e78f3c04654bc.jpg`,
-            fileName: '2f816e99dc29f707c24e78f3c04654bc.jpg',
+            url: `/files/manufactcoffee_products_04-1.webp`,
+            fileName: 'manufactcoffee_products_04-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_04-2.webp`,
+            fileName: 'manufactcoffee_products_04-2.webp',
             orgName: '',
           },
         ],
-        content: `
-          <div class="product-detail">
-            <p>기본 정보
-            배송비	2,500원 (40,000원 이상 구매 시 무료)
-            조성	- 에티오피아 예가체프 할로 내추럴 G1 30%
-            - 에티오피아 예가체프 반코 코티티 내추럴 G1 50%
-            - 콜롬비아 모모스 셀렉션 라 플라타 블렌드 워시드 20%
-            노트	믹스베리, 체리, 메이플시럽, 쥬시</p>
-          </div>`,
+        content: [
+          {
+            d1: `다양한 용도로 사용 가능한 유리컵 입니다.\n 내열 소재로 뜨거운 음료와 전자레인지에 사용 가능 합니다.\n\n 용량 : 160ml\n 사이즈 : 지름 71mm / 높이 76mm\n 원산지 : 프랑스`,
+          },
+          {
+            d2: `* 구매시 주의 사항\n\n 수작업 제품 특성상\n _ 표면 또는 바닥면이 고르지 못하거나 기포가 있을 수 있습니다.\n  _ 로고의 인쇄 위치가 상이 할 수 있습니다.\n _ 모니터에 따라 컵의 색상이 다를 수 있습니다.\n\n 상기 사항으로 반품 및 교환을 원하실 경우 택배 비용이 발생 할 수 있으니 구매 시 참고하여 주시기 바랍니다.`,
+          },
+          {
+            d3: `* 로고는 일반적 사용에 반영구적으로 사용할 수 있게 인쇄 제작되어 있으나 식기세척기를 비롯한 연마력이 큰 소재로 반복적으로 세척했을시 훼손될 수 있으니 사용시 주의하시기 바랍니다.
+            `,
+          },
+        ],
         createdAt: getTime(-41, -60 * 60 * 2),
         updatedAt: getTime(-40, -60 * 15),
         extra: {
           isNew: true,
           isBest: true,
+          category: ['goods'],
+          brand: '매뉴팩트커피',
+          sort: 3,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 7,
+        price: 25000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[매뉴팩트커피] Mug White / 머그 화이트',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/manufactcoffee_products_05.webp`,
+            fileName: 'manufactcoffee_products_05.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/manufactcoffee_products_05-1.webp`,
+            fileName: 'manufactcoffee_products_05-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_05-2.webp`,
+            fileName: 'manufactcoffee_products_05-2.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `다양한 용도로 사용 가능한 머그 입니다.\n 내열 소재로 뜨거운 음료와 전자레인지에 사용 가능 합니다.\n\n 용량 : 250ml\n 사이즈 : 85mm(지름) * 93mm(높이)\n 색상 : 화이트`,
+          },
+          {
+            d2: `* 구매시 주의 사항\n\n 수작업 제품 특성상\n _ 표면에 유약의 흐름이 나타날 수 있습니다.\n _ 표면이 고르지 못할 수 있습니다.\n _ 로고의 인쇄 위치가 상이 할 수 있습니다.\n _ 모니터에 따라 컵의 색상이 다를 수 있습니다.\n\n 상기 사항으로 반품 및 교환을 원하실 경우 택배 비용이 발생 할 수 있으니 구매 시 참고하여 주시기 바랍니다.`,
+          },
+          {
+            d3: `* 로고는 일반적 사용에 반영구적으로 사용할 수 있게 인쇄 제작되어 있으나 식기세척기를 비롯한 연마력이 큰 소재로 반복적으로 세척했을시 훼손될 수 있으니 사용시 주의하시기 바랍니다.`,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: false,
+          category: ['goods'],
+          brand: '매뉴팩트커피',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 7,
+        price: 12000,
+        shippingFees: 3000,
+        show: false,
+        active: true,
+        name: '[매뉴팩트커피] Kinto Wood Saucer / 킨토 우드 논슬립 소서',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/manufactcoffee_products_06.webp`,
+            fileName: 'manufactcoffee_products_06.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/manufactcoffee_products_06-1.webp`,
+            fileName: 'manufactcoffee_products_06-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/manufactcoffee_products_06-2.webp`,
+            fileName: 'manufactcoffee_products_06-2.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `다양한 컵과 어울리는 잔받침입니다.\n 티크 원목으로 제작되어 열 전도율이 비교적 낮으며 사용할 수록 깊이감이 더해지는 잔 받침입니다.`,
+          },
+          {
+            d2: `소재 : 합성칠기 / 천연나무(티크 적층재), 우레탄 코팅\n사이즈 : 지름 130mm / 높이 17mm\n원산지 : 중국`,
+          },
+          {
+            d3: `* 사용 및 구매시 주의 사항\n\n _ 식기 세척기를 사용 하실 수 없습니다.\n _ 물이나 온수에 오래 담그지 마십시오.\n _ 불 옆에 두지 마십시오.\n _ 사용 후 행주로 청소 하십시오.\n _ 직사광선을 피하고 건조한 상태로 보관 하십시오.\n _ 핸드메이드 제품은 크기와 모양이 각각 다를 수 있습니다.\n _ 천연나무 소재는 색상과 나무결에 약간 차이가 있을 수 있습니다. `,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: false,
+          isBest: false,
+          category: ['goods'],
+          brand: '매뉴팩트커피',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 8,
+        price: 18000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[롱플레이] 커피파우더 질베르토 20g [원산지:국산(경기도 화성시)]',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/longplay_products_01.webp`,
+            fileName: 'longplay_products_01.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/longplay_products_common.webp`,
+            fileName: 'longplay_products_common.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/longplay_products_01-2.webp`,
+            fileName: 'longplay_products_01-2.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `롱플레이의 질베르토를 간편하게 즐기실 수 있도록\n 파우더 형태의 커피로 제작했습니다.\n\n 묵직하고 초콜릿 단맛이 좋은 타입의 질베르토 블랜드 파우더 커피입니다.`,
+          },
+          {
+            d2: `롱플레이 커피 파우더\n [질베르토]`,
+          },
+          {
+            d3: `파우더 커피는 따듯한 물이나 우유에 타서 간편하게 즐기실 수 있습니다.\n * 차가운 물과 우유도 가능합니다. `,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: false,
+          isBest: false,
           category: ['coffee'],
-          brand: '모모스커피',
+          brand: '롱플레이',
+          sort: 3,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 8,
+        price: 52000,
+        shippingFees: 3000,
+        show: false,
+        active: true,
+        name: '[롱플레이] 롱플레이 X TRVR 티셔츠 LP ver. - navy',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/longplay_products_02.webp`,
+            fileName: 'longplay_products_02.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/longplay_products_common.webp`,
+            fileName: 'longplay_products_common.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/longplay_products_02-1.webp`,
+            fileName: 'longplay_products_02-1.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `롱플레이 X TRVR T-Shirt (ver.1)\n Longplay X TRVR T-Shirt (ver.1)`,
+          },
+          {
+            d2: `'시간'과 밀접한 관계를 맺고 있는 롱플레이와 TRVR의 콜라보레이션 소식을 전합니다.`,
+          },
+          {
+            d3: `숏슬리브 라벨의 QR코드로 접속하면 TRVR과 LONGPLAY에서 만든 플레이리스트를 스포티파이와 애플뮤직에서 감상할 수 있도록 재미있는 요소를 더했습니다. `,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: false,
+          isBest: true,
+          category: ['goods'],
+          brand: '롱플레이',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 8,
+        price: 29000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[롱플레이] 롱플레이 LP 슬립매트',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/longplay_products_03.webp`,
+            fileName: 'longplay_products_03.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/longplay_products_common.webp`,
+            fileName: 'longplay_products_common.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/longplay_products_03-1.webp`,
+            fileName: 'longplay_products_03-1.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `롱플레이의 로고가 담긴 LP 슬립매트 입니다.`,
+          },
+          {
+            d2: `롱플레이 슬립매트\n Longplay Slipmats`,
+          },
+          {
+            d3: `LP 재생 음질 개선에 가장 좋은 2mm 두께로 제작되었습니다.`,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['goods'],
+          brand: '롱플레이',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 8,
+        price: 46000,
+        shippingFees: 3000,
+        show: true,
+        active: true,
+        name: '[롱플레이]롱플레이 X 마더그라운드 티셔츠 굿무드 - lemon',
+        quantity: 310,
+        buyQuantity: 200,
+        mainImages: [
+          {
+            url: `/files/longplay_products_04.webp`,
+            fileName: 'longplay_products_04.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/longplay_products_04-1.webp`,
+            fileName: 'longplay_products_04-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/longplay_products_04-2.webp`,
+            fileName: 'longplay_products_04-2.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `맛있는 커피와 좋은 음악이 만들어내는 롱플레이의 분위기를 생각하며\n 마더그라운드와 함께 만든 GOOD SOUND, GOOD MOOD 티셔츠입니다.`,
+          },
+          {
+            d2: `100% 코튼(30수) 원단에 면의 보풀을 없애는 실켓가공 처리를 하여 원단이 가볍고 시원하며 톡톡한 질감을 줍니다.\n 넉넉한 핏으로 성별 관계없이 편하게 입을 수 있습니다.`,
+          },
+          {
+            d3: `프린트가 된 부분도 통기성이 좋고 시원합니다.`,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['goods'],
+          brand: '롱플레이',
+          sort: 2,
+        },
+      },
+      {
+        _id: await nextSeq('product'),
+        seller_id: 8,
+        price: 35000,
+        shippingFees: 0,
+        show: true,
+        active: true,
+        name: 'Post-Visionㅣ월요일 저녁 단어와 요가 with 근영',
+        quantity: 60,
+        buyQuantity: 16,
+        mainImages: [
+          {
+            url: `/files/joinus_products_01.webp`,
+            fileName: 'joinus_products_01.webp',
+            orgName: '',
+          },
+        ],
+        detailImages: [
+          {
+            url: `/files/joinus_products_01-1.webp`,
+            fileName: 'joinus_products_01-1.webp',
+            orgName: '',
+          },
+          {
+            url: `/files/joinus_products_01-2.webp`,
+            fileName: 'joinus_products_01-2.webp',
+            orgName: '',
+          },
+        ],
+        content: [
+          {
+            d1: `단어 하나와 함께 매트 위에 서서 눈에 보이지 않는 감각을 살펴보고자 합니다.\n 맨몸으로 나를 마주하는 시간인 요가는 자신을 더 깊이 이해할 수 있게 해줘요.\n 경쟁과 미움 없이 포용과 사랑만으로,\n 요가를 하며, 요가처럼 사는 연습을 해봐요.`,
+          },
+          {
+            d2: `1What is Post-vision?\n 고소한 커피와 맛 좋은 제철 아침 식사를 제공하는 프로비전의 분주한 영업이 끝나면 공간은 새로운 일들과 사람들로 채워집니다.\n 우리의 삶에 건강한 활기를 더해줄 프로그램에 참여해보세요!`,
+          },
+          {
+            d3: `●근영 님, 안녕하세요! 자기 소개 부탁드립니다.\n 안녕하세요. 프리랜서 에디터이자 하타요가를 하는 박근영입니다.\n 요가를 하면서 내 몸과 마음의 형태를 더 잘 알게 되었고, 점점 더 튼튼해지는 뿌리로 삶의 흔들림을 즐기며 살아가고 있습니다.\n\n\n\n ● 단어와 요가는 어떤 수업인가요?\n ‘요가를 하는 동안 스치는 몸의 느낌과 감정의 변화를 조금 더 잘 새겨보고자 단어 하나를 세워두고 움직여보려 합니다. \n 예를 들면, 가득 / 새김 / 틈 / 넌지시 / 속엣것 …  이런 단어들이요. \n 요가하는 동안 단어가 지닌 뉘앙스를 곱씹어보거나, 또 다른 단어가 떠오르면 그 뒤에 붙여봐도 좋습니다. \n 아마 아무 생각 없이 움직임에만 집중하는 날도 많을 텐데, 괜찮습니다. \n 나도 모르는 새에 단어가 몸과 마음의 흐름을 살펴보는 데 도움을 주어, 그 미묘한 차이를 새롭게 읽어내게 될 거예요. 언어에는 그런 힘이 있다고 생각합니다.\n\n\n\n ● 모닝 오너분들이 이 수업을 통해 무엇을 얻었으면 하나요?\n 월요일 저녁마다 요가를 통해 한 주를 잘 보내는 데 필요한 에너지와 마음가짐을 충전할 수 있으면 좋겠습니다. \n 그렇게 시간이 쌓이다 보면 움직이며 사는 즐거움을 알게 되고, 내 몸이 가진 가능성과 내면의 힘을 키워갈 수 있을 거예요.\n\n\n\n ● 요가를 처음 하는 사람들도 참여할 수 있나요? \n 몸의 흐름을 자연스럽게 따라갈 거라 초심자도 무리 없이 함께 할 수 있습니다. \n 어떨 때는 숨은 힘을 끌어내어 내 한계를 넘어보기도 하겠지만, 그날의 컨디션에 따라서 자기만의 ‘stop’ 버튼을 눌러도 좋습니다. \n 요가에는 포기가 없어요. 매 순간 나에게 맞는 선택을 내리면 되고, 어떤 선택이든 매트 위에 쌓여 정직한 변화를 가져다줄 거예요.`,
+          },
+        ],
+        createdAt: getTime(-41, -60 * 60 * 2),
+        updatedAt: getTime(-40, -60 * 15),
+        extra: {
+          isNew: true,
+          isBest: true,
+          category: ['joinus'],
+          brand: '롱플레이',
           sort: 2,
         },
       },
@@ -2092,7 +2281,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '[센터커피] 게이샤 콜드브루 200ml',
-            image: 'centercoffee_02.png',
+            image: 'centercoffee_02.webp',
             quantity: 1,
             price: 12500,
             reply_id: 3,
@@ -2124,7 +2313,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '[센터커피] 에티오피아 디카페인 콜드브루 300ml',
-            image: 'centercoffee_01.png',
+            image: 'centercoffee_01.webp',
             quantity: 1,
             price: 12000,
             reply_id: 3,
@@ -2156,7 +2345,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: '[센터커피] 프라이데이 블랜드 네스프레소 캡슐',
-            image: 'centercoffee_05.png',
+            image: 'centercoffee_05.webp',
             quantity: 1,
             price: 20000,
             reply_id: 3,
@@ -2188,7 +2377,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 24개입 [3종]',
-            image: 'bonanzacoffee_products_01.jpg',
+            image: 'bonanzacoffee_products_01.webp',
             quantity: 1,
             price: 32000,
             reply_id: 3,
@@ -2220,7 +2409,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 블렌드 콜롬비아 & 브라질 250g',
-            image: 'bonanzacoffee_products_02.png',
+            image: 'bonanzacoffee_products_02.webp',
             quantity: 1,
             price: 18900,
             reply_id: 3,
@@ -2252,7 +2441,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '[킵댓커피] 킵댓 스터코 블렌드(Strong) 200g [원산지:국산(경기도 수원시 팔달구)]',
-            fileName: 'keepthatcoffee_products_02.jpg',
+            fileName: 'keepthatcoffee_products_02.webp',
             quantity: 2,
             price: 20000,
             reply_id: 3,
@@ -2284,7 +2473,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: 'bonanzacoffee_products_03.jpg',
+            image: 'bonanzacoffee_products_03.webp',
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2316,7 +2505,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: 'bonanzacoffee_products_03.jpg',
+            image: 'bonanzacoffee_products_03.webp',
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2348,7 +2537,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '킵댓 스무스 블렌드(Smooth) 1kg [원산지:국산(경기도 수원시 팔달구)]',
-            image: 'keepthatcoffee_products_03.jpg',
+            image: 'keepthatcoffee_products_03.webp',
             quantity: 2,
             price: 55000,
             reply_id: 3,
@@ -2358,7 +2547,7 @@ export const initData = async (nextSeq) => {
             seller_id: 1,
             state: 'OS020',
             name: 'VISIONSTROLL HANDCRAFT GLASS CUP 비전스트롤 핸드크래프트 유리컵',
-            image: 'visionstroll_products_01.jpg',
+            image: 'visionstroll_products_01.webp',
             quantity: 1,
             price: 38000,
             reply_id: 3,
@@ -2390,7 +2579,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '[프릳츠] 샷글라스 120ml',
-            image: 'ac52478dc537888fa75932fd30390a0a.jpg',
+            image: 'ac52478dc537888fa75932fd30390a0a.webp',
             quantity: 2,
             price: 8500,
             reply_id: 3,
@@ -2422,7 +2611,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '보난자 드립백 5개입 3종 + 드립 어시스트',
-            image: 'bonanzacoffee_products_03.jpg',
+            image: 'bonanzacoffee_products_03.webp',
             quantity: 2,
             price: 45000,
             reply_id: 3,
@@ -2787,7 +2976,7 @@ export const initData = async (nextSeq) => {
     ],
     // QnA, 공지사항, 게시판
     post: [
-      [
+
         {
           _id: await nextSeq('posts'),
           title: '편안함 속에서 공유하는 즐거움, COEO(코에오)',
@@ -3848,6 +4037,7 @@ export const initData = async (nextSeq) => {
           updatedAt: getTime(-40, -60 * 15),
         },
       ],
+
     ],
     // 코드
     code: [
