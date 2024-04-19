@@ -33,13 +33,13 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     let realQuantity = item.product.quantity - item.product.buyQuantity;
     if (!isProcessing && productQuantity < realQuantity) {
       setProductQuantity((prev) => prev + 1);
-    } else if(!isProcessing && productQuantity == 0){
+    } else if (!isProcessing && productQuantity == 0) {
       handleDeleteItem(item._id);
     } else {
       alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
       return;
     }
-};
+  };
 
   const handleReduceQuantity = () => {
     // isProcessing일 경우 handleRequest 함수의 사이클을 온전히 실행한 후 수량 조정을 위해

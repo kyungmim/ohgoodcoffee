@@ -13,7 +13,6 @@ function MarketDetail() {
   const navigate = useNavigate();
   const location = useLocation();
   const [productQuantity, setProductQuantity] = useState(1);
-  const [detailItem, setDetailItem] = useState();
   const openModal = useModalStore((state) => state.openModal);
 
   const { data } = useQuery({
