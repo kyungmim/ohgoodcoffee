@@ -2,6 +2,7 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 // import CheckBox from '@pages/cart/CheckBox';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 CartListItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -14,6 +15,7 @@ CartListItem.propTypes = {
 
 function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems }) {
   const axios = useCustomAxios();
+  const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -110,7 +112,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       </div>
       <div className="cart-layout">
         <div className="cart-item-info">
-          <div className="cart-item-cover">
+          <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
           <p className="cart-item-title">

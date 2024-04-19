@@ -2,7 +2,7 @@ import Wishlist_Dis from '@public/wishlist_dis.svg';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 
@@ -23,8 +23,6 @@ function MarketDetail() {
   });
 
   const item = data?.item;
-
-  console.log('ITEM', item);
 
   const handleSubmitCart = async () => {
     let cart = { product_id: Number(_id), quantity: productQuantity };
@@ -51,14 +49,17 @@ function MarketDetail() {
           },
         ],
         address: {
-          value: userData.address,
+          user: user,
         },
       };
       try {
-        const response = await axios.post('/orders', order);
-        console.log(response);
         const gotoPaymentComplete = confirm(`${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`);
-        gotoPaymentComplete && navigate('/orders', { state: { from: location.pathname } });
+        if (gotoPaymentComplete) {
+          const response = await axios.post('/orders', order);
+          console.log(response);
+          // 결제 완료 페이지로 response 전달
+          navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
+        }
       } catch (err) {
         alert(err.response?.data.message);
       }
@@ -122,7 +123,7 @@ function MarketDetail() {
                         +{/* <img className="selling-icon up" src={Plus} /> */}
                       </div>
                     </div>
-                    <p className="selling-price">{item.price * productQuantity}원</p>
+                    <p className="selling-price">{item.price * productQuantity.toLocaleString('ko-KR')}원</p>
                   </div>
                 </div>
               </div>

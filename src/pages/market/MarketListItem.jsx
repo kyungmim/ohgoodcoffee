@@ -11,11 +11,7 @@ function MarketListItem({ item }) {
       <li>
         <Link className="card" to={`/market/detail/${item._id}`}>
           <div className="card-cover">
-            <img
-              className="card-cover-src"
-              src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.fileName}` || null}
-              alt={`${item.name} 상품 사진`}
-            />
+            <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.name}` || null} alt={`${item.name} 상품 사진`} />
           </div>
           <div className="card-contents">
             <div className="card-contents-item">
