@@ -25,7 +25,9 @@ function UserWishList() {
             <p className="main-contents-title">위시리스트</p>
           </div>
           <div className="main-content">
-            <div className="card-container">{wishList}</div>
+            <div className="card-container">
+              <ul className="grid">{wishList}</ul>
+            </div>
           </div>
         </div>
       </div>

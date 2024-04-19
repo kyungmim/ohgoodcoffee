@@ -288,17 +288,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_01.png`,
-            fileName: 'centercoffee_01.png',
+            name: 'centercoffee_01.png',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_01.png`,
-            fileName: 'centercoffee_01.png',
+            name: 'centercoffee_01.png',
           },
           {
             url: `/files/centercoffee_01_detail.png`,
-            fileName: 'centercoffee_01_detail.png',
+            name: 'centercoffee_01_detail.png',
           },
         ],
         content: [
@@ -335,17 +335,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_02.png`,
-            fileName: 'centercoffee_02.png',
+            name: 'centercoffee_02.png',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_02.png`,
-            fileName: '/files/centercoffee_02.png',
+            name: '/files/centercoffee_02.png',
           },
           {
             url: `/files/centercoffee_02_detail.png`,
-            fileName: 'centercoffee_02_detail.png',
+            name: 'centercoffee_02_detail.png',
           },
         ],
         content: [
@@ -382,17 +382,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_03.jpg`,
-            fileName: 'centercoffee_03.jpg',
+            name: 'centercoffee_03.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_03.jpg`,
-            fileName: 'centercoffee_03.jpg',
+            name: 'centercoffee_03.jpg',
           },
           {
             url: `/files/centercoffee_03_detail.jpg`,
-            fileName: 'centercoffee_03_detail.jpg',
+            name: 'centercoffee_03_detail.jpg',
           },
         ],
         content: [
@@ -423,17 +423,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_04.png`,
-            fileName: 'centercoffee_04.png',
+            name: 'centercoffee_04.png',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_04.png`,
-            fileName: 'centercoffee_04.png',
+            name: 'centercoffee_04.png',
           },
           {
             url: `/files/centercoffee_04_detail.png`,
-            fileName: 'centercoffee_04_detail.png',
+            name: 'centercoffee_04_detail.png',
           },
         ],
         content: [
@@ -470,17 +470,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_05.png`,
-            fileName: 'centercoffee_05.png',
+            name: 'centercoffee_05.png',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_05.png`,
-            fileName: 'centercoffee_05.png',
+            name: 'centercoffee_05.png',
           },
           {
             url: `/files/centercoffee_05_detail.png`,
-            fileName: 'centercoffee_05_detail.png',
+            name: 'centercoffee_05_detail.png',
           },
         ],
         content: [
@@ -517,17 +517,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/centercoffee_06.png`,
-            fileName: 'centercoffee_06.png',
+            name: 'centercoffee_06.png',
           },
         ],
         detailImages: [
           {
             url: `/files/centercoffee_06.png`,
-            fileName: 'centercoffee_06.png',
+            name: 'centercoffee_06.png',
           },
           {
             url: `/files/centercoffee_06_detail.png`,
-            fileName: 'centercoffee_06_detail.png',
+            name: 'centercoffee_06_detail.png',
           },
         ],
         content: [
@@ -564,17 +564,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_01.jpg`,
-            fileName: 'bonanzacoffee_products_01.jpg',
+            name: 'bonanzacoffee_products_01.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/bonanzacoffee_products_01_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_01_detail_01.jpg',
+            name: 'bonanzacoffee_products_01_detail_01.jpg',
           },
           {
             url: `/files/bonanzacoffee_products_01_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_01_detail_02.jpg',
+            name: 'bonanzacoffee_products_01_detail_02.jpg',
           },
         ],
         content: [
@@ -605,17 +605,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_02.png`,
-            fileName: 'bonanzacoffee_products_02.png',
+            name: 'bonanzacoffee_products_02.png',
           },
         ],
         detailImages: [
           {
             url: `/files/bonanzacoffee_products_02_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_02_detail_01.jpg',
+            name: 'bonanzacoffee_products_02_detail_01.jpg',
           },
           {
             url: `/files/bonanzacoffee_products_02_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_02_detail_02.jpg',
+            name: 'bonanzacoffee_products_02_detail_02.jpg',
           },
         ],
         content: [
@@ -653,17 +653,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_03.jpg`,
-            fileName: 'bonanzacoffee_products_03.jpg',
+            name: 'bonanzacoffee_products_03.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/bonanzacoffee_products_03_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_03_detail_01.jpg',
+            name: 'bonanzacoffee_products_03_detail_01.jpg',
           },
           {
             url: `/files/bonanzacoffee_products_03_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_03_detail_02.jpg',
+            name: 'bonanzacoffee_products_03_detail_02.jpg',
           },
         ],
         content: [
@@ -699,17 +699,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_04.webp`,
-            fileName: 'bonanzacoffee_products_04.webp',
+            name: 'bonanzacoffee_products_04.webp',
           },
         ],
         detailImages: [
           {
             url: `/files/bonanzacoffee_products_04_detail_01webp`,
-            fileName: 'bonanzacoffee_products_04_detail_01.webp',
+            name: 'bonanzacoffee_products_04_detail_01.webp',
           },
           {
             url: `/files/bonanzacoffee_products_04_detail_02.webp`,
-            fileName: 'bonanzacoffee_products_04_detail_02.webp',
+            name: 'bonanzacoffee_products_04_detail_02.webp',
           },
         ],
         content: [
@@ -744,17 +744,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/bonanzacoffee_products_05.png`,
-            fileName: 'bonanzacoffee_products_05.png',
+            name: 'bonanzacoffee_products_05.png',
           },
         ],
         detailImages: [
           {
             url: `/files/bonanzacoffee_products_05_detail_01.jpg`,
-            fileName: 'bonanzacoffee_products_05_detail_01.jpg',
+            name: 'bonanzacoffee_products_05_detail_01.jpg',
           },
           {
             url: `/files/bonanzacoffee_products_05_detail_02.jpg`,
-            fileName: 'bonanzacoffee_products_05_detail_02.jpg',
+            name: 'bonanzacoffee_products_05_detail_02.jpg',
           },
         ],
         content: [
@@ -788,17 +788,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_01.jpg`,
-            fileName: 'keepthatcoffee_products_01.jpg',
+            name: 'keepthatcoffee_products_01.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/keepthatcoffee_products_01_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_01_detail_01.jpg',
+            name: 'keepthatcoffee_products_01_detail_01.jpg',
           },
           {
             url: `/files/keepthatcoffee_products_01_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_01_detail_02.jpg',
+            name: 'keepthatcoffee_products_01_detail_02.jpg',
           },
         ],
         content: [
@@ -833,17 +833,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_02.jpg`,
-            fileName: 'keepthatcoffee_products_02.jpg',
+            name: 'keepthatcoffee_products_02.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/keepthatcoffee_products_02_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_02_detail_01.jpg',
+            name: 'keepthatcoffee_products_02_detail_01.jpg',
           },
           {
             url: `/files/keepthatcoffee_products_02_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_02_detail_02.jpg',
+            name: 'keepthatcoffee_products_02_detail_02.jpg',
           },
         ],
         content: [
@@ -876,17 +876,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_03.jpg`,
-            fileName: 'keepthatcoffee_products_03.jpg',
+            name: 'keepthatcoffee_products_03.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+            name: 'keepthatcoffee_products_03_detail_01.jpg',
           },
           {
             url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
+            name: 'keepthatcoffee_products_03_detail_02.jpg',
           },
         ],
         content: [
@@ -920,17 +920,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/keepthatcoffee_products_04.jpg`,
-            fileName: 'keepthatcoffee_products_04.jpg',
+            name: 'keepthatcoffee_products_04.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/keepthatcoffee_products_03_detail_01.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_01.jpg',
+            name: 'keepthatcoffee_products_03_detail_01.jpg',
           },
           {
             url: `/files/keepthatcoffee_products_03_detail_02.jpg`,
-            fileName: 'keepthatcoffee_products_03_detail_02.jpg',
+            name: 'keepthatcoffee_products_03_detail_02.jpg',
           },
         ],
         content: [
@@ -963,17 +963,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/milestonecoffee_products_01.jpg`,
-            fileName: 'milestonecoffee_products_01.jpg',
+            name: 'milestonecoffee_products_01.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/milestonecoffee_products_01-1.png`,
-            fileName: 'milestonecoffee_products_01-1.png',
+            name: 'milestonecoffee_products_01-1.png',
           },
           {
             url: `/files/milestonecoffee_products_01-2.png`,
-            fileName: 'milestonecoffee_products_01-2.png',
+            name: 'milestonecoffee_products_01-2.png',
           },
         ],
         content: [
@@ -1008,17 +1008,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/milestonecoffee_products_02.png`,
-            fileName: 'milestonecoffee_products_02.png',
+            name: 'milestonecoffee_products_02.png',
           },
         ],
         detailImages: [
           {
             url: `/files/milestonecoffee_products_02-1.png`,
-            fileName: 'milestonecoffee_products_02-1.png',
+            name: 'milestonecoffee_products_02-1.png',
           },
           {
             url: `/files/milestonecoffee_products_02-2.png`,
-            fileName: 'milestonecoffee_products_02-2.png',
+            name: 'milestonecoffee_products_02-2.png',
           },
         ],
         content: [
@@ -1053,17 +1053,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/milestonecoffee_products_03.jpg`,
-            fileName: 'milestonecoffee_products_03.jpg',
+            name: 'milestonecoffee_products_03.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/milestonecoffee_products_03-1.png`,
-            fileName: 'milestonecoffee_products_03-1.png',
+            name: 'milestonecoffee_products_03-1.png',
           },
           {
             url: `/files/milestonecoffee_products_03-2.png`,
-            fileName: 'milestonecoffee_products_03-2.png',
+            name: 'milestonecoffee_products_03-2.png',
           },
         ],
         content: [
@@ -1098,17 +1098,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/milestonecoffee_products_04.jpeg`,
-            fileName: 'milestonecoffee_products_04.jpeg',
+            name: 'milestonecoffee_products_04.jpeg',
           },
         ],
         detailImages: [
           {
             url: `/files/milestonecoffee_products_04-1.png`,
-            fileName: 'milestonecoffee_products_04-1.png',
+            name: 'milestonecoffee_products_04-1.png',
           },
           {
             url: `/files/milestonecoffee_products_04-2.png`,
-            fileName: 'milestonecoffee_products_04-2.png',
+            name: 'milestonecoffee_products_04-2.png',
           },
         ],
         content: [
@@ -1145,17 +1145,17 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/milestonecoffee_products_05.jpg`,
-            fileName: 'milestonecoffee_products_05.jpg',
+            name: 'milestonecoffee_products_05.jpg',
           },
         ],
         detailImages: [
           {
             url: `/files/milestonecoffee_products_05-1.png`,
-            fileName: 'milestonecoffee_products_05-1.png',
+            name: 'milestonecoffee_products_05-1.png',
           },
           {
             url: `/files/milestonecoffee_products_05-2.png`,
-            fileName: 'milestonecoffee_products_05-2.png',
+            name: 'milestonecoffee_products_05-2.png',
           },
         ],
         content: [
@@ -1192,18 +1192,18 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/protokoll_products_01.jpg`,
-            fileName: 'protokoll_products_01.jpg',
+            name: 'protokoll_products_01.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/protokoll_products_01-1.png`,
-            fileName: 'protokoll_products_01-1.png',
+            name: 'protokoll_products_01-1.png',
           },
           {
             url: `/files/protokoll_products_01-2.png`,
-            fileName: 'protokoll_products_01-2.png',
+            name: 'protokoll_products_01-2.png',
           },
         ],
         content: [
@@ -1238,18 +1238,18 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/protokoll_products_02.jpg`,
-            fileName: 'protokoll_products_02.jpg',
+            name: 'protokoll_products_02.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/protokoll_products_02-1.png`,
-            fileName: 'protokoll_products_02-1.png',
+            name: 'protokoll_products_02-1.png',
           },
           {
             url: `/files/protokoll_products_02-2.png`,
-            fileName: 'protokoll_products_02-2.png',
+            name: 'protokoll_products_02-2.png',
           },
         ],
         content: [
@@ -1286,18 +1286,18 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/protokoll_products_03.jpg`,
-            fileName: 'protokoll_products_03.jpg',
+            name: 'protokoll_products_03.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/protokoll_products_03-1.png`,
-            fileName: 'protokoll_products_03-1.png',
+            name: 'protokoll_products_03-1.png',
           },
           {
             url: `/files/protokoll_products_03-2.png`,
-            fileName: 'protokoll_products_03-2.png',
+            name: 'protokoll_products_03-2.png',
           },
         ],
         content: [
@@ -1334,18 +1334,18 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/protokoll_products_04.jpg`,
-            fileName: 'protokoll_products_04.jpg',
+            name: 'protokoll_products_04.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/protokoll_products_04-1.png`,
-            fileName: 'protokoll_products_04-1.png',
+            name: 'protokoll_products_04-1.png',
           },
           {
             url: `/files/protokoll_products_04-2.png`,
-            fileName: 'protokoll_products_04-2.png',
+            name: 'protokoll_products_04-2.png',
           },
         ],
         content: [
@@ -1380,18 +1380,18 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/protokoll_products_05.jpg`,
-            fileName: 'protokoll_products_05.jpg',
+            name: 'protokoll_products_05.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/protokoll_products_05-1.png`,
-            fileName: 'protokoll_products_05-1.png',
+            name: 'protokoll_products_05-1.png',
           },
           {
             url: `/files/protokoll_products_05-2.png`,
-            fileName: 'protokoll_products_05-2.png',
+            name: 'protokoll_products_05-2.png',
           },
         ],
         content: [
@@ -1426,19 +1426,19 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/nest_products_01.png`,
-            fileName: 'nest_products_01.png',
+            name: 'nest_products_01.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/nest_products_01-1.png`,
-            fileName: 'nest_products_01-1.png',
+            name: 'nest_products_01-1.png',
             orgName: '',
           },
           {
             url: `/files/nest_products_01-2.png`,
-            fileName: 'nest_products_01-2.png',
+            name: 'nest_products_01-2.png',
             orgName: '',
           },
         ],
@@ -1476,19 +1476,19 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/nest_products_02.png`,
-            fileName: 'nest_products_02.png',
+            name: 'nest_products_02.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/nest_products_02-1.png`,
-            fileName: 'nest_products_02-1.png',
+            name: 'nest_products_02-1.png',
             orgName: '',
           },
           {
             url: `/files/nest_products_02-2.png`,
-            fileName: 'nest_products_02-2.png',
+            name: 'nest_products_02-2.png',
             orgName: '',
           },
         ],
@@ -1528,19 +1528,19 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/nest_products_03.png`,
-            fileName: 'nest_products_03.png',
+            name: 'nest_products_03.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/nest_products_03-1.png`,
-            fileName: 'nest_products_03-1.png',
+            name: 'nest_products_03-1.png',
             orgName: '',
           },
           {
             url: `/files/nest_products_03-2.png`,
-            fileName: 'nest_products_03-2.png',
+            name: 'nest_products_03-2.png',
             orgName: '',
           },
         ],
@@ -1578,19 +1578,19 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/nest_products_04.png`,
-            fileName: 'nest_products_04.png',
+            name: 'nest_products_04.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/nest_products_04-1.png`,
-            fileName: 'nest_products_04-1.png',
+            name: 'nest_products_04-1.png',
             orgName: '',
           },
           {
             url: `/files/nest_products_04-2.png`,
-            fileName: 'nest_products_04-2.png',
+            name: 'nest_products_04-2.png',
             orgName: '',
           },
         ],
@@ -1629,19 +1629,19 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/nest_products_05.png`,
-            fileName: 'nest_products_05.png',
+            name: 'nest_products_05.png',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/nest_products_05-1.png`,
-            fileName: 'nest_products_05-1.png',
+            name: 'nest_products_05-1.png',
             orgName: '',
           },
           {
             url: `/files/nest_products_05-2.png`,
-            fileName: 'nest_products_05-2.png',
+            name: 'nest_products_05-2.png',
             orgName: '',
           },
         ],
@@ -1680,14 +1680,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/ac52478dc537888fa75932fd30390a0a.jpg`,
-            fileName: 'ac52478dc537888fa75932fd30390a0a.jpg',
+            name: 'ac52478dc537888fa75932fd30390a0a.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E90EC82ACEBAAB0.png',
+            name: 'EC9E90EC82ACEBAAB0.png',
             orgName: '',
           },
         ],
@@ -1722,14 +1722,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/15ea96b0060027f0569b3047e80e108a.jpg`,
-            fileName: '15ea96b0060027f0569b3047e80e108a.jpg',
+            name: '15ea96b0060027f0569b3047e80e108a.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC9E94EAB3BCEC868CEC849C_EBACBCEBB99B_EC8381EC84B828EC9E90EC82ACEBAAB029.png`,
-            fileName: 'EC9E94EAB3BCEC868CEC849C_EBACBCEBB99B_EC8381EC84B828EC9E90EC82ACEBAAB029.png',
+            name: 'EC9E94EAB3BCEC868CEC849C_EBACBCEBB99B_EC8381EC84B828EC9E90EC82ACEBAAB029.png',
             orgName: '',
           },
         ],
@@ -1762,14 +1762,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/7ca6724ba612ccd1d8c140cdeaec68aa.jpg`,
-            fileName: '7ca6724ba612ccd1d8c140cdeaec68aa.jpg',
+            name: '7ca6724ba612ccd1d8c140cdeaec68aa.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC869FEC869F-EBACBCEBB391EAB080EBB0A91-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC869FEC869F-EBACBCEBB391EAB080EBB0A91-EC9E90EC82ACEBAAB0.png',
+            name: 'EC869FEC869F-EBACBCEBB391EAB080EBB0A91-EC9E90EC82ACEBAAB0.png',
             orgName: '',
           },
         ],
@@ -1801,14 +1801,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/a60a5da6831e6b5e0f0ba524433c38df.jpg`,
-            fileName: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
+            name: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
+            name: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
             orgName: '',
           },
         ],
@@ -1840,14 +1840,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/a60a5da6831e6b5e0f0ba524433c38df.jpg`,
-            fileName: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
+            name: 'a60a5da6831e6b5e0f0ba524433c38df.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC869FEC869F-EBB3BCECBAA1-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC869FEC869F-EBB3BCECBAA1-EC9E90EC82ACEBAAB0.png',
+            name: 'EC869FEC869F-EBB3BCECBAA1-EC9E90EC82ACEBAAB0.png',
             orgName: '',
           },
         ],
@@ -1880,14 +1880,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/d42cd7b0d298579692e80638fa6dd6ed.jpg`,
-            fileName: 'd42cd7b0d298579692e80638fa6dd6ed.jpg',
+            name: 'd42cd7b0d298579692e80638fa6dd6ed.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png`,
-            fileName: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
+            name: 'EC9E98EB9098EC96B4EAB080EC8B9CEB8298-EC9E90EC82ACEBAAB0.png',
             orgName: '',
           },
         ],
@@ -1920,14 +1920,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/95793b84d779e6456f4eb1829538742d.jpg`,
-            fileName: '95793b84d779e6456f4eb1829538742d.jpg',
+            name: '95793b84d779e6456f4eb1829538742d.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/8632006192a0a3e28657df057c906be7.jpg`,
-            fileName: '8632006192a0a3e28657df057c906be7.jpg',
+            name: '8632006192a0a3e28657df057c906be7.jpg',
             orgName: '',
           },
         ],
@@ -1962,14 +1962,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/fd073ab0619e246c92a02e5fad0d4fb2.jpg`,
-            fileName: 'fd073ab0619e246c92a02e5fad0d4fb2.jpg',
+            name: 'fd073ab0619e246c92a02e5fad0d4fb2.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/6b09e09ef39522bd9c5d8f901023f637.jpg`,
-            fileName: '6b09e09ef39522bd9c5d8f901023f637.jpg',
+            name: '6b09e09ef39522bd9c5d8f901023f637.jpg',
             orgName: '',
           },
         ],
@@ -2006,14 +2006,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/9a245b17ce5b24d94fe622f6eeec2a45.jpg`,
-            fileName: '9a245b17ce5b24d94fe622f6eeec2a45.jpg',
+            name: '9a245b17ce5b24d94fe622f6eeec2a45.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/fb88988a5193f8c75a46811d29c456be.jpg`,
-            fileName: 'fb88988a5193f8c75a46811d29c456be.jpg',
+            name: 'fb88988a5193f8c75a46811d29c456be.jpg',
             orgName: '',
           },
         ],
@@ -2049,14 +2049,14 @@ export const initData = async (nextSeq) => {
         mainImages: [
           {
             url: `/files/498525b4eb33ec6987e81d1702d8f2fd.jpg`,
-            fileName: '498525b4eb33ec6987e81d1702d8f2fd.jpg',
+            name: '498525b4eb33ec6987e81d1702d8f2fd.jpg',
             orgName: '',
           },
         ],
         detailImages: [
           {
             url: `/files/2f816e99dc29f707c24e78f3c04654bc.jpg`,
-            fileName: '2f816e99dc29f707c24e78f3c04654bc.jpg',
+            name: '2f816e99dc29f707c24e78f3c04654bc.jpg',
             orgName: '',
           },
         ],
@@ -2252,7 +2252,7 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '[킵댓커피] 킵댓 스터코 블렌드(Strong) 200g [원산지:국산(경기도 수원시 팔달구)]',
-            fileName: 'keepthatcoffee_products_02.jpg',
+            image: 'keepthatcoffee_products_02.jpg',
             quantity: 2,
             price: 20000,
             reply_id: 3,

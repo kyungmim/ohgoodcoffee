@@ -17,11 +17,37 @@ function SellerSalesListEdit() {
     productData();
   }, []);
 
+  const handleDeletClick = async () => {
+    try {
+      await axios.delete(`/seller/products/${itemId}`);
+      openModal({
+        content: `${product.name}  <br />상품이 삭제되었습니다. :)`,
+        callbackButton: {
+          확인: () => {
+            navigate(window.location.reload(), { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    values: {
+      price: product.price,
+      quantity: product.quantity,
+      name: product.name,
+      content: product.content[0].d1,
+      shippingFees: product.shippingFees,
+      type: product.type,
+    },
+  });
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
@@ -43,7 +69,7 @@ function SellerSalesListEdit() {
         });
         console.log(fileRes);
         // 서버로부터 응답받은 이미지 이름을  정보에 포함
-        formData.mainImages = fileRes.data.item[0].name;
+        formData.mainImages = fileRes.data.item;
       } else {
         // mainImages 속성을 제거
         delete formData.mainImages;
@@ -205,17 +231,14 @@ function SellerSalesListEdit() {
                 </div>
               </fieldset>
 
-              {/* <div className="button-box">
-                <button className="button button-large btn-Fill btn-layout" type="submit">
-                  등록하기
+              <div className="button-box type-btn-gap">
+                <button className="button button-small btn-Fill btn-layout type-sales-btn" type="submit">
+                  수정하기
                 </button>
-                <button className="button button-large btn-null btn-layout" type="button">
+                <button className="button button-small btn-null btn-layout type-sales-btn" onClick={handleDeletClick}>
                   삭제하기
                 </button>
-              </div> */}
-              <button className="button button-large btn-Fill btn-layout" type="submit">
-                등록하기
-              </button>
+              </div>
             </form>
           </div>
         </div>

@@ -11,7 +11,7 @@ function SellerSalesListItem({ item }) {
 
   const onClick = () => {
     setItemId(item._id, () => {
-      console.log(item._id);
+      item._id;
     });
   };
   return (
@@ -20,11 +20,7 @@ function SellerSalesListItem({ item }) {
         <li>
           <button className="button card type-info-card" onClick={onClick}>
             <div className="card-cover">
-              <img
-                className="card-cover-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.fileName}` || null}
-                alt={`${item.name} 상품 사진`}
-              />
+              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0].name}` || null} alt={`${item.name} 상품 사진`} />
             </div>
             <div className="card-contents">
               <div className="card-contents-item">

@@ -10,6 +10,8 @@ const useUserStore = create(
       setItemId: (itemId) => set({ itemId }),
       product: null,
       setProduct: (product) => set({ product }),
+      magazine: null,
+      setMgazine: (magazine) => set({ magazine }),
     }),
     {
       name: 'Acctoken',

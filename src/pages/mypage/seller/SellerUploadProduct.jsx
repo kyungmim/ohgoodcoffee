@@ -8,16 +8,7 @@ function SellerUploadProduct() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    values: {
-      price: '30000',
-      quantity: '10',
-      name: 'test상품',
-      content: '테스트 상품입니다요요요.',
-      shippingFees: '3000',
-      type: 'new',
-    },
-  });
+  } = useForm();
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
@@ -39,7 +30,7 @@ function SellerUploadProduct() {
         });
         console.log(fileRes);
         // 서버로부터 응답받은 이미지 이름을  정보에 포함
-        formData.mainImages = fileRes.data.item[0].name;
+        formData.mainImages = fileRes.data.item;
       } else {
         // mainImages 속성을 제거
         delete formData.mainImages;
@@ -73,8 +64,17 @@ function SellerUploadProduct() {
                 <label className="signup-sub-title" htmlFor="mainImages">
                   Photo<span className="signup-required-point">*</span>
                 </label>
-                <div className="form-input">
-                  <input type="file" id="mainImages" {...register('mainImages')} />
+                <div className="signup-input-box">
+                  <div className="form-input">
+                    <input
+                      id="mainImages"
+                      type="file"
+                      {...register('mainImages', {
+                        required: '상품사진은 필수 입니다.',
+                      })}
+                    />
+                  </div>
+                  {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
                 </div>
               </fieldset>
 
