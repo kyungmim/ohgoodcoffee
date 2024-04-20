@@ -15,10 +15,6 @@ function CartList() {
   const [productDetails, setProductDetail] = useState([]);
   const [mainCheck, setMainCheck] = useState(false);
 
-  // const productTotalPrice = items.reduce((acc, item) => {
-  //   const itemTotal = item.product.price * item.quantity;
-  //   return acc + itemTotal;
-  // }, 0);
   const calculateTotalPrice = (itemsToSum) => {
     return itemsToSum.reduce((acc, item) => {
       const itemTotal = item.product.price * item.quantity;
@@ -50,22 +46,6 @@ function CartList() {
       setShippingFees(3000);
     }
   }, [orderPrice]);
-
-  // const handleSetOrderItem = () => {
-  //   if (selectedCartItem.indexOf(items._id > -1)) {
-  //     let newCartArr = items
-  //       .filter((item) => selectedCartItem.includes(item._id))
-  //       .map((item) => ({
-  //         _id: Number(item.product_id), // product_id 값을 새 객체에 저장
-  //         quantity: item.quantity, // quantity 값을 새 객체에 저장
-  //       }));
-  //     console.log('newCartArr', newCartArr);
-  //     setProductDetail(newCartArr);
-  //   } else {
-  //     let newCartArr = [];
-  //     setProductDetail(newCartArr);
-  //   }
-  // }
 
   const handleSetOrderItem = () => {
     let newCartArr = selectedCartItem
