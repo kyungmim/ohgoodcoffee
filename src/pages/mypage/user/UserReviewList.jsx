@@ -13,7 +13,7 @@ function UserReviewList() {
   };
 
   useEffect(() => {
-    console.log(list());
+    list();
   }, []);
 
   const item = data?.item?.map((item) => <UserReviewItem key={item._id} item={item} />);
