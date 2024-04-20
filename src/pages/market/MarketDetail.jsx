@@ -49,10 +49,6 @@ function MarketDetail() {
   };
 
   useEffect(() => {
-    if (!user) {
-      navigate('/login');
-      return;
-    }
 
     let bookmarkUser = item.bookmarks.find((bookmark) => bookmark.user_id === user._id);
     setIsBookmarked(!!bookmarkUser);
