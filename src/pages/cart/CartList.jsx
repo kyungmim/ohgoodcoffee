@@ -1,6 +1,6 @@
 import PlusIcon from '@public/plus.svg';
 import EqualIcon from '@public/equal_icon.svg';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
 import CartListItem from '@pages/cart/CartListItem';
@@ -9,12 +9,14 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 function CartList() {
   const axios = useCustomAxios();
   const { user } = useUserStore();
+  const navigate = useNavigate();
   const [items, setItems] = useState([]);
   const [itemsCost, setItemsCost] = useState({ shippingFees: 3000 });
   // const [orderCartInfo, setOrderCartInfo] = useState();
   const [selectedCartItem, setSelectedCartItem] = useState([]);
   const [productDetails, setProductDetail] = useState([]);
   const [mainCheck, setMainCheck] = useState(false);
+  const [orderPrice, setOrderPrice] = useState();
 
   const productTotalPrice = items.reduce((acc, item) => {
     const itemTotal = item.product.price * item.quantity;
@@ -51,17 +53,19 @@ function CartList() {
       type: 'cart',
       products: productDetails,
       address: {
-        name: user.name,
-        value: user.address,
+        user: user,
       },
     };
 
     try {
-      const response = await axios.post('/orders', orderForm);
-      console.log('Order Response:', response);
-      alert('주문에 성공했습니다.');
-      setSelectedCartItem([]);
-      setProductDetail([]);
+      const gotoPaymentComplete = confirm(`선택한 ${productDetails.length}개의 상품을 주문 하시겠습니까?`);
+      if (gotoPaymentComplete) {
+        const response = await axios.post('/orders', orderForm);
+        console.log('Order Response:', response);
+        navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
+        setSelectedCartItem([]);
+        setProductDetail([]);
+      }
     } catch (error) {
       console.error('Order Submission Failed:', error);
     }
@@ -72,10 +76,6 @@ function CartList() {
       fetchData();
     }
   }, []);
-
-  useEffect(() => {
-    console.log('SELECTT', selectedCartItem);
-  }, [selectedCartItem]);
 
   const fetchData = async () => {
     try {
@@ -121,9 +121,30 @@ function CartList() {
     setMainCheck((state) => !state);
   };
 
-  useEffect(() => {
-    console.log('checkAll', mainCheck);
-  }, [mainCheck]);
+  // const setTotalOrderPrice = () => {
+  //   if (selectedCartItem.length === 0) {
+  //     let Price = productTotalPrice;
+  //     setOrderPrice(Price);
+  //   } else if (selectedCartItem.length >= 1) {
+  //     let newCartArr = items
+  //       .filter((item) => selectedCartItem.includes(item._id))
+  //       .map((item) => ({
+  //         _id: Number(item.product_id),
+  //         quantity: item.quantity,
+  //         price: item.product.price,
+  //       }));
+  //     console.log('newCartArr', newCartArr);
+  //     let selectedOrderPrice = newCartArr.reduce((acc, item) => {     const itemTotal = item.price * item.quantity;
+  //       return acc + itemTotal;
+  //     }, 0);
+  //     console.log("selectedOrderPrice", selectedOrderPrice)
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   setTotalOrderPrice();
+  //   console.log('setorderprice');
+  // }, [selectedCartItem]);
 
   const itemList = items.map((item) => (
     <CartListItem
@@ -170,7 +191,7 @@ function CartList() {
 
               <div className="cart-total-list">
                 <div className="cart-tota-item">
-                  <p className="cart-total-num">{productTotalPrice.toLocaleString('ko-KR')}원</p>
+                  <p className="cart-total-num">{productTotalPrice}원</p>
                   <p className="cart-total-txt">상품 금액</p>
                 </div>
 

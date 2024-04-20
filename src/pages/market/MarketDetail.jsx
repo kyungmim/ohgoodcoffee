@@ -24,7 +24,7 @@ function MarketDetail() {
 
   const item = data?.item;
 
-  async function handleSubmitCart() {
+  const handleSubmitCart = async () => {
     let cart = { product_id: Number(_id), quantity: productQuantity };
     await axios.post('/carts', cart);
     openModal({
@@ -36,9 +36,9 @@ function MarketDetail() {
         취소: '',
       },
     });
-  }
+  };
 
-  async function handleSubmitBuy() {
+  const handleSubmitBuy = async () => {
     let userData = user;
     if (userData) {
       let order = {
@@ -49,14 +49,17 @@ function MarketDetail() {
           },
         ],
         address: {
-          value: userData.address,
+          user: user,
         },
       };
       try {
-        const response = await axios.post('/orders', order);
-        console.log(response);
         const gotoPaymentComplete = confirm(`${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`);
-        gotoPaymentComplete && navigate('/orders', { state: { from: location.pathname } });
+        if (gotoPaymentComplete) {
+          const response = await axios.post('/orders', order);
+          console.log(response);
+          // 결제 완료 페이지로 response 전달
+          navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
+        }
       } catch (err) {
         alert(err.response?.data.message);
       }
@@ -64,11 +67,23 @@ function MarketDetail() {
       const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
       gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
     }
-  }
+  };
 
   const handleReduceQuantity = () => {
     if (productQuantity > 1) {
       setProductQuantity((prev) => prev - 1);
+    }
+  };
+
+  const handleCheckQuantity = () => {
+    let realQuantity = item.quantity - item.buyQuantity;
+    console.log('realQuantity', realQuantity);
+    if (productQuantity >= realQuantity) {
+      alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
+      setProductQuantity(realQuantity);
+      return;
+    } else {
+      setProductQuantity((prev) => prev + 1);
     }
   };
 
@@ -77,8 +92,7 @@ function MarketDetail() {
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`} alt={`${item.name} 상품 사진`} />
-
+            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />
 
             <div className="market-overview-desc">
               <div className="overview-header">
@@ -105,11 +119,11 @@ function MarketDetail() {
                       <div>
                         <p className="selling-pick">{productQuantity}</p>
                       </div>
-                      <div className="quantity-button" onClick={() => setProductQuantity((prev) => prev + 1)}>
+                      <div className="quantity-button" onClick={handleCheckQuantity}>
                         +{/* <img className="selling-icon up" src={Plus} /> */}
                       </div>
                     </div>
-                    <p className="selling-price">{item.price * productQuantity}원</p>
+                    <p className="selling-price">{item.price * productQuantity.toLocaleString('ko-KR')}원</p>
                   </div>
                 </div>
               </div>
@@ -128,7 +142,7 @@ function MarketDetail() {
             <div className="market-overview-bottom-cover">
               <img
                 className="market-overview-bottom-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`}
+                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`}
                 alt={`${item.name} 상품 사진`}
               />
             </div>
@@ -141,7 +155,7 @@ function MarketDetail() {
             <div className="market-overview-bottom-cover">
               <img
                 className="market-overview-bottom-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.fileName}`}
+                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`}
                 alt={`${item.name} 상품 사진`}
               />
             </div>
