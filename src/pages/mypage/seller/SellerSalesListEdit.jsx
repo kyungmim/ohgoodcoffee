@@ -1,21 +1,51 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
+import { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 function SellerSalesListEdit() {
+  const productData = async () => {
+    const res = await axios.get(`/seller/products/${itemId}`);
+    setProduct(res.data.item);
+  };
+
+  const { itemId, product, setProduct } = useUserStore();
+
+  useEffect(() => {
+    productData();
+  }, []);
+
+  const handleDeletClick = async () => {
+    try {
+      await axios.delete(`/seller/products/${itemId}`);
+      openModal({
+        content: `${product.name}  <br />상품이 삭제되었습니다. :)`,
+        callbackButton: {
+          확인: () => {
+            navigate(window.location.reload(), { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm({
     values: {
-      price: '30000',
-      quantity: '10',
-      name: 'test상품',
-      content: '테스트 상품입니다요요요.',
-      shippingFees: '3000',
-      type: 'new',
+      price: product.price,
+      quantity: product.quantity,
+      name: product.name,
+      content: product.content[0].d1,
+      shippingFees: product.shippingFees,
+      type: product.type,
     },
   });
   const axios = useCustomAxios();
@@ -39,18 +69,17 @@ function SellerSalesListEdit() {
         });
         console.log(fileRes);
         // 서버로부터 응답받은 이미지 이름을  정보에 포함
-        formData.mainImages = fileRes.data.item[0].name;
+        formData.mainImages = fileRes.data.item;
       } else {
         // mainImages 속성을 제거
         delete formData.mainImages;
       }
-      const res = await axios.post('seller/products', formData);
-      console.log(res);
+      await axios.patch(`/seller/products/${itemId}`, formData);
       openModal({
-        content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
+        content: `${product.name}  <br />상품이 수정되었습니다. <br />상품 목록을 확인하시겠습니까? :)`,
         callbackButton: {
           확인: () => {
-            navigate('/seller/mypage', { state: { from: '/' } });
+            navigate(window.location.reload(), { state: { from: '/' } });
           },
           취소: '',
         },
@@ -85,7 +114,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="상품 이름을 입력해주세요."
                       id="name"
                       type="text"
                       {...register('name', {
@@ -109,7 +137,6 @@ function SellerSalesListEdit() {
                   <div className="form-input ">
                     <textarea
                       className="type-textarea"
-                      placeholder="상품 설명을 입력해주세요."
                       id="content"
                       type="text"
                       {...register('content', {
@@ -132,7 +159,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="가격을 입력해주세요."
                       id="price"
                       type="text"
                       {...register('price', {
@@ -155,7 +181,6 @@ function SellerSalesListEdit() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
-                      placeholder="수량을 입력해주세요."
                       id="quantity"
                       type="text"
                       {...register('quantity', {
@@ -177,7 +202,6 @@ function SellerSalesListEdit() {
                 </label>
                 <div className="form-input">
                   <input
-                    placeholder="배송비를 입력해주세요."
                     id="shippingFees"
                     type="text"
                     {...register('shippingFees', {
@@ -206,9 +230,15 @@ function SellerSalesListEdit() {
                   </div>
                 </div>
               </fieldset>
-              <button className="button button-large btn-Fill btn-layout" type="submit">
-                등록하기
-              </button>
+
+              <div className="button-box type-btn-gap">
+                <button className="button button-small btn-Fill btn-layout type-sales-btn" type="submit">
+                  수정하기
+                </button>
+                <button className="button button-small btn-null btn-layout type-sales-btn" onClick={handleDeletClick}>
+                  삭제하기
+                </button>
+              </div>
             </form>
           </div>
         </div>

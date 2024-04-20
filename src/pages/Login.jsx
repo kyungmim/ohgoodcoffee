@@ -19,7 +19,6 @@ function Login() {
   const openModal = useModalStore((state) => state.openModal);
   const axios = useCustomAxios();
   const { setUser } = useUserStore();
-  // const location = useLocation();
 
   const onSubmit = async (formData) => {
     try {

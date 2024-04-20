@@ -138,7 +138,7 @@ body {
   width: 500px;
   max-height: 200px;
   height: 100%;
-  margin-top: -200px;
+  margin-top: -70px;
 
   display: flex;
   flex-direction: column;
@@ -314,6 +314,11 @@ body {
   width: 100%;
 }
 
+.type-btn-gap {
+  gap: 10px;
+  justify-content: center;
+}
+
 .type-modal-btn {
   width: 100%;
 }
@@ -329,9 +334,23 @@ body {
   padding: 1.7rem 0;
 }
 
+.sales-button {
+  display: flex;
+  gap: 10px;
+  margin-left: auto;
+}
+
 .type-btn-cart {
   padding: 4px 10px;
   border: 1px solid var(--color-gray-30);
+}
+
+.type-sales {
+  margin-left: auto;
+}
+
+.type-sales-btn {
+  width: 400px;
 }
 
 /*  Layouts  */
@@ -341,7 +360,6 @@ body {
   gap: 20px;
   row-gap: 60px;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 30px;
 }
 
 .l_wrapper {
@@ -933,6 +951,7 @@ body {
   display: flex;
   align-items: center;
   margin-left: 2px;
+  margin-bottom: 30px;
 }
 
 .section-count {
@@ -1132,16 +1151,6 @@ body {
   line-height: 1.5rem;
 }
 
-/* @@@@@@@@@@@@@@@@@@@@ PRODUCT @@@@@@@@@@@@@@@@@@@ */
-
-.grid {
-  display: grid;
-  gap: 30px;
-  row-gap: 60px;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 30px;
-}
-
 /* @@@@@@@@@@@@@@@@@@@@ 마켓 목록 & 매거진 목록 @@@@@@@@@@@@@@@@@@@@ */
 
 .card {
@@ -1159,6 +1168,9 @@ body {
 .card-cover {
   object-fit: contain;
   overflow: hidden;
+  background-color: var(--color-gray-20);
+  width: 200px;
+  height: 200px;
 }
 
 .card-cover-src {
@@ -1167,7 +1179,6 @@ body {
 
 .card-title {
   font-weight: 700;
-
 }
 
 .card-contents {
@@ -1291,6 +1302,7 @@ body {
   font-size: 26px;
   font-weight: 900;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .main-contents {
