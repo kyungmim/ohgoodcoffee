@@ -15,7 +15,7 @@ function UserOrderProductItem({ product }) {
           <div className="order-main-item">
             <p>{product.name}</p>
             <p>
-              {product.price}원 /{product.quantity}개
+              {product.price.toLocaleString('ko-KR')}원 /{product.quantity}개
             </p>
           </div>
           <div className="order-main-item-status">주문완료</div>

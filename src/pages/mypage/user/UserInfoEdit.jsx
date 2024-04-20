@@ -30,7 +30,7 @@ function SellerInfoEdit() {
         content: `${res.data.updated.name}님 회원정보가 수정되었습니다. :)`,
         callbackButton: {
           확인: () => {
-            navigate(window.location.reload(), { state: { from: window.location.reload() } });
+            navigate('/mypage/userinfo', { state: { from: window.location.reload() } });
           },
         },
       });
