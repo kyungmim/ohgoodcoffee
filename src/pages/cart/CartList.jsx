@@ -85,7 +85,6 @@ function CartList() {
       const gotoPaymentComplete = confirm(`선택한 ${productDetails.length}개의 상품을 주문 하시겠습니까?`);
       if (gotoPaymentComplete) {
         const response = await axios.post('/orders', orderForm);
-        console.log('Order Response:', response);
         navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
         setSelectedCartItem([]);
         setProductDetail([]);
@@ -163,7 +162,6 @@ function CartList() {
 
   useEffect(() => {
     setTotalOrderPrice();
-    console.log(typeof setTotalOrderPrice);
   }, [selectedCartItem]);
 
   const itemList = items.map((item) => (
