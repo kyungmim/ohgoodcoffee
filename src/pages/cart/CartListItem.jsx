@@ -2,6 +2,7 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 // import CheckBox from '@pages/cart/CheckBox';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 CartListItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -14,6 +15,7 @@ CartListItem.propTypes = {
 
 function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems }) {
   const axios = useCustomAxios();
+  const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
   const [isProcessing, setIsProcessing] = useState(false);
 
@@ -30,8 +32,14 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   }, [productQuantity]);
 
   const handleAddQuantity = () => {
-    if (!isProcessing) {
+    let realQuantity = item.product.quantity - item.product.buyQuantity;
+    if (!isProcessing && productQuantity < realQuantity) {
       setProductQuantity((prev) => prev + 1);
+    } else if (!isProcessing && productQuantity == 0) {
+      handleDeleteItem(item._id);
+    } else {
+      alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
+      return;
     }
   };
 
@@ -47,7 +55,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     }
   };
 
-  async function handleRequest(cart) {
+  const handleRequest = async (cart) => {
     setIsProcessing(true);
     await axios.post('/carts', cart);
     const response = await axios.get('/carts');
@@ -55,16 +63,16 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       setItems(response.data.item);
       setIsProcessing(false);
     }
-  }
+  };
 
-  async function handleDeleteItem(id) {
+  const handleDeleteItem = async (id) => {
     console.log(id, '삭제');
     await axios.delete(`/carts/${id}`);
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
     }
-  }
+  };
 
   const cartItemCheck = () => {
     console.log('selectedCartItem', selectedCartItem, 'kkk', item);
@@ -89,7 +97,6 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     if (mainCheck) {
       setMainCheck(false);
     }
-    // setAllSelect(false)
   };
 
   const handleChange = (e) => {
@@ -105,8 +112,8 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       </div>
       <div className="cart-layout">
         <div className="cart-item-info">
-          <div className="cart-item-cover">
-            <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.fileName}`} alt="커피이미지" />
+          <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
+            <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
           <p className="cart-item-title">
             PID{item._id} | {item.product?.name}
