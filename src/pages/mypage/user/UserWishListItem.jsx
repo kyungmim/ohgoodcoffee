@@ -15,7 +15,7 @@ function UserWishListItem({ item }) {
     <>
       <li>
         <button className="card type-info-card" onClick={onClick}>
-          <div className="card-cover">
+          <div className="card-cover type-info-card-cover">
             <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product.image.name}`} alt="상품 사진" />
           </div>
           <div className="card-contents">
