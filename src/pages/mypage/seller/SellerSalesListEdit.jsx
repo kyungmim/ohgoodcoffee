@@ -6,33 +6,19 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 
 function SellerSalesListEdit() {
+  const axios = useCustomAxios();
+  const openModal = useModalStore((state) => state.openModal);
+  const navigate = useNavigate();
+  const { itemId, product, setProduct } = useUserStore();
+
   const productData = async () => {
     const res = await axios.get(`/seller/products/${itemId}`);
     setProduct(res.data.item);
   };
 
-  const { itemId, product, setProduct } = useUserStore();
-
   useEffect(() => {
     productData();
   }, []);
-
-  const handleDeletClick = async () => {
-    try {
-      await axios.delete(`/seller/products/${itemId}`);
-      openModal({
-        content: `${product.name}  <br />상품이 삭제되었습니다. :)`,
-        callbackButton: {
-          확인: () => {
-            navigate(window.location.reload(), { state: { from: '/' } });
-          },
-          취소: '',
-        },
-      });
-    } catch (err) {
-      console.log(err);
-    }
-  };
 
   const {
     register,
@@ -40,48 +26,64 @@ function SellerSalesListEdit() {
     formState: { errors },
   } = useForm({
     values: {
-      price: product.price,
-      quantity: product.quantity,
-      name: product.name,
-      content: product.content[0].d1,
-      shippingFees: product.shippingFees,
-      type: product.type,
+      price: product?.price,
+      quantity: product?.quantity,
+      name: product?.name,
+      content: product?.content,
+      shippingFees: product?.shippingFees,
+      type: product?.type,
     },
   });
-  const axios = useCustomAxios();
-  const openModal = useModalStore((state) => state.openModal);
-  const navigate = useNavigate();
+
+  console.log(product);
+
+  const handleDeletClick = async () => {
+    try {
+      openModal({
+        content: `${product.name}  <br />상품을 삭제하시겠습니까?. :)`,
+        callbackButton: {
+          확인: async () => {
+            await axios.delete(`/seller/products/${itemId}`);
+            navigate(window.location.reload(), { state: { from: '/' } });
+          },
+          취소: () => window.location.reload(),
+        },
+      });
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   const onSubmit = async (formData) => {
     try {
-      if (formData.mainImages.length > 0) {
-        // 프로필 이미지를 추가한 경우
-        const imageFormData = new FormData();
-        imageFormData.append('attach', formData.mainImages[0]);
-
-        const fileRes = await axios('/files', {
-          method: 'post',
-          headers: {
-            // 파일 업로드시 필요한 설정
-            'Content-Type': 'multipart/form-data',
-          },
-          data: imageFormData,
-        });
-        console.log(fileRes);
-        // 서버로부터 응답받은 이미지 이름을  정보에 포함
-        formData.mainImages = fileRes.data.item;
-      } else {
-        // mainImages 속성을 제거
-        delete formData.mainImages;
-      }
-      await axios.patch(`/seller/products/${itemId}`, formData);
       openModal({
-        content: `${product.name}  <br />상품이 수정되었습니다. <br />상품 목록을 확인하시겠습니까? :)`,
+        content: `${product.name}  <br />상품을 수정하시겠습니까?`,
         callbackButton: {
-          확인: () => {
+          확인: async () => {
+            if (formData.mainImages.length > 0) {
+              // 프로필 이미지를 추가한 경우
+              const imageFormData = new FormData();
+              imageFormData.append('attach', formData.mainImages[0]);
+
+              const fileRes = await axios('/files', {
+                method: 'post',
+                headers: {
+                  // 파일 업로드시 필요한 설정
+                  'Content-Type': 'multipart/form-data',
+                },
+                data: imageFormData,
+              });
+              console.log(fileRes);
+              // 서버로부터 응답받은 이미지 이름을  정보에 포함
+              formData.mainImages = fileRes.data.item;
+            } else {
+              // mainImages 속성을 제거
+              delete formData.mainImages;
+            }
+            await axios.patch(`/seller/products/${itemId}`, formData);
             navigate(window.location.reload(), { state: { from: '/' } });
           },
-          취소: '',
+          취소: () => window.location.reload(),
         },
       });
     } catch (err) {

@@ -4,6 +4,11 @@ import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import { Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; //basic
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 function Mainpage() {
   const axios = useCustomAxios();
@@ -24,7 +29,20 @@ function Mainpage() {
     <>
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src="src/assets/main-cover.jpg" alt="커피 커버 이미지" />
+          <Swiper modules={[Pagination, Autoplay]} spaceBetween={0} slidesPerView={1} Autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+          </Swiper>
         </div>
 
         <div className="main-contents">
