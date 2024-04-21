@@ -1137,8 +1137,8 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_04.jpeg`,
-            name: 'milestonecoffee_products_04.jpeg',
+            url: `/files/milestonecoffee_products_04.webp`,
+            name: 'milestonecoffee_products_04.webp',
           },
         ],
         detailImages: [
@@ -3060,38 +3060,38 @@ export const initData = async (nextSeq) => {
           articleType: 'FRIENDLY',
           mainImages: [
             {
-              url: `/files/coeo-01.jpg`,
-              name: 'coeo-01.jpg',
+              url: `/files/coeo-01.webp`,
+              name: 'coeo-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/coeo-01.jpg`,
-              name: 'coeo-01.jpg',
+              url: `/files/coeo-01.webp`,
+              name: 'coeo-01.webp',
             },
             {
-              url: `/files/coeo-02.jpg`,
-              name: 'coeo-02.jpg',
+              url: `/files/coeo-02.webp`,
+              name: 'coeo-02.webp',
             },
             {
-              url: `/files/coeo-03.jpg`,
-              name: 'coeo-03.jpg',
+              url: `/files/coeo-03.webp`,
+              name: 'coeo-03.webp',
             },
             {
-              url: `/files/coeo-04.jpg`,
-              name: 'coeo-04.jpg',
+              url: `/files/coeo-04.webp`,
+              name: 'coeo-04.webp',
             },
             {
-              url: `/files/coeo-05.jpg`,
-              name: 'coeo-05.jpg',
+              url: `/files/coeo-05.webp`,
+              name: 'coeo-05.webp',
             },
             {
-              url: `/files/coeo-06.jpg`,
-              name: 'coeo-06.jpg',
+              url: `/files/coeo-06.webp`,
+              name: 'coeo-06.webp',
             },
             {
-              url: `/files/coeo-07.jpg`,
-              name: 'coeo-07.jpg',
+              url: `/files/coeo-07.webp`,
+              name: 'coeo-07.webp',
             },
           ],
         },
@@ -3192,38 +3192,38 @@ export const initData = async (nextSeq) => {
           articleType: 'JOYFUL',
           mainImages: [
             {
-              url: `/files/yeonpil-01.jpg`,
-              name: 'yeonpil-01.jpg',
+              url: `/files/yeonpil-01.webp`,
+              name: 'yeonpil-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/yeonpil-01.jpg`,
-              name: 'yeonpil-01.jpg',
+              url: `/files/yeonpil-01.webp`,
+              name: 'yeonpil-01.webp',
             },
             {
-              url: `/files/yeonpil-02.jpg`,
-              name: 'yeonpil-02.jpg',
+              url: `/files/yeonpil-02.webp`,
+              name: 'yeonpil-02.webp',
             },
             {
-              url: `/files/yeonpil-03.jpg`,
-              name: 'yeonpil-03.jpg',
+              url: `/files/yeonpil-03.webp`,
+              name: 'yeonpil-03.webp',
             },
             {
-              url: `/files/yeonpil-04.jpg`,
-              name: 'yeonpil-04.jpg',
+              url: `/files/yeonpil-04.webp`,
+              name: 'yeonpil-04.webp',
             },
             {
-              url: `/files/yeonpil-05.jpg`,
-              name: 'yeonpil-05.jpg',
+              url: `/files/yeonpil-05.webp`,
+              name: 'yeonpil-05.webp',
             },
             {
-              url: `/files/yeonpil-06.jpg`,
-              name: 'yeonpil-06.jpg',
+              url: `/files/yeonpil-06.webp`,
+              name: 'yeonpil-06.webp',
             },
             {
-              url: `/files/yeonpil-07.jpg`,
-              name: 'yeonpil-07.jpg',
+              url: `/files/yeonpil-07.webp`,
+              name: 'yeonpil-07.webp',
             },
           ],
         },
@@ -3324,38 +3324,38 @@ export const initData = async (nextSeq) => {
           articleType: 'KIND',
           mainImages: [
             {
-              url: `/files/dominic-01.jpg`,
-              name: 'dominic-01.jpg',
+              url: `/files/dominic-01.webp`,
+              name: 'dominic-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/dominic-01.jpg`,
-              name: 'dominic-01.jpg',
+              url: `/files/dominic-01.webp`,
+              name: 'dominic-01.webp',
             },
             {
-              url: `/files/dominic-02.jpg`,
-              name: 'dominic-02.jpg',
+              url: `/files/dominic-02.webp`,
+              name: 'dominic-02.webp',
             },
             {
-              url: `/files/dominic-03.jpg`,
-              name: 'dominic-03.jpg',
+              url: `/files/dominic-03.webp`,
+              name: 'dominic-03.webp',
             },
             {
-              url: `/files/dominic-04.jpg`,
-              name: 'dominic-04.jpg',
+              url: `/files/dominic-04.webp`,
+              name: 'dominic-04.webp',
             },
             {
-              url: `/files/dominic-05.jpg`,
-              name: 'dominic-05.jpg',
+              url: `/files/dominic-05.webp`,
+              name: 'dominic-05.webp',
             },
             {
-              url: `/files/dominic-06.jpg`,
-              name: 'dominic-06.jpg',
+              url: `/files/dominic-06.webp`,
+              name: 'dominic-06.webp',
             },
             {
-              url: `/files/dominic-07.jpg`,
-              name: 'dominic-07.jpg',
+              url: `/files/dominic-07.webp`,
+              name: 'dominic-07.webp',
             },
           ],
         },
@@ -3471,38 +3471,38 @@ export const initData = async (nextSeq) => {
           articleType: 'FIENDLY',
           mainImages: [
             {
-              url: `/files/identity-01.jpg`,
-              name: 'identity-01.jpg',
+              url: `/files/identity-01.webp`,
+              name: 'identity-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/identity-01.jpg`,
-              name: 'identity-01.jpg',
+              url: `/files/identity-01.webp`,
+              name: 'identity-01.webp',
             },
             {
-              url: `/files/identity-02.jpg`,
-              name: 'identity-02.jpg',
+              url: `/files/identity-02.webp`,
+              name: 'identity-02.webp',
             },
             {
-              url: `/files/identity-03.jpg`,
-              name: 'identity-03.jpg',
+              url: `/files/identity-03.webp`,
+              name: 'identity-03.webp',
             },
             {
-              url: `/files/identity-04.jpg`,
-              name: 'identity-04.jpg',
+              url: `/files/identity-04.webp`,
+              name: 'identity-04.webp',
             },
             {
-              url: `/files/identity-05.jpg`,
-              name: 'identity-05.jpg',
+              url: `/files/identity-05.webp`,
+              name: 'identity-05.webp',
             },
             {
-              url: `/files/identity-06.jpg`,
-              name: 'identity-06.jpg',
+              url: `/files/identity-06.webp`,
+              name: 'identity-06.webp',
             },
             {
-              url: `/files/identity-07jpg`,
-              name: 'identity-01.jpg',
+              url: `/files/identity-07webp`,
+              name: 'identity-01.webp',
             },
           ],
         },
@@ -3594,38 +3594,38 @@ export const initData = async (nextSeq) => {
           articleType: 'FIENDLY',
           mainImages: [
             {
-              url: `/files/kihei-01.jpg`,
-              name: 'kihei-01.jpg',
+              url: `/files/kihei-01.webp`,
+              name: 'kihei-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/kihei-01.jpg`,
-              name: 'kihei-01.jpg',
+              url: `/files/kihei-01.webp`,
+              name: 'kihei-01.webp',
             },
             {
-              url: `/files/kihei-02.jpg`,
-              name: 'kihei-02.jpg',
+              url: `/files/kihei-02.webp`,
+              name: 'kihei-02.webp',
             },
             {
-              url: `/files/kihei-03.jpg`,
-              name: 'kihei-03.jpg',
+              url: `/files/kihei-03.webp`,
+              name: 'kihei-03.webp',
             },
             {
-              url: `/files/kihei-04.jpg`,
-              name: 'kihei-04.jpg',
+              url: `/files/kihei-04.webp`,
+              name: 'kihei-04.webp',
             },
             {
-              url: `/files/kihei-05.jpg`,
-              name: 'kihei-05.jpg',
+              url: `/files/kihei-05.webp`,
+              name: 'kihei-05.webp',
             },
             {
-              url: `/files/kihei-06.jpg`,
-              name: 'kihei-06.jpg',
+              url: `/files/kihei-06.webp`,
+              name: 'kihei-06.webp',
             },
             {
-              url: `/files/kihei-07.jpg`,
-              name: 'kihei-07.jpg',
+              url: `/files/kihei-07.webp`,
+              name: 'kihei-07.webp',
             },
           ],
         },
@@ -3740,38 +3740,38 @@ export const initData = async (nextSeq) => {
           articleType: 'FIENDLY',
           mainImages: [
             {
-              url: `/files/pont-01.jpg`,
-              name: 'pont-01.jpg',
+              url: `/files/pont-01.webp`,
+              name: 'pont-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/pont-01.jpg`,
-              name: 'pont-01.jpg',
+              url: `/files/pont-01.webp`,
+              name: 'pont-01.webp',
             },
             {
-              url: `/files/pont-02.jpg`,
-              name: 'pont-02.jpg',
+              url: `/files/pont-02.webp`,
+              name: 'pont-02.webp',
             },
             {
-              url: `/files/pont-03.jpg`,
-              name: 'pont-03.jpg',
+              url: `/files/pont-03.webp`,
+              name: 'pont-03.webp',
             },
             {
-              url: `/files/pont-04.jpg`,
-              name: 'pont-04.jpg',
+              url: `/files/pont-04.webp`,
+              name: 'pont-04.webp',
             },
             {
-              url: `/files/pont-05.jpg`,
-              name: 'pont-05.jpg',
+              url: `/files/pont-05.webp`,
+              name: 'pont-05.webp',
             },
             {
-              url: `/files/pont-06.jpg`,
-              name: 'pont-06.jpg',
+              url: `/files/pont-06.webp`,
+              name: 'pont-06.webp',
             },
             {
-              url: `/files/pont-07.jpg`,
-              name: 'pont-07.jpg',
+              url: `/files/pont-07.webp`,
+              name: 'pont-07.webp',
             },
           ],
         },
@@ -3873,38 +3873,38 @@ export const initData = async (nextSeq) => {
           articleType: 'FRIENDLY',
           mainImages: [
             {
-              url: `/files/standard-01.jpg`,
-              name: 'standard-01.jpg',
+              url: `/files/standard-01.webp`,
+              name: 'standard-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/standard-01.jpg`,
-              name: 'standard-01.jpg',
+              url: `/files/standard-01.webp`,
+              name: 'standard-01.webp',
             },
             {
-              url: `/files/standard-02.jpg`,
-              name: 'standard-02.jpg',
+              url: `/files/standard-02.webp`,
+              name: 'standard-02.webp',
             },
             {
-              url: `/files/standard-03.jpg`,
-              name: 'standard-03.jpg',
+              url: `/files/standard-03.webp`,
+              name: 'standard-03.webp',
             },
             {
-              url: `/files/standard-04.jpg`,
-              name: 'standard-04.jpg',
+              url: `/files/standard-04.webp`,
+              name: 'standard-04.webp',
             },
             {
-              url: `/files/standard-05.jpg`,
-              name: 'standard-05.jpg',
+              url: `/files/standard-05.webp`,
+              name: 'standard-05.webp',
             },
             {
-              url: `/files/standard-06.jpg`,
-              name: 'standard-06.jpg',
+              url: `/files/standard-06.webp`,
+              name: 'standard-06.webp',
             },
             {
-              url: `/files/standard-07.jpg`,
-              name: 'standard-07.jpg',
+              url: `/files/standard-07.webp`,
+              name: 'standard-07.webp',
             },
           ],
         },
@@ -3996,38 +3996,38 @@ export const initData = async (nextSeq) => {
           articleType: 'JOYFUL',
           mainImages: [
             {
-              url: `/files/p_ark-01.jpg`,
-              name: 'p_ark-01.jpg',
+              url: `/files/p_ark-01.webp`,
+              name: 'p_ark-01.webp',
             },
           ],
           detailImages: [
             {
-              url: `/files/p_ark-01.jpg`,
-              name: 'p_ark-01.jpg',
+              url: `/files/p_ark-01.webp`,
+              name: 'p_ark-01.webp',
             },
             {
-              url: `/files/p_ark-02.jpg`,
-              name: 'p_ark-02.jpg',
+              url: `/files/p_ark-02.webp`,
+              name: 'p_ark-02.webp',
             },
             {
-              url: `/files/p_ark-03.jpg`,
-              name: 'p_ark-03.jpg',
+              url: `/files/p_ark-03.webp`,
+              name: 'p_ark-03.webp',
             },
             {
-              url: `/files/p_ark-04.jpg`,
-              name: 'p_ark-04.jpg',
+              url: `/files/p_ark-04.webp`,
+              name: 'p_ark-04.webp',
             },
             {
-              url: `/files/p_ark-05.jpg`,
-              name: 'p_ark-05.jpg',
+              url: `/files/p_ark-05.webp`,
+              name: 'p_ark-05.webp',
             },
             {
-              url: `/files/p_ark-06.jpg`,
-              name: 'p_ark-06.jpg',
+              url: `/files/p_ark-06.webp`,
+              name: 'p_ark-06.webp',
             },
             {
-              url: `/files/p_ark-07.jpg`,
-              name: 'p_ark-07.jpg',
+              url: `/files/p_ark-07.webp`,
+              name: 'p_ark-07.webp',
             },
           ],
         },
