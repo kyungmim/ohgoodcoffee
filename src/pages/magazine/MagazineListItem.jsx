@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import useUserStore from '@zustand/store';
 
 MagazineListItem.propTypes = {
   item: PropTypes.shape({
@@ -12,10 +13,16 @@ MagazineListItem.propTypes = {
 };
 
 function MagazineListItem({ item }) {
+  const { setItemId } = useUserStore();
+  const onclick = () => {
+    setItemId(item._id, () => {
+      item._id;
+    });
+  };
   return (
     <>
       <li>
-        <Link className="card" to="/magazine/detail">
+        <Link className="card" to="/magazine/detail" onClick={onclick}>
           <div className="card-cover">
             <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.extra.detailImages[0].name}`} alt="카페 전경 사진" />
           </div>

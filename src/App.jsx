@@ -3,7 +3,7 @@ import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import './App.css';
 import { Suspense } from 'react';
 import router from '@/routes';
-import Loading from '@/Loading';
+import Loading from '@pages/Loading';
 
 // react-query 사용
 const queryClient = new QueryClient();
