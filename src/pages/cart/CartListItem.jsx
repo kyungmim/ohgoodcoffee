@@ -11,9 +11,10 @@ CartListItem.propTypes = {
   setMainCheck: PropTypes.func.isRequired,
   mainCheck: PropTypes.bool.isRequired,
   setItems: PropTypes.func.isRequired,
+  setTotalOrderPrice: PropTypes.func.isRequired,
 };
 
-function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems }) {
+function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
   const axios = useCustomAxios();
   const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
@@ -30,6 +31,10 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       handleRequest(cart);
     }
   }, [productQuantity]);
+
+  useEffect(() => {
+    setTotalOrderPrice();
+  }, [selectedCartItem, productQuantity]);
 
   const handleAddQuantity = () => {
     let realQuantity = item.product.quantity - item.product.buyQuantity;
