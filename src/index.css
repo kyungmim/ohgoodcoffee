@@ -1057,9 +1057,6 @@ body {
 }
 
 .wishlist-icon {
-  width: 27px;
-  width: 28px;
-  height: 24px;
   height: 24px;
   display: flex;
   align-items: center;
@@ -1069,6 +1066,7 @@ body {
 .wishlist-count {
   color: var(--color-gray-30);
   font-weight: var(--fw-regular);
+  
 }
 
 .overview-contents {
