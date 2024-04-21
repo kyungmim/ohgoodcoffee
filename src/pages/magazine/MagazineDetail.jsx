@@ -1,91 +1,68 @@
-import cafeCoeo from '@public/cafe_coeo.jpeg';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
+import { useEffect, useState } from 'react';
 
 function MagazineDetail() {
+  const [data, setData] = useState();
+  const axios = useCustomAxios();
+  const { itemId } = useUserStore();
+
+  const fetchData = async () => {
+    try {
+      const res = await axios.get(`/posts/${itemId}`);
+      setData(res.data.item);
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <>
       <section className="section type_magazine-desc">
         <div className="l_wrapper">
           <div className="magazine-desc-header">
-            <h2 className="magazine-desc-header-title">[USEFUL] Achim 스폿 서른 네 번째 파트너, 시그너스 커피</h2>
-            <p className="magazine-desc-header-date">2024-04-04 조회 72</p>
+            <h2 className="magazine-desc-header-title">{data && data.title}</h2>
+            <p className="magazine-desc-header-date">2024-04-01 조회 70</p>
           </div>
           <div className="magazine-desc-contents">
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <h3 className="magazine-desc-subheading">소제목입니당 소제목~</h3>
-            <p className="magazine-desc-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Ut enim ad
-              minim veniam, quis nostrud exercitation
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph third">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph third">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph third">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph third">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-            <img className="magazine-desc-img" src={cafeCoeo} />
-            <p className="magazine-desc-paragraph third">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation <br />
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-
-          <div className="comment-footer">
-            <form>
-              <div className="form-group">
-                <textarea type="text" className="form-control" placeholder="댓글을 입력하세요" required></textarea>
-              </div>
-            </form>
-            <div className="comment-btns">
-              <button className="button button-small btn-null" type="button">
-                목록
-              </button>
-              <button className="button button-small btn-null" type="submit">
-                작성
-              </button>
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[0].name}`} alt="카페 상세 사진" />
             </div>
-            <div></div>
+            <p className="magazine-desc-paragraph">{data && data.content[0].d1}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[1].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[1].d2}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[2].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[2].d3}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[3].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[3].d4}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[4].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[4].d5}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[5].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[5].d6}</p>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[6].name}`} alt="카페 상세 사진" />
+            </div>
+            <p className="magazine-desc-paragraph">{data && data.content[6].d7}</p>
           </div>
         </div>
       </section>

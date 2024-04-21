@@ -1,5 +1,5 @@
+import useUserStore from '@zustand/store';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 SellerSalesListItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -7,17 +7,20 @@ SellerSalesListItem.propTypes = {
 };
 
 function SellerSalesListItem({ item }) {
+  const { setItemId } = useUserStore();
+
+  const onClick = () => {
+    setItemId(item._id, () => {
+      item._id;
+    });
+  };
   return (
     <>
       <>
         <li>
-          <Link className="card type-info-card" to={`/market/detail/${item._id}`}>
-            <div className="card-cover">
-              <img
-                className="card-cover-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.fileName}` || null}
-                alt={`${item.name} 상품 사진`}
-              />
+          <button className="button card type-info-card" onClick={onClick}>
+            <div className="card-cover type-info-card-cover">
+              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0].name}` || null} alt={`${item.name} 상품 사진`} />
             </div>
             <div className="card-contents">
               <div className="card-contents-item">
@@ -30,7 +33,7 @@ function SellerSalesListItem({ item }) {
                 {item.extra?.isNew ? <p className="card-state-item best">BEST</p> : null}
               </div>
             </div>
-          </Link>
+          </button>
         </li>
       </>
     </>

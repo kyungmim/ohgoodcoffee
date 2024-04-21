@@ -1,12 +1,34 @@
-import coffee_1 from '@public/coffee-1.jpg';
-import coffee_2 from '@public/coffee-2.jpg';
-import coffee_3 from '@public/coffee-3.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import { Pagination, Autoplay } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css'; //basic
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import useUserStore from '@zustand/store';
 
 function Mainpage() {
   const axios = useCustomAxios();
+  const [story, setStory] = useState();
+  const navigation = useNavigate();
+  const { setItemId } = useUserStore();
+
+  const fetchData = async () => {
+    const res = await axios.get('/posts?type=magazine');
+    setStory(res.data.item);
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const onNav = (id) => {
+    setItemId(id);
+    navigation('/magazine/detail');
+  };
 
   const { data } = useQuery({
     queryKey: ['products'],
@@ -24,7 +46,20 @@ function Mainpage() {
     <>
       <main className="main">
         <div className="main-header">
-          <img className="main-cover" src="src/assets/main-cover.jpg" alt="커피 커버 이미지" />
+          <Swiper modules={[Pagination, Autoplay]} spaceBetween={1} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+            </SwiperSlide>
+          </Swiper>
         </div>
 
         <div className="main-contents">
@@ -36,21 +71,18 @@ function Mainpage() {
             <div className="main-coverstory">
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src={coffee_1} alt="커피이미지" />
+                  <img
+                    className="coverstory-list-cover-src"
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[2].extra.detailImages[0].name}`}
+                    alt="커피이미지"
+                  />
                 </div>
 
                 <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title"># Title</h2>
-                  <p className="coverstorylist-list-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <h2 className="coverstory-list-title">#{story && story[2].title}</h2>
+                  <pre className="coverstorylist-list-description">{story && story[2].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(7)}>
                     MORE
                   </button>
                 </div>
@@ -58,21 +90,18 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src={coffee_2} alt="커피이미지" />
+                  <img
+                    className="coverstory-list-cover-src"
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[3].extra.detailImages[0].name}`}
+                    alt="커피이미지"
+                  />
                 </div>
 
                 <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title"># Title</h2>
-                  <p className="coverstorylist-list-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <h2 className="coverstory-list-title">#{story && story[3].title}</h2>
+                  <pre className="coverstorylist-list-description">{story && story[3].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(8)}>
                     MORE
                   </button>
                 </div>
@@ -80,21 +109,18 @@ function Mainpage() {
 
               <section className="coverstory-list">
                 <div className="coverstory-list-cover">
-                  <img className="coverstory-list-cover-src" src={coffee_3} alt="커피이미지" />
+                  <img
+                    className="coverstory-list-cover-src"
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[6].extra.detailImages[0].name}`}
+                    alt="커피이미지"
+                  />
                 </div>
 
                 <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title"># Title</h2>
-                  <p className="coverstorylist-list-description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                    <br />
-                    <br />
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation Lorem
-                    ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  </p>
+                  <h2 className="coverstory-list-title">#{story && story[6].title}</h2>
+                  <pre className="coverstorylist-list-description">{story && story[6].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button">
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(3)}>
                     MORE
                   </button>
                 </div>

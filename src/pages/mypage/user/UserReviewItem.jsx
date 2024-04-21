@@ -5,8 +5,6 @@ UserReviewItem.propTypes = {
 };
 
 function UserReviewItem({ item }) {
-  // console.log('item', item);
-
   return (
     <>
       <div className="review">

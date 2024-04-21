@@ -58,12 +58,9 @@ function Header() {
               <Link to="/market">Market</Link>
             </li>
             <li className="logo">
-              <Link to="/mainpage">
-                {/* <img src={logo} alt="로고" /> */}
-                Oh Good Coffee
-              </Link>
+              <Link to="/mainpage">Oh Good Coffee</Link>
             </li>
-            <li>{user.token ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+            <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
             <li>
               <Link onClick={(e) => clickLogin(e)} to="/mypage">
                 My
