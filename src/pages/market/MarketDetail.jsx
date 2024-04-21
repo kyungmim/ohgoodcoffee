@@ -12,8 +12,11 @@ function MarketDetail() {
   const { user } = useUserStore();
   const navigate = useNavigate();
   const location = useLocation();
+  const [product, setProduct] = useState();
   const [productQuantity, setProductQuantity] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
+  const [bookmarks, setBookmarks] = useState([]);
+  const [matchedItems, setMatchedItems] = useState([]);
   const [bookmarkQuantity, setBookmarkQuantity] = useState(0);
   const openModal = useModalStore((state) => state.openModal);
 
@@ -26,8 +29,35 @@ function MarketDetail() {
 
   const item = data?.item;
 
-  console.log('Item', item);
-  console.log('User', user);
+  useEffect(() => {
+    setProduct(item);
+    setBookmarkQuantity(item.bookmarks);
+  }, []);
+
+  const getBookmarks = async () => {
+    try {
+      const res = await axios.get(`/bookmarks/product`);
+      setBookmarks(res.data.item);
+      checkBookmark();
+    } catch (error) {
+      console.error('Failed to add bookmark:', error);
+    }
+  };
+
+  // 북마크 목록을 검사하여 현재 제품 ID와 일치하는 항목들만 추출
+  const checkBookmark = () => {
+    const newMatchedItems = bookmarks.filter((it) => it.product._id == _id);
+    setMatchedItems(newMatchedItems);
+  };
+
+  useEffect(() => {
+    checkBookmark();
+  }, [bookmarks]);
+
+  useEffect(() => {
+    getBookmarks();
+    setBookmarkQuantity(item.bookmarks); // 컴포넌트 마운트 시 데이터 초기 가져오기
+  }, []);
 
   const postBookmark = async () => {
     try {
@@ -39,7 +69,7 @@ function MarketDetail() {
   };
 
   const deleteBookmark = async () => {
-    let bookmarkId = item.bookmarks.find((b) => b.user_id === user._id)?._id;
+    let bookmarkId = matchedItems.find((b) => b.user_id == user._id)?._id;
     try {
       await axios.delete(`/bookmarks/${bookmarkId}`);
       setBookmarkQuantity((prev) => (prev > 0 ? prev - 1 : 0));
@@ -49,17 +79,15 @@ function MarketDetail() {
   };
 
   useEffect(() => {
-
-    let bookmarkUser = item.bookmarks.find((bookmark) => bookmark.user_id === user._id);
+    let bookmarkUser = matchedItems.find((bookmark) => bookmark.user_id == user._id);
     setIsBookmarked(!!bookmarkUser);
-    setBookmarkQuantity(item.bookmarks.length);
 
     if (bookmarkUser) {
       setIsBookmarked(true);
     } else {
       setIsBookmarked(false);
     }
-  }, [item.bookmarks, user]);
+  }, [matchedItems, user]);
 
   const handleSubmitCart = async () => {
     let cart = { product_id: Number(_id), quantity: productQuantity };
