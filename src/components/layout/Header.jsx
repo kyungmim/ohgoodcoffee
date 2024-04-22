@@ -1,6 +1,6 @@
-import search from '@public/search_icon.svg';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
+import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
@@ -8,6 +8,7 @@ function Header() {
   const openModal = useModalStore((state) => state.openModal);
   const clearUserIdStorage = useUserStore.persist.clearStorage;
   const navigate = useNavigate();
+  const [menu, setMenu] = useState(false);
 
   const clickLogin = (e) => {
     e.preventDefault();
@@ -43,36 +44,78 @@ function Header() {
     clearUserIdStorage();
   };
 
+  const hadlemenu = () => {
+    setMenu(!menu);
+  };
+
   return (
     <>
       <header className="header">
         <div className="l_wrapper">
-          <ul className="header-nav">
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/magazine">Magazine</Link>
-            </li>
-            <li>
-              <Link to="/market">Market</Link>
-            </li>
-            <li className="logo">
-              <Link to="/mainpage">Oh Good Coffee</Link>
-            </li>
-            <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
-            <li>
-              <Link onClick={(e) => clickLogin(e)} to="/mypage">
-                My
-              </Link>
-            </li>
-            <li>
-              <Link to="/carts">Cart</Link>
-            </li>
-            <li>
-              <img className="search_icon" src={search} alt="돋보기 아이콘" />
-            </li>
-          </ul>
+          <div className="header-nav nav-box">
+            <ul className="pc-nav">
+              <li>
+                <Link to="/about">About</Link>
+              </li>
+              <li>
+                <Link to="/magazine">Magazine</Link>
+              </li>
+              <li>
+                <Link to="/market">Market</Link>
+              </li>
+              <li className="logo pc">
+                <Link to="/mainpage">Oh Good Coffee</Link>
+              </li>
+              <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+              <li>
+                <Link onClick={(e) => clickLogin(e)} to="/mypage">
+                  My
+                </Link>
+              </li>
+              <li>
+                <Link to="/carts">Cart</Link>
+              </li>
+            </ul>
+            <div className="hamburgerMenu">
+              <div className="hamburger-nomal">
+                <Link to="/mainpage" className="logo mo">
+                  Oh Good Coffee
+                </Link>
+                <button className="menuopen" onClick={hadlemenu}>
+                  버튼
+                </button>
+              </div>
+              {menu && (
+                <ul className="mo-nav" onClick={hadlemenu}>
+                  <li>
+                    <button className="menuclose" onClick={hadlemenu}>
+                      닫기
+                    </button>
+                  </li>
+                  <li>
+                    <Link to="/about">About</Link>
+                  </li>
+                  <li>
+                    <Link to="/magazine">Magazine</Link>
+                  </li>
+                  <li>
+                    <Link to="/market">Market</Link>
+                  </li>
+                  <li>
+                    <Link to="/carts">Cart</Link>
+                  </li>
+                  <div className="hamburger-footer">
+                    <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+                    <li>
+                      <Link onClick={(e) => clickLogin(e)} to="/mypage">
+                        My
+                      </Link>
+                    </li>
+                  </div>
+                </ul>
+              )}
+            </div>
+          </div>
         </div>
       </header>
     </>
