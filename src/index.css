@@ -205,42 +205,115 @@ body {
   align-items: center;
 }
 
-.header-nav > li {
-  cursor: pointer;
-}
-
 .l_wrapper {
   max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
 
-.header-nav {
+.pc-nav {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 50px;
+  gap: 40px;
   color: var(--color-black-10);
   font-weight: 500;
 }
 
-.logo {
+.pc-nav > li {
+  flex-basis: 80px;
+  text-align: center;
+}
+
+.hamburgerMenu {
+  color: var(--color-black-10);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: none;
+}
+
+.hamburger-nomal {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.logo.mo {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  text-align: center;
+}
+
+.menuopen,
+.menuclose {
+  width: 30px;
+  height: 30px;
+  background-image: url(assets/menuopen-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  text-indent: -99999px;
+  display: none;
+}
+
+.menuclose {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url(assets/menuclose-icon.svg);
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.mo-nav {
+  background-color: var(--color-white);
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.mo-nav > li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 1px solid var(--color-gray-20);
+  display: flex;
+}
+
+.mo-nav > li > a {
+  padding: 20px;
+  width: 100%;
+}
+
+.logo.pc,
+.logo.mo {
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
   margin: 0 auto;
-  /* width: 110px; */
-  font-size: 40px;
+  font-size: 36px;
   font-family: serif;
   font-weight: bold;
   font-family: 'Anton', sans-serif;
 }
 
-.search_icon {
-  width: 24px;
+.logo.mo {
+  display: none;
 }
 
-.is_click {
-  color: var(--color-yellow);
-  font-weight: 500;
+.hamburger-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid var(--color-gray-20);
 }
 
 .footer {
@@ -1185,6 +1258,12 @@ body {
 .coverstorylist-list-description {
   font-weight: var(--fw-regular);
   line-height: 1.8rem;
+  height: 200px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@ 마켓 목록 & 매거진 목록 @@@@@@@@@@@@@@@@@@@@ */
@@ -1340,16 +1419,30 @@ body {
 
 /* @@@@@@@@@@@@@@@@@@@@ main @@@@@@@@@@@@@@@@@@@@ */
 .content-title {
-  font-size: 26px;
+  font-size: 30px;
   font-weight: 900;
   text-align: center;
   margin-bottom: 30px;
 }
 
+.project-info {
+  padding: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+}
+
 .main-contents {
   display: flex;
   flex-direction: column;
-  margin: 70px 0;
+  padding-bottom: 100px;
+  background-color: #fff8ef;
+}
+
+.project-info {
+  background-color: #c8d6ed;
 }
 
 .main-header {
@@ -1707,4 +1800,74 @@ body {
 .type-error-small {
   font-size: 30px;
   margin-top: 0;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ 테블릿 @@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 1024px) {
+  .l_wrapper {
+    width: 780px;
+    box-shadow: inset 0 0 10px saddlebrown;
+  }
+
+  .logo.pc {
+    font-size: 24px;
+  }
+  .coverstory-list,
+  .coverstory-list:nth-child(even) {
+    flex-direction: column;
+  }
+  .coverstory-list:nth-child(even) {
+    text-align: left;
+  }
+
+  .pc-nav > li {
+    font-size: 14px;
+    flex-basis: 62px;
+  }
+
+  .grid {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-cover {
+    width: 370px;
+    height: 370px;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ 모바일 @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  .l_wrapper {
+    width: 600px;
+    box-shadow: inset 0 0 10px blue;
+  }
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .pc-nav {
+    display: none;
+  }
+
+  .logo.pc {
+    display: none;
+  }
+
+  .logo.mo,
+  .menuopen {
+    display: block;
+  }
+
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-cover {
+    width: 500px;
+    height: 370px;
+  }
 }
