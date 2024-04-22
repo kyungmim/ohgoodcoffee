@@ -1,4 +1,4 @@
-import TopLine from '@public/ogc-top-line.svg';
+import TopLine from '@assets/ogc-top-line.svg';
 import MarketListItem from './MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';

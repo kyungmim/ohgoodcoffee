@@ -1,4 +1,4 @@
-import profile from '@public/profile.svg';
+import profile from '@assets/profile.svg';
 import useUserStore from '@zustand/store';
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';

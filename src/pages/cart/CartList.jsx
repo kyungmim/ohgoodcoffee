@@ -1,5 +1,5 @@
-import PlusIcon from '@public/plus.svg';
-import EqualIcon from '@public/equal_icon.svg';
+import PlusIcon from '@assets/plus.svg';
+import EqualIcon from '@assets/equal_icon.svg';
 import { Link, useNavigate } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
