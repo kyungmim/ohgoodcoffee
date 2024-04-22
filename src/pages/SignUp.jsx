@@ -1,5 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import TopLine from '@public/ogc-top-line.svg';
+import TopLine from '@assets/ogc-top-line.svg';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
