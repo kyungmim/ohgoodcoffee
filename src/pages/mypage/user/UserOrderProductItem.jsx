@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import arrow from '@public/dropup_icon.svg'; // 이미지 경로 수정 필요
+import arrow from '@assets/dropup_icon.svg'; // 이미지 경로 수정 필요
 import useUserStore from '@zustand/store';
 import { useState } from 'react';
 

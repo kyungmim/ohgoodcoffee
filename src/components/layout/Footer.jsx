@@ -1,5 +1,5 @@
-import kakaoIcon from '@public/kakao_icon.svg';
-import instaIcon from '@public/insta_icon.svg';
+import kakaoIcon from '@assets/kakao_icon.svg';
+import instaIcon from '@assets/insta_icon.svg';
 
 function Footer() {
   return (
