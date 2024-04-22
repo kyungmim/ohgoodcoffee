@@ -1,3 +1,5 @@
+import coverImg_1 from '@assets/main-cover-img-1.jpg';
+import coverImg_2 from '@assets/main-cover-img-2.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
@@ -48,21 +50,29 @@ function Mainpage() {
         <div className="main-header">
           <Swiper modules={[Pagination, Autoplay]} spaceBetween={1} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
             <SwiperSlide>
-              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+              <img className="main-cover" src={coverImg_1} alt="커피 커버 이미지" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+              <img className="main-cover" src={coverImg_2} alt="커피 커버 이미지" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="main-cover" src="src/assets/main-cover-img-1.jpg" alt="커피 커버 이미지" />
+              <img className="main-cover" src={coverImg_1} alt="커피 커버 이미지" />
             </SwiperSlide>
             <SwiperSlide>
-              <img className="main-cover" src="src/assets/main-cover-img-2.jpg" alt="커피 커버 이미지" />
+              <img className="main-cover" src={coverImg_2} alt="커피 커버 이미지" />
             </SwiperSlide>
           </Swiper>
         </div>
 
         <div className="main-contents">
+          <div className="project-info">
+            <p className="project-info-text">
+              " This site was created by combining 3 days in Sinchon, <br /> 10 days in Gwanghwamun,
+              <br /> and 5 days in Wangsimni. Why does time pass so quickly..? <br />
+              Our team members worked hard... <br />
+              Thanks to you, I think I'm getting this result... As always, thank you...."
+            </p>
+          </div>
           <div className="l_wrapper">
             <div className="contents-header">
               <h2 className="content-title">COVER STORYE</h2>
@@ -134,7 +144,6 @@ function Mainpage() {
               <ul className="grid">{itemList}</ul>
             </div>
           </div>
-          {/* <!-- l wrapper --> */}
         </div>
       </main>
     </>
