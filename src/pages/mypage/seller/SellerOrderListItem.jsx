@@ -2,11 +2,11 @@ import PropTypes from 'prop-types';
 import UserOrderProductItem from '@pages/mypage/user/UserOrderProductItem';
 import { generateOrderNumber } from '@utils/date';
 
-UserOrderListItem.propTypes = {
+SellerOrderListItem.propTypes = {
   item: PropTypes.object.isRequired,
 };
 
-function UserOrderListItem({ item }) {
+function SellerOrderListItem({ item }) {
   const productsList = item.products.map((product) => <UserOrderProductItem key={product._id} product={item.products[0]} item={item} />);
 
   const orderNumber = generateOrderNumber(item);
@@ -32,4 +32,4 @@ function UserOrderListItem({ item }) {
   );
 }
 
-export default UserOrderListItem;
+export default SellerOrderListItem;

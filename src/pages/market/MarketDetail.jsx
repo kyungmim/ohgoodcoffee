@@ -15,8 +15,6 @@ function MarketDetail() {
   const [product, setProduct] = useState();
   const [productQuantity, setProductQuantity] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
-  const [bookmarks, setBookmarks] = useState([]);
-  const [matchedItems, setMatchedItems] = useState([]);
   const [bookmarkQuantity, setBookmarkQuantity] = useState(0);
   const openModal = useModalStore((state) => state.openModal);
 
@@ -32,75 +30,98 @@ function MarketDetail() {
   useEffect(() => {
     setProduct(item);
     setBookmarkQuantity(item.bookmarks);
-  }, []);
 
-  const getBookmarks = async () => {
-    try {
-      const res = await axios.get(`/bookmarks/product`);
-      setBookmarks(res.data.item);
-      checkBookmark();
-    } catch (error) {
-      console.error('Failed to add bookmark:', error);
+    // 사용가의 해당상품 북마크 여부 확인
+    if (item.myBookmarkId) {
+      setIsBookmarked(true);
+    } else {
+      setIsBookmarked(false);
     }
-  };
-
-  // 북마크 목록을 검사하여 현재 제품 ID와 일치하는 항목들만 추출
-  const checkBookmark = () => {
-    const newMatchedItems = bookmarks.filter((it) => it.product._id == _id);
-    setMatchedItems(newMatchedItems);
-  };
-
-  useEffect(() => {
-    checkBookmark();
-  }, [bookmarks]);
-
-  useEffect(() => {
-    getBookmarks();
-    setBookmarkQuantity(item.bookmarks); // 컴포넌트 마운트 시 데이터 초기 가져오기
-  }, []);
+  }, [item]);
 
   const postBookmark = async () => {
     try {
       await axios.post(`/bookmarks/product/${item._id}`);
       setBookmarkQuantity((prev) => prev + 1);
+      openModal({
+        content: `${item.name}을 위시리스트에 추가했습니다 :) \n 위시리스트로 이동하시겠습니까?`,
+        callbackButton: {
+          확인: () => {
+            navigate('/mypage/wishlist');
+          },
+          취소: '',
+        },
+      });
     } catch (error) {
       console.error('Failed to add bookmark:', error);
     }
   };
 
-  const deleteBookmark = async () => {
-    let bookmarkId = matchedItems.find((b) => b.user_id == user._id)?._id;
+  const deleteBookmark = () => {
     try {
-      await axios.delete(`/bookmarks/${bookmarkId}`);
-      setBookmarkQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+      openModal({
+        content: `${item.name}을 위시리스트에서 삭제하시겠습니까?`,
+        callbackButton: {
+          확인: async () => {
+            await axios.delete(`/bookmarks/${item.myBookmarkId}`);
+            setBookmarkQuantity((prev) => (prev > 0 ? prev - 1 : 0));
+          },
+          취소: '',
+        },
+      });
     } catch (error) {
       console.error('Failed to delete bookmark:', error);
     }
   };
 
-  useEffect(() => {
-    let bookmarkUser = matchedItems.find((bookmark) => bookmark.user_id == user._id);
-    setIsBookmarked(!!bookmarkUser);
-
-    if (bookmarkUser) {
-      setIsBookmarked(true);
-    } else {
-      setIsBookmarked(false);
+  const handleToggleBookmark = () => {
+    if (!user) {
+      openModal({
+        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+      return;
     }
-  }, [matchedItems, user]);
+
+    if (isBookmarked) {
+      deleteBookmark();
+      setIsBookmarked(false);
+    } else {
+      postBookmark();
+      setIsBookmarked(true);
+    }
+  };
 
   const handleSubmitCart = async () => {
     let cart = { product_id: Number(_id), quantity: productQuantity };
-    await axios.post('/carts', cart);
-    openModal({
-      content: '장바구니에 담겼습니다 :) <br />  장바구니로 이동하시겠습니까?',
-      callbackButton: {
-        확인: () => {
-          navigate('/carts', { state: { from: '/carts' } });
+    if (user) {
+      await axios.post('/carts', cart);
+      openModal({
+        content: '장바구니에 담겼습니다 :) <br />  장바구니로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/carts', { state: { from: '/carts' } });
+          },
+          취소: '',
         },
-        취소: '',
-      },
-    });
+      });
+    } else {
+      openModal({
+        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+      return;
+    }
   };
 
   const handleSubmitBuy = async () => {
@@ -114,23 +135,36 @@ function MarketDetail() {
           },
         ],
         address: {
-          user: user,
+          userName: user.name,
+          phone: user.phone,
+          address: user.address,
         },
       };
       try {
-        const gotoPaymentComplete = confirm(`${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`);
-        if (gotoPaymentComplete) {
-          const response = await axios.post('/orders', order);
-          console.log(response);
-          // 결제 완료 페이지로 response 전달
-          navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
-        }
+        openModal({
+          content: `${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`,
+          callbackButton: {
+            확인: async () => {
+              const response = await axios.post('/orders', order);
+              navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
+            },
+            취소: '',
+          },
+        });
       } catch (err) {
         alert(err.response?.data.message);
       }
     } else {
-      const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
-      gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
+      openModal({
+        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+      return;
     }
   };
 
@@ -152,28 +186,16 @@ function MarketDetail() {
     }
   };
 
-  const handleToggleBookmark = () => {
-    if (!user) {
-      const gotoLogin = confirm('로그인 후 이용 가능합니다.\n로그인 페이지로 이동하시겠습니까?');
-      gotoLogin && navigate('/users/login', { state: { from: location.pathname } });
-      return;
-    }
-
-    if (isBookmarked) {
-      deleteBookmark();
-      setIsBookmarked(false);
-    } else {
-      postBookmark();
-      setIsBookmarked(true);
-    }
-  };
-
   return (
     <>
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />
+            <img
+              className="card-cover type-card-detail"
+              src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`}
+              alt={`${item.name} 상품 사진`}
+            />
 
             <div className="market-overview-desc">
               <div className="overview-header">
@@ -191,7 +213,7 @@ function MarketDetail() {
                 </div>
               </div>
 
-              <div className="overview-contents">{item.content[0].d1}</div>
+              <pre className="overview-contents">{item.content[0].d1}</pre>
 
               <div className="overview-selling-count">
                 <p className="overview-selling-title">수량</p>
@@ -199,13 +221,13 @@ function MarketDetail() {
                   <div className="selling-row">
                     <div className="quantity-row">
                       <div className="quantity-button" onClick={handleReduceQuantity}>
-                        -{/* <img className="selling-icon down" src={Minus} />  */}
+                        -
                       </div>
                       <div>
                         <p className="selling-pick">{productQuantity}</p>
                       </div>
                       <div className="quantity-button" onClick={handleCheckQuantity}>
-                        +{/* <img className="selling-icon up" src={Plus} /> */}
+                        +
                       </div>
                     </div>
                     <p className="selling-price">{(item.price * productQuantity).toLocaleString('ko-KR')}원</p>
@@ -223,7 +245,6 @@ function MarketDetail() {
             </div>
           </div>
           <div className="market-overview-bottom">
-            {/* <img className="card-cover" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.fileName}`} alt={`${item.name} 상품 상세페이지`} /> */}
             <div className="market-overview-bottom-cover">
               <img
                 className="market-overview-bottom-src"

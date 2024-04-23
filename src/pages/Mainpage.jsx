@@ -9,7 +9,7 @@ import 'swiper/css'; //basic
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import useUserStore from '@zustand/store';
 
 function Mainpage() {
@@ -17,6 +17,7 @@ function Mainpage() {
   const [story, setStory] = useState();
   const navigation = useNavigate();
   const { setItemId } = useUserStore();
+  const { pathname } = useLocation();
 
   const fetchData = async () => {
     const res = await axios.get('/posts?type=magazine');
@@ -26,6 +27,10 @@ function Mainpage() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const onNav = (id) => {
     setItemId(id);

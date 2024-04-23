@@ -4,12 +4,12 @@ import useUserStore from '@zustand/store';
 import { useState } from 'react';
 import { formatPhoneNumber } from '@utils/date';
 
-UserOrderProductItem.propTypes = {
+SellerOrderProductItem.propTypes = {
   product: PropTypes.object.isRequired,
   item: PropTypes.object,
 };
 
-function UserOrderProductItem({ product, item }) {
+function SellerOrderProductItem({ product, item }) {
   const { user } = useUserStore();
   const [itemInfo, setItemInfo] = useState(false);
 
@@ -104,4 +104,4 @@ function UserOrderProductItem({ product, item }) {
   );
 }
 
-export default UserOrderProductItem;
+export default SellerOrderProductItem;
