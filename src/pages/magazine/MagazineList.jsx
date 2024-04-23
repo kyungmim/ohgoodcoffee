@@ -27,7 +27,7 @@ function MagazineList() {
         <div className="l_wrapper">
           <div className="section-filter">
             <p className="section-count">POSTING</p>
-            {/* <span className="section-count num">{magazineList.length}</span> */}
+            <span className="section-count num">{data?.length}</span>
           </div>
 
           <div className="section-grid">
