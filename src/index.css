@@ -1928,9 +1928,9 @@ body {
 /* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
 
 @media (max-width: 768px) {
-  /* .l_wrapper {
+  .l_wrapper {
     box-shadow: inset 0 0 10px blue;
-  } */
+  }
 
   .hamburgerMenu {
     display: block;
