@@ -19,15 +19,13 @@ function UserWishList() {
 
   return (
     <>
-      <div className="l_wrapper">
-        <div className="item-wrapper">
-          <div className="main-title">
-            <p className="main-contents-title">위시리스트</p>
-          </div>
-          <div className="main-content">
-            <div className="card-container">
-              <ul className="grid">{wishList}</ul>
-            </div>
+      <div className="item-wrapper">
+        <div className="main-title">
+          <p className="main-contents-title">위시리스트</p>
+        </div>
+        <div className="main-content">
+          <div className="card-container">
+            <ul className="grid">{wishList}</ul>
           </div>
         </div>
       </div>

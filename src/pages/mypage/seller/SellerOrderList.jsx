@@ -19,14 +19,12 @@ function SellerOrderList() {
 
   return (
     <>
-      <div className="l_wrapper">
-        <div className="item-wrapper">
-          <div className="main-title">
-            <p className="main-contents-title">주문 내역 조회</p>
-          </div>
-          <div className="main-content">
-            <div className="order">{orderList}</div>
-          </div>
+      <div className="item-wrapper">
+        <div className="main-title">
+          <p className="main-contents-title">주문 내역 조회</p>
+        </div>
+        <div className="main-content">
+          <div className="order">{orderList}</div>
         </div>
       </div>
     </>
