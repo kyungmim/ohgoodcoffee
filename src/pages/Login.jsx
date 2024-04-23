@@ -9,12 +9,7 @@ function Login() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm({
-    values: {
-      email: '',
-      password: '',
-    },
-  });
+  } = useForm();
 
   // const {
   //   register,
@@ -26,7 +21,7 @@ function Login() {
   //     password: '11111111',
   //   },
   // });
-  
+
   const navigate = useNavigate();
   const openModal = useModalStore((state) => state.openModal);
   const axios = useCustomAxios();
@@ -103,9 +98,9 @@ function Login() {
                   {errors.password && <p className="err-text">{errors.password.message}</p>}
                 </div>
               </div>
-              <div className="login-find">
+              {/* <div className="login-find">
                 <Link to="#">아이디/비밀번호 찾기</Link>
-              </div>
+              </div> */}
               <button className="button button-large btn-Fill" type="submit">
                 LOGIN
               </button>
@@ -113,14 +108,6 @@ function Login() {
                 SIGN UP
               </Link>
             </form>
-
-            <div className="login-line">
-              <p className="or">OR</p>
-            </div>
-
-            <div className="social-btn">
-              <button className="button-large btn-kakao">카카오 로그인</button>
-            </div>
           </div>
         </div>
       </div>
