@@ -30,10 +30,6 @@ textarea {
   width: 100%;
 }
 
-pre {
-  all: unset;
-}
-
 /* 스크롤바 커스텀 시작 */
 ::-webkit-scrollbar {
   width: 6px;
@@ -441,9 +437,15 @@ body {
   margin-left: auto;
 }
 
-.type-btn-cart {
+.type-btn-cart,
+.type-magarzin-btn {
   padding: 4px 10px;
   border: 1px solid var(--color-gray-30);
+}
+
+.type-magarzin-btn {
+  margin-top: 30px;
+  margin-left: auto;
 }
 
 .type-sales {
@@ -1236,6 +1238,10 @@ body {
   height: 100%;
 }
 
+.click-cover {
+  border: 1px solid var(--color-black-20);
+}
+
 .card-title {
   font-weight: 700;
 }
@@ -1811,6 +1817,10 @@ body {
   padding: 20px;
 }
 
+.test {
+  background-color: black;
+}
+
 /* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
 @media (max-width: 1024px) {
   /* .l_wrapper {
@@ -1871,11 +1881,15 @@ body {
     margin-top: 20px;
   }
 
+  .market-overview-desc {
+    width: 100%;
+  }
+
   .cart-price-number {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: centers;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -1885,6 +1899,11 @@ body {
 
   .cart-quantity {
     flex-basis: 0;
+  }
+
+  .card-cover.type-info-card-cover {
+    width: 360px;
+    height: 360px;
   }
 
   .menu-list {
@@ -1920,6 +1939,11 @@ body {
     text-align: center;
   }
 
+  .review-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
   .about {
     flex-direction: column;
   }
@@ -1928,9 +1952,9 @@ body {
 /* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
 
 @media (max-width: 768px) {
-  .l_wrapper {
+  /* .l_wrapper {
     box-shadow: inset 0 0 10px blue;
-  }
+  } */
 
   .hamburgerMenu {
     display: block;

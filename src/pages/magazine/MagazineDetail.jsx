@@ -71,7 +71,7 @@ function MagazineDetail() {
             </div>
             <pre className="magazine-desc-paragraph">{data && data.content[6].d7}</pre>
           </div>
-          <button className="button button-small type-btn-cart" onClick={() => navigate(-1)}>
+          <button className="button button-small type-magarzin-btn" onClick={() => navigate(-1)}>
             목록 보기
           </button>
         </div>
