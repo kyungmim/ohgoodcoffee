@@ -2,7 +2,7 @@ import TopLine from '@assets/ogc-top-line.svg';
 import MarketListItem from './MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import moment from 'moment';
 
 function MarketList() {
@@ -17,41 +17,82 @@ function MarketList() {
   });
 
   useEffect(() => {
-    console.log('DATAAA', data);
     setSortProductList(data);
   }, [data]);
 
+  const sortData = (data, sortType) => {
+    switch (sortType) {
+      case 'lowPrice':
+        return [...data].sort((a, b) => a.price - b.price);
+      case 'highPrice':
+        return [...data].sort((a, b) => b.price - a.price);
+      case 'new':
+      case 'registration':
+        return sortDateDescending(data);
+      case 'sales':
+        return [...data].sort((a, b) => b.buyQuantity - a.buyQuantity);
+    }
+  };
+
+  const sortDateDescending = (data) => {
+    let arr = [...data].map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
+    return arr.sort((a, b) => {
+      const dateA = moment(a.createdAt, 'YYYY.MM.DD HH:mm');
+      const dateB = moment(b.createdAt, 'YYYY.MM.DD HH:mm');
+      return dateA - dateB;
+    });
+  };
+
+  //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
+  const sortedData = useMemo(() => {
+    if (!data) return [];
+    return sortData([...data], sortType);
+  }, [data, sortType]);
+
   useEffect(() => {
-    if (data == undefined) {
+    setSortProductList(sortedData);
+  }, [sortedData]);
+
+  useEffect(() => {
+    if (!data) {
       return;
     }
+    setSortProductList((prevList) => {
+      return sortData([...data], sortType);
+    });
+  }, [data, sortType]);
 
-    let sortedArr;
-    if (sortType == 'lowPrice') {
-      sortedArr = data.sort((a, b) => b.price - a.price);
-    } else if (sortType == 'highPrice') {
-      sortedArr = data.sort((a, b) => a.price - b.price);
-    } else if (sortType == 'new') {
-      console.log('qqqqq', data);
-      let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
-      sortedArr = arr.sort((a, b) => {
-        const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-        const dateB = moment(b, 'YYYY.MM.DD HH:mm');
-        return dateA - dateB;
-      });
-    } else if (sortType == 'sales') {
-      sortedArr = data.sort((a, b) => b.buyQuantity - a.buyQuantity);
-    } else if (sortType == 'registration') {
-      let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
-      sortedArr = arr.sort((a, b) => {
-        const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-        const dateB = moment(b, 'YYYY.MM.DD HH:mm');
-        return dateA - dateB;
-      });
-    }
-    console.log('GG', sortedArr);
-    setSortProductList(sortedArr);
-  }, [sortType]);
+  // useEffect(() => {
+  //   if (data == undefined) {
+  //     return;
+  //   }
+
+  //   let sortedArr;
+  //   if (sortType == 'lowPrice') {
+  //     sortedArr = data.sort((a, b) => b.price - a.price);
+  //   } else if (sortType == 'highPrice') {
+  //     sortedArr = data.sort((a, b) => a.price - b.price);
+  //   } else if (sortType == 'new') {
+  //     console.log('qqqqq', data);
+  //     let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
+  //     sortedArr = arr.sort((a, b) => {
+  //       const dateA = moment(a, 'YYYY.MM.DD HH:mm');
+  //       const dateB = moment(b, 'YYYY.MM.DD HH:mm');
+  //       return dateA - dateB;
+  //     });
+  //   } else if (sortType == 'sales') {
+  //     sortedArr = data.sort((a, b) => b.buyQuantity - a.buyQuantity);
+  //   } else if (sortType == 'registration') {
+  //     let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
+  //     sortedArr = arr.sort((a, b) => {
+  //       const dateA = moment(a, 'YYYY.MM.DD HH:mm');
+  //       const dateB = moment(b, 'YYYY.MM.DD HH:mm');
+  //       return dateA - dateB;
+  //     });
+  //   }
+  //   console.log('GG', sortedArr);
+  //   setSortProductList(sortedArr);
+  // }, [sortType]);
 
   const handleSelectChange = (e) => {
     console.log('e.target', e.target.value);
