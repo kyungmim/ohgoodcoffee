@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
 import CartListItem from '@pages/cart/CartListItem';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useModalStore from '@zustand/useModalStore.mjs';
 
 function CartList() {
   const axios = useCustomAxios();
@@ -14,6 +15,7 @@ function CartList() {
   const [selectedCartItem, setSelectedCartItem] = useState([]);
   const [productDetails, setProductDetail] = useState([]);
   const [mainCheck, setMainCheck] = useState(false);
+  const openModal = useModalStore((state) => state.openModal);
 
   const calculateTotalPrice = (itemsToSum) => {
     return itemsToSum.reduce((acc, item) => {
@@ -37,6 +39,7 @@ function CartList() {
     } else {
       setOrderPrice(productTotalPrice);
     }
+    handleSetOrderItem();
   }, [selectedCartItem, items]);
 
   useEffect(() => {
@@ -63,10 +66,6 @@ function CartList() {
     setProductDetail(newCartArr);
   };
 
-  useEffect(() => {
-    handleSetOrderItem();
-  }, [selectedCartItem, items]);
-
   const handleSubmitOrder = async () => {
     if (!user || !productDetails || productDetails.length === 0) {
       alert('구매할 상품을 선택해주세요');
@@ -77,7 +76,9 @@ function CartList() {
       type: 'cart',
       products: productDetails,
       address: {
-        user: user,
+        userName: user.name,
+        phone: user.phone,
+        address: user.address,
       },
     };
 
@@ -114,7 +115,16 @@ function CartList() {
       let cartData = {
         carts: selectedCartItem,
       };
-      await axios.delete('/carts', { data: cartData });
+      openModal({
+        content: '선택하신 상품들을 장바구니에서 삭제하시겠습니까?',
+        callbackButton: {
+          확인: async () => {
+            await axios.delete('/carts', { data: cartData });
+          },
+          취소: '',
+        },
+      });
+
       const response = await axios.get('/carts');
       if (response.data.item) {
         setItems(response.data.item);
@@ -125,8 +135,25 @@ function CartList() {
 
   const handleCleanUp = async () => {
     try {
-      await axios.delete('/carts/cleanup');
-      await fetchData();
+      if (selectedCartItem.length > 0) {
+        openModal({
+          content: '전체 상품들을 장바구니에서 모두 삭제하시겠습니까?',
+          callbackButton: {
+            확인: async () => {
+              await axios.delete('/carts/cleanup');
+            },
+            취소: '',
+          },
+        });
+        await fetchData();
+      } else {
+        openModal({
+          content: '삭제할 상품을 선택해주세요 :)',
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     } catch (error) {
       console.error('Error cleaning up carts:', error);
     }
@@ -184,7 +211,7 @@ function CartList() {
         <div className="l_wrapper">
           <div className="cart">
             <div className="cart-title">
-              <div className="cart-layout cart-check" onClick={handleSelectAll}>
+              <div className="cart-layout cart-check check-width" onClick={handleSelectAll}>
                 <div className="form-input-radio">
                   <input type="checkbox" checked={mainCheck} />
                 </div>
@@ -206,7 +233,17 @@ function CartList() {
             </div>
 
             <div className="cart-total">
-              <p className="cart-total-title">총 주문 상태 {items?.length > 0 ? <span className="cart-total-point">{items.length}</span> : null}개</p>
+              {selectedCartItem.length > 0 ? (
+                <p className="cart-total-title">
+                  선택상품 : <span className="cart-total-point">{selectedCartItem.length}</span>개
+                </p>
+              ) : (
+                <p className="cart-total-title">
+                  전체상품 : <span className="cart-total-point">{items.length}</span>개
+                </p>
+              )}
+
+              {/* <p className="cart-total-title">총 주문 상태 {items?.length > 0 ? <span className="cart-total-point">{items.length}</span> : null}개</p> */}
 
               <div className="cart-total-list">
                 <div className="cart-tota-item">
@@ -219,7 +256,7 @@ function CartList() {
                 </div>
 
                 <div className="cart-tota-item">
-                  <p className="cart-total-num">{shippingFees.toLocaleString('ko-KR')}원</p>
+                  <p className="cart-total-num">{items?.length > 0 ? shippingFees.toLocaleString('ko-KR') : 0}원</p>
                   <p className="cart-total-txt">배송비</p>
                 </div>
 
@@ -228,7 +265,7 @@ function CartList() {
                 </div>
 
                 <div className="cart-tota-item">
-                  <p className="cart-total-num">{(orderPrice + shippingFees).toLocaleString('ko-KR')}원</p>
+                  <p className="cart-total-num">{items?.length > 0 ? (orderPrice + shippingFees).toLocaleString('ko-KR') : 0}원</p>
                   <p className="cart-total-txt">총 주문 금액</p>
                 </div>
               </div>

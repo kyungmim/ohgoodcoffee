@@ -1,8 +1,8 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import UserWishListItem from '@pages/mypage/user/UserWishListItem';
+import SellerWishListItem from '@pages/mypage/seller/SellerWishListItem';
 import { useEffect, useState } from 'react';
 
-function UserWishList() {
+function SellerWishList() {
   const axios = useCustomAxios();
   const [data, setData] = useState();
 
@@ -15,7 +15,7 @@ function UserWishList() {
     setData(response.data);
   };
 
-  const wishList = data?.item.map((item) => <UserWishListItem key={item._id} item={item} />);
+  const wishList = data?.item.map((item) => <SellerWishListItem key={item._id} item={item} />);
 
   return (
     <>
@@ -33,4 +33,4 @@ function UserWishList() {
   );
 }
 
-export default UserWishList;
+export default SellerWishList;

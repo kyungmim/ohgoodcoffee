@@ -20,14 +20,12 @@ function UserReviewList() {
 
   // return <UserReviewItem itemlist={itemlist} />;
   return (
-    <div className="l_wrapper">
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">내가 쓴 리뷰</p>
-        </div>
-        <div className="main-content">
-          <div className="review-list">{item}</div>
-        </div>
+    <div className="item-wrapper">
+      <div className="main-title">
+        <p className="main-contents-title">내가 쓴 리뷰</p>
+      </div>
+      <div className="main-content">
+        <div className="review-list">{item}</div>
       </div>
     </div>
   );
