@@ -7,8 +7,19 @@ function SellerUploadProduct() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    defaultValues: {
+      mainImages: '',
+      name: '',
+      content: '',
+      price: '',
+      quantity: '',
+      shippingFees: '',
+      type: 'new',
+    },
+  });
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
@@ -43,7 +54,9 @@ function SellerUploadProduct() {
           확인: () => {
             navigate('/seller/mypage', { state: { from: '/' } });
           },
-          취소: '',
+          취소: () => {
+            reset();
+          },
         },
       });
     } catch (err) {
