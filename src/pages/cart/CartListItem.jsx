@@ -1,5 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-// import CheckBox from '@pages/cart/CheckBox';
+import useModalStore from '@zustand/useModalStore.mjs';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
@@ -19,6 +19,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
   const [isProcessing, setIsProcessing] = useState(false);
+  const openModal = useModalStore((state) => state.openModal);
 
   useEffect(() => {
     console.log('productQuantity', productQuantity, 'id', item._id);
@@ -53,7 +54,15 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     if (!isProcessing && productQuantity > 0) {
       //카트에서 제품의 갯수가 1개일 때, 마이너스 버튼을 누르면 delete 요청
       if (productQuantity == 1) {
-        handleDeleteItem(item._id);
+        openModal({
+          content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
+          callbackButton: {
+            확인: async () => {
+              await handleDeleteItem(item._id);
+            },
+            취소: '',
+          },
+        });
       } else {
         setProductQuantity((prev) => prev - 1);
       }
@@ -71,8 +80,15 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   };
 
   const handleDeleteItem = async (id) => {
-    console.log(id, '삭제');
-    await axios.delete(`/carts/${id}`);
+    openModal({
+      content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
+      callbackButton: {
+        확인: async () => {
+          await axios.delete(`/carts/${id}`);
+        },
+        취소: '',
+      },
+    });
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
@@ -110,7 +126,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
 
   return (
     <div className="cart-item">
-      <div className="cart-layout cart-check" onClick={() => handleCartCheck()}>
+      <div className="cart-check" onClick={() => handleCartCheck()}>
         <div className="form-input-radio">
           <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
         </div>
@@ -120,11 +136,10 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
           <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
-          <p className="cart-item-title">
-            PID{item._id} | {item.product?.name}
-          </p>
+          <p className="cart-item-title">{item.product?.name}</p>
         </div>
       </div>
+      <div className='cart-price-number'>
       <div className="cart-layout cart-quantity">
         <div className="quantity-button" onClick={handleReduceQuantity}>
           -
@@ -138,8 +153,9 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       </div>
 
       <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+      </div>
 
-      <p className="button type-btn-cart button-small type-modal-btn" onClick={() => handleDeleteItem(item._id)}>
+      <p className="button type-btn-cart button-small type-cart-btn" onClick={() => handleDeleteItem(item._id)}>
         삭제
       </p>
     </div>

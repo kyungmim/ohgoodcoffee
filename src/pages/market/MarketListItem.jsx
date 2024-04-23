@@ -20,8 +20,8 @@ function MarketListItem({ item }) {
             </div>
             <p className="card-price">{item.price.toLocaleString('ko-KR')}원</p>
             <div className="card-state">
-              {item.extra?.isBest ? <p className="card-state-item new">NEW</p> : null}
-              {item.extra?.isNew ? <p className="card-state-item best">BEST</p> : null}
+              {item.extra?.isNew ? <p className="card-state-item new">NEW</p> : null}
+              {item.extra?.isBest ? <p className="card-state-item best">BEST</p> : null}
             </div>
           </div>
         </Link>

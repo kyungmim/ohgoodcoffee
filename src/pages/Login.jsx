@@ -11,10 +11,22 @@ function Login() {
     formState: { errors },
   } = useForm({
     values: {
-      email: 'u1@market.com',
-      password: '11111111',
+      email: '',
+      password: '',
     },
   });
+
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm({
+  //   values: {
+  //     email: 'u1@market.com',
+  //     password: '11111111',
+  //   },
+  // });
+  
   const navigate = useNavigate();
   const openModal = useModalStore((state) => state.openModal);
   const axios = useCustomAxios();

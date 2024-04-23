@@ -33,7 +33,7 @@ function SellerSalesList() {
   return (
     <>
       {edit ? (
-        <div className="l_wrapper">
+        <>
           <div className="item-wrapper">
             <div className="main-title">
               <p className="main-contents-title">상품 목록 조회</p>
@@ -51,7 +51,7 @@ function SellerSalesList() {
               </ul>
             </div>
           </div>
-        </div>
+        </>
       ) : (
         <SellerSalesListEdit />
       )}

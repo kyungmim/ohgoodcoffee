@@ -1,11 +1,14 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 function MagazineDetail() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
   const { itemId } = useUserStore();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
 
   const fetchData = async () => {
     try {
@@ -20,6 +23,10 @@ function MagazineDetail() {
     fetchData();
   }, []);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
   return (
     <>
       <section className="section type_magazine-desc">
@@ -32,38 +39,41 @@ function MagazineDetail() {
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[0].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[0].d1}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[0].d1}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[1].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[1].d2}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[1].d2}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[2].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[2].d3}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[2].d3}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[3].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[3].d4}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[3].d4}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[4].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[4].d5}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[4].d5}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[5].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[5].d6}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[5].d6}</pre>
 
             <div className="magazin-cover">
               <img className="magazine-desc-img" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${data && data.extra.detailImages[6].name}`} alt="카페 상세 사진" />
             </div>
-            <p className="magazine-desc-paragraph">{data && data.content[6].d7}</p>
+            <pre className="magazine-desc-paragraph">{data && data.content[6].d7}</pre>
           </div>
+          <button className="button button-small type-btn-cart" onClick={() => navigate(-1)}>
+            목록 보기
+          </button>
         </div>
       </section>
     </>
