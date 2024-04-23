@@ -191,11 +191,9 @@ function MarketDetail() {
       <section className="section type_market-desc">
         <div className="l_wrapper">
           <div className="market-overview-top">
-            <img
-              className="card-cover type-card-detail"
-              src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`}
-              alt={`${item.name} 상품 사진`}
-            />
+            <div className="card-cover type-card-detail">
+              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />
+            </div>
 
             <div className="market-overview-desc">
               <div className="overview-header">
@@ -253,7 +251,7 @@ function MarketDetail() {
               />
             </div>
             <div className="market-overview-bottom-desc">
-              <p className="market-overview-bottom-text">{item.content[1].d2}</p>
+              <pre className="market-overview-bottom-text">{item.content[1].d2}</pre>
             </div>
             <div className="market-overview-bottom-cover">
               <img
@@ -263,7 +261,7 @@ function MarketDetail() {
               />
             </div>
             <div className="market-overview-bottom-desc">
-              <p className="market-overview-bottom-text">{item.content[2].d3}</p>
+              <pre className="market-overview-bottom-text">{item.content[2].d3}</pre>
             </div>
           </div>
         </div>

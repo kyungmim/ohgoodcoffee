@@ -131,28 +131,28 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
           <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
         </div>
       </div>
-      <div className="cart-layout">
+      <div className="cart-layout type-cart-mo">
         <div className="cart-item-info">
           <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
           <p className="cart-item-title">{item.product?.name}</p>
         </div>
-      </div>
-      <div className='cart-price-number'>
-      <div className="cart-layout cart-quantity">
-        <div className="quantity-button" onClick={handleReduceQuantity}>
-          -
-        </div>
-        <div>
-          <p>{productQuantity}</p>
-        </div>
-        <div className="quantity-button" onClick={handleAddQuantity}>
-          +
-        </div>
-      </div>
+        <div className="cart-price-number">
+          <div className="cart-layout cart-quantity">
+            <div className="quantity-button" onClick={handleReduceQuantity}>
+              -
+            </div>
+            <div>
+              <p>{productQuantity}</p>
+            </div>
+            <div className="quantity-button" onClick={handleAddQuantity}>
+              +
+            </div>
+          </div>
 
-      <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+          <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+        </div>
       </div>
 
       <p className="button type-btn-cart button-small type-cart-btn" onClick={() => handleDeleteItem(item._id)}>

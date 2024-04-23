@@ -29,7 +29,7 @@ function SellerSalesListEdit() {
       price: product?.price,
       quantity: product?.quantity,
       name: product?.name,
-      content: product?.content,
+      content: product?.content[0].d1,
       shippingFees: product?.shippingFees,
       type: product?.type,
     },
