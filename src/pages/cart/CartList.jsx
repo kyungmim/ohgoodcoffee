@@ -68,7 +68,12 @@ function CartList() {
 
   const handleSubmitOrder = async () => {
     if (!user || !productDetails || productDetails.length === 0) {
-      alert('구매할 상품을 선택해주세요');
+      openModal({
+        content: '구매할 상품을 선택해주세요',
+        callbackButton: {
+          확인: '',
+        },
+      });
       return;
     }
 
@@ -83,15 +88,29 @@ function CartList() {
     };
 
     try {
-      const gotoPaymentComplete = confirm(`선택한 ${productDetails.length}개의 상품을 주문 하시겠습니까?`);
-      if (gotoPaymentComplete) {
-        const response = await axios.post('/orders', orderForm);
-        navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
-        setSelectedCartItem([]);
-        setProductDetail([]);
+      openModal({
+        content: `선택한 ${productDetails.length}개의 상품을 주문 하시겠습니까?`,
+        callbackButton: {
+          확인: async () => {
+            const response = await axios.post('/orders', orderForm);
+            navigate('/orders', {
+              state: { from: location.pathname, orderResponse: response.data },
+            });
+            setSelectedCartItem([]);
+            setProductDetail([]);
+          },
+          취소: '',
+        },
+      });
+    } catch (err) {
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
       }
-    } catch (error) {
-      console.error('Order Submission Failed:', error);
     }
   };
 
@@ -105,8 +124,15 @@ function CartList() {
     try {
       const productsResponse = await axios.get('/carts');
       await setItems(productsResponse.data.item);
-    } catch (error) {
-      console.error('Failed to fetch data:', error);
+    } catch (err) {
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
@@ -154,8 +180,15 @@ function CartList() {
           },
         });
       }
-    } catch (error) {
-      console.error('Error cleaning up carts:', error);
+    } catch (err) {
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
