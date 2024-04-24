@@ -12,7 +12,6 @@ function MarketDetail() {
   const { user } = useUserStore();
   const navigate = useNavigate();
   const location = useLocation();
-  const [product, setProduct] = useState();
   const [productQuantity, setProductQuantity] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [bookmarkQuantity, setBookmarkQuantity] = useState(0);
@@ -28,7 +27,6 @@ function MarketDetail() {
   const item = data?.item;
 
   useEffect(() => {
-    setProduct(item);
     setBookmarkQuantity(item.bookmarks);
 
     // 사용가의 해당상품 북마크 여부 확인
@@ -211,7 +209,7 @@ function MarketDetail() {
                 </div>
               </div>
 
-              <pre className="overview-contents">{item.content[0].d1}</pre>
+              <pre className="overview-contents">{item.content[0]}</pre>
 
               <div className="overview-selling-count">
                 <p className="overview-selling-title">수량</p>
@@ -244,24 +242,40 @@ function MarketDetail() {
           </div>
           <div className="market-overview-bottom">
             <div className="market-overview-bottom-cover">
-              <img
+              {<img
                 className="market-overview-bottom-src"
                 src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.name}`}
                 alt={`${item.name} 상품 사진`}
-              />
+              /> ? (
+                <img
+                  className="market-overview-bottom-src"
+                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.name}`}
+                  alt={`${item.name} 상품 사진`}
+                />
+              ) : (
+                ''
+              )}
             </div>
             <div className="market-overview-bottom-desc">
-              <pre className="market-overview-bottom-text">{item.content[1].d2}</pre>
+              <pre className="market-overview-bottom-text">{item.content[1] ? item.content[1] : ''}</pre>
             </div>
             <div className="market-overview-bottom-cover">
-              <img
+              {<img
                 className="market-overview-bottom-src"
                 src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[1]?.name}`}
                 alt={`${item.name} 상품 사진`}
-              />
+              /> ? (
+                <img
+                  className="market-overview-bottom-src"
+                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[1]?.name}`}
+                  alt={`${item.name} 상품 사진`}
+                />
+              ) : (
+                ''
+              )}
             </div>
             <div className="market-overview-bottom-desc">
-              <pre className="market-overview-bottom-text">{item.content[2].d3}</pre>
+              <pre className="market-overview-bottom-text">{item.content[2] ? item.content[2] : ''}</pre>
             </div>
           </div>
         </div>
