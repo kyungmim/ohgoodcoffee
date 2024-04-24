@@ -49,7 +49,7 @@ export const initData = async (nextSeq) => {
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
           membershipClass: 'MC01',
-          image: 'profile.svg',
+          image: 'goyangkim.jpg',
           addressBook: [
             {
               id: 1,
@@ -76,7 +76,7 @@ export const initData = async (nextSeq) => {
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
           membershipClass: 'MC03',
-          image: 'profile.svg',
+          image: 'tokkichoi.jpg',
           addressBook: [
             {
               id: 1,
@@ -104,7 +104,7 @@ export const initData = async (nextSeq) => {
         updatedAt: getTime(-100, -60 * 60 * 3),
         extra: {
           membershipClass: 'MC01',
-          image: 'profile.svg',
+          image: 'milestonecoffee.png',
           addressBook: [
             {
               id: 1,
@@ -3220,6 +3220,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 2,
+        user: {
+          _id: 2,
+        },
         target_id: 2,
         type: 'product',
         memo: '맛도리 원두',
@@ -3228,6 +3231,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 2,
+        user: {
+          _id: 2,
+        },
         target_id: 5,
         type: 'product',
         memo: '맛있는 그래놀라',
@@ -3236,6 +3242,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 2,
+        user: {
+          _id: 2,
+        },
         target_id: 3,
         type: 'product',
         memo: '2순위로 살것',
@@ -3244,6 +3253,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 2,
+        user: {
+          _id: 2,
+        },
         target_id: 7,
         type: 'product',
         createdAt: getTime(-3, -60 * 60 * 2),
@@ -3251,6 +3263,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 3,
+        user: {
+          _id: 3,
+        },
         target_id: 8,
         type: 'product',
         memo: '맛있는 그래놀라',
@@ -3259,6 +3274,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 3,
+        user: {
+          _id: 3,
+        },
         target_id: 10,
         type: 'product',
         memo: '2순위로 살것',
@@ -3267,6 +3285,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 3,
+        user: {
+          _id: 3,
+        },
         target_id: 2,
         type: 'product',
         memo: '이달 보너스타면 꼭!!!',
@@ -3275,6 +3296,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 3,
+        user: {
+          _id: 3,
+        },
         target_id: 4,
         type: 'product',
         memo: '1순위로 살것!',
@@ -3283,6 +3307,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
+        user: {
+          _id: 4,
+        },
         target_id: 8,
         type: 'product',
         memo: '맛도리 원두',
@@ -3291,6 +3318,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
+        user: {
+          _id: 4,
+        },
         target_id: 11,
         type: 'product',
         memo: '맛있는 그래놀라',
@@ -3299,6 +3329,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
+        user: {
+          _id: 4,
+        },
         target_id: 12,
         type: 'product',
         memo: '2순위로 살것',
@@ -3307,6 +3340,9 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
+        user: {
+          _id: 4,
+        },
         target_id: 19,
         type: 'product',
         memo: '맛도리 원두',

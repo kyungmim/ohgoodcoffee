@@ -19,6 +19,10 @@ function MagazineListItem({ item }) {
       item._id;
     });
   };
+
+  const today = new Date();
+  const date = `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일`;
+
   return (
     <>
       <li>
@@ -32,7 +36,7 @@ function MagazineListItem({ item }) {
               <h4 className="card-title mini">{item.title}</h4>
             </div>
             <p className="card-footer">
-              {item.createdAt.split(' ')[0].replace(/\./g, '-')} 조회 {item.views.toLocaleString('ko-KR')}
+              {date} 조회 {item.views.toLocaleString('ko-KR')}
             </p>
           </div>
         </Link>

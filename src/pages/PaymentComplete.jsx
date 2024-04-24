@@ -5,8 +5,8 @@ function PaymentComplete() {
   const location = useLocation();
   const navigate = useNavigate();
   const orderResponse = location.state?.orderResponse.item;
-  console.log('orderResponse', orderResponse);
 
+  console.log(orderResponse);
   const orderNumber = generateOrderNumber(orderResponse);
   const orderdateParser = orderResponse.createdAt.split(' ')[0].replace(/\./g, '-');
 

@@ -50,8 +50,15 @@ function MarketDetail() {
           취소: '',
         },
       });
-    } catch (error) {
-      console.error('Failed to add bookmark:', error);
+    } catch (err) {
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
@@ -67,8 +74,16 @@ function MarketDetail() {
           취소: '',
         },
       });
-    } catch (error) {
-      console.error('Failed to delete bookmark:', error);
+    } catch (err) {
+      // console.error('Failed to delete bookmark:', error);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
@@ -150,7 +165,14 @@ function MarketDetail() {
           },
         });
       } catch (err) {
-        alert(err.response?.data.message);
+        if (err.response?.data.message) {
+          openModal({
+            content: err.response?.data.message,
+            callbackButton: {
+              확인: '',
+            },
+          });
+        }
       }
     } else {
       openModal({
@@ -174,7 +196,6 @@ function MarketDetail() {
 
   const handleCheckQuantity = () => {
     let realQuantity = item.quantity - item.buyQuantity;
-    console.log('realQuantity', realQuantity);
     if (productQuantity >= realQuantity) {
       alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
       setProductQuantity(realQuantity);

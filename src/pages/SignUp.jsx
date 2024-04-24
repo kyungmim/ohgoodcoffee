@@ -11,28 +11,15 @@ function SignUp() {
     formState: { errors },
   } = useForm({
     values: {
-      email: '',
-      password: '',
-      name: '',
-      address: '',
-      phone: '',
+      email: 'test@market.com',
+      password: '11111111',
+      name: '테스트',
+      address: '경기도 어딘가 살고있음',
+      phone: '01012345678',
       type: 'user',
     },
   });
-  // const {
-  //   register,
-  //   handleSubmit,
-  //   formState: { errors },
-  // } = useForm({
-  //   values: {
-  //     email: 'test30@market.com',
-  //     password: '11111111',
-  //     name: 'test',
-  //     address: '경기도 남양주시 어딘가',
-  //     phone: '01012345678',
-  //     type: 'seller',
-  //   },
-  // });
+
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
@@ -52,7 +39,7 @@ function SignUp() {
           },
           data: imageFormData,
         });
-        console.log(fileRes);
+        // console.log(fileRes);
         // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
         formData.profileImage = fileRes.data.item[0].name;
       } else {
@@ -69,7 +56,14 @@ function SignUp() {
         },
       });
     } catch (err) {
-      console.log(err.response?.data.message);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 

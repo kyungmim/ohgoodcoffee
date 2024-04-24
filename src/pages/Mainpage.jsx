@@ -1,5 +1,7 @@
 import coverImg_1 from '@assets/main-cover-img-1.jpg';
 import coverImg_2 from '@assets/main-cover-img-2.jpg';
+import coverImg_3 from '@assets/main-cover-img-3.jpg';
+import coverImg_4 from '@assets/main-cover-img-4.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
@@ -52,19 +54,33 @@ function Mainpage() {
   return (
     <>
       <main className="main">
-        <div className="main-header">
-          <Swiper modules={[Pagination, Autoplay]} spaceBetween={1} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
-            <SwiperSlide>
-              <img className="main-cover" src={coverImg_1} alt="커피 커버 이미지" />
+        <div>
+          <Swiper
+            className="main-header"
+            modules={[Pagination, Autoplay]}
+            spaceBetween={0}
+            slidesPerView={1}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            breakpoints={{
+              768: {
+                slidesPerView: 3,
+              },
+              1024: {
+                slidesPerView: 2,
+              },
+            }}
+          >
+            <SwiperSlide className="main-cover">
+              <img src={coverImg_1} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide>
-              <img className="main-cover" src={coverImg_2} alt="커피 커버 이미지" />
+            <SwiperSlide className="main-cover">
+              <img className="main-cover-src" src={coverImg_2} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide>
-              <img className="main-cover" src={coverImg_1} alt="커피 커버 이미지" />
+            <SwiperSlide className="main-cover">
+              <img className="main-cover-src" src={coverImg_3} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide>
-              <img className="main-cover" src={coverImg_2} alt="커피 커버 이미지" />
+            <SwiperSlide className="main-cover">
+              <img className="main-cover-src" src={coverImg_4} alt="커피 커버 이미지" />
             </SwiperSlide>
           </Swiper>
         </div>
@@ -97,7 +113,7 @@ function Mainpage() {
                   <h2 className="coverstory-list-title">#{story && story[2].title}</h2>
                   <pre className="coverstorylist-list-description">{story && story[2].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(7)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(2)}>
                     MORE
                   </button>
                 </div>
@@ -116,7 +132,7 @@ function Mainpage() {
                   <h2 className="coverstory-list-title">#{story && story[3].title}</h2>
                   <pre className="coverstorylist-list-description">{story && story[3].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(8)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(3)}>
                     MORE
                   </button>
                 </div>
@@ -135,7 +151,7 @@ function Mainpage() {
                   <h2 className="coverstory-list-title">#{story && story[6].title}</h2>
                   <pre className="coverstorylist-list-description">{story && story[6].content[0].d1}</pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(3)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(6)}>
                     MORE
                   </button>
                 </div>
