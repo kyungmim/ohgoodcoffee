@@ -86,7 +86,7 @@ function SellerUploadProduct() {
         content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
         callbackButton: {
           확인: () => {
-            navigate('/seller/mypage', { state: { from: '/' } });
+            navigate('/seller/mypage', { state: { from: window.location.replace('/seller/mypage') } });
           },
           취소: '',
         },
@@ -199,8 +199,8 @@ function SellerUploadProduct() {
                     })}
                   />
                 </div>
+                {errors.shippingFees && <p className="err-text">{errors.shippingFees.message}</p>}
               </div>
-              {errors.shippingFees && <p className="err-text">{errors.shippingFees.message}</p>}
             </fieldset>
 
             <fieldset className="signup-layout">
@@ -235,7 +235,7 @@ function SellerUploadProduct() {
                       })}
                     />
                   </div>
-                  {errors.mainImages && <p className="err-text">{errors.i1.message}</p>}
+                  {errors.i1 && <p className="err-text">{errors.i1.message}</p>}
                 </div>
 
                 <div className="signup-input-box">
@@ -254,7 +254,7 @@ function SellerUploadProduct() {
                       })}
                     />
                   </div>
-                  {errors.content && <p className="err-text">{errors.d1.message}</p>}
+                  {errors.d1 && <p className="err-text">{errors.d1.message}</p>}
                 </div>
 
                 <div className="product-sub-layout">
@@ -271,7 +271,7 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.mainImages && <p className="err-text">{errors.i2.message}</p>}
+                      {errors.i2 && <p className="err-text">{errors.i2.message}</p>}
                     </div>
 
                     <div className="signup-input-box">
@@ -290,7 +290,7 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.content && <p className="err-text">{errors.d2.message}</p>}
+                      {errors.d2 && <p className="err-text">{errors.d2.message}</p>}
                     </div>
                   </div>
                 </div>
@@ -306,7 +306,7 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.mainImages && <p className="err-text">{errors.i3.message}</p>}
+                      {errors.i3 && <p className="err-text">{errors.i3.message}</p>}
                     </div>
 
                     <div className="signup-input-box">
@@ -325,7 +325,7 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.content && <p className="err-text">{errors.d3.message}</p>}
+                      {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
                     </div>
                   </div>
                 </div>
