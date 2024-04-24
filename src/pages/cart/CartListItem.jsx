@@ -25,7 +25,10 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     let postQuantity = productQuantity - item.quantity;
 
     if (postQuantity != 0) {
-      let cart = { product_id: Number(item.product_id), quantity: postQuantity };
+      let cart = {
+        product_id: Number(item.product_id),
+        quantity: postQuantity,
+      };
 
       handleRequest(cart);
     }
