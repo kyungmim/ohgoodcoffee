@@ -105,7 +105,15 @@ function Header() {
                     <Link to="/carts">Cart</Link>
                   </li>
                   <div className="hamburger-footer">
-                    <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+                    <li>
+                      {user ? (
+                        <button className="logout" onClick={onClickLogout}>
+                          Logout
+                        </button>
+                      ) : (
+                        <Link to="/users/login">Login</Link>
+                      )}
+                    </li>
                     <li>
                       <Link onClick={(e) => clickLogin(e)} to="/mypage">
                         My
