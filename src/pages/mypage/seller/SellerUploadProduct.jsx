@@ -45,17 +45,13 @@ function SellerUploadProduct() {
       delete formData.mainImages;
     }
 
-    console.log('imageNamesArr ::: ', imageNamesArr);
+    // console.log('imageNamesArr ::: ', imageNamesArr);
     return imageNamesArr;
   };
 
   const onSubmit = async (formData) => {
     try {
       const imageNamesArr = await imgData(formData);
-      // console.log('res ', res);
-      // console.log('formData ', formData);
-
-      // console.log('@@@@', typeof formData);
       const { d1, d2, d3, ...rest } = formData;
 
       const reqBody = {
@@ -85,7 +81,6 @@ function SellerUploadProduct() {
       delete reqBody.i2;
       delete reqBody.i3;
 
-      // console.log(reqBody);
       const res = await axios.post('seller/products', reqBody);
       openModal({
         content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
@@ -97,7 +92,14 @@ function SellerUploadProduct() {
         },
       });
     } catch (err) {
-      console.log(err);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
