@@ -14,11 +14,19 @@ function SellerUploadProduct() {
   const navigate = useNavigate();
 
   const imgData = async (formData) => {
-    if (formData.mainImages.length > 0) {
+    const combinedArr = [...formData.i1, ...formData.i2, ...formData.i3];
+    // console.log('formData ::: ', formData);
+    // console.log('i1 ::: ', formData.i1);
+    // console.log('i2 ::: ', formData.i2);
+    // console.log('i3 ::: ', formData.i3);
+    // console.log('combinedArr ::: ', combinedArr);
+    let imageNamesArr = [];
+    if (combinedArr.length > 0) {
       // 프로필 이미지를 추가한 경우
-      for
       const imageFormData = new FormData();
-      imageFormData.append('attach', formData.mainImages[0]);
+      for (let i = 0; i < combinedArr.length; i++) {
+        imageFormData.append('attach', combinedArr[i]);
+      }
 
       const fileRes = await axios('/files', {
         method: 'post',
@@ -28,48 +36,56 @@ function SellerUploadProduct() {
         },
         data: imageFormData,
       });
-      console.log(fileRes);
+      // console.log(fileRes);
       // 서버로부터 응답받은 이미지 이름을  정보에 포함
-      formData.mainImages = fileRes.data.item;
+      imageNamesArr = [...imageNamesArr, ...fileRes.data.item];
+      // console.log(`imageNamesArr`, imageNamesArr);
     } else {
       // mainImages 속성을 제거
       delete formData.mainImages;
     }
+
+    console.log('imageNamesArr ::: ', imageNamesArr);
+    return imageNamesArr;
   };
 
   const onSubmit = async (formData) => {
     try {
+      const imageNamesArr = await imgData(formData);
       // console.log('res ', res);
-      console.log('formData ', formData);
+      // console.log('formData ', formData);
 
-      console.log('@@@@', typeof formData);
-      const { i1, i2, i3, d1, d2, d3, ...rest } = formData;
+      // console.log('@@@@', typeof formData);
+      const { d1, d2, d3, ...rest } = formData;
 
       const reqBody = {
         mainImages: [
           {
-            name: i1[0].name,
+            name: imageNamesArr[0].name,
             path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + i1[0].name,
+            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[0].name,
           },
         ],
         detailImages: [
           {
-            name: i2[0].name,
+            name: imageNamesArr[1].name,
             path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + i2[0].name,
+            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[1].name,
           },
           {
-            name: i3[0].name,
+            name: imageNamesArr[2].name,
             path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + i2[0].name,
+            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[2].name,
           },
         ],
         content: [`${d1}`, `${d2}`, `${d3}`],
         ...rest,
       };
+      delete reqBody.i1;
+      delete reqBody.i2;
+      delete reqBody.i3;
 
-      console.log(reqBody);
+      // console.log(reqBody);
       const res = await axios.post('seller/products', reqBody);
       openModal({
         content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,

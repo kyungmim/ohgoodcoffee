@@ -12,7 +12,6 @@ function MarketDetail() {
   const { user } = useUserStore();
   const navigate = useNavigate();
   const location = useLocation();
-  const [product, setProduct] = useState();
   const [productQuantity, setProductQuantity] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [bookmarkQuantity, setBookmarkQuantity] = useState(0);
@@ -28,7 +27,6 @@ function MarketDetail() {
   const item = data?.item;
 
   useEffect(() => {
-    setProduct(item);
     setBookmarkQuantity(item.bookmarks);
 
     // 사용가의 해당상품 북마크 여부 확인
