@@ -4,7 +4,8 @@ import useModalStore from '@zustand/useModalStore.mjs';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 
-const API_SERVER = 'https://market-lion.koyeb.app/api';
+// const API_SERVER = 'https://market-lion.koyeb.app/api';
+const API_SERVER = import.meta.env.VITE_API_SERVER;
 const REFRESH_URL = '/auth/refresh';
 
 function useCustomAxios() {
@@ -18,7 +19,7 @@ function useCustomAxios() {
   // ajax 통신에 사용할 공통 설정 지정
   const instance = axios.create({
     baseURL: API_SERVER,
-    timeout: 1000 * 10,
+    timeout: 1000 * 100,
     headers: {
       'content-type': 'application/json',
       accept: 'application/json',
