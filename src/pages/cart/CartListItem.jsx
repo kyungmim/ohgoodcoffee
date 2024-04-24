@@ -22,8 +22,6 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   const openModal = useModalStore((state) => state.openModal);
 
   useEffect(() => {
-    console.log('productQuantity', productQuantity, 'id', item._id);
-
     let postQuantity = productQuantity - item.quantity;
 
     if (postQuantity != 0) {
@@ -42,7 +40,15 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     if (!isProcessing && productQuantity < realQuantity) {
       setProductQuantity((prev) => prev + 1);
     } else if (!isProcessing && productQuantity == 0) {
-      handleDeleteItem(item._id);
+      openModal({
+        content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
+        callbackButton: {
+          확인: async () => {
+            await handleDeleteItem(item._id);
+          },
+          취소: '',
+        },
+      });
     } else {
       alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
       return;
@@ -96,7 +102,6 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   };
 
   const cartItemCheck = () => {
-    console.log('selectedCartItem', selectedCartItem, 'kkk', item);
     if (selectedCartItem.indexOf(item._id) > -1) {
       return true;
     } else {
@@ -107,7 +112,6 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   const handleCartCheck = () => {
     let arrCopy = [...selectedCartItem];
     const index = arrCopy.indexOf(item._id);
-    console.log('handleCarrtCHeck', index);
     if (index > -1) {
       let newArr = arrCopy.filter((el) => el != item._id);
       setSelectedCartItem(newArr);
@@ -121,6 +125,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   };
 
   const handleChange = (e) => {
+    //inputdml onChange를 위해 생성된 함수
     console.log('E value', e);
   };
 
@@ -139,20 +144,20 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
           <p className="cart-item-title">{item.product?.name}</p>
         </div>
       </div>
-      <div className='cart-price-number'>
-      <div className="cart-layout cart-quantity">
-        <div className="quantity-button" onClick={handleReduceQuantity}>
-          -
+      <div className="cart-price-number">
+        <div className="cart-layout cart-quantity">
+          <div className="quantity-button" onClick={handleReduceQuantity}>
+            -
+          </div>
+          <div>
+            <p>{productQuantity}</p>
+          </div>
+          <div className="quantity-button" onClick={handleAddQuantity}>
+            +
+          </div>
         </div>
-        <div>
-          <p>{productQuantity}</p>
-        </div>
-        <div className="quantity-button" onClick={handleAddQuantity}>
-          +
-        </div>
-      </div>
 
-      <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+        <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
       </div>
 
       <p className="button type-btn-cart button-small type-cart-btn" onClick={() => handleDeleteItem(item._id)}>

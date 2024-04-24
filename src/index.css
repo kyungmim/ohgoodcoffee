@@ -30,10 +30,6 @@ textarea {
   width: 100%;
 }
 
-pre {
-  all: unset;
-}
-
 /* 스크롤바 커스텀 시작 */
 ::-webkit-scrollbar {
   width: 6px;
@@ -83,6 +79,15 @@ select {
   inline-size: 100%;
   box-sizing: border-box;
   cursor: pointer;
+}
+
+pre {
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  white-space: pre-line;
 }
 
 /* Typography */
@@ -191,6 +196,10 @@ body {
 }
 
 .menu-item {
+  cursor: pointer;
+}
+
+.logout {
   cursor: pointer;
 }
 
@@ -428,6 +437,10 @@ body {
   width: 100px;
 }
 
+.type-margin {
+  margin-top: 30px;
+}
+
 .cart-button {
   display: flex;
   gap: 10px;
@@ -441,9 +454,15 @@ body {
   margin-left: auto;
 }
 
-.type-btn-cart {
+.type-btn-cart,
+.type-magarzin-btn {
   padding: 4px 10px;
   border: 1px solid var(--color-gray-30);
+}
+
+.type-magarzin-btn {
+  margin-top: 30px;
+  margin-left: auto;
 }
 
 .type-sales {
@@ -556,6 +575,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #aaa;
 }
 
 .profile-content {
@@ -932,7 +952,14 @@ body {
   text-align: center;
 }
 
+.magazine-desc-paragraph-cover {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+}
+
 .magazine-desc-paragraph {
+  flex-grow: 1;
   text-align: center;
   font-size: 16px;
   font-weight: var(--fw-regular);
@@ -1017,6 +1044,18 @@ body {
   gap: 50px;
 }
 
+.market-overview-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.market-overview-bottom-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .market-overview-desc {
   max-width: 660px;
   flex-grow: 1;
@@ -1074,6 +1113,7 @@ body {
 }
 
 .overview-contents {
+  text-align: left;
   margin: 30px 0;
   font-size: 18px;
   font-weight: var(--fw-regular);
@@ -1156,6 +1196,14 @@ body {
   text-align: right;
 }
 
+.coverstory-list:nth-child(even) .coverstorylist-list-description {
+  text-align: right;
+}
+
+.coverstory-list:nth-child(even) .coverstory-list-item {
+  align-items: flex-end;
+}
+
 .coverstory-list-cover {
   width: 400px;
   height: 400px;
@@ -1183,6 +1231,7 @@ body {
 }
 
 .coverstorylist-list-description {
+  text-align: left;
   font-weight: var(--fw-regular);
   line-height: 1.8rem;
   height: 200px;
@@ -1234,6 +1283,10 @@ body {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.click-cover {
+  border: 1px solid var(--color-black-20);
 }
 
 .card-title {
@@ -1623,7 +1676,7 @@ body {
 }
 
 .signup-sub-title {
-  width: 400px;
+  width: 350px;
   font-size: 18px;
 }
 
@@ -1740,6 +1793,18 @@ body {
   justify-content: center;
 }
 
+.product-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.product-main-content-text {
+  font-size: 14px;
+  color: var(--color-gray-30);
+}
+
 /* Error page */
 
 .error-text {
@@ -1811,6 +1876,10 @@ body {
   padding: 20px;
 }
 
+.test {
+  background-color: black;
+}
+
 /* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
 @media (max-width: 1024px) {
   /* .l_wrapper {
@@ -1820,9 +1889,22 @@ body {
   .coverstory-list,
   .coverstory-list:nth-child(even) {
     flex-direction: column;
+    width: 100%;
   }
   .coverstory-list:nth-child(even) {
     text-align: left;
+  }
+
+  .coverstory-list-item {
+    align-items: center;
+  }
+
+  .coverstorylist-list-description {
+    text-align: center;
+  }
+
+  .coverstory-list:nth-child(even) .coverstorylist-list-description {
+    text-align: center;
   }
 
   .pc-nav > li {
@@ -1871,11 +1953,15 @@ body {
     margin-top: 20px;
   }
 
+  .market-overview-desc {
+    width: 100%;
+  }
+
   .cart-price-number {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: centers;
+    justify-content: center;
     gap: 20px;
   }
 
@@ -1885,6 +1971,11 @@ body {
 
   .cart-quantity {
     flex-basis: 0;
+  }
+
+  .card-cover.type-info-card-cover {
+    width: 360px;
+    height: 360px;
   }
 
   .menu-list {
@@ -1920,6 +2011,11 @@ body {
     text-align: center;
   }
 
+  .review-list {
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+
   .about {
     flex-direction: column;
   }
@@ -1928,9 +2024,9 @@ body {
 /* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
 
 @media (max-width: 768px) {
-  .l_wrapper {
+  /* .l_wrapper {
     box-shadow: inset 0 0 10px blue;
-  }
+  } */
 
   .hamburgerMenu {
     display: block;
@@ -1997,5 +2093,13 @@ body {
   .cart-check {
     text-align: left;
     justify-content: flex-start;
+  }
+
+  .market-logo-slogan {
+    font-size: 40px;
+  }
+  .product-layout {
+    flex-grow: 1;
+    width: 100%;
   }
 }
