@@ -18,8 +18,6 @@ function UserMypageHeader() {
     }
   };
 
-  console.log('user', user);
-
   const fileInputRef = useRef(null);
 
   const handleIconClick = () => {

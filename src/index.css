@@ -81,6 +81,15 @@ select {
   cursor: pointer;
 }
 
+pre {
+  text-align: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  white-space: pre-line;
+}
+
 /* Typography */
 :root {
   font-family: 'Noto Sans KR', sans-serif;
@@ -187,6 +196,10 @@ body {
 }
 
 .menu-item {
+  cursor: pointer;
+}
+
+.logout {
   cursor: pointer;
 }
 
@@ -424,6 +437,10 @@ body {
   width: 100px;
 }
 
+.type-margin {
+  margin-top: 30px;
+}
+
 .cart-button {
   display: flex;
   gap: 10px;
@@ -558,6 +575,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: 1px solid #aaa;
 }
 
 .profile-content {
@@ -934,7 +952,14 @@ body {
   text-align: center;
 }
 
+.magazine-desc-paragraph-cover {
+  display: flex;
+  align-items: center;
+  max-width: 1100px;
+}
+
 .magazine-desc-paragraph {
+  flex-grow: 1;
   text-align: center;
   font-size: 16px;
   font-weight: var(--fw-regular);
@@ -1019,6 +1044,18 @@ body {
   gap: 50px;
 }
 
+.market-overview-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.market-overview-bottom-cover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .market-overview-desc {
   max-width: 660px;
   flex-grow: 1;
@@ -1076,6 +1113,7 @@ body {
 }
 
 .overview-contents {
+  text-align: left;
   margin: 30px 0;
   font-size: 18px;
   font-weight: var(--fw-regular);
@@ -1158,6 +1196,14 @@ body {
   text-align: right;
 }
 
+.coverstory-list:nth-child(even) .coverstorylist-list-description {
+  text-align: right;
+}
+
+.coverstory-list:nth-child(even) .coverstory-list-item {
+  align-items: flex-end;
+}
+
 .coverstory-list-cover {
   width: 400px;
   height: 400px;
@@ -1185,6 +1231,7 @@ body {
 }
 
 .coverstorylist-list-description {
+  text-align: left;
   font-weight: var(--fw-regular);
   line-height: 1.8rem;
   height: 200px;
@@ -1629,7 +1676,7 @@ body {
 }
 
 .signup-sub-title {
-  width: 400px;
+  width: 350px;
   font-size: 18px;
 }
 
@@ -1746,6 +1793,18 @@ body {
   justify-content: center;
 }
 
+.product-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.product-main-content-text {
+  font-size: 14px;
+  color: var(--color-gray-30);
+}
+
 /* Error page */
 
 .error-text {
@@ -1830,9 +1889,22 @@ body {
   .coverstory-list,
   .coverstory-list:nth-child(even) {
     flex-direction: column;
+    width: 100%;
   }
   .coverstory-list:nth-child(even) {
     text-align: left;
+  }
+
+  .coverstory-list-item {
+    align-items: center;
+  }
+
+  .coverstorylist-list-description {
+    text-align: center;
+  }
+
+  .coverstory-list:nth-child(even) .coverstorylist-list-description {
+    text-align: center;
   }
 
   .pc-nav > li {
@@ -2021,5 +2093,13 @@ body {
   .cart-check {
     text-align: left;
     justify-content: flex-start;
+  }
+
+  .market-logo-slogan {
+    font-size: 40px;
+  }
+  .product-layout {
+    flex-grow: 1;
+    width: 100%;
   }
 }
