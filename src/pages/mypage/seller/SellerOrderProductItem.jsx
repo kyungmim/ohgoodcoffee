@@ -20,18 +20,19 @@ function SellerOrderProductItem({ product, item }) {
     setItemInfo(!itemInfo);
   };
 
-  function getImageSrc(product) {
+  const getImageSrc = (product) => {
     if (product.image && product.image.name) {
       return `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${product.image.name}`;
     } else {
       return `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${product.image}`;
     }
-  }
+  };
 
   return (
     <>
       <button className="order-main" onClick={handleShowClick}>
         <div className="order-main-item-title">
+          .order-main-item-title
           <img src={getImageSrc(product)} alt="상품 사진" />
         </div>
         <div className="order-main-item-desc">
