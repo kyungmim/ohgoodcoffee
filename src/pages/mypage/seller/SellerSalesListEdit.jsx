@@ -233,7 +233,7 @@ function SellerSalesListEdit() {
                     <input
                       id="mainImages"
                       type="file"
-                      {...register('i1', {
+                      {...register('mainImages', {
                         minLength: {
                           value: `${product?.mainImages[0].name}`,
                           message: '상품사진을 넣어주세요.',
@@ -263,79 +263,43 @@ function SellerSalesListEdit() {
                 </div>
 
                 <div className="product-sub-layout">
-                  <div className="product-layout">
-                    <p className="product-main-content-text">Sub Contents</p>
-
-                    <div className="signup-input-box">
-                      <div className="form-input">
-                        <input
-                          id="detailImages"
-                          type="file"
-                          {...register('i2', {
-                            minLength: {
-                              value: `${product?.detailImages[0].name}`,
-                              message: '상품사진을 넣어주세요.',
-                            },
-                          })}
-                        />
-                      </div>
-                      {errors.i2 && <p className="err-text">{errors.i2.message}</p>}
+                  <div className="signup-input-box">
+                    <div className="form-input ">
+                      <textarea
+                        className="type-textarea"
+                        placeholder="상품 설명을 입력해주세요."
+                        id="content"
+                        type="text"
+                        {...register('d2', {
+                          minLength: {
+                            value: 10,
+                            message: '10자리 이상 입력하세요.',
+                          },
+                        })}
+                      />
                     </div>
-
-                    <div className="signup-input-box">
-                      <div className="form-input ">
-                        <textarea
-                          className="type-textarea"
-                          placeholder="상품 설명을 입력해주세요."
-                          id="content"
-                          type="text"
-                          {...register('d2', {
-                            minLength: {
-                              value: 10,
-                              message: '10자리 이상 입력하세요.',
-                            },
-                          })}
-                        />
-                      </div>
-                      {errors.d2 && <p className="err-text">{errors.d2.message}</p>}
-                    </div>
+                    {errors.d2 && <p className="err-text">{errors.d2.message}</p>}
                   </div>
                 </div>
-                <div className="product-sub-layout">
-                  <div className="product-layout">
-                    <div className="signup-input-box">
-                      <div className="form-input">
-                        <input
-                          id="detailImages"
-                          type="file"
-                          {...register('i3', {
-                            minLength: {
-                              value: `${product?.detailImages[1].name}`,
-                              message: '상품사진을 넣어주세요.',
-                            },
-                          })}
-                        />
-                      </div>
-                      {errors.i3 && <p className="err-text">{errors.i3.message}</p>}
+              </div>
+              <div className="product-sub-layout">
+                <div className="product-layout">
+                  <div className="signup-input-box">
+                    <div className="form-input ">
+                      <textarea
+                        className="type-textarea"
+                        placeholder="상품 설명을 입력해주세요."
+                        id="content"
+                        type="text"
+                        {...register('d3', {
+                          minLength: {
+                            value: 10,
+                            message: '10자리 이상 입력하세요.',
+                          },
+                        })}
+                      />
                     </div>
-
-                    <div className="signup-input-box">
-                      <div className="form-input ">
-                        <textarea
-                          className="type-textarea"
-                          placeholder="상품 설명을 입력해주세요."
-                          id="content"
-                          type="text"
-                          {...register('d3', {
-                            minLength: {
-                              value: 10,
-                              message: '10자리 이상 입력하세요.',
-                            },
-                          })}
-                        />
-                      </div>
-                      {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
-                    </div>
+                    {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
                   </div>
                 </div>
               </div>
