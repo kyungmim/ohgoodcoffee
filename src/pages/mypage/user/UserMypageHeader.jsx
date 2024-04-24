@@ -1,14 +1,11 @@
 import profile from '@assets/profile.svg';
-import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 
 function UserMypageHeader() {
   const { user } = useUserStore();
   const [activeMenu, setActiveMenu] = useState('주문 내역 조회'); // 초기값으로 '/mypage'를 설정
-  const [selectedImage, setSelectedImage] = useState(null);
-  const axios = useCustomAxios();
 
   // 클릭된 요소의 데이터 속성을 통해 활성화된 메뉴 항목을 식별하고 상태 업데이트
   const handleMenuClick = (e) => {
@@ -17,38 +14,6 @@ function UserMypageHeader() {
       setActiveMenu(targetMenu);
     }
   };
-
-  const fileInputRef = useRef(null);
-
-  const handleIconClick = () => {
-    fileInputRef.current.click();
-  };
-
-  const handleImageChange = (e) => {
-    const file = e.target.files[0];
-    setSelectedImage(file);
-  };
-
-  useEffect(() => {
-    const uploadAndGet = async () => {
-      const fileRes = await axios.post('/files', {
-        method: 'post',
-        headers: {
-          // 파일 업로드시 필요한 설정
-          'Content-Type': 'multipart/form-data',
-        },
-        data: selectedImage,
-      });
-      console.log(fileRes);
-      let imgData = { profileImage: selectedImage };
-      const res = await axios.fetch(`/users/${user._id}`, imgData);
-      console.log('res', res);
-    };
-    if (selectedImage != null) {
-      uploadAndGet();
-    }
-    console.log('GG');
-  }, [selectedImage]);
 
   return (
     <div className="container">
@@ -87,13 +52,13 @@ function UserMypageHeader() {
           <div className="inner">
             <div className="user-info">
               <div className="profile">
-                <div className="profile-cover" onClick={handleIconClick}>
+                <div className="profile-cover">
                   <img
                     className="profile-cover-src"
                     src={user.profileImage ? `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${user.profileImage}` : profile}
                     alt="회원 프로필 사진"
                   />
-                  <input ref={fileInputRef} type="file" style={{ display: 'none' }} onChange={handleImageChange} />
+                  <input type="file" style={{ display: 'none' }} />
                 </div>
               </div>
               <div className="profile-content">

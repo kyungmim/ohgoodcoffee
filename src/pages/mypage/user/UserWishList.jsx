@@ -11,11 +11,13 @@ function UserWishList() {
   }, []);
 
   const fetchList = async () => {
-    const response = await axios.get('/bookmarks/product');
-    setData(response.data);
+    const res = await axios.get('/bookmarks/product');
+    console.log(res.data.item);
+    const wishlist = res.data.item;
+    setData(wishlist);
   };
 
-  const wishList = data?.item.map((item) => <UserWishListItem key={item._id} item={item} />);
+  const wishList = data?.map((item) => <UserWishListItem key={item._id} item={item} />);
 
   return (
     <>
