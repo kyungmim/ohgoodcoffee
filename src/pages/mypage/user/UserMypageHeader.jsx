@@ -1,4 +1,4 @@
-import profile from '@public/profile.svg';
+import profile from '@assets/profile.svg';
 import useUserStore from '@zustand/store';
 import { useState } from 'react';
 import { Link, Outlet } from 'react-router-dom';
@@ -34,12 +34,31 @@ function UserMypageHeader() {
                 <Link to="/mypage/userinfo">회원정보</Link>
               </li>
             </ul>
+            <ul className="menu-list-mo" onClick={handleMenuClick}>
+              <li className={`menu-item ${activeMenu === '주문 내역 조회' ? 'is_active' : ''}`} data-menu-id="/mypage">
+                <Link to="/mypage">주문 내역 조회</Link>
+              </li>
+              <li className={`menu-item ${activeMenu === '위시리스트' ? 'is_active' : ''}`} data-menu-id="/mypage/wishlist">
+                <Link to="/mypage/wishlist">위시리스트</Link>
+              </li>
+              <li className={`menu-item ${activeMenu === '내가 쓴 리뷰' ? 'is_active' : ''}`} data-menu-id="/mypage/review">
+                <Link to="/mypage/review">내가 쓴 리뷰</Link>
+              </li>
+              <li className={`menu-item ${activeMenu === '회원정보' ? 'is_active' : ''}`} data-menu-id="/mypage/userinfo">
+                <Link to="/mypage/userinfo">회원정보</Link>
+              </li>
+            </ul>
           </div>
           <div className="inner">
             <div className="user-info">
               <div className="profile">
                 <div className="profile-cover">
-                  <img className="profile-cover-src" src={profile} alt="회원 프로필 사진" />
+                  <img
+                    className="profile-cover-src"
+                    src={user.profileImage ? `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${user.profileImage}` : profile}
+                    alt="회원 프로필 사진"
+                  />
+                  <input type="file" style={{ display: 'none' }} />
                 </div>
               </div>
               <div className="profile-content">

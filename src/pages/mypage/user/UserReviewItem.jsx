@@ -10,7 +10,7 @@ function UserReviewItem({ item }) {
       <div className="review">
         <div className="review-contents">
           <p>{item.user.name}</p>
-          <p className="review-content-time">{item.createdAt}</p>
+          <p className="review-content-time">{item.createdAt.split(' ')[0].replace(/\./g, '-')}</p>
         </div>
         <p className="review-content-desc">{item.content}</p>
       </div>

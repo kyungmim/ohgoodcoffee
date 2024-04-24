@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
-import arrow from '@public/dropup_icon.svg'; // 이미지 경로 수정 필요
+import arrow from '@assets/dropup_icon.svg'; // 이미지 경로 수정 필요
 import useUserStore from '@zustand/store';
 import { useState } from 'react';
+import { formatPhoneNumber } from '@utils/date';
 
 UserOrderProductItem.propTypes = {
   product: PropTypes.object.isRequired,
@@ -19,11 +20,19 @@ function UserOrderProductItem({ product, item }) {
     setItemInfo(!itemInfo);
   };
 
+  function getImageSrc(product) {
+    if (product.image && product.image.name) {
+      return `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${product.image.name}`;
+    } else {
+      return `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${product.image}`;
+    }
+  }
+
   return (
     <>
       <button className="order-main" onClick={handleShowClick}>
         <div className="order-main-item-title">
-          <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${product.image}`} alt="상품 사진" />
+          <img src={getImageSrc(product)} alt="상품 사진" />
         </div>
         <div className="order-main-item-desc">
           <div className="order-main-item">
@@ -46,7 +55,7 @@ function UserOrderProductItem({ product, item }) {
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">연락처</p>
-                <p>{user.phone}</p>
+                <p>{formatPhoneNumber(user.phone)}</p>
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">이메일</p>
@@ -61,7 +70,7 @@ function UserOrderProductItem({ product, item }) {
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">연락처</p>
-                <p>{item.phone}</p>
+                <p>{formatPhoneNumber(user.phone)}</p>
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">배송지</p>

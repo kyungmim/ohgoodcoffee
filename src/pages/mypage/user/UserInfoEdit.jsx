@@ -40,104 +40,102 @@ function SellerInfoEdit() {
   };
   return (
     <>
-      <div className="l_wrapper">
-        <div className="item-wrapper">
-          <div className="main-content">
-            <form onSubmit={handleSubmit(onSubmit)} className="signup_form">
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="name">
-                  Name <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      type="text"
-                      id="name"
-                      {...register('name', {
-                        required: '이름을 입력하세요.',
-                        minLength: {
-                          value: 2,
-                          message: '이름을 2글자 이상 입력하세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.name && <p className="err-text">{errors.name.message}</p>}
+      <div className="item-wrapper">
+        <div className="main-content">
+          <form onSubmit={handleSubmit(onSubmit)} className="signup_form">
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="name">
+                Name <span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    type="text"
+                    id="name"
+                    {...register('name', {
+                      required: '이름을 입력하세요.',
+                      minLength: {
+                        value: 2,
+                        message: '이름을 2글자 이상 입력하세요.',
+                      },
+                    })}
+                  />
                 </div>
-              </fieldset>
+                {errors.name && <p className="err-text">{errors.name.message}</p>}
+              </div>
+            </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="email">
-                  Email <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      type="text"
-                      id="email"
-                      {...register('email', {
-                        required: '이메일은 필수 입니다.',
-                        pattern: {
-                          value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
-                          message: '이메일 형식이 아닙니다.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.email && <p className="err-text">{errors.email.message}</p>}
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="email">
+                Email <span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    type="text"
+                    id="email"
+                    {...register('email', {
+                      required: '이메일은 필수 입니다.',
+                      pattern: {
+                        value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+                        message: '이메일 형식이 아닙니다.',
+                      },
+                    })}
+                  />
                 </div>
-              </fieldset>
+                {errors.email && <p className="err-text">{errors.email.message}</p>}
+              </div>
+            </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="phone">
-                  Phone Number
-                  <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      type="text"
-                      id="phone"
-                      {...register('phone', {
-                        required: '전화번호는 필수 입니다.',
-                        minLength: {
-                          value: 10,
-                          message: '10자리 이상 입력하세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.phone && <p className="err-text">{errors.phone.message}</p>}
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="phone">
+                Phone Number
+                <span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    type="text"
+                    id="phone"
+                    {...register('phone', {
+                      required: '전화번호는 필수 입니다.',
+                      minLength: {
+                        value: 10,
+                        message: '10자리 이상 입력하세요.',
+                      },
+                    })}
+                  />
                 </div>
-              </fieldset>
+                {errors.phone && <p className="err-text">{errors.phone.message}</p>}
+              </div>
+            </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="address">
-                  Address <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      type="text"
-                      id="address"
-                      {...register('address', {
-                        required: '주소는 필수 입니다.',
-                        minLength: {
-                          value: 10,
-                          message: '10자리 이상 입력하세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.address && <p className="err-text">{errors.address.message}</p>}
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="address">
+                Address <span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    type="text"
+                    id="address"
+                    {...register('address', {
+                      required: '주소는 필수 입니다.',
+                      minLength: {
+                        value: 10,
+                        message: '10자리 이상 입력하세요.',
+                      },
+                    })}
+                  />
                 </div>
-              </fieldset>
+                {errors.address && <p className="err-text">{errors.address.message}</p>}
+              </div>
+            </fieldset>
 
-              <button className="button button-large btn-Fill btn-layout" type="submit">
-                수정하기
-              </button>
-            </form>
-          </div>
+            <button className="button button-large btn-Fill btn-layout" type="submit">
+              수정하기
+            </button>
+          </form>
         </div>
       </div>
     </>

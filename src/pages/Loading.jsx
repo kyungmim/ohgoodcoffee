@@ -9,7 +9,7 @@ function Loading() {
   return (
     <div className="loading-box">
       <div className="loading">
-        <Lottie options={defaultOptions} animationData={LoadingIcon} height={100} width={100} />;
+        <Lottie options={defaultOptions} animationData={LoadingIcon} height={100} width={100} />
       </div>
     </div>
   );

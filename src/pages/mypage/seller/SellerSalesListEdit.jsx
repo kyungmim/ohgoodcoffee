@@ -29,7 +29,7 @@ function SellerSalesListEdit() {
       price: product?.price,
       quantity: product?.quantity,
       name: product?.name,
-      content: product?.content,
+      content: product?.content[0].d1,
       shippingFees: product?.shippingFees,
       type: product?.type,
     },
@@ -93,121 +93,77 @@ function SellerSalesListEdit() {
 
   return (
     <>
-      <div className="l_wrapper">
-        <div className="item-wrapper">
-          <div className="main-title">
-            <p className="main-contents-title">상품 수정</p>
-          </div>
-          <div className="main-content">
-            <form className="signup_form" onSubmit={handleSubmit(onSubmit)}>
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="mainImages">
-                  Photo<span className="signup-required-point">*</span>
-                </label>
-                <div className="form-input">
-                  <input type="file" id="mainImages" {...register('mainImages')} />
-                </div>
-              </fieldset>
+      <div className="item-wrapper">
+        <div className="main-title">
+          <p className="main-contents-title">상품 수정</p>
+        </div>
+        <div className="main-content">
+          <form className="signup_form" onSubmit={handleSubmit(onSubmit)}>
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="mainImages">
+                Photo<span className="signup-required-point">*</span>
+              </label>
+              <div className="form-input">
+                <input type="file" id="mainImages" {...register('mainImages')} />
+              </div>
+            </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="name">
-                  Product Name<span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      id="name"
-                      type="text"
-                      {...register('name', {
-                        required: '상품이름은 필수 입니다.',
-                        minLength: {
-                          value: 2,
-                          message: '2자리 이상 입력하세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.name && <p className="err-text">{errors.name.message}</p>}
-                </div>
-              </fieldset>
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="content">
-                  Product Content<span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input ">
-                    <textarea
-                      className="type-textarea"
-                      id="content"
-                      type="text"
-                      {...register('content', {
-                        required: '상품설명은 필수 입니다.',
-                        minLength: {
-                          value: 10,
-                          message: '10자리 이상 입력하세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.content && <p className="err-text">{errors.content.message}</p>}
-                </div>
-              </fieldset>
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="price">
-                  Price<span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      id="price"
-                      type="text"
-                      {...register('price', {
-                        required: '가격은 필수 입니다.',
-                        minLength: {
-                          value: 4,
-                          message: '숫자를 입력해주세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.price && <p className="err-text">{errors.price.message}</p>}
-                </div>
-              </fieldset>
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="quantity">
-                  Quantity <span className="signup-required-point">*</span>
-                </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      id="quantity"
-                      type="text"
-                      {...register('quantity', {
-                        required: '수량은 필수 입니다.',
-                        minLength: {
-                          value: 1,
-                          message: '숫자를 입력해주세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.quantity && <p className="err-text">{errors.quantity.message}</p>}
-                </div>
-              </fieldset>
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="shippingFees">
-                  ShippingFees <span className="signup-required-point">*</span>
-                </label>
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="name">
+                Product Name<span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
                 <div className="form-input">
                   <input
-                    id="shippingFees"
+                    id="name"
                     type="text"
-                    {...register('shippingFees', {
-                      required: '배송비는 필수 입니다.',
+                    {...register('name', {
+                      required: '상품이름은 필수 입니다.',
+                      minLength: {
+                        value: 2,
+                        message: '2자리 이상 입력하세요.',
+                      },
+                    })}
+                  />
+                </div>
+                {errors.name && <p className="err-text">{errors.name.message}</p>}
+              </div>
+            </fieldset>
+
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="content">
+                Product Content<span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input ">
+                  <textarea
+                    className="type-textarea"
+                    id="content"
+                    type="text"
+                    {...register('content', {
+                      required: '상품설명은 필수 입니다.',
+                      minLength: {
+                        value: 10,
+                        message: '10자리 이상 입력하세요.',
+                      },
+                    })}
+                  />
+                </div>
+                {errors.content && <p className="err-text">{errors.content.message}</p>}
+              </div>
+            </fieldset>
+
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="price">
+                Price<span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    id="price"
+                    type="text"
+                    {...register('price', {
+                      required: '가격은 필수 입니다.',
                       minLength: {
                         value: 4,
                         message: '숫자를 입력해주세요.',
@@ -215,34 +171,76 @@ function SellerSalesListEdit() {
                     })}
                   />
                 </div>
-                {errors.shippingFees && <p className="err-text">{errors.shippingFees.message}</p>}
-              </fieldset>
-
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="type">
-                  Category
-                </label>
-
-                <div className="signup-select-box">
-                  <div className="signup-select-box-item">
-                    <select className="select" id="type" {...register('type')}>
-                      <option value="new">New</option>
-                      <option value="best">Best</option>
-                    </select>
-                  </div>
-                </div>
-              </fieldset>
-
-              <div className="button-box type-btn-gap">
-                <button className="button button-small btn-Fill btn-layout type-sales-btn" type="submit">
-                  수정하기
-                </button>
-                <button className="button button-small btn-null btn-layout type-sales-btn" onClick={handleDeletClick}>
-                  삭제하기
-                </button>
+                {errors.price && <p className="err-text">{errors.price.message}</p>}
               </div>
-            </form>
-          </div>
+            </fieldset>
+
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="quantity">
+                Quantity <span className="signup-required-point">*</span>
+              </label>
+              <div className="signup-input-box">
+                <div className="form-input">
+                  <input
+                    id="quantity"
+                    type="text"
+                    {...register('quantity', {
+                      required: '수량은 필수 입니다.',
+                      minLength: {
+                        value: 1,
+                        message: '숫자를 입력해주세요.',
+                      },
+                    })}
+                  />
+                </div>
+                {errors.quantity && <p className="err-text">{errors.quantity.message}</p>}
+              </div>
+            </fieldset>
+
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="shippingFees">
+                ShippingFees <span className="signup-required-point">*</span>
+              </label>
+              <div className="form-input">
+                <input
+                  id="shippingFees"
+                  type="text"
+                  {...register('shippingFees', {
+                    required: '배송비는 필수 입니다.',
+                    minLength: {
+                      value: 4,
+                      message: '숫자를 입력해주세요.',
+                    },
+                  })}
+                />
+              </div>
+              {errors.shippingFees && <p className="err-text">{errors.shippingFees.message}</p>}
+            </fieldset>
+
+            <fieldset className="signup-layout">
+              <label className="signup-sub-title" htmlFor="type">
+                Category
+              </label>
+
+              <div className="signup-select-box">
+                <div className="signup-select-box-item">
+                  <select className="select" id="type" {...register('type')}>
+                    <option value="new">New</option>
+                    <option value="best">Best</option>
+                  </select>
+                </div>
+              </div>
+            </fieldset>
+
+            <div className="button-box type-btn-gap">
+              <button className="button button-small btn-Fill btn-layout type-sales-btn" type="submit">
+                수정하기
+              </button>
+              <button className="button button-small btn-null btn-layout type-sales-btn" onClick={handleDeletClick}>
+                삭제하기
+              </button>
+            </div>
+          </form>
         </div>
       </div>
     </>

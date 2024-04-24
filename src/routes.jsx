@@ -25,6 +25,8 @@ import SellerInfo from '@pages/mypage/seller/SellerInfo';
 import { createBrowserRouter } from 'react-router-dom';
 import CartList from '@pages/cart/CartList';
 import PaymentComplete from '@pages/PaymentComplete';
+import SellerOrderList from '@pages/mypage/seller/SellerOrderList';
+import SellerWishList from '@pages/mypage/seller/SellerWishList';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -104,6 +106,14 @@ const router = createBrowserRouter([
           {
             index: true,
             element: <SellerSalesList />,
+          },
+          {
+            path: 'orderlist',
+            element: <SellerOrderList />,
+          },
+          {
+            path: 'wishlist',
+            element: <SellerWishList />,
           },
           {
             path: 'upload',

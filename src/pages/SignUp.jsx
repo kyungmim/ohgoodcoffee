@@ -1,5 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import TopLine from '@public/ogc-top-line.svg';
+import TopLine from '@assets/ogc-top-line.svg';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
@@ -11,14 +11,28 @@ function SignUp() {
     formState: { errors },
   } = useForm({
     values: {
-      email: 'test30@market.com',
-      password: '11111111',
-      name: 'test',
-      address: '경기도 남양주시 어딘가',
-      phone: '01012345678',
-      type: 'seller',
+      email: '',
+      password: '',
+      name: '',
+      address: '',
+      phone: '',
+      type: 'user',
     },
   });
+  // const {
+  //   register,
+  //   handleSubmit,
+  //   formState: { errors },
+  // } = useForm({
+  //   values: {
+  //     email: 'test30@market.com',
+  //     password: '11111111',
+  //     name: 'test',
+  //     address: '경기도 남양주시 어딘가',
+  //     phone: '01012345678',
+  //     type: 'seller',
+  //   },
+  // });
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
