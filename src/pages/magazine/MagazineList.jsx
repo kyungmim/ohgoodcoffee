@@ -1,17 +1,27 @@
 import MagazineListItem from './MagazineListItem';
 import { useEffect, useState } from 'react';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useModalStore from '@zustand/useModalStore.mjs';
 
 function MagazineList() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
+  const openModal = useModalStore((state) => state.openModal);
 
   const fetchData = async () => {
     try {
       const res = await axios.get('/posts?type=magazine');
       setData(res.data.item);
     } catch (err) {
-      console.error(err);
+      // console.error(err);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
