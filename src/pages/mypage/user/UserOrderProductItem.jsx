@@ -66,7 +66,7 @@ function UserOrderProductItem({ product, item }) {
             <div className="order-detail-list">
               <div className="order-detail-items">
                 <p className="order-detail-item">수령인</p>
-                <p>{item.address.name}</p>
+                <p>{item.address.userName}</p>
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">연락처</p>
@@ -74,7 +74,7 @@ function UserOrderProductItem({ product, item }) {
               </div>
               <div className="order-detail-items">
                 <p className="order-detail-item">배송지</p>
-                <p>{item.address.value}</p>
+                <p>{item.address.address}</p>
               </div>
             </div>
           </div>

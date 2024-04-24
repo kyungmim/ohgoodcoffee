@@ -1,6 +1,6 @@
-import coverImg_1 from '@assets/main-cover-img-1.jpg';
-import coverImg_2 from '@assets/main-cover-img-2.jpg';
-import coverImg_3 from '@assets/main-cover-img-3.jpg';
+import coverImg_1 from '@assets/main-cover-img-1.png';
+import coverImg_2 from '@assets/main-cover-img-2.png';
+import coverImg_3 from '@assets/main-cover-img-3.png';
 import coverImg_4 from '@assets/main-cover-img-4.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
@@ -55,23 +55,9 @@ function Mainpage() {
     <>
       <main className="main">
         <div>
-          <Swiper
-            className="main-header"
-            modules={[Pagination, Autoplay]}
-            spaceBetween={0}
-            slidesPerView={1}
-            autoplay={{ delay: 3000, disableOnInteraction: false }}
-            breakpoints={{
-              768: {
-                slidesPerView: 3,
-              },
-              1024: {
-                slidesPerView: 2,
-              },
-            }}
-          >
+          <Swiper className="main-header" modules={[Pagination, Autoplay]} spaceBetween={0} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
             <SwiperSlide className="main-cover">
-              <img src={coverImg_1} alt="커피 커버 이미지" />
+              <img className="main-cover-src" src={coverImg_1} alt="커피 커버 이미지" />
             </SwiperSlide>
             <SwiperSlide className="main-cover">
               <img className="main-cover-src" src={coverImg_2} alt="커피 커버 이미지" />

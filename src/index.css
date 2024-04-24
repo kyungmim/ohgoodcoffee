@@ -1176,7 +1176,7 @@ body {
   align-items: center;
 }
 .main-cover-src {
-  object-fit: contain;
+  object-fit: cover;
 }
 
 .coverstory-list {
