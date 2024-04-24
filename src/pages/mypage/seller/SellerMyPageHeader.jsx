@@ -1,12 +1,11 @@
 import profile from '@assets/profile.svg';
 import useUserStore from '@zustand/store';
-import { useEffect, useState } from 'react';
-import { Link, Outlet, useNavigate } from 'react-router-dom';
+import { useState } from 'react';
+import { Link, Outlet } from 'react-router-dom';
 
 function SellerMyPageHeader() {
   const { user } = useUserStore();
   const [activeMenu, setActiveMenu] = useState('상품 목록 조회'); // 초기값으로 '/mypage'를 설정
-  const navigate = useNavigate();
 
   // 클릭된 요소의 데이터 속성을 통해 활성화된 메뉴 항목을 식별하고 상태 업데이트
   const handleMenuClick = (e) => {
@@ -15,20 +14,6 @@ function SellerMyPageHeader() {
       setActiveMenu(targetMenu);
     }
   };
-
-  useEffect(() => {
-    if (activeMenu === '주문 내역 조회') {
-      navigate('/seller/mypage/orderlist');
-    } else if (activeMenu === '위시리스트') {
-      navigate('/seller/mypage/wishlist');
-    } else if (activeMenu === '상품 목록 조회') {
-      navigate('/seller/mypage');
-    } else if (activeMenu === '상품 등록') {
-      navigate('/seller/mypage/upload');
-    } else if (activeMenu === '회원 정보') {
-      navigate('/seller/mypage/sellerinfo');
-    }
-  }, [activeMenu, navigate]);
 
   return (
     <div className="container">
