@@ -25,7 +25,10 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     let postQuantity = productQuantity - item.quantity;
 
     if (postQuantity != 0) {
-      let cart = { product_id: Number(item.product_id), quantity: postQuantity };
+      let cart = {
+        product_id: Number(item.product_id),
+        quantity: postQuantity,
+      };
 
       handleRequest(cart);
     }
@@ -50,7 +53,12 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
         },
       });
     } else {
-      alert(`현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`);
+      openModal({
+        content: `현재 구매 가능한 재고 수량은 ${realQuantity} 개 입니다.`,
+        callbackButton: {
+          확인: '',
+        },
+      });
       return;
     }
   };

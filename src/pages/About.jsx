@@ -1,4 +1,4 @@
-import boram from '@assets/boram3.jpg';
+import boram from '@assets/boram.jpg';
 function About() {
   return (
     <div className="l_wrapper">

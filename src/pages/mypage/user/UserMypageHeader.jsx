@@ -5,11 +5,11 @@ import { Link, Outlet } from 'react-router-dom';
 
 function UserMypageHeader() {
   const { user } = useUserStore();
-  const [activeMenu, setActiveMenu] = useState('주문 내역 조회'); // 초기값으로 '/mypage'를 설정
+  const [activeMenu, setActiveMenu] = useState('/mypage'); // 초기값으로 '/mypage'를 설정
 
-  // 클릭된 요소의 데이터 속성을 통해 활성화된 메뉴 항목을 식별하고 상태 업데이트
   const handleMenuClick = (e) => {
-    const targetMenu = e.target.innerText;
+    // console.log('클릭', e.target.attributes.href.nodeValue);
+    const targetMenu = e.target.attributes.href.nodeValue;
     if (targetMenu) {
       setActiveMenu(targetMenu);
     }
@@ -21,30 +21,30 @@ function UserMypageHeader() {
         <div className="main-container">
           <div className="sidebar">
             <ul className="menu-list" onClick={handleMenuClick}>
-              <li className={`menu-item ${activeMenu === '주문 내역 조회' ? 'is_active' : ''}`} data-menu-id="/mypage">
+              <li className={`menu-item ${activeMenu === '/mypage' ? 'is_active' : ''}`} data-menu-id="/mypage">
                 <Link to="/mypage">주문 내역 조회</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '위시리스트' ? 'is_active' : ''}`} data-menu-id="/mypage/wishlist">
+              <li className={`menu-item ${activeMenu === '/mypage/wishlist' ? 'is_active' : ''}`} data-menu-id="/mypage/wishlist">
                 <Link to="/mypage/wishlist">위시리스트</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '내가 쓴 리뷰' ? 'is_active' : ''}`} data-menu-id="/mypage/review">
+              <li className={`menu-item ${activeMenu === '/mypage/review' ? 'is_active' : ''}`} data-menu-id="/mypage/review">
                 <Link to="/mypage/review">내가 쓴 리뷰</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '회원정보' ? 'is_active' : ''}`} data-menu-id="/mypage/userinfo">
+              <li className={`menu-item ${activeMenu === '/mypage/userinfo' ? 'is_active' : ''}`} data-menu-id="/mypage/userinfo">
                 <Link to="/mypage/userinfo">회원정보</Link>
               </li>
             </ul>
             <ul className="menu-list-mo" onClick={handleMenuClick}>
-              <li className={`menu-item ${activeMenu === '주문 내역 조회' ? 'is_active' : ''}`} data-menu-id="/mypage">
+              <li className={`menu-item ${activeMenu === '/mypage' ? 'is_active' : ''}`} data-menu-id="/mypage">
                 <Link to="/mypage">주문 내역 조회</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '위시리스트' ? 'is_active' : ''}`} data-menu-id="/mypage/wishlist">
+              <li className={`menu-item ${activeMenu === '/mypage/wishlist' ? 'is_active' : ''}`} data-menu-id="/mypage/wishlist">
                 <Link to="/mypage/wishlist">위시리스트</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '내가 쓴 리뷰' ? 'is_active' : ''}`} data-menu-id="/mypage/review">
+              <li className={`menu-item ${activeMenu === '/mypage/review' ? 'is_active' : ''}`} data-menu-id="/mypage/review">
                 <Link to="/mypage/review">내가 쓴 리뷰</Link>
               </li>
-              <li className={`menu-item ${activeMenu === '회원정보' ? 'is_active' : ''}`} data-menu-id="/mypage/userinfo">
+              <li className={`menu-item ${activeMenu === '/mypage/userinfo' ? 'is_active' : ''}`} data-menu-id="/mypage/userinfo">
                 <Link to="/mypage/userinfo">회원정보</Link>
               </li>
             </ul>
