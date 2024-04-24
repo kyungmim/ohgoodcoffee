@@ -29,9 +29,6 @@ function SellerSalesListEdit() {
       price: product?.price,
       quantity: product?.quantity,
       name: product?.name,
-      i1: product?.mainImages[0],
-      i2: product?.detailImages[0],
-      i3: product?.detailImages[1],
       d1: product?.content[0],
       d2: product?.content[1],
       d3: product?.content[2],
@@ -65,48 +62,25 @@ function SellerSalesListEdit() {
   };
 
   const onSubmit = async (formData) => {
-    // console.log('formData 최종', formData);
     try {
-      if (formData.profileImage.length > 0) {
-        // 프로필 이미지를 추가한 경우
-        const imageFormData = new FormData();
-        imageFormData.append('attach', formData.profileImage[0]);
-
-        const fileRes = await axios('/files', {
-          method: 'post',
-          headers: {
-            // 파일 업로드시 필요한 설정
-            'Content-Type': 'multipart/form-data',
-          },
-          data: imageFormData,
-        });
-        // console.log(fileRes);
-        // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
-        formData.profileImage = fileRes.data.item[0].name;
-      } else {
-        // profileImage 속성을 제거
-        delete formData.profileImage;
-      }
-
       const res = await axios.patch(`/seller/products/${itemId}`, formData);
       openModal({
-        content: `${res.data.item.name}상품이 수정되었습니다.  :)`,
+        content: `${res.data.updated.name}상품이 수정되었습니다.  :)`,
         callbackButton: {
-          확인: '', //() => {
-          //   navigate(window.location.reload(), { state: { from: window.location.reload() } });
-          // },
+          확인: () => {
+            navigate(window.location.replace('/seller/mypage'), { state: { from: window.location.replace('/seller/mypage') } });
+          },
         },
       });
     } catch (err) {
-      // console.log(err);
-      openModal({
-        content: `${err.response?.data.message}`,
-        callbackButton: {
-          확인: () => {
-            navigate('/', { state: { from: '/' } });
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
           },
-        },
-      });
+        });
+      }
     }
   };
 
@@ -229,22 +203,6 @@ function SellerSalesListEdit() {
                 <p className="product-main-content-text">Main Contents</p>
 
                 <div className="signup-input-box">
-                  <div className="form-input">
-                    <input
-                      id="mainImages"
-                      type="file"
-                      {...register('mainImages', {
-                        minLength: {
-                          value: `${product?.mainImages[0].name}`,
-                          message: '상품사진을 넣어주세요.',
-                        },
-                      })}
-                    />
-                  </div>
-                  {errors.i1 && <p className="err-text">{errors.i1.message}</p>}
-                </div>
-
-                <div className="signup-input-box">
                   <div className="form-input ">
                     <textarea
                       className="type-textarea"
@@ -262,6 +220,7 @@ function SellerSalesListEdit() {
                   {errors.d1 && <p className="err-text">{errors.d1.message}</p>}
                 </div>
 
+                <p className="product-main-content-text">Sub Contents</p>
                 <div className="product-sub-layout">
                   <div className="signup-input-box">
                     <div className="form-input ">
@@ -281,26 +240,22 @@ function SellerSalesListEdit() {
                     {errors.d2 && <p className="err-text">{errors.d2.message}</p>}
                   </div>
                 </div>
-              </div>
-              <div className="product-sub-layout">
-                <div className="product-layout">
-                  <div className="signup-input-box">
-                    <div className="form-input ">
-                      <textarea
-                        className="type-textarea"
-                        placeholder="상품 설명을 입력해주세요."
-                        id="content"
-                        type="text"
-                        {...register('d3', {
-                          minLength: {
-                            value: 10,
-                            message: '10자리 이상 입력하세요.',
-                          },
-                        })}
-                      />
-                    </div>
-                    {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
+                <div className="signup-input-box">
+                  <div className="form-input ">
+                    <textarea
+                      className="type-textarea"
+                      placeholder="상품 설명을 입력해주세요."
+                      id="content"
+                      type="text"
+                      {...register('d3', {
+                        minLength: {
+                          value: 10,
+                          message: '10자리 이상 입력하세요.',
+                        },
+                      })}
+                    />
                   </div>
+                  {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
                 </div>
               </div>
             </fieldset>
