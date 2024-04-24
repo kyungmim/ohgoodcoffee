@@ -93,7 +93,9 @@ function CartList() {
         callbackButton: {
           확인: async () => {
             const response = await axios.post('/orders', orderForm);
-            navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
+            navigate('/orders', {
+              state: { from: location.pathname, orderResponse: response.data },
+            });
             setSelectedCartItem([]);
             setProductDetail([]);
           },

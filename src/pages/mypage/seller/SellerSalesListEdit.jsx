@@ -30,6 +30,8 @@ function SellerSalesListEdit() {
       quantity: product?.quantity,
       name: product?.name,
       i1: product?.mainImages[0],
+      i2: product?.detailImages[0],
+      i3: product?.detailImages[1],
       d1: product?.content[0],
       d2: product?.content[1],
       d3: product?.content[2],
@@ -90,9 +92,9 @@ function SellerSalesListEdit() {
       openModal({
         content: `${res.data.item.name}상품이 수정되었습니다.  :)`,
         callbackButton: {
-          확인: () => {
-            navigate(window.location.reload(), { state: { from: window.location.reload() } });
-          },
+          확인: '', //() => {
+          //   navigate(window.location.reload(), { state: { from: window.location.reload() } });
+          // },
         },
       });
     } catch (err) {
