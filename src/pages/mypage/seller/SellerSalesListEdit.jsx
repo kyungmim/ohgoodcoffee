@@ -64,93 +64,37 @@ function SellerSalesListEdit() {
     }
   };
 
-  const imgData = async (formData) => {
-    const combinedArr = [formData.i1, formData.i2, ...formData.i3];
-    // console.log('formData ::: ', formData);
-    // console.log('i1 ::: ', formData.i1);
-    // console.log('i2 ::: ', formData.i2);
-    // console.log('i3 ::: ', formData.i3);
-    // console.log('combinedArr ::: ', combinedArr);
-    let imageNamesArr = [];
-    if (combinedArr.length > 0) {
-      // 프로필 이미지를 추가한 경우
-      const imageFormData = new FormData();
-      for (let i = 0; i < combinedArr.length; i++) {
-        imageFormData.append('attach', combinedArr[i]);
-      }
-
-      // console.log(imageFormData);
-
-      const fileRes = await axios('/files', {
-        method: 'post',
-        headers: {
-          // 파일 업로드시 필요한 설정
-          'Content-Type': 'multipart/form-data',
-        },
-        data: imageFormData,
-      });
-      // console.log(fileRes);
-      // 서버로부터 응답받은 이미지 이름을  정보에 포함
-      imageNamesArr = [...imageNamesArr, ...fileRes.data.item];
-
-      // console.log(`imageNamesArr`, imageNamesArr);
-    } else {
-      // mainImages 속성을 제거
-      delete formData.mainImages;
-    }
-
-    // console.log('imageNamesArr ::: ', imageNamesArr);
-    return imageNamesArr;
-  };
-
   const onSubmit = async (formData) => {
     // console.log('formData 최종', formData);
     try {
-      openModal({
-        content: `${product?.name}  <br />상품을 수정하시겠습니까?`,
-        callbackButton: {
-          확인: async () => {
-            const imageNamesArr = await imgData(formData);
-            const { d1, d2, d3, ...rest } = formData;
+      if (formData.profileImage.length > 0) {
+        // 프로필 이미지를 추가한 경우
+        const imageFormData = new FormData();
+        imageFormData.append('attach', formData.profileImage[0]);
 
-            const reqBody = {
-              mainImages: [
-                {
-                  name: imageNamesArr[0].name,
-                  path: '',
-                  url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[0].name,
-                },
-              ],
-              detailImages: [
-                {
-                  name: imageNamesArr[1].name,
-                  path: '',
-                  url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[1].name,
-                },
-                {
-                  name: imageNamesArr[2].name,
-                  path: '',
-                  url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[2].name,
-                },
-              ],
-              content: [`${d1}`, `${d2}`, `${d3}`],
-              ...rest,
-            };
-            delete reqBody.i1;
-            delete reqBody.i2;
-            delete reqBody.i3;
-
-            const res = await axios.patch(`/seller/products/${itemId}`, reqBody);
-            openModal({
-              content: `${res.data.item.name}상품이 수정되었습니다.  :)`,
-              callbackButton: {
-                확인: '', //() => {
-                //   navigate(window.location.reload(), { state: { from: window.location.reload() } });
-                // },
-              },
-            });
+        const fileRes = await axios('/files', {
+          method: 'post',
+          headers: {
+            // 파일 업로드시 필요한 설정
+            'Content-Type': 'multipart/form-data',
           },
-          취소: () => '', //window.location.reload(),
+          data: imageFormData,
+        });
+        // console.log(fileRes);
+        // 서버로부터 응답받은 이미지 이름을 회원 정보에 포함
+        formData.profileImage = fileRes.data.item[0].name;
+      } else {
+        // profileImage 속성을 제거
+        delete formData.profileImage;
+      }
+
+      const res = await axios.patch(`/seller/products/${itemId}`, formData);
+      openModal({
+        content: `${res.data.item.name}상품이 수정되었습니다.  :)`,
+        callbackButton: {
+          확인: '', //() => {
+          //   navigate(window.location.reload(), { state: { from: window.location.reload() } });
+          // },
         },
       });
     } catch (err) {

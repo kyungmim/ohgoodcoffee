@@ -1,6 +1,6 @@
-import coverImg_1 from '@assets/main-cover-img-1.png';
-import coverImg_2 from '@assets/main-cover-img-2.png';
-import coverImg_3 from '@assets/main-cover-img-3.png';
+import coverImg_1 from '@assets/main-cover-img-1.jpg';
+import coverImg_2 from '@assets/main-cover-img-2.jpg';
+import coverImg_3 from '@assets/main-cover-img-3.jpg';
 import coverImg_4 from '@assets/main-cover-img-4.jpg';
 import MarketListItem from '@pages/market/MarketListItem';
 import { useQuery } from '@tanstack/react-query';
