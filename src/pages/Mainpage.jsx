@@ -82,7 +82,7 @@ function Mainpage() {
           </div>
           <div className="l_wrapper">
             <div className="contents-header">
-              <h2 className="content-title">COVER STORYE</h2>
+              <h2 className="content-title">COVER STORY</h2>
             </div>
 
             <div className="main-coverstory">
