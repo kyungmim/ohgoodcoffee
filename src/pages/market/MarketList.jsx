@@ -62,40 +62,8 @@ function MarketList() {
     });
   }, [data, sortType]);
 
-  // useEffect(() => {
-  //   if (data == undefined) {
-  //     return;
-  //   }
-
-  //   let sortedArr;
-  //   if (sortType == 'lowPrice') {
-  //     sortedArr = data.sort((a, b) => b.price - a.price);
-  //   } else if (sortType == 'highPrice') {
-  //     sortedArr = data.sort((a, b) => a.price - b.price);
-  //   } else if (sortType == 'new') {
-  //     console.log('qqqqq', data);
-  //     let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
-  //     sortedArr = arr.sort((a, b) => {
-  //       const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-  //       const dateB = moment(b, 'YYYY.MM.DD HH:mm');
-  //       return dateA - dateB;
-  //     });
-  //   } else if (sortType == 'sales') {
-  //     sortedArr = data.sort((a, b) => b.buyQuantity - a.buyQuantity);
-  //   } else if (sortType == 'registration') {
-  //     let arr = data.map((item) => ({ ...item, createdAt: item.createdAt.substring(0, 16) }));
-  //     sortedArr = arr.sort((a, b) => {
-  //       const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-  //       const dateB = moment(b, 'YYYY.MM.DD HH:mm');
-  //       return dateA - dateB;
-  //     });
-  //   }
-  //   console.log('GG', sortedArr);
-  //   setSortProductList(sortedArr);
-  // }, [sortType]);
 
   const handleSelectChange = (e) => {
-    console.log('e.target', e.target.value);
     setSortType(e.target.value);
   };
 
