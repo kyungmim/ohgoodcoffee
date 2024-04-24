@@ -8,8 +8,6 @@ UserWishListItem.propTypes = {
 function UserWishListItem({ item }) {
   const navigate = useNavigate();
 
-  console.log(item);
-
   const onClick = () => {
     navigate(`/market/detail/${item.product._id}`);
   };

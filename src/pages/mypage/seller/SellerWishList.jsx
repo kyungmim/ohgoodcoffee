@@ -12,7 +12,6 @@ function SellerWishList() {
 
   const fetchList = async () => {
     const res = await axios.get('/bookmarks/product');
-    console.log(res.data.item);
     const wishlist = res.data.item;
     setData(wishlist);
   };

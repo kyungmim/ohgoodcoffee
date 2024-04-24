@@ -35,8 +35,6 @@ function SellerSalesListEdit() {
     },
   });
 
-  console.log(product);
-
   const handleDeletClick = async () => {
     try {
       openModal({
@@ -50,7 +48,14 @@ function SellerSalesListEdit() {
         },
       });
     } catch (err) {
-      console.log(err);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 
@@ -73,7 +78,7 @@ function SellerSalesListEdit() {
                 },
                 data: imageFormData,
               });
-              console.log(fileRes);
+              // console.log(fileRes);
               // 서버로부터 응답받은 이미지 이름을  정보에 포함
               formData.mainImages = fileRes.data.item;
             } else {
@@ -87,7 +92,14 @@ function SellerSalesListEdit() {
         },
       });
     } catch (err) {
-      console.log(err);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
 

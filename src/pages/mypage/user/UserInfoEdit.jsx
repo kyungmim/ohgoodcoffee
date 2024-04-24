@@ -35,7 +35,14 @@ function SellerInfoEdit() {
         },
       });
     } catch (err) {
-      console.log(err);
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
+          },
+        });
+      }
     }
   };
   return (

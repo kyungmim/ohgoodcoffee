@@ -41,14 +41,14 @@ function Login() {
       const user = res.data.item;
       setUser(user);
     } catch (err) {
-      openModal({
-        content: `${err.response?.data.message}`,
-        callbackButton: {
-          확인: () => {
-            navigate('/users/login', { state: { from: '/users/login' } });
+      if (err.response?.data.message) {
+        openModal({
+          content: err.response?.data.message,
+          callbackButton: {
+            확인: '',
           },
-        },
-      });
+        });
+      }
     }
   };
 

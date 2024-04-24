@@ -57,11 +57,10 @@ function MarketList() {
     if (!data) {
       return;
     }
-    setSortProductList((prevList) => {
+    setSortProductList(() => {
       return sortData([...data], sortType);
     });
   }, [data, sortType]);
-
 
   const handleSelectChange = (e) => {
     setSortType(e.target.value);
