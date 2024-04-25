@@ -109,7 +109,7 @@ OGC는 **✨<u>커피를 사랑하는 소비자와 열정적인 카페 판매자
 
 |                       |                                                                                        |
 | --------------------- | -------------------------------------------------------------------------------------- |
-| **개발 환경**         | - FE: `React`, `Axios`, `Zustand`, `CSS Module`<br>- BE: `제공된 RESTful API`, `Bruno` |
+| **개발 환경**         | - FE: `React`, `Axios`, `Zustand`, `Vanila CSS`<br>- BE: `제공된 RESTful API`, `Bruno` |
 | **버전 및 이슈 관리** | - `Git`, `Github`, `Notion`                                                            |
 | **프로젝트 관리**     | - `Github Pull Requests`                                                               |
 | **커뮤니케이션**      | - `Notion`, `Discord`                                                                  |
@@ -374,7 +374,7 @@ module.exports = {
 
 #### 메인 풀페이지
 
-<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/0d36df70-35fe-4208-9419-c792628ff2f6">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ee4fa714-5c2c-4e3e-ac71-aa4cccf70b1c">
 
 </br></br>
 
@@ -398,14 +398,14 @@ module.exports = {
 
 #### 매거진 페이지
 
-<image src="">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/6db4ad46-76b5-4100-8ffb-1c037a91681a">
 
 </br></br>
 
 #### 마켓 페이지
 
 - 전체 리스트, sort 버튼 정렬
-  <image src="">
+  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ce8401a3-efbf-41b2-a2be-e754b333c2ca">
 
 </br>
 
@@ -579,11 +579,6 @@ const handleRequest = async (cart) => {
 };
 ```
 
-- 파일을 pure로 index.css 하나의 파일로 진행했으나, 이후의 유지보수를 위해 Module CSS로 각 페이지마다 적용되도록 수정 필요
-- 컴포넌트에도 UseQuery를 적용
-  - 현재 mainpage, marketList, marketDetail 컴포넌트에서만 UseQuery를 사용하여 데이터 캐싱 작업이 되어있는데, 나머지 컴포넌트에도 UseQuery를 적용하여 데이터를 캐싱하도록 수정필요
-- 매거진 상세 페이지 텍스트 UI 가독성 개선
-
 </br></br>
 
 ## 🔫 11. 트러블 슈팅
@@ -740,17 +735,17 @@ const handleRequest = async (cart) => {
 - isProcessing, setIsProcessing이라는 useState 상태를 만들어 handleRequst 함수의 사이클 중간에 API 요청이 되지 않도록 코드 수정
 - 아래와 같이 수정하여 클릭하면 1씩 증가하도록 수정 완료
 
-```js
-const handleRequest = async (cart) => {
-  setIsProcessing(true);
-  await axios.post('/carts', cart);
-  const response = await axios.get('/carts');
-  if (response.data.item) {
-    setItems(response.data.item);
-    setIsProcessing(false);
-  }
-};
-```
+  ```js
+  const handleRequest = async (cart) => {
+    setIsProcessing(true);
+    await axios.post('/carts', cart);
+    const response = await axios.get('/carts');
+    if (response.data.item) {
+      setItems(response.data.item);
+      setIsProcessing(false);
+    }
+  };
+  ```
 
 </details>
 
@@ -771,14 +766,14 @@ const handleRequest = async (cart) => {
 
 - 이동되는 페이지에 아래의 코드를 삽입하여, 페이지가 최초 마운트 될 때, 스크롤을 최상단으로 위치시킴
 
-```js
-import { useLocation } from 'react-router-dom';
+  ```js
+  import { useLocation } from 'react-router-dom';
 
-const { pathname } = useLocation();
-useEffect(() => {
-  window.scrollTo(0, 0);
-}, [pathname]);
-```
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+  ```
 
 </details>
 
@@ -818,96 +813,96 @@ useEffect(() => {
 - sortType이 변경 될 때 마다, UseQuery로 불러온 캐싱된 Stale 데이터를 참조하고 있어 변경점이 바로 적용되지 않았음.
 - sort는 직접적으로 배열을 수정하여 해당 이슈가 발생함
 
-```js
-useEffect(() => {
-  if (data == undefined) {
-    return;
-  }
+  ```js
+  useEffect(() => {
+    if (data == undefined) {
+      return;
+    }
 
-  let sortedArr;
-  if (sortType == 'lowPrice') {
-    sortedArr = data.sort((a, b) => b.price - a.price);
-  } else if (sortType == 'highPrice') {
-    sortedArr = data.sort((a, b) => a.price - b.price);
-  } else if (sortType == 'new') {
-    console.log('qqqqq', data);
-    let arr = data.map((item) => ({
+    let sortedArr;
+    if (sortType == 'lowPrice') {
+      sortedArr = data.sort((a, b) => b.price - a.price);
+    } else if (sortType == 'highPrice') {
+      sortedArr = data.sort((a, b) => a.price - b.price);
+    } else if (sortType == 'new') {
+      console.log('qqqqq', data);
+      let arr = data.map((item) => ({
+        ...item,
+        createdAt: item.createdAt.substring(0, 16),
+      }));
+      sortedArr = arr.sort((a, b) => {
+        const dateA = moment(a, 'YYYY.MM.DD HH:mm');
+        const dateB = moment(b, 'YYYY.MM.DD HH:mm');
+        return dateA - dateB;
+      });
+    } else if (sortType == 'sales') {
+      sortedArr = data.sort((a, b) => b.buyQuantity - a.buyQuantity);
+    } else if (sortType == 'registration') {
+      let arr = data.map((item) => ({
+        ...item,
+        createdAt: item.createdAt.substring(0, 16),
+      }));
+      sortedArr = arr.sort((a, b) => {
+        const dateA = moment(a, 'YYYY.MM.DD HH:mm');
+        const dateB = moment(b, 'YYYY.MM.DD HH:mm');
+        return dateA - dateB;
+      });
+    }
+    setSortProductList(sortedArr);
+  }, [sortType]);
+  ```
+
+  <b>3. 해결방안</b>
+
+  - UseQuery의 stale한 data를 참조하지 않도록 refresh된 data를 복사
+  - sort는 직접적으로 배열을 수정하기 때문에 refresh된 data를 복사하여 sort를 진행
+  - 아래와 같이 코드 적용 후, 해당 이슈 해결 완료
+
+  ```js
+  const sortData = (data, sortType) => {
+    switch (sortType) {
+      case 'lowPrice':
+        return [...data].sort((a, b) => a.price - b.price);
+      case 'highPrice':
+        return [...data].sort((a, b) => b.price - a.price);
+      case 'new':
+      case 'registration':
+        return sortDateDescending(data);
+      case 'sales':
+        return [...data].sort((a, b) => b.buyQuantity - a.buyQuantity);
+    }
+  };
+  const sortDateDescending = (data) => {
+    let arr = [...data].map((item) => ({
       ...item,
       createdAt: item.createdAt.substring(0, 16),
     }));
-    sortedArr = arr.sort((a, b) => {
-      const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-      const dateB = moment(b, 'YYYY.MM.DD HH:mm');
+    return arr.sort((a, b) => {
+      const dateA = moment(a.createdAt, 'YYYY.MM.DD HH:mm');
+      const dateB = moment(b.createdAt, 'YYYY.MM.DD HH:mm');
       return dateA - dateB;
     });
-  } else if (sortType == 'sales') {
-    sortedArr = data.sort((a, b) => b.buyQuantity - a.buyQuantity);
-  } else if (sortType == 'registration') {
-    let arr = data.map((item) => ({
-      ...item,
-      createdAt: item.createdAt.substring(0, 16),
-    }));
-    sortedArr = arr.sort((a, b) => {
-      const dateA = moment(a, 'YYYY.MM.DD HH:mm');
-      const dateB = moment(b, 'YYYY.MM.DD HH:mm');
-      return dateA - dateB;
-    });
-  }
-  setSortProductList(sortedArr);
-}, [sortType]);
-```
+  };
 
-<b>3. 해결방안</b>
-
-- UseQuery의 stale한 data를 참조하지 않도록 refresh된 data를 복사
-- sort는 직접적으로 배열을 수정하기 때문에 refresh된 data를 복사하여 sort를 진행
-- 아래와 같이 코드 적용 후, 해당 이슈 해결 완료
-
-```js
-const sortData = (data, sortType) => {
-  switch (sortType) {
-    case 'lowPrice':
-      return [...data].sort((a, b) => a.price - b.price);
-    case 'highPrice':
-      return [...data].sort((a, b) => b.price - a.price);
-    case 'new':
-    case 'registration':
-      return sortDateDescending(data);
-    case 'sales':
-      return [...data].sort((a, b) => b.buyQuantity - a.buyQuantity);
-  }
-};
-const sortDateDescending = (data) => {
-  let arr = [...data].map((item) => ({
-    ...item,
-    createdAt: item.createdAt.substring(0, 16),
-  }));
-  return arr.sort((a, b) => {
-    const dateA = moment(a.createdAt, 'YYYY.MM.DD HH:mm');
-    const dateB = moment(b.createdAt, 'YYYY.MM.DD HH:mm');
-    return dateA - dateB;
-  });
-};
-
-//data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
-const sortedData = useMemo(() => {
-  if (!data) return [];
-  return sortData([...data], sortType);
-}, [data, sortType]);
-
-useEffect(() => {
-  setSortProductList(sortedData);
-}, [sortedData]);
-
-useEffect(() => {
-  if (!data) {
-    return;
-  }
-  setSortProductList((prevList) => {
+  //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
+  const sortedData = useMemo(() => {
+    if (!data) return [];
     return sortData([...data], sortType);
-  });
-}, [data, sortType]);
-```
+  }, [data, sortType]);
+
+  useEffect(() => {
+    setSortProductList(sortedData);
+  }, [sortedData]);
+
+  useEffect(() => {
+    if (!data) {
+      return;
+    }
+    setSortProductList((prevList) => {
+      return sortData([...data], sortType);
+    });
+  }, [data, sortType]);
+  ```
 
 </details>
 
