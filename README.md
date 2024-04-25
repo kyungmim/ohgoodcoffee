@@ -405,17 +405,17 @@ module.exports = {
 #### 마켓 페이지
 
 - 전체 리스트, sort 버튼 정렬
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ce8401a3-efbf-41b2-a2be-e754b333c2ca">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ce8401a3-efbf-41b2-a2be-e754b333c2ca">
 
 </br>
 
 - 위시리스트 추가/삭제
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/e6be15de-542e-4c0d-aaec-d5d4e6b50ae7">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/e6be15de-542e-4c0d-aaec-d5d4e6b50ae7">
 
 </br>
 
 - 아이템 수량 업다운
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/227868c7-7e1f-4812-9f06-56fdca175231">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/227868c7-7e1f-4812-9f06-56fdca175231">
 
 </br></br>
 
@@ -424,55 +424,56 @@ module.exports = {
 </br>
 
 - 장바구니 담기
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/4b8771e1-5a51-4cc7-8a06-222ce68a3637">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/4b8771e1-5a51-4cc7-8a06-222ce68a3637">
 
 <br/>
 
 - 장바구니 수량 1개 미만이면 삭제 모달 띄우기
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/4b79581b-f92f-4af5-b21e-e9abf6d28a8e">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/4b79581b-f92f-4af5-b21e-e9abf6d28a8e">
 
 <br/>
 
 - 전체 주문
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/27788bea-5f64-4937-9372-48f8af9128c0">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/27788bea-5f64-4937-9372-48f8af9128c0">
 
 <br/>
 
 - 아이템 선택 삭제
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ff02cef1-367e-4512-866b-f26bc46eea1a">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/ff02cef1-367e-4512-866b-f26bc46eea1a">
 
 <br/>
 
 - 아이템 전체 삭제
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/48e71af9-63fc-4c1f-b59a-7e64824550b6">
-  </br></br>
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/48e71af9-63fc-4c1f-b59a-7e64824550b6">
+
+</br></br>
 
 #### 유저마이페이지
 
 - 주문 내역 조회
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/5354d83a-1605-4fc6-9cc5-5a04f0868dcc">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/5354d83a-1605-4fc6-9cc5-5a04f0868dcc">
 
 <br/>
 
 - 위시리스트 목록 조회
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/697bbca7-55c7-41a7-b722-f5fbdf54f7ae">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/697bbca7-55c7-41a7-b722-f5fbdf54f7ae">
 
 <br/>
 
 - 내가 쓴 리뷰
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/b3c8333c-310d-48e3-b354-1ce66ac30a6d">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/b3c8333c-310d-48e3-b354-1ce66ac30a6d">
 
 <br/>
 
 - 내 정보 조회 및 수정
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/bfbd242e-0549-4c1d-85e6-0afd8f818c7e">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/bfbd242e-0549-4c1d-85e6-0afd8f818c7e">
 
 </br></br>
 
 #### 셀러마이페이지
 
 - 상품 수정
-  <image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/f724ddcf-af4c-404f-9f3c-37984ec939cc">
+<image src="https://github.com/FRONTENDSCHOOL9/ohgoodcoffee/assets/153144288/f724ddcf-af4c-404f-9f3c-37984ec939cc">
 
 </br></br>
 
