@@ -906,7 +906,8 @@ const handleRequest = async (cart) => {
 
 </details>
 
-</br></br>
+</br>
+</br>
 
 ## ♻️ 12. 리팩토링
 
