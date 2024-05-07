@@ -8,80 +8,54 @@ function SellerUploadProduct() {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm();
+  } = useForm({
+    values: {
+      name: 'test',
+      price: '111111',
+      quantity: '10',
+      shippingFees: '3000',
+      type: 'new',
+      content: 'dfsdfsdfsdfsdfsdf',
+    },
+  });
   const axios = useCustomAxios();
   const openModal = useModalStore((state) => state.openModal);
   const navigate = useNavigate();
 
-  const imgData = async (formData) => {
-    const combinedArr = [...formData.i1, ...formData.i2, ...formData.i3];
-    // console.log('formData ::: ', formData);
-    // console.log('i1 ::: ', formData.i1);
-    // console.log('i2 ::: ', formData.i2);
-    // console.log('i3 ::: ', formData.i3);
-    // console.log('combinedArr ::: ', combinedArr);
-    let imageNamesArr = [];
-    if (combinedArr.length > 0) {
-      // 프로필 이미지를 추가한 경우
-      const imageFormData = new FormData();
-      for (let i = 0; i < combinedArr.length; i++) {
-        imageFormData.append('attach', combinedArr[i]);
-      }
-
-      const fileRes = await axios('/files', {
-        method: 'post',
-        headers: {
-          // 파일 업로드시 필요한 설정
-          'Content-Type': 'multipart/form-data',
-        },
-        data: imageFormData,
-      });
-      // console.log(fileRes);
-      // 서버로부터 응답받은 이미지 이름을  정보에 포함
-      imageNamesArr = [...imageNamesArr, ...fileRes.data.item];
-      // console.log(`imageNamesArr`, imageNamesArr);
-    } else {
-      // mainImages 속성을 제거
-      delete formData.mainImages;
-    }
-
-    // console.log('imageNamesArr ::: ', imageNamesArr);
-    return imageNamesArr;
-  };
-
   const onSubmit = async (formData) => {
     try {
-      const imageNamesArr = await imgData(formData);
-      const { d1, d2, d3, ...rest } = formData;
+      if (formData.mainImages.length > 0) {
+        // 프로필 이미지를 추가한 경우
+        const imageFormData = new FormData();
+        for (let i = 0; i < formData.mainImages.length; i++) {
+          imageFormData.append('attach', formData.mainImages[i]);
+        }
 
-      const reqBody = {
-        mainImages: [
-          {
-            name: imageNamesArr[0].name,
-            path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[0].name,
+        const fileRes = await axios('/files', {
+          method: 'post',
+          headers: {
+            // 파일 업로드시 필요한 설정
+            'Content-Type': 'multipart/form-data',
           },
-        ],
-        detailImages: [
-          {
-            name: imageNamesArr[1].name,
-            path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[1].name,
-          },
-          {
-            name: imageNamesArr[2].name,
-            path: '',
-            url: 'https://api.frontendschool.shop/api/files/' + imageNamesArr[2].name,
-          },
-        ],
-        content: [`${d1}`, `${d2}`, `${d3}`],
+          data: imageFormData,
+        });
+
+        // 서버로부터 응답받은 이미지 이름을 formData에 반영
+        const imageNames = fileRes.data?.item.map((item) => ({ name: item.name, path: `/files/03-OGC/${item.name}` }));
+        // console.log('imageNames', imageNames);
+        formData.mainImages = imageNames;
+      } else {
+        // mainImages 속성을 제거
+        delete formData.mainImages;
+      }
+
+      const { content, ...rest } = formData;
+      const newFormData = {
+        content: [content, content, content],
         ...rest,
       };
-      delete reqBody.i1;
-      delete reqBody.i2;
-      delete reqBody.i3;
-
-      const res = await axios.post('seller/products', reqBody);
+      const res = await axios.post('seller/products', newFormData);
+      console.log(res);
       openModal({
         content: `${res.data.item.name}상품이 등록되었습니다. <br /> 상품 목록을 확인하시겠습니까? :)`,
         callbackButton: {
@@ -92,6 +66,7 @@ function SellerUploadProduct() {
         },
       });
     } catch (err) {
+      console.log(err);
       if (err.response?.data.message) {
         openModal({
           content: err.response?.data.message,
@@ -228,14 +203,15 @@ function SellerUploadProduct() {
                 <div className="signup-input-box">
                   <div className="form-input">
                     <input
+                      multiple
                       id="mainImages"
                       type="file"
-                      {...register('i1', {
+                      {...register('mainImages', {
                         required: '상품사진은 필수 입니다.',
                       })}
                     />
                   </div>
-                  {errors.i1 && <p className="err-text">{errors.i1.message}</p>}
+                  {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
                 </div>
 
                 <div className="signup-input-box">
@@ -245,7 +221,7 @@ function SellerUploadProduct() {
                       placeholder="상품 설명을 입력해주세요."
                       id="content"
                       type="text"
-                      {...register('d1', {
+                      {...register('content', {
                         required: '상품설명은 필수 입니다.',
                         minLength: {
                           value: 10,
@@ -254,25 +230,25 @@ function SellerUploadProduct() {
                       })}
                     />
                   </div>
-                  {errors.d1 && <p className="err-text">{errors.d1.message}</p>}
+                  {errors.content && <p className="err-text">{errors.content.message}</p>}
                 </div>
 
                 <div className="product-sub-layout">
                   <div className="product-layout">
                     <p className="product-main-content-text">Sub Contents</p>
 
-                    <div className="signup-input-box">
+                    {/* <div className="signup-input-box">
                       <div className="form-input">
                         <input
-                          id="detailImages"
+                          id="mainImages"
                           type="file"
-                          {...register('i2', {
+                          {...register('mainImages', {
                             required: '상품사진은 필수 입니다.',
                           })}
                         />
                       </div>
-                      {errors.i2 && <p className="err-text">{errors.i2.message}</p>}
-                    </div>
+                      {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
+                    </div> */}
 
                     <div className="signup-input-box">
                       <div className="form-input ">
@@ -281,7 +257,7 @@ function SellerUploadProduct() {
                           placeholder="상품 설명을 입력해주세요."
                           id="content"
                           type="text"
-                          {...register('d2', {
+                          {...register('content', {
                             required: '상품설명은 필수 입니다.',
                             minLength: {
                               value: 10,
@@ -290,24 +266,24 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.d2 && <p className="err-text">{errors.d2.message}</p>}
+                      {errors.content && <p className="err-text">{errors.content.message}</p>}
                     </div>
                   </div>
                 </div>
                 <div className="product-sub-layout">
                   <div className="product-layout">
-                    <div className="signup-input-box">
+                    {/* <div className="signup-input-box">
                       <div className="form-input">
                         <input
                           id="detailImages"
                           type="file"
-                          {...register('i3', {
+                          {...register('mainImages', {
                             required: '상품사진은 필수 입니다.',
                           })}
                         />
                       </div>
-                      {errors.i3 && <p className="err-text">{errors.i3.message}</p>}
-                    </div>
+                      {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
+                    </div> */}
 
                     <div className="signup-input-box">
                       <div className="form-input ">
@@ -316,7 +292,7 @@ function SellerUploadProduct() {
                           placeholder="상품 설명을 입력해주세요."
                           id="content"
                           type="text"
-                          {...register('d3', {
+                          {...register('content', {
                             required: '상품설명은 필수 입니다.',
                             minLength: {
                               value: 10,
@@ -325,7 +301,7 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.d3 && <p className="err-text">{errors.d3.message}</p>}
+                      {errors.content && <p className="err-text">{errors.content.message}</p>}
                     </div>
                   </div>
                 </div>

@@ -7,6 +7,7 @@ SellerSalesListItem.propTypes = {
 
 function SellerSalesListItem({ item }) {
   const { setItemId } = useUserStore();
+  console.log(item.mainImages);
 
   const onClick = () => {
     setItemId(item._id, () => {
@@ -19,7 +20,7 @@ function SellerSalesListItem({ item }) {
         <li className="click-item">
           <button className="button card type-info-card" onClick={onClick}>
             <div className="card-cover type-info-card-cover ">
-              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0].name}` || null} alt={`${item.name} 상품 사진`} />
+              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.name}` || null} alt={`${item.name} 상품 사진`} />
             </div>
             <div className="card-contents">
               <div className="card-contents-item">

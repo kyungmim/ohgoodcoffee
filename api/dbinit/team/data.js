@@ -288,18 +288,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 5,
         mainImages: [
           {
-            url: `/files/centercoffee_01.webp`,
             name: 'centercoffee_01.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_01.webp`,
-            name: 'centercoffee_01.webp',
+            path: `/files/03-OGC/centercoffee_01.webp`,
           },
           {
-            url: `/files/centercoffee_01_detail.webp`,
+            name: 'centercoffee_01.webp',
+            path: `/files/03-OGC/centercoffee_01.webp`,
+          },
+          {
             name: 'centercoffee_01_detail.webp',
+            path: `/files/03-OGC/centercoffee_01_detail.webp`,
           },
         ],
         content: [
@@ -332,18 +330,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/centercoffee_02.webp`,
             name: 'centercoffee_02.webp',
+            path: `/files/03-OGC/centercoffee_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/centercoffee_02.webp`,
             name: '/files/centercoffee_02.webp',
+            path: `/files/03-OGC/centercoffee_02.webp`,
           },
           {
-            url: `/files/centercoffee_02_detail.webp`,
             name: 'centercoffee_02_detail.webp',
+            path: `/files/03-OGC/centercoffee_02_detail.webp`,
           },
         ],
         content: [
@@ -376,18 +372,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/centercoffee_03.webp`,
             name: 'centercoffee_03.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_03.webp`,
-            name: 'centercoffee_03.webp',
+            path: `/files/03-OGC/centercoffee_03.webp`,
           },
           {
-            url: `/files/centercoffee_03_detail.webp`,
+            name: 'centercoffee_03.webp',
+            path: `/files/03-OGC/centercoffee_03.webp`,
+          },
+          {
             name: 'centercoffee_03_detail.webp',
+            path: `/files/03-OGC/centercoffee_03_detail.webp`,
           },
         ],
         content: [
@@ -420,18 +414,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 10,
         mainImages: [
           {
-            url: `/files/centercoffee_04.webp`,
             name: 'centercoffee_04.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_04.webp`,
-            name: 'centercoffee_04.webp',
+            path: `/files/03-OGC/centercoffee_04.webp`,
           },
           {
-            url: `/files/centercoffee_04_detail.webp`,
+            name: 'centercoffee_04.webp',
+            path: `/files/03-OGC/centercoffee_04.webp`,
+          },
+          {
             name: 'centercoffee_04_detail.webp',
+            path: `/files/03-OGC/centercoffee_04_detail.webp`,
           },
         ],
         content: [
@@ -462,18 +454,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/centercoffee_05.webp`,
             name: 'centercoffee_05.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_05.webp`,
-            name: 'centercoffee_05.webp',
+            path: `/files/03-OGC/centercoffee_05.webp`,
           },
           {
-            url: `/files/centercoffee_05_detail.webp`,
+            name: 'centercoffee_05.webp',
+            path: `/files/03-OGC/centercoffee_05.webp`,
+          },
+          {
             name: 'centercoffee_05_detail.webp',
+            path: `/files/03-OGC/centercoffee_05_detail.webp`,
           },
         ],
         content: [
@@ -504,18 +494,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 30,
         mainImages: [
           {
-            url: `/files/centercoffee_06.webp`,
             name: 'centercoffee_06.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_06.webp`,
-            name: 'centercoffee_06.webp',
+            path: `/files/03-OGC/centercoffee_06.webp`,
           },
           {
-            url: `/files/centercoffee_06_detail.webp`,
+            name: 'centercoffee_06.webp',
+            path: `/files/03-OGC/centercoffee_06.webp`,
+          },
+          {
             name: 'centercoffee_06_detail.webp',
+            path: `/files/03-OGC/centercoffee_06_detail.webp`,
           },
         ],
         content: [
@@ -551,18 +539,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 290,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_01.webp`,
             name: 'bonanzacoffee_products_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_01_detail_01.webp`,
             name: 'bonanzacoffee_products_01_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_01_detail_02.webp`,
             name: 'bonanzacoffee_products_01_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01_detail_02.webp`,
           },
         ],
         content: [
@@ -594,18 +580,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 100,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_02.webp`,
             name: 'bonanzacoffee_products_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_02_detail_01.webp`,
             name: 'bonanzacoffee_products_02_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_02_detail_02.webp`,
             name: 'bonanzacoffee_products_02_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02_detail_02.webp`,
           },
         ],
         content: [
@@ -642,18 +626,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 70,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_03.webp`,
             name: 'bonanzacoffee_products_03.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_03_detail_01.webp`,
             name: 'bonanzacoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_03_detail_02.webp`,
             name: 'bonanzacoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -694,18 +676,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 30,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_04.webp`,
             name: 'bonanzacoffee_products_04.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_04_detail_01webp`,
             name: 'bonanzacoffee_products_04_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04_detail_01webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_04_detail_02.webp`,
             name: 'bonanzacoffee_products_04_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04_detail_02.webp`,
           },
         ],
         content: [
@@ -739,18 +719,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_05.webp`,
             name: 'bonanzacoffee_products_05.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_05_detail_01.webp`,
             name: 'bonanzacoffee_products_05_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_05_detail_02.webp`,
             name: 'bonanzacoffee_products_05_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05_detail_02.webp`,
           },
         ],
         content: [
@@ -785,18 +763,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 60,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_01.webp`,
             name: 'keepthatcoffee_products_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_01_detail_01.webp`,
             name: 'keepthatcoffee_products_01_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_01_detail_02.webp`,
             name: 'keepthatcoffee_products_01_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01_detail_02.webp`,
           },
         ],
         content: [
@@ -832,18 +808,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 80,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_02.webp`,
             name: 'keepthatcoffee_products_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_02_detail_01.webp`,
             name: 'keepthatcoffee_products_02_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_02_detail_02.webp`,
             name: 'keepthatcoffee_products_02_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02_detail_02.webp`,
           },
         ],
         content: [
@@ -879,18 +853,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 300,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_03.webp`,
             name: 'keepthatcoffee_products_03.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
             name: 'keepthatcoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
             name: 'keepthatcoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -925,18 +897,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_04.webp`,
             name: 'keepthatcoffee_products_04.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
             name: 'keepthatcoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
             name: 'keepthatcoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -970,18 +940,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 190,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_01.webp`,
             name: 'milestonecoffee_products_01.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_01-1.webp`,
             name: 'milestonecoffee_products_01-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_01-2.webp`,
             name: 'milestonecoffee_products_01-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01-2.webp`,
           },
         ],
         content: [
@@ -1017,18 +985,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_02.webp`,
             name: 'milestonecoffee_products_02.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_02-1.webp`,
             name: 'milestonecoffee_products_02-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_02-2.webp`,
             name: 'milestonecoffee_products_02-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02-2.webp`,
           },
         ],
         content: [
@@ -1064,18 +1030,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_03.webp`,
             name: 'milestonecoffee_products_03.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_03-1.webp`,
             name: 'milestonecoffee_products_03-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_03-2.webp`,
             name: 'milestonecoffee_products_03-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03-2.webp`,
           },
         ],
         content: [
@@ -1109,18 +1073,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_04.webp`,
             name: 'milestonecoffee_products_04.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_04-1.webp`,
             name: 'milestonecoffee_products_04-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_04-2.webp`,
             name: 'milestonecoffee_products_04-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04-2.webp`,
           },
         ],
         content: [
@@ -1183,18 +1145,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_05.webp`,
             name: 'milestonecoffee_products_05.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_05-1.webp`,
             name: 'milestonecoffee_products_05-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_05-2.webp`,
             name: 'milestonecoffee_products_05-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05-2.webp`,
           },
         ],
         content: [
@@ -1250,19 +1210,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_01.webp`,
             name: 'protokoll_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_01-1.webp`,
             name: 'protokoll_products_01-1.webp',
+            path: `/files/03-OGC/protokoll_products_01-1.webp`,
           },
           {
-            url: `/files/protokoll_products_01-2.webp`,
             name: 'protokoll_products_01-2.webp',
+            path: `/files/03-OGC/protokoll_products_01-2.webp`,
           },
         ],
         content: [
@@ -1320,19 +1277,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_02.webp`,
             name: 'protokoll_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_02-1.webp`,
             name: 'protokoll_products_02-1.webp',
+            path: `/files/03-OGC/protokoll_products_02-1.webp`,
           },
           {
-            url: `/files/protokoll_products_02-2.webp`,
             name: 'protokoll_products_02-2.webp',
+            path: `/files/03-OGC/protokoll_products_02-2.webp`,
           },
         ],
         content: [
@@ -1401,19 +1355,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_03.webp`,
             name: 'protokoll_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_03-1.webp`,
             name: 'protokoll_products_03-1.webp',
+            path: `/files/03-OGC/protokoll_products_03-1.webp`,
           },
           {
-            url: `/files/protokoll_products_03-2.webp`,
             name: 'protokoll_products_03-2.webp',
+            path: `/files/03-OGC/protokoll_products_03-2.webp`,
           },
         ],
         content: [
@@ -1479,19 +1430,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_04.webp`,
             name: 'protokoll_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_04-1.webp`,
             name: 'protokoll_products_04-1.webp',
+            path: `/files/03-OGC/protokoll_products_04-1.webp`,
           },
           {
-            url: `/files/protokoll_products_04-2.webp`,
             name: 'protokoll_products_04-2.webp',
+            path: `/files/03-OGC/protokoll_products_04-2.webp`,
           },
         ],
         content: [
@@ -1536,19 +1484,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_05.webp`,
             name: 'protokoll_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_05-1.webp`,
             name: 'protokoll_products_05-1.webp',
+            path: `/files/03-OGC/protokoll_products_05-1.webp`,
           },
           {
-            url: `/files/protokoll_products_05-2.webp`,
             name: 'protokoll_products_05-2.webp',
+            path: `/files/03-OGC/protokoll_products_05-2.webp`,
           },
         ],
         content: [
@@ -1591,21 +1536,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_01.webp`,
             name: 'nest_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_01-1.webp`,
             name: 'nest_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01-1.webp`,
           },
           {
-            url: `/files/nest_products_01-2.webp`,
             name: 'nest_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01-2.webp`,
           },
         ],
         content: [
@@ -1665,21 +1605,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_02.webp`,
             name: 'nest_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_02-1.webp`,
             name: 'nest_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02-1.webp`,
           },
           {
-            url: `/files/nest_products_02-2.webp`,
             name: 'nest_products_02-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02-2.webp`,
           },
         ],
         content: [
@@ -1744,21 +1679,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_03.webp`,
             name: 'nest_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_03-1.webp`,
             name: 'nest_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03-1.webp`,
           },
           {
-            url: `/files/nest_products_03-2.webp`,
             name: 'nest_products_03-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03-2.webp`,
           },
         ],
         content: [
@@ -1809,21 +1739,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_04.webp`,
             name: 'nest_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_04-1.webp`,
             name: 'nest_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04-1.webp`,
           },
           {
-            url: `/files/nest_products_04-2.webp`,
             name: 'nest_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04-2.webp`,
           },
         ],
         content: [
@@ -1890,21 +1815,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_05.webp`,
             name: 'nest_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_05-1.webp`,
             name: 'nest_products_05-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05-1.webp`,
           },
           {
-            url: `/files/nest_products_05-2.webp`,
             name: 'nest_products_05-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05-2.webp`,
           },
         ],
         content: [
@@ -1972,21 +1892,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_01.webp`,
             name: 'manufactcoffee_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_01-1.webp`,
             name: 'manufactcoffee_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_01-2.webp`,
             name: 'manufactcoffee_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01-2.webp`,
           },
         ],
         content: [
@@ -2029,21 +1944,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_02.webp`,
             name: 'manufactcoffee_products_02.webp',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/manufactcoffee_products_02.webp`,
-            name: 'manufactcoffee_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_02.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_02-1.webp`,
+            name: 'manufactcoffee_products_02.webp',
+            path: `/files/03-OGC/manufactcoffee_products_02.webp`,
+          },
+          {
             name: 'manufactcoffee_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_02-1.webp`,
           },
         ],
         content: [
@@ -2078,21 +1988,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_03.webp`,
             name: 'manufactcoffee_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_03-1.webp`,
             name: 'manufactcoffee_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_03-2.webp`,
             name: 'manufactcoffee_products_03-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03-2.webp`,
           },
         ],
         content: [
@@ -2125,21 +2030,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_04.webp`,
             name: 'manufactcoffee_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_04-1.webp`,
             name: 'manufactcoffee_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_04-2.webp`,
             name: 'manufactcoffee_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04-2.webp`,
           },
         ],
         content: [
@@ -2182,21 +2082,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_05.webp`,
             name: 'manufactcoffee_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_05-1.webp`,
             name: 'manufactcoffee_products_05-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_05-2.webp`,
             name: 'manufactcoffee_products_05-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05-2.webp`,
           },
         ],
         content: [
@@ -2239,21 +2134,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_06.webp`,
             name: 'manufactcoffee_products_06.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_06-1.webp`,
             name: 'manufactcoffee_products_06-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_06-2.webp`,
             name: 'manufactcoffee_products_06-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06-2.webp`,
           },
         ],
         content: [
@@ -2293,21 +2183,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_01.webp`,
             name: 'longplay_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_01-2.webp`,
             name: 'longplay_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_01-2.webp`,
           },
         ],
         content: [
@@ -2342,21 +2227,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_02.webp`,
             name: 'longplay_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_02-1.webp`,
             name: 'longplay_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_02-1.webp`,
           },
         ],
         content: [
@@ -2387,21 +2267,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_03.webp`,
             name: 'longplay_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_03-1.webp`,
             name: 'longplay_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_03-1.webp`,
           },
         ],
         content: [
@@ -2432,21 +2307,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_04.webp`,
             name: 'longplay_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_04-1.webp`,
             name: 'longplay_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04-1.webp`,
           },
           {
-            url: `/files/longplay_products_04-2.webp`,
             name: 'longplay_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04-2.webp`,
           },
         ],
         content: [
@@ -2478,21 +2348,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 16,
         mainImages: [
           {
-            url: `/files/joinus_products_01.webp`,
             name: 'joinus_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/joinus_products_01-1.webp`,
             name: 'joinus_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01-1.webp`,
           },
           {
-            url: `/files/joinus_products_01-2.webp`,
             name: 'joinus_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01-2.webp`,
           },
         ],
         content: [
@@ -3354,8 +3219,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '편안함 속에서 공유하는 즐거움, COEO(코에오)',
-        content: [
-          `
+        content: `
           <div className="magazin-cover">
               <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-01.webp" alt="카페 상세 사진" />
             </div>
@@ -3467,14 +3331,13 @@ export const initData = async (nextSeq) => {
             </div>
               
            `,
-        ],
         type: 'magazine',
         extra: {
           address: '서울특별시 성동구 성수이로16길 45, 1층',
           articleType: 'FRIENDLY',
           mainImages: {
-            url: `/files/coeo-01.webp`,
             name: 'coeo-01.webp',
+            path: `/files/03-OGC/coeo-01.webp`,
           },
         },
         views: 2000,
@@ -3484,8 +3347,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '함께 채워가는 공간, 연필(緣苾)',
-        content: [
-          `
+        content: `
             <div className="magazin-cover">
               <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-01.webp" alt="카페 상세 사진" />
             </div>
@@ -3596,14 +3458,14 @@ export const initData = async (nextSeq) => {
               @yeonpil_official 
               </pre>
             </div>`,
-        ],
+
         type: 'magazine',
         extra: {
           address: '서울 광진구 면목로 12, 1층',
           articleType: 'JOYFUL',
           mainImages: {
-            url: `/files/yeonpil-01.webp`,
             name: 'yeonpil-01.webp',
+            path: `/files/03-OGC/yeonpil-01.webp`,
           },
         },
         views: 1818,
@@ -3613,8 +3475,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: 'You made my day, 도미닉커피랩',
-        content: [
-          `
+        content: `
             <div className="magazin-cover">
               <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-01.webp" alt="카페 상세 사진" />
             </div>
@@ -3720,14 +3581,13 @@ export const initData = async (nextSeq) => {
             </div>
             ,
           `,
-        ],
         type: 'magazine',
         extra: {
           address: '경기 수원시 영통구 센트럴파크로 127번 길 46 ',
           articleType: 'KIND',
           mainImages: {
-            url: `/files/dominic-01.webp`,
             name: 'dominic-01.webp',
+            path: `/files/03-OGC/dominic-01.webp`,
           },
         },
         views: 1800,
@@ -3737,8 +3597,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: `스페셜티커피문화의 본질을 전하는 '전달자' - 아이덴티티커피랩`,
-        content: [
-          `
+        content: `
        <div className="magazin-cover">
          <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-01.webp" alt="카페 상세 사진" />
        </div>
@@ -3857,14 +3716,13 @@ export const initData = async (nextSeq) => {
          </pre>
        </div>
          `,
-        ],
         type: 'magazine',
         extra: {
           address: '서울 마포구 동교로 139 1층',
           articleType: 'FIENDLY',
           mainImages: {
-            url: `/files/identity-01.webp`,
             name: 'identity-01.webp',
+            path: `/files/03-OGC/identity-01.webp`,
           },
         },
         views: 100,
@@ -3874,8 +3732,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: `하와이 해변에서 즐기는 커피 한 잔? '키헤이커피'`,
-        content: [
-          `
+        content: `
        <div className="magazin-cover">
          <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-01.webp" alt="카페 상세 사진" />
        </div>
@@ -3975,14 +3832,13 @@ export const initData = async (nextSeq) => {
          </pre>
        </div>
           `,
-        ],
         type: 'magazine',
         extra: {
           address: '서울시 강남구 봉은사로 78길 15, 1층',
           articleType: 'FIENDLY',
           mainImages: {
-            url: `/files/kihei-01.webp`,
             name: 'kihei-01.webp',
+            path: `/files/03-OGC/kihei-01.webp`,
           },
         },
         views: 1,
@@ -3992,8 +3848,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '커피와 나를 이어주기 위해 탄생한 공간, 폰트(PONT)',
-        content: [
-          `
+        content: `
        <div className="magazin-cover">
          <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-01.webp" alt="카페 상세 사진" />
        </div>
@@ -4113,14 +3968,13 @@ export const initData = async (nextSeq) => {
          </pre>
        </div>
           `,
-        ],
         type: 'magazine',
         extra: {
           address: '서울시 용산구 한강대로15길 19-16 1층',
           articleType: 'FIENDLY',
           mainImages: {
-            url: `/files/pont-01.webp`,
             name: 'pont-01.webp',
+            path: `/files/03-OGC/pont-01.webp`,
           },
         },
         views: 111,
@@ -4130,8 +3984,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: 'Higher Standard Solid System, 스탠다드시스템',
-        content: [
-          `
+        content: `
        <div className="magazin-cover">
          <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-01.webp" alt="카페 상세 사진" />
        </div>
@@ -4241,14 +4094,13 @@ export const initData = async (nextSeq) => {
          </pre>
        </div>
           `,
-        ],
         type: 'magazine',
         extra: {
           address: '서울 강남구 선릉로148길 48-5 ',
           articleType: 'FRIENDLY',
           mainImages: {
-            url: `/files/standard-01.webp`,
             name: 'standard-01.webp',
+            path: `/files/03-OGC/standard-01.webp`,
           },
         },
         views: 112,
@@ -4258,8 +4110,7 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '영도의 새로운 랜드마크, P.ARK(피아크)',
-        content: [
-          `
+        content: `
        <div className="magazin-cover">
          <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-01.webp" alt="카페 상세 사진" />
        </div>
@@ -4363,14 +4214,13 @@ export const initData = async (nextSeq) => {
          </pre>
        </div>
          `,
-        ],
         type: 'magazine',
         extra: {
           address: '부산광역시 영도구 해양로195번길 180',
           articleType: 'JOYFUL',
           mainImages: {
-            url: `/files/p_ark-01.webp`,
             name: 'p_ark-01.webp',
+            path: `/files/03-OGC/p_ark-01.webp`,
           },
         },
         views: 119,

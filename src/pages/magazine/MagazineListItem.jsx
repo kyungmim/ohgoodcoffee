@@ -19,7 +19,6 @@ function MagazineListItem({ item }) {
       item._id;
     });
   };
-  console.log(item);
 
   const today = new Date();
   const date = `${today.getFullYear()}년 ${today.getMonth() + 1}월 ${today.getDate()}일`;
