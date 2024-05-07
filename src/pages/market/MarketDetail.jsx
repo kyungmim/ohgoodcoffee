@@ -265,12 +265,12 @@ function MarketDetail() {
             <div className="market-overview-bottom-cover">
               {<img
                 className="market-overview-bottom-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.name}`}
+                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[1]?.name}`}
                 alt={`${item.name} 상품 사진`}
               /> ? (
                 <img
                   className="market-overview-bottom-src"
-                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[0]?.name}`}
+                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[1]?.name}`}
                   alt={`${item.name} 상품 사진`}
                 />
               ) : (
@@ -283,12 +283,12 @@ function MarketDetail() {
             <div className="market-overview-bottom-cover">
               {<img
                 className="market-overview-bottom-src"
-                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[1]?.name}`}
+                src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[2]?.name}`}
                 alt={`${item.name} 상품 사진`}
               /> ? (
                 <img
                   className="market-overview-bottom-src"
-                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.detailImages[1]?.name}`}
+                  src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[2]?.name}`}
                   alt={`${item.name} 상품 사진`}
                 />
               ) : (

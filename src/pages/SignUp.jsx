@@ -85,7 +85,7 @@ function SignUp() {
                   Profile
                 </label>
                 <div className="form-input">
-                  <input type="file" name="profile" id="profileImage" {...register('profileImage')} />
+                  <input type="file" id="profileImage" {...register('profileImage')} />
                 </div>
               </div>
 
