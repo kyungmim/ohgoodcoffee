@@ -3324,16 +3324,15 @@ export const initData = async (nextSeq) => {
               무엇보다 '함께'라는 부사가 잘 어울리는 공간이라는 생각이 들었다. 사소한 인연이라도 소중하게 여길 줄 알고, 이를 이어나가는 것 또한 자연스럽게 찾게 만드는 공간의 조건이라고 할 수 있지
               않을까. 소소하지만 단단한 유대감으로 엮인 인연은 그 자체로 일종의 안정감을 준다. 그리고 그러한 안정감과 편안함 속에서 소통과 공유를 할 수 있는 시간이자 공간은 지금 시대를 살아가는
               우리들에게 있어 꽤나 소중하다. 
-
-              COEO(코에오) 
-              @coeo_kr 
               </pre>
             </div>
-              
            `,
         type: 'magazine',
         extra: {
+          name: 'COEO(코에오)',
+          social: '@coeo_kr',
           address: '서울특별시 성동구 성수이로16길 45, 1층',
+          coordinates: { lat: '37.5397942677918', lng: '127.061436661107' },
           articleType: 'FRIENDLY',
           mainImages: {
             name: 'coeo-01.webp',
@@ -3452,16 +3451,16 @@ export const initData = async (nextSeq) => {
               <pre className="magazine-desc-paragraph">
               가끔 매장을 찾은 손님분들이 메모지에 공간과 어울리는 음악을 적어주고 가는 경우가 있어 쉽게 선택을 할 때도 있었다. 한 번은 짧게나마 손님들과의 음악 공유를 통해 공간에 서로의 취향을
               담아보고 싶어 신청곡을 받기도 했는데, 다들 자유롭게 좋아하는 플레이 리스트를 담아주면서 모두가 공간을 더 즐길 수 있었던 것이 좋은 기억이 남았다고. 
-
-              연필 
                
-              @yeonpil_official 
               </pre>
             </div>`,
 
         type: 'magazine',
         extra: {
+          name: '연필(緣苾)',
+          social: '@yeonpil_official',
           address: '서울 광진구 면목로 12, 1층',
+          coordinates: { lat: '37.5552233141176', lng: '127.075594139455' },
           articleType: 'JOYFUL',
           mainImages: {
             name: 'yeonpil-01.webp',
@@ -3573,17 +3572,16 @@ export const initData = async (nextSeq) => {
               아무리 비싸고 좋은 커피, 스스로는 엄청난 정성을 들여 준비하더라도 정작 이를 접하게 될 이들을 고려하지 않았다면 그 결과는 장담할 수 없다. 예상했던 것과는 정반대의 반응을 보일 수도, 어쩌면
               부정적인 평가가 이어질 수도 있다. 결국 중요한 것은 마주하고 있는 상대방을 파악하고 배려하는 것이 아닐까. 그런 의미에서 도미닉 커피가 거쳐 온 과정은 신뢰가 가는 브랜드가 만들어지는 순서를
               잘 담고 있다는 생각이 들었다. 하고 싶은 것과 할 수 있는 것 그리고 해야 하는 것을 분명히 하고 차근차근 밟아 온 흔적과 지금 브랜드를 향한 지역 소비자들의 애정이 이를 증명하고 있었다. 
-
-              도미닉커피랩 
-              
-              @dominiccoffee_official_ 
               </pre>
             </div>
             ,
           `,
         type: 'magazine',
         extra: {
+          name: '도미닉커피랩',
+          social: '@dominiccoffee_official_',
           address: '경기 수원시 영통구 센트럴파크로 127번 길 46 ',
+          coordinates: { lat: '37.2948029209528', lng: '127.053977556449' },
           articleType: 'KIND',
           mainImages: {
             name: 'dominic-01.webp',
@@ -3709,16 +3707,15 @@ export const initData = async (nextSeq) => {
          어떻게 보면 아이덴티티커피랩이 빠른 시간 안에 착실한 성장을 거듭했기에 비교적 잦은 이전이 필요했던 것은 아닐까라는 생각이 들었다. 여건에 따라 빠르게 판단을 내리고 이를 실천에 옮기는 것은
               의사결정의 주체가 현실적이면서도 추진력이 있다는 의미로 풀이할 수 있지 않을까. 5년이라는 기간 동안 브랜드를 지속해 오고, 많은 이들로부터 신뢰받는 브랜드로 성장한 것은 그 판단과 추진력이
               결코 틀린 방향을 향한 것이 아니었음을 증명한다. 
-
-              아이덴티티커피랩 
-               
-              @identity_coffeelab 
          </pre>
        </div>
          `,
         type: 'magazine',
         extra: {
+          name: '아이덴티티커피랩',
+          social: '@identity_coffeelab',
           address: '서울 마포구 동교로 139 1층',
+          coordinates: { lat: '37.5554112242628', lng: '126.917486143443' },
           articleType: 'FIENDLY',
           mainImages: {
             name: 'identity-01.webp',
@@ -3824,9 +3821,6 @@ export const initData = async (nextSeq) => {
        </div>
        <div className="magazine-desc-paragraph-cover">
          <pre className="magazine-desc-paragraph">
-          키헤이커피
-          @kihei_coffee
-
           Mon - Fri : 08:30 - 18:30(L.0 18:00)
           Sat  - Sun : OFF
          </pre>
@@ -3834,7 +3828,10 @@ export const initData = async (nextSeq) => {
           `,
         type: 'magazine',
         extra: {
+          name: '키헤이커피',
+          social: '@kihei_coffee',
           address: '서울시 강남구 봉은사로 78길 15, 1층',
+          coordinates: { lat: '37.5118320645968', lng: '127.053194780969' },
           articleType: 'FIENDLY',
           mainImages: {
             name: 'kihei-01.webp',
@@ -3961,7 +3958,7 @@ export const initData = async (nextSeq) => {
    
          "단순히 돈을 많이 벌어서 큰 성장을 이루는 것이 목표는 아닙니다. 돈은 손님들에게 폰트가 지속적으로 선택받을 수 있게 하는 힘을 만들고, 구성원들의 삶을 영위할 수 있도록 하는 수단으로 사용될 거예요. 
          많은 분들께서 사랑해 주신 덕에 잘 살아남았습니다. 앞으로도 최선을 다해 살아남겠습니다. 감사합니다."			  
-         폰트(PONT) 
+          
          로스팅 오피스 | 서울 영등포구 도림로139길 21 
          용산점 | 서울 용산구 한강대로15길 19-16 1층 
          문래점 | 서울 영등포구 경인로77가길 6 1층 
@@ -3970,7 +3967,10 @@ export const initData = async (nextSeq) => {
           `,
         type: 'magazine',
         extra: {
+          name: '폰트(PONT)',
+          social: '@pont_official_',
           address: '서울시 용산구 한강대로15길 19-16 1층',
+          coordinates: { lat: '37.5257905975656', lng: '126.96285650643' },
           articleType: 'FIENDLY',
           mainImages: {
             name: 'pont-01.webp',
@@ -4087,16 +4087,15 @@ export const initData = async (nextSeq) => {
               스탠다드시스템에는 이러한 생각을 실현하기 위한 여러 장치들을 마련했는데, 그중 가장 눈에 띄며 직관적이라고 할 수 있는 것이 바로 원두의 정보가 담긴 인포메이션 카드다. 과거에 비하면 최근에는 브랜드마다의 개성을 
               필터 삼아 커피를 설명한 원두 카드를 커피와 함께 제공하는 모습을 어렵지 않게 마주할 수 있다. 그리고 스탠다드시스템의 카드는 주관적이기보다는 직관적이고 명확하다. 서로 다른 입맛, 취향을 지닌 이들이더라도 커피와 함께 
               접했을 때 그들이 전달하고자 하는 커피의 맛을 명료하게 이해할 수 있기를 바랐기 때문인데, 내부적으로 커피를 평가할 때 기준으로 하는 6가지 항목의 그래프를 삽입한 의도 또한 커피의 맛에 대해 보다 구체적으로 전하고 소통하기 위함이다. 
-			  
-              스탠다드시스템 
-
-              @standardsystem.coffee 
          </pre>
        </div>
           `,
         type: 'magazine',
         extra: {
+          name: '스탠다드시스템',
+          social: '@standardsystem.coffee',
           address: '서울 강남구 선릉로148길 48-5 ',
+          coordinates: { lat: '37.5225715544949', lng: '127.043565625531' },
           articleType: 'FRIENDLY',
           mainImages: {
             name: 'standard-01.webp',
@@ -4209,14 +4208,15 @@ export const initData = async (nextSeq) => {
          "커피를 드시지 못하는 분들께는 히비스커스 패션후르츠 아이스티를 추천합니다. 패션후르츠청의 새콤달콤함에 은은하게 퍼지는 히비스커스 향이 조화를 이루어 남녀노소 부담 없이 즐길 수 있습니다. 
          또 베이커리는 피아크 고구만주를 추천합니다. 부드러운 만주피와 달콤한 고구마 앙금이 피아크의 어떤 음료와도 잘 어울리는 만능 제품이라고 생각합니다. 특히 조선시대, 고구마의 최초 시배지가 영도였다는
          스토리를 생각하며 고구만주를 즐겨보는 것도 뜻깊을 것 같습니다." 
-
-         @p.ark_official
          </pre>
        </div>
          `,
         type: 'magazine',
         extra: {
+          name: 'P.ARK(피아크)',
+          social: '@p.ark_official',
           address: '부산광역시 영도구 해양로195번길 180',
+          coordinates: { lat: '35.0863911924487', lng: '129.076725991167' },
           articleType: 'JOYFUL',
           mainImages: {
             name: 'p_ark-01.webp',
