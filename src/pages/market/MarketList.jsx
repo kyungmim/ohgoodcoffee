@@ -4,20 +4,24 @@ import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useEffect, useMemo, useState } from 'react';
 import moment from 'moment';
+import Pagination from '@components/Pagination';
 
 function MarketList() {
   const axios = useCustomAxios();
-  const [sortProductList, setSortProductList] = useState([]);
+  const [sortProductList, setSortProductList] = useState();
   const [sortType, setSortType] = useState('new');
 
   const { data } = useQuery({
     queryKey: ['products'],
     queryFn: () => axios.get('/products'),
-    select: (response) => response.data.item,
+    select: (response) => response.data,
+    suspense: true,
   });
 
+  console.log(data.pagination);
+
   useEffect(() => {
-    setSortProductList(data);
+    setSortProductList(data.item);
   }, [data]);
 
   const sortData = (data, sortType) => {
@@ -43,10 +47,10 @@ function MarketList() {
     });
   };
 
-  //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
+  // //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
   const sortedData = useMemo(() => {
     if (!data) return [];
-    return sortData([...data], sortType);
+    return sortData([...data.item], sortType);
   }, [data, sortType]);
 
   useEffect(() => {
@@ -54,11 +58,9 @@ function MarketList() {
   }, [sortedData]);
 
   useEffect(() => {
-    if (!data) {
-      return;
-    }
+    if (!data) return;
     setSortProductList(() => {
-      return sortData([...data], sortType);
+      return sortData([...data.item], sortType);
     });
   }, [data, sortType]);
 
@@ -98,6 +100,8 @@ function MarketList() {
               ))}
             </ul>
           </div>
+
+          <Pagination totalCount={data?.pagination.total} currentPage={data?.pagination.page} Link="market" />
         </div>
       </section>
     </>
