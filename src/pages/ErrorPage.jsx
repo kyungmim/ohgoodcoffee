@@ -6,7 +6,7 @@ function ErrorPage() {
         <p className="error-text-item">Error Server</p>
         <p className="error-text-item type-error-small">"Sorry. Please try again."</p>
       </div>
-      <img src="src/assets/error-img.png" alt="에러 이미지" />
+      <img src="/src/assets/error-img.png" alt="에러 이미지" />
     </div>
   );
 }

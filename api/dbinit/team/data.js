@@ -288,18 +288,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 5,
         mainImages: [
           {
-            url: `/files/centercoffee_01.webp`,
             name: 'centercoffee_01.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_01.webp`,
-            name: 'centercoffee_01.webp',
+            path: `/files/03-OGC/centercoffee_01.webp`,
           },
           {
-            url: `/files/centercoffee_01_detail.webp`,
+            name: 'centercoffee_01.webp',
+            path: `/files/03-OGC/centercoffee_01.webp`,
+          },
+          {
             name: 'centercoffee_01_detail.webp',
+            path: `/files/03-OGC/centercoffee_01_detail.webp`,
           },
         ],
         content: [
@@ -332,18 +330,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/centercoffee_02.webp`,
             name: 'centercoffee_02.webp',
+            path: `/files/03-OGC/centercoffee_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/centercoffee_02.webp`,
             name: '/files/centercoffee_02.webp',
+            path: `/files/03-OGC/centercoffee_02.webp`,
           },
           {
-            url: `/files/centercoffee_02_detail.webp`,
             name: 'centercoffee_02_detail.webp',
+            path: `/files/03-OGC/centercoffee_02_detail.webp`,
           },
         ],
         content: [
@@ -376,18 +372,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/centercoffee_03.webp`,
             name: 'centercoffee_03.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_03.webp`,
-            name: 'centercoffee_03.webp',
+            path: `/files/03-OGC/centercoffee_03.webp`,
           },
           {
-            url: `/files/centercoffee_03_detail.webp`,
+            name: 'centercoffee_03.webp',
+            path: `/files/03-OGC/centercoffee_03.webp`,
+          },
+          {
             name: 'centercoffee_03_detail.webp',
+            path: `/files/03-OGC/centercoffee_03_detail.webp`,
           },
         ],
         content: [
@@ -420,18 +414,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 10,
         mainImages: [
           {
-            url: `/files/centercoffee_04.webp`,
             name: 'centercoffee_04.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_04.webp`,
-            name: 'centercoffee_04.webp',
+            path: `/files/03-OGC/centercoffee_04.webp`,
           },
           {
-            url: `/files/centercoffee_04_detail.webp`,
+            name: 'centercoffee_04.webp',
+            path: `/files/03-OGC/centercoffee_04.webp`,
+          },
+          {
             name: 'centercoffee_04_detail.webp',
+            path: `/files/03-OGC/centercoffee_04_detail.webp`,
           },
         ],
         content: [
@@ -462,18 +454,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/centercoffee_05.webp`,
             name: 'centercoffee_05.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_05.webp`,
-            name: 'centercoffee_05.webp',
+            path: `/files/03-OGC/centercoffee_05.webp`,
           },
           {
-            url: `/files/centercoffee_05_detail.webp`,
+            name: 'centercoffee_05.webp',
+            path: `/files/03-OGC/centercoffee_05.webp`,
+          },
+          {
             name: 'centercoffee_05_detail.webp',
+            path: `/files/03-OGC/centercoffee_05_detail.webp`,
           },
         ],
         content: [
@@ -504,18 +494,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 30,
         mainImages: [
           {
-            url: `/files/centercoffee_06.webp`,
             name: 'centercoffee_06.webp',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/centercoffee_06.webp`,
-            name: 'centercoffee_06.webp',
+            path: `/files/03-OGC/centercoffee_06.webp`,
           },
           {
-            url: `/files/centercoffee_06_detail.webp`,
+            name: 'centercoffee_06.webp',
+            path: `/files/03-OGC/centercoffee_06.webp`,
+          },
+          {
             name: 'centercoffee_06_detail.webp',
+            path: `/files/03-OGC/centercoffee_06_detail.webp`,
           },
         ],
         content: [
@@ -551,18 +539,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 290,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_01.webp`,
             name: 'bonanzacoffee_products_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_01_detail_01.webp`,
             name: 'bonanzacoffee_products_01_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_01_detail_02.webp`,
             name: 'bonanzacoffee_products_01_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_01_detail_02.webp`,
           },
         ],
         content: [
@@ -594,18 +580,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 100,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_02.webp`,
             name: 'bonanzacoffee_products_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_02_detail_01.webp`,
             name: 'bonanzacoffee_products_02_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_02_detail_02.webp`,
             name: 'bonanzacoffee_products_02_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_02_detail_02.webp`,
           },
         ],
         content: [
@@ -642,18 +626,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 70,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_03.webp`,
             name: 'bonanzacoffee_products_03.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_03_detail_01.webp`,
             name: 'bonanzacoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_03_detail_02.webp`,
             name: 'bonanzacoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -694,18 +676,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 30,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_04.webp`,
             name: 'bonanzacoffee_products_04.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_04_detail_01webp`,
             name: 'bonanzacoffee_products_04_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04_detail_01webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_04_detail_02.webp`,
             name: 'bonanzacoffee_products_04_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_04_detail_02.webp`,
           },
         ],
         content: [
@@ -739,18 +719,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/bonanzacoffee_products_05.webp`,
             name: 'bonanzacoffee_products_05.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/bonanzacoffee_products_05_detail_01.webp`,
             name: 'bonanzacoffee_products_05_detail_01.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05_detail_01.webp`,
           },
           {
-            url: `/files/bonanzacoffee_products_05_detail_02.webp`,
             name: 'bonanzacoffee_products_05_detail_02.webp',
+            path: `/files/03-OGC/bonanzacoffee_products_05_detail_02.webp`,
           },
         ],
         content: [
@@ -785,18 +763,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 60,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_01.webp`,
             name: 'keepthatcoffee_products_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_01_detail_01.webp`,
             name: 'keepthatcoffee_products_01_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_01_detail_02.webp`,
             name: 'keepthatcoffee_products_01_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_01_detail_02.webp`,
           },
         ],
         content: [
@@ -832,18 +808,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 80,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_02.webp`,
             name: 'keepthatcoffee_products_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_02_detail_01.webp`,
             name: 'keepthatcoffee_products_02_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_02_detail_02.webp`,
             name: 'keepthatcoffee_products_02_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_02_detail_02.webp`,
           },
         ],
         content: [
@@ -879,18 +853,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 300,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_03.webp`,
             name: 'keepthatcoffee_products_03.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
             name: 'keepthatcoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
             name: 'keepthatcoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -925,18 +897,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 50,
         mainImages: [
           {
-            url: `/files/keepthatcoffee_products_04.webp`,
             name: 'keepthatcoffee_products_04.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/keepthatcoffee_products_03_detail_01.webp`,
             name: 'keepthatcoffee_products_03_detail_01.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_01.webp`,
           },
           {
-            url: `/files/keepthatcoffee_products_03_detail_02.webp`,
             name: 'keepthatcoffee_products_03_detail_02.webp',
+            path: `/files/03-OGC/keepthatcoffee_products_03_detail_02.webp`,
           },
         ],
         content: [
@@ -970,18 +940,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 190,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_01.webp`,
             name: 'milestonecoffee_products_01.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_01-1.webp`,
             name: 'milestonecoffee_products_01-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_01-2.webp`,
             name: 'milestonecoffee_products_01-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_01-2.webp`,
           },
         ],
         content: [
@@ -1017,18 +985,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_02.webp`,
             name: 'milestonecoffee_products_02.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_02-1.webp`,
             name: 'milestonecoffee_products_02-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_02-2.webp`,
             name: 'milestonecoffee_products_02-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_02-2.webp`,
           },
         ],
         content: [
@@ -1064,18 +1030,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_03.webp`,
             name: 'milestonecoffee_products_03.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_03-1.webp`,
             name: 'milestonecoffee_products_03-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_03-2.webp`,
             name: 'milestonecoffee_products_03-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_03-2.webp`,
           },
         ],
         content: [
@@ -1109,18 +1073,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_04.webp`,
             name: 'milestonecoffee_products_04.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_04-1.webp`,
             name: 'milestonecoffee_products_04-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_04-2.webp`,
             name: 'milestonecoffee_products_04-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_04-2.webp`,
           },
         ],
         content: [
@@ -1183,18 +1145,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/milestonecoffee_products_05.webp`,
             name: 'milestonecoffee_products_05.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/milestonecoffee_products_05-1.webp`,
             name: 'milestonecoffee_products_05-1.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05-1.webp`,
           },
           {
-            url: `/files/milestonecoffee_products_05-2.webp`,
             name: 'milestonecoffee_products_05-2.webp',
+            path: `/files/03-OGC/milestonecoffee_products_05-2.webp`,
           },
         ],
         content: [
@@ -1250,19 +1210,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_01.webp`,
             name: 'protokoll_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_01-1.webp`,
             name: 'protokoll_products_01-1.webp',
+            path: `/files/03-OGC/protokoll_products_01-1.webp`,
           },
           {
-            url: `/files/protokoll_products_01-2.webp`,
             name: 'protokoll_products_01-2.webp',
+            path: `/files/03-OGC/protokoll_products_01-2.webp`,
           },
         ],
         content: [
@@ -1320,19 +1277,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_02.webp`,
             name: 'protokoll_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_02-1.webp`,
             name: 'protokoll_products_02-1.webp',
+            path: `/files/03-OGC/protokoll_products_02-1.webp`,
           },
           {
-            url: `/files/protokoll_products_02-2.webp`,
             name: 'protokoll_products_02-2.webp',
+            path: `/files/03-OGC/protokoll_products_02-2.webp`,
           },
         ],
         content: [
@@ -1401,19 +1355,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_03.webp`,
             name: 'protokoll_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_03-1.webp`,
             name: 'protokoll_products_03-1.webp',
+            path: `/files/03-OGC/protokoll_products_03-1.webp`,
           },
           {
-            url: `/files/protokoll_products_03-2.webp`,
             name: 'protokoll_products_03-2.webp',
+            path: `/files/03-OGC/protokoll_products_03-2.webp`,
           },
         ],
         content: [
@@ -1479,19 +1430,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_04.webp`,
             name: 'protokoll_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_04-1.webp`,
             name: 'protokoll_products_04-1.webp',
+            path: `/files/03-OGC/protokoll_products_04-1.webp`,
           },
           {
-            url: `/files/protokoll_products_04-2.webp`,
             name: 'protokoll_products_04-2.webp',
+            path: `/files/03-OGC/protokoll_products_04-2.webp`,
           },
         ],
         content: [
@@ -1536,19 +1484,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/protokoll_products_05.webp`,
             name: 'protokoll_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/protokoll_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/protokoll_products_05-1.webp`,
             name: 'protokoll_products_05-1.webp',
+            path: `/files/03-OGC/protokoll_products_05-1.webp`,
           },
           {
-            url: `/files/protokoll_products_05-2.webp`,
             name: 'protokoll_products_05-2.webp',
+            path: `/files/03-OGC/protokoll_products_05-2.webp`,
           },
         ],
         content: [
@@ -1591,21 +1536,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_01.webp`,
             name: 'nest_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_01-1.webp`,
             name: 'nest_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01-1.webp`,
           },
           {
-            url: `/files/nest_products_01-2.webp`,
             name: 'nest_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_01-2.webp`,
           },
         ],
         content: [
@@ -1665,21 +1605,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_02.webp`,
             name: 'nest_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_02-1.webp`,
             name: 'nest_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02-1.webp`,
           },
           {
-            url: `/files/nest_products_02-2.webp`,
             name: 'nest_products_02-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_02-2.webp`,
           },
         ],
         content: [
@@ -1744,21 +1679,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_03.webp`,
             name: 'nest_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_03-1.webp`,
             name: 'nest_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03-1.webp`,
           },
           {
-            url: `/files/nest_products_03-2.webp`,
             name: 'nest_products_03-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_03-2.webp`,
           },
         ],
         content: [
@@ -1809,21 +1739,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_04.webp`,
             name: 'nest_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_04-1.webp`,
             name: 'nest_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04-1.webp`,
           },
           {
-            url: `/files/nest_products_04-2.webp`,
             name: 'nest_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_04-2.webp`,
           },
         ],
         content: [
@@ -1890,21 +1815,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/nest_products_05.webp`,
             name: 'nest_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/nest_products_05-1.webp`,
             name: 'nest_products_05-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05-1.webp`,
           },
           {
-            url: `/files/nest_products_05-2.webp`,
             name: 'nest_products_05-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/nest_products_05-2.webp`,
           },
         ],
         content: [
@@ -1972,21 +1892,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_01.webp`,
             name: 'manufactcoffee_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_01-1.webp`,
             name: 'manufactcoffee_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_01-2.webp`,
             name: 'manufactcoffee_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_01-2.webp`,
           },
         ],
         content: [
@@ -2029,21 +1944,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_02.webp`,
             name: 'manufactcoffee_products_02.webp',
-            orgName: '',
-          },
-        ],
-        detailImages: [
-          {
-            url: `/files/manufactcoffee_products_02.webp`,
-            name: 'manufactcoffee_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_02.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_02-1.webp`,
+            name: 'manufactcoffee_products_02.webp',
+            path: `/files/03-OGC/manufactcoffee_products_02.webp`,
+          },
+          {
             name: 'manufactcoffee_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_02-1.webp`,
           },
         ],
         content: [
@@ -2078,21 +1988,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_03.webp`,
             name: 'manufactcoffee_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_03-1.webp`,
             name: 'manufactcoffee_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_03-2.webp`,
             name: 'manufactcoffee_products_03-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_03-2.webp`,
           },
         ],
         content: [
@@ -2125,21 +2030,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 310,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_04.webp`,
             name: 'manufactcoffee_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_04-1.webp`,
             name: 'manufactcoffee_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_04-2.webp`,
             name: 'manufactcoffee_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_04-2.webp`,
           },
         ],
         content: [
@@ -2182,21 +2082,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_05.webp`,
             name: 'manufactcoffee_products_05.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_05-1.webp`,
             name: 'manufactcoffee_products_05-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_05-2.webp`,
             name: 'manufactcoffee_products_05-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_05-2.webp`,
           },
         ],
         content: [
@@ -2239,21 +2134,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/manufactcoffee_products_06.webp`,
             name: 'manufactcoffee_products_06.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/manufactcoffee_products_06-1.webp`,
             name: 'manufactcoffee_products_06-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06-1.webp`,
           },
           {
-            url: `/files/manufactcoffee_products_06-2.webp`,
             name: 'manufactcoffee_products_06-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/manufactcoffee_products_06-2.webp`,
           },
         ],
         content: [
@@ -2293,21 +2183,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_01.webp`,
             name: 'longplay_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_01-2.webp`,
             name: 'longplay_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_01-2.webp`,
           },
         ],
         content: [
@@ -2342,21 +2227,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_02.webp`,
             name: 'longplay_products_02.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_02.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_02-1.webp`,
             name: 'longplay_products_02-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_02-1.webp`,
           },
         ],
         content: [
@@ -2387,21 +2267,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_03.webp`,
             name: 'longplay_products_03.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_03.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_common.webp`,
             name: 'longplay_products_common.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_common.webp`,
           },
           {
-            url: `/files/longplay_products_03-1.webp`,
             name: 'longplay_products_03-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_03-1.webp`,
           },
         ],
         content: [
@@ -2432,21 +2307,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 200,
         mainImages: [
           {
-            url: `/files/longplay_products_04.webp`,
             name: 'longplay_products_04.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/longplay_products_04-1.webp`,
             name: 'longplay_products_04-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04-1.webp`,
           },
           {
-            url: `/files/longplay_products_04-2.webp`,
             name: 'longplay_products_04-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/longplay_products_04-2.webp`,
           },
         ],
         content: [
@@ -2478,21 +2348,16 @@ export const initData = async (nextSeq) => {
         buyQuantity: 16,
         mainImages: [
           {
-            url: `/files/joinus_products_01.webp`,
             name: 'joinus_products_01.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01.webp`,
           },
-        ],
-        detailImages: [
           {
-            url: `/files/joinus_products_01-1.webp`,
             name: 'joinus_products_01-1.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01-1.webp`,
           },
           {
-            url: `/files/joinus_products_01-2.webp`,
             name: 'joinus_products_01-2.webp',
-            orgName: '',
+            path: `/files/03-OGC/joinus_products_01-2.webp`,
           },
         ],
         content: [
@@ -3354,9 +3219,12 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '편안함 속에서 공유하는 즐거움, COEO(코에오)',
-        content: [
-          {
-            d1: `
+        content: `
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-01.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               COFFEE.HUMAN.LOVE LIFE 
               편안함 속에서 공유하는 즐거움, COEO(코에오) 
 
@@ -3368,10 +3236,14 @@ export const initData = async (nextSeq) => {
               성수동에서도 조금 한적한 거리에는 그런 장면들 중에서도 눈에 띌 COEO(코에오)가 자리하고 있다. 얼핏 보면 공방 같기도 한 외관에 비해 따뜻한 톤의 내부의 반전을 발견할 수 있고, 밖에 세워둔
               다양한 '탈것'들에서 공간에 대해 다양한 상상을 하게 만드는 곳이다. 또 코에오를 찾은 날은 겨울과 봄의 경계였던 탓에 아직 쌀쌀했으나 유난히도 볕이 잘 들었다. 하루의, 누군가의 기승전결
               중에서 하나의 장면으로 넣기에 이보다 적절할 수 있을까라는 생각이 절로 들었다.
-              `,
-          },
-          {
-            d2: `
+              </pre>
+            </div>
+            
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-02.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               함께 만들고, 목소리가 모이는 공간 
               코에오(COEO)는 라틴어로 '함께 가다', '모이다'라는 뜻이다. 이중적인 의미로 일본어인 声を（こえを）'목소리를'이라는 뜻도 담고 있다. 
 
@@ -3381,10 +3253,14 @@ export const initData = async (nextSeq) => {
               코에오의 슬로건은 'COFFEE.HUMAN.LOVE LIFE'다. 커피라는 매개체로 많은 사람들의 삶에 녹아들어 그들과 공유하고, 서로의 안부를 묻는, 소소한 LOVE LIFE를 지향하고 있다. 코에오의 이름을 걸기
               위한 공간을 찾을 때, '함께' 혹은 각자가 어우러져 코에오라는 공간에서 이곳을 찾은 사람들이 각자의 방식으로 편안하게 시간을 보내다 갈 수 있기를 바랐다. 그래서일까, 첫 매장이었던 이태원에서
               성수동으로 매장을 이전할 때 북적대는 메인거리가 아닌, 조금은 떨어진 곳에 한적하고 아늑한 공간이 자연스럽게 눈에 들어왔다.
-              `,
-          },
-          {
-            d3: `
+              </pre>
+            </div>
+
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-03.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               오롯이 즐길 수 있는 편안함 
               코에오를 방문하는 고객들은 주로 필터커피를 찾아오는, 커피 자체에 깊게 매료되어 있는 이들이 대부분이다. 여기에는 쟁쟁한 커피 브랜드들 사이에서도 특유의 감성과 퀄리티를 통해 신뢰받는
               브랜드로 자리 잡은 것 또한 한몫을 했다고 할 수 있다. 이밖에도 시그니처 커피로 통하는 'YUKI'(유키)는 콜드브루 커피 위에 하얀 크림과 가니쉬가 올라가는 메뉴로, 이름처럼 겨울에 내린 눈을
@@ -3393,28 +3269,40 @@ export const initData = async (nextSeq) => {
               "필터커피로는 5-8 종류의 라인업을 주기적으로 변경하여 서브하고 있습니다. 에스프레소 머신으로 서브하는 커피로는 2종류의 블렌드와 디카페인이 있고요. 매장에는 커피 외에도 논커피 음료를
               즐기시는 분들도 많으시기 때문에 6가지 정도의 논커피 종류를 준비해서 제공하고 있습니다. 눈을 닮은 커피 'YUKI'는 시그니쳐 메뉴입니다. 차처럼 가벼우면서 산뜻하고 향긋합니다. 처음 매장에
               방문하신다면 무조건 YUKI를 드셔보시는 것을 추천합니다."
-              `,
-          },
-          {
-            d4: `
+              </pre>
+            </div>
+
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-04.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               공간의 한계에서 나아간 '코에오' 
               "코에오를 단순히 커피와 디저트를 즐기는 공간으로만 운영하고 싶진 않았어요. 코에오는 한 마디로 정의할 수 없는 '코에오' 자체이고 싶었습니다. 문화를 공유하고 다양한 사람들이 모여 문화를
               공유하고 각자의 취향대로 즐기는 공간이길 바랐습니다. 코에오와 함께 의미가 담긴 일이면 무엇이든 다양하게 도전하고, 기획하려고 합니다. '함께' 한다는 사실만으로도 행사의 주체가 되는 분,
               찾아오시는 분들 모두가 행복해지더라고요."
-              `,
-          },
-          {
-            d5: `
+              </pre>
+            </div>
+
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-05.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               이들의 생각처럼 코에오는 지난 시간 동안 소소하지만 누구나 '함께' 즐길 수 있는 것들을 진행해 왔다. ▲성소수자들의 인권을 위해 활동하는 단골손님이자 변호사 Eric의 게스트 바리스타
               행사-성소수자단체 기부행사 ▲분재를 하시는 단골손님과 진행한 식목일 팝업행사 ▲산 하나를 통으로 빌린 캠핑장에서 브루잉 행사(단골손님의 강력추천으로 참여) ▲몽골여행을 다녀온 단골손님의
               1주년 기념 여행 사진전 - 판매금 몽골어린이단체 기부 ▲생산자와 소비자를 연결하는 가치에 집중하는 마르셰시장- 커피장 참여 ▲단골손님들이 셀러로 참여해 모두 모여 즐기는 '이웃마켓'(매년 봄,
               가을 진행) ▲후쿠오카에서 워킹홀리데이를 온 단골손님의 후쿠오카 로컬 로스터리들을 소개하는 브루잉 행사 등등이 있었다. 크게 화려하거나 모든 이들의 눈을 사로잡을 만큼 큰 스케일의 행사들이
               아닌 소소한 이벤트들이었으나 모두 코에오의 단골손님들이 없었다면, 함께 할 사람들이 존재하지 않았다면 시작도 할 수 없던 일들인 셈이다. 오히려 다른 브랜드에서는 경험하기 힘든 유니크한
               콘텐츠인 것이다.
-              `,
-          },
-          {
-            d6: `
+              </pre>
+            </div>
+            
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-06.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               문화를 공유하고 즐길 수 있는 공간 
               코에오의 소식을 접하다 보면 유독 로컬 상권을 중심으로 다양한 인연을 맺고 있다는 것을 볼 수 있다. 이웃 매장끼리 서로 돕거나 협업을 하는 등 함께 하는 경우가 없는 것은 아니지만, 코에오가
               보여주는 '함께'는 조금 더 친밀하고 각별하게 보인다. 
@@ -3425,59 +3313,31 @@ export const initData = async (nextSeq) => {
 
               앞으로의 방향성을 묻는 질문에 이들은 "코에오를 단순히 커피와 디저트를 즐기는 공간으로만 운영하고 싶지는 않다."라고 답했다. 다양한 사람들이 모여 문화를 공유하고 각자의 취향대로 즐기는
               공간이길 바란다는 것. 그리고 이를 위해 앞으로도 지금까지처럼 코에오와 함께 의미가 담긴 일이면 무엇이든 다양하게 도전하고, 기획할 것임을 밝혔다.
-              `,
-          },
-          {
-            d7: `
+              </pre>
+            </div>
+
+          <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/coeo-07.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               무엇보다 '함께'라는 부사가 잘 어울리는 공간이라는 생각이 들었다. 사소한 인연이라도 소중하게 여길 줄 알고, 이를 이어나가는 것 또한 자연스럽게 찾게 만드는 공간의 조건이라고 할 수 있지
               않을까. 소소하지만 단단한 유대감으로 엮인 인연은 그 자체로 일종의 안정감을 준다. 그리고 그러한 안정감과 편안함 속에서 소통과 공유를 할 수 있는 시간이자 공간은 지금 시대를 살아가는
               우리들에게 있어 꽤나 소중하다. 
-
-              COEO(코에오) 
-              서울특별시 성동구 성수이로16길 45, 1층 
-              @coeo_kr 
-              `,
-          },
-        ],
+              </pre>
+            </div>
+           `,
         type: 'magazine',
         extra: {
+          name: 'COEO(코에오)',
+          social: '@coeo_kr',
+          address: '서울특별시 성동구 성수이로16길 45, 1층',
+          coordinates: { lat: '37.5397942677918', lng: '127.061436661107' },
           articleType: 'FRIENDLY',
-          mainImages: [
-            {
-              url: `/files/coeo-01.webp`,
-              name: 'coeo-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/coeo-01.webp`,
-              name: 'coeo-01.webp',
-            },
-            {
-              url: `/files/coeo-02.webp`,
-              name: 'coeo-02.webp',
-            },
-            {
-              url: `/files/coeo-03.webp`,
-              name: 'coeo-03.webp',
-            },
-            {
-              url: `/files/coeo-04.webp`,
-              name: 'coeo-04.webp',
-            },
-            {
-              url: `/files/coeo-05.webp`,
-              name: 'coeo-05.webp',
-            },
-            {
-              url: `/files/coeo-06.webp`,
-              name: 'coeo-06.webp',
-            },
-            {
-              url: `/files/coeo-07.webp`,
-              name: 'coeo-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'coeo-01.webp',
+            path: `/files/03-OGC/coeo-01.webp`,
+          },
         },
         views: 2000,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -3486,9 +3346,12 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '함께 채워가는 공간, 연필(緣苾)',
-        content: [
-          {
-            d1: `
+        content: `
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-01.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               입체적인 콘텐츠 공간에서 쌓아가는 인연 
 			  
               함께 채워가는 공간, 연필(緣苾) 
@@ -3504,10 +3367,14 @@ export const initData = async (nextSeq) => {
 			        성수동에서도 조금 한적한 거리에는 그런 장면들 중에서도 눈에 띌 COEO(코에오)가 자리하고 있다. 얼핏 보면 공방 같기도 한 외관에 비해 따뜻한 톤의 내부의 반전을 발견할 수 있고, 밖에 세워둔
               다양한 '탈것'들에서 공간에 대해 다양한 상상을 하게 만드는 곳이다. 또 코에오를 찾은 날은 겨울과 봄의 경계였던 탓에 아직 쌀쌀했으나 유난히도 볕이 잘 들었다. 하루의, 누군가의 기승전결
               중에서 하나의 장면으로 넣기에 이보다 적절할 수 있을까라는 생각이 절로 들었다.
-              `,
-          },
-          {
-            d2: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-02.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               인연이 피어 향기로운 공간
 			  
               "우선순위로 쉽게 기억에 남을 수 있는 네이밍을 하려고 했습니다. 다양한 카페 이름을 보면서 '기억에 남아있는 이름이 무엇이었을까?', '왜 이렇게 지으셨을까?', '왜 기억에 남았을까?'라는
@@ -3515,19 +3382,26 @@ export const initData = async (nextSeq) => {
               사물 등을 이중적인 의미로 지어보는 것도 좋겠다.'라는 생각이 번쩍 들었습니다. 또 때마침 '연필'이란 단어가 떠올랐죠." 
 			  
               누구나 사용해 봤고 친근감이 있으며, 옛 생각도 들어 기억에도 잘 남을 듯했다. 매장을 바 형식으로 구성하고자 했던 의도와도 어울리고 스토리텔링도 잘 이어질 것 같았다.
-              `,
-          },
-          {
-            d3: `
-			        "인연 연, 향기로울 필 자를 쓰는데, 이중적인 의미로 '필' 한자 위에는 초두머리로 풀 초를 사용합니다. 풀 초는 자라나다는 의미도 담겨 있어 인연이 피어(자라나서) 향기로운 공간이라는 의미를
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-03.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
+              "인연 연, 향기로울 필 자를 쓰는데, 이중적인 의미로 '필' 한자 위에는 초두머리로 풀 초를 사용합니다. 풀 초는 자라나다는 의미도 담겨 있어 인연이 피어(자라나서) 향기로운 공간이라는 의미를
               넣게 되었어요. 커피를 매개체로 다양한 사람들과 가깝게 연을 이어갈 수 있는 공간이 되기를 바라는 마음입니다. 그러기 위해서 다양한 로스터리 원두를 셀렉해 좋은 컨디션의 맛을 유지하여,
               누구나 부담 없이 커피를 즐길 수 있도록 하고 싶어요. 다양한 로스터리 카페를 손님들에게 알릴 수 있는 좋은 계기가 되기도 하는 것 같고, 커피를 통해 대화를 이어가게 되면서 서로의 일상적인
               대화도 자연스럽게 나누어 손님과의 대화 단절의 벽을 쉽게 허물 수 있었습니다."
-			
-              `,
-          },
-          {
-            d4: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-04.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               방문하는 이들이 남기는 기록 
               연필의 매장 한편에는 지금까지 공간을 찾은 이들이 남긴 메모들이 기록되어 있다. 소개팅으로 연필을 찾았던 이들이 남긴 이야기, 지방 혹은 제주도에서 이곳을 찾은 손님의 인사, 주변에서 소개를
               받고 찾은 외국인 손님 등 다양한 시선으로 내용이 담긴 메모장을 볼 수 있다. 
@@ -3535,11 +3409,15 @@ export const initData = async (nextSeq) => {
 			        "대부분 커피와 공간에 대한 내용들이 많이 적혀 있는데, 그 메모를 볼 때마다 내심 열심히 일을 한 것 같아 마음이 따뜻해지고 더 분발해야겠다는 느낌을 강하게 받습니다. 또 그림도 많이 그려
               주시는데, 특히 연필의 창밖으로 자주 출몰하는 길 고양이를 그려주시는 분들이 정말 많아요. 고양이의 생김새는 한결같지만 손님들이 그리는 고양이들은 다양한 특징들을 갖고 있어 볼 때마다
               사람들마다 다양한 관점을 가지고 있고 관찰력이 다르다는 것을 느끼게 되는 것 같아 재미있고 신기한 것 같아요."
-              `,
-          },
-          {
-            d5: `
-			        탄탄하면서도 독특한 매력 
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-05.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
+              탄탄하면서도 독특한 매력 
 			  
               "대부분 커피와 공간에 대한 내용들이 많이 적혀 있는데, 그 메모를 볼 때마다 내심 열심히 일을 한 것 같아 마음이 따뜻해지고 더 분발해야겠다는 느낌을 강하게 받습니다. 또 그림도 많이 그려
               주시는데, 특히 연필의 창밖으로 자주 출몰하는 길 고양이를 그려주시는 분들이 정말 많아요. 고양이의 생김새는 한결같지만 손님들이 그리는 고양이들은 다양한 특징들을 갖고 있어 볼 때마다
@@ -3547,10 +3425,14 @@ export const initData = async (nextSeq) => {
 			
 			        논커피 라인업 또한 부족함이 없도록 준비했다. 심플하지만 시선을 사로잡는 로즈힙베리 아이스티부터 밀크티, 에이드 등과 더불어 티 메뉴 또한 취향에 맞춰 선택할 수 있도록 3가지를 구비해두고
               있다. 디저트의 경우는 제철 과일에 따라 자주 바뀌는 편인데, 푸딩과 티라미수 등 다양한 변화를 주고 있다고. 그는 "디저트에 대해서는 항상 고민이 많은 편"이라고 덧붙이기도 했다.
-              `,
-          },
-          {
-            d6: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-06.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               입체적인 콘텐츠가 있는 공간 
 
               연필을 직접 방문하거나 SNS를 살펴보면 눈에 띄는 것이 청각적인 요소의 비중. 매장을 찾는 이들로부터 받은 신청곡을 틀거나 음악에 집중할 수 있는 환경을 만들기 위해 구조에 신경을 쏟은 흔적을 발견할 수 있다. 
@@ -3559,58 +3441,31 @@ export const initData = async (nextSeq) => {
               양쪽 정면에 위치하게 있습니다. 그리하여 사운드에 더 쉽게 노출이 되어 음악에 집중할 수 있도록 배치해 두었는데 음료를 마시며 공간이 주는 분위기와 음향에 심취할 수 있도록 힘썼습니다.
               하지만 저에겐 연필의 우드톤 인테리어에 잘 어울리는 음악을 찾기 정말 어려웠던 거 같습니다. 너무 밝은 음악도 그렇다 해서 무거운 음악도 잘 맞지가 않아 퇴근길에 항상 음악을 찾아 고민 끝에
               추가하고 있는데, 쉽지 않아 여전히 큰 고민 중 하나입니다."
-              `,
-          },
-          {
-            d7: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/yeonpil-07.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               가끔 매장을 찾은 손님분들이 메모지에 공간과 어울리는 음악을 적어주고 가는 경우가 있어 쉽게 선택을 할 때도 있었다. 한 번은 짧게나마 손님들과의 음악 공유를 통해 공간에 서로의 취향을
               담아보고 싶어 신청곡을 받기도 했는데, 다들 자유롭게 좋아하는 플레이 리스트를 담아주면서 모두가 공간을 더 즐길 수 있었던 것이 좋은 기억이 남았다고. 
+               
+              </pre>
+            </div>`,
 
-              연필 
-              서울 광진구 면목로 12, 1층 
-              @yeonpil_official 
-              `,
-          },
-        ],
         type: 'magazine',
         extra: {
+          name: '연필(緣苾)',
+          social: '@yeonpil_official',
+          address: '서울 광진구 면목로 12, 1층',
+          coordinates: { lat: '37.5552233141176', lng: '127.075594139455' },
           articleType: 'JOYFUL',
-          mainImages: [
-            {
-              url: `/files/yeonpil-01.webp`,
-              name: 'yeonpil-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/yeonpil-01.webp`,
-              name: 'yeonpil-01.webp',
-            },
-            {
-              url: `/files/yeonpil-02.webp`,
-              name: 'yeonpil-02.webp',
-            },
-            {
-              url: `/files/yeonpil-03.webp`,
-              name: 'yeonpil-03.webp',
-            },
-            {
-              url: `/files/yeonpil-04.webp`,
-              name: 'yeonpil-04.webp',
-            },
-            {
-              url: `/files/yeonpil-05.webp`,
-              name: 'yeonpil-05.webp',
-            },
-            {
-              url: `/files/yeonpil-06.webp`,
-              name: 'yeonpil-06.webp',
-            },
-            {
-              url: `/files/yeonpil-07.webp`,
-              name: 'yeonpil-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'yeonpil-01.webp',
+            path: `/files/03-OGC/yeonpil-01.webp`,
+          },
         },
         views: 1818,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -3619,9 +3474,12 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: 'You made my day, 도미닉커피랩',
-        content: [
-          {
-            d1: `
+        content: `
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-01.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               광교카페거리의 스페셜티커피 간판 브랜드 
               You made my day, 도미닉커피랩 
 			  
@@ -3631,30 +3489,41 @@ export const initData = async (nextSeq) => {
               디저트와의 조합, 바리스타들의 친절함 등 카페를 구성하는 다양한 요소들에 대한 만족도가 높다. 여기에 카페 컨설팅, 원두 납품도 꾸준히 진행하면서 점차 인지도와 영향력을 확장해 나가고 있는
               브랜드이기도 하다. 모두가 어려웠던 시기도 굳건하게 버티며 이어져 올 수 있었다는 것은 분명한 이유가 있다는 의미. 겉으로 봐도 탄탄하다는 느낌을 받을 수 있는 도미닉커피랩의 대표인 강정호
               바리스타를 만났다. 
-              `,
-          },
-          {
-            d2: `
+              </pre>
+            </div>
+            
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-02.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               친숙함에서 비롯한 시작 
               자신의 이름을 건 도미닉 커피랩을 오픈하면서 수원에 스페셜티커피를 소개하고자 했으나 쉽지 않았다. 공을 들여 스페셜티커피를 준비해도 대부분의 소비자들은 낯설게 받아들였다. 
 			  
               "당시에는 스페셜티커피에 대한 수요가 지금보다도 없었어요. 8~10만 원짜리 게이샤를 구해서 준비를 해도 같은 바리스타 고객분들이나 주변 지인들 또는 직원들만 즐기는 형태가 되다 보니 의미가
               없다는 생각이 들었어요."
-              `,
-          },
-          {
-            d3: `
-			        이에 그는 우선 호불호가 적은 맛과 향의 커피를 소개함으로써 커피에 대한 소비자들의 인식을 전환함과 동시에 도미니 커피랩을 신뢰할 수 있는 브랜드로 만들고자 했다. 직접 로스팅을 하는 만큼,
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-03.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
+              이에 그는 우선 호불호가 적은 맛과 향의 커피를 소개함으로써 커피에 대한 소비자들의 인식을 전환함과 동시에 도미니 커피랩을 신뢰할 수 있는 브랜드로 만들고자 했다. 직접 로스팅을 하는 만큼,
               고소하면서도 쓴 맛 대신 단 맛이 두드러지는 커피를 블렌딩해 제공했다. 또 싱글 오리진 또한 화려한 개성을 있는 그대로 표현하는 것보다는 적은 산미를 바탕으로 커피 본연의 개성이 살아나도록
               의도했다. 
 			  
 			        "그렇게 한동안은 최대한 호불호가 적고 많은 분들이 편안하면서도 다양하게 즐길 수 있는 커피를 만들고 소개해 왔어요. 그러다 보니 수원 광교 지역에서는 그래도 어느 정도 이름이 알려지고
               찾아와 주시는 분들도 생겼죠. 처음과 비교했을 때 달라진 상황을 보면서 이제는 좀 더 다양한 커피를 소개할 수 있지 않을까라는 생각이 들었고요."
-			
-              `,
-          },
-          {
-            d4: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-04.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               더 깊고 다양한 커피를 위해 
               마침 그가 만드는 커피에 대한 수요량이 늘어나면서 기존 매장에 마련한 로스팅실을 확장할 필요성도 느끼고 있던 만큼 멀지 않은 곳에 두 번째 공간을 오픈했다. 매장을 방문한 고객분들이 편하게
               커피를 즐길 수 있는 홀과 바, 그리고 확장된 로스팅실을 만들었다. 
@@ -3664,79 +3533,60 @@ export const initData = async (nextSeq) => {
 			  
 			        커피랩을 소비자들이 익숙하게 여기면서도 커피에 대한 긍정적인 인상을 느낄 수 있는 공간으로 의도했다면, 두 번째 매장인 로스터즈는 더 디테일하면서도 다채로운 커피 경험을 위한 공간이라고 할
               수 있다. 실제로 공간을 찾는 고객들도 기존 메뉴들에 비해 저렴한 가격이 아님에도 스페셜티커피를 주문하기 시작했고, 대화를 통해 추천받은 커피를 경험한 이들은 점차 더 다양한 커피들에도
-              관심을 가지거나 원두를 구매하기도 했다
-              `,
-          },
-          {
-            d5: `
-			        개성을 공유하는 공간들
+              관심을 가지거나 원두를 구매하기도 했다.
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-05.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
+              개성을 공유하는 공간들
               각각 에스프레소 베이스의 커피와 필터 커피를 전문적으로 다루는 두 곳의 매장 외에도 디저트를 전문적으로 하는 와이엠엠디(YMMD; You made my day) 또한 광교카페거리에서 디저트 맛집으로 이름을
               알리고 있다. 디저트에 강점을 두고 있는 카페인만큼 다양한 디저트들과 함께 즐길 수 있는 시즌별 시그니처 메뉴를 만나볼 수 있다는 것이 포인트다.
 			        "시장의 흐름이나 트렌드의 변화도 그렇고 현실적인 부분에서도 디저트의 유무가 중요하겠다는 생각이 들었어요. 그래서 커피와 함께 즐길 수 있는 디저트를 고민하다가 바스크 치즈 케이크를
               판매하기 시작했어요. 당시 수원 지역에서는 거의 취급하는 곳이 없었기 때문에 많은 분들이 찾아주셨죠."
-              `,
-          },
-          {
-            d6: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-06.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               더 많은 이들을 위한 도미닉 
               이미 인근에서는 유명한 메뉴인 코코넛 라떼는 남녀노소 누구나 편안하게 즐길 수 있는 시그니처 메뉴다. 여기에 디카페인으로 주문을 해도 달콤 쌉싸름한 커피의 맛을 느낄 수 있고, 플랫화이트를
               비롯해 직원들 모두의 수준 높은 라떼아트를 즐길 수 있는 라떼 메뉴들은 긍정적인 후기로 가득하다.
 			  
               "디저트 공간의 이름인 YMMD는 You made my day의 앞글자를 따서 만든 이름인데, 의미 그대로 '덕분에 좋은 하루를 보냈어요'라는 뜻으로 고객분들이 저희가 제공하는 커피 한잔으로 행복한 하루를
               보내실 수 있으면 좋겠다는 마음으로 커피를 하고 있어요. 행복하고 즐거운 커피를 더 많이 알리기 위해 노력을 하고 있다고 볼 수 있을 것 같아요."
-              `,
-          },
-          {
-            d7: `
+              </pre>
+            </div>
+
+            <div className="magazin-cover">
+              <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/dominic-07.webp" alt="카페 상세 사진" />
+            </div>
+            <div className="magazine-desc-paragraph-cover">
+              <pre className="magazine-desc-paragraph">
               아무리 비싸고 좋은 커피, 스스로는 엄청난 정성을 들여 준비하더라도 정작 이를 접하게 될 이들을 고려하지 않았다면 그 결과는 장담할 수 없다. 예상했던 것과는 정반대의 반응을 보일 수도, 어쩌면
               부정적인 평가가 이어질 수도 있다. 결국 중요한 것은 마주하고 있는 상대방을 파악하고 배려하는 것이 아닐까. 그런 의미에서 도미닉 커피가 거쳐 온 과정은 신뢰가 가는 브랜드가 만들어지는 순서를
               잘 담고 있다는 생각이 들었다. 하고 싶은 것과 할 수 있는 것 그리고 해야 하는 것을 분명히 하고 차근차근 밟아 온 흔적과 지금 브랜드를 향한 지역 소비자들의 애정이 이를 증명하고 있었다. 
-
-              도미닉커피랩 
-              경기 수원시 영통구 센트럴파크로 127번 길 46 
-              @dominiccoffee_official_ 
-              `,
-          },
-        ],
+              </pre>
+            </div>
+            ,
+          `,
         type: 'magazine',
         extra: {
+          name: '도미닉커피랩',
+          social: '@dominiccoffee_official_',
+          address: '경기 수원시 영통구 센트럴파크로 127번 길 46 ',
+          coordinates: { lat: '37.2948029209528', lng: '127.053977556449' },
           articleType: 'KIND',
-          mainImages: [
-            {
-              url: `/files/dominic-01.webp`,
-              name: 'dominic-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/dominic-01.webp`,
-              name: 'dominic-01.webp',
-            },
-            {
-              url: `/files/dominic-02.webp`,
-              name: 'dominic-02.webp',
-            },
-            {
-              url: `/files/dominic-03.webp`,
-              name: 'dominic-03.webp',
-            },
-            {
-              url: `/files/dominic-04.webp`,
-              name: 'dominic-04.webp',
-            },
-            {
-              url: `/files/dominic-05.webp`,
-              name: 'dominic-05.webp',
-            },
-            {
-              url: `/files/dominic-06.webp`,
-              name: 'dominic-06.webp',
-            },
-            {
-              url: `/files/dominic-07.webp`,
-              name: 'dominic-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'dominic-01.webp',
+            path: `/files/03-OGC/dominic-01.webp`,
+          },
         },
         views: 1800,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -3745,10 +3595,13 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: `스페셜티커피문화의 본질을 전하는 '전달자' - 아이덴티티커피랩`,
-        content: [
-          {
-            d1: `
-              분명한 목적과 의도 스페셜티커피문화의 본질을 전하는 '전달자' 
+        content: `
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-01.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         분명한 목적과 의도 스페셜티커피문화의 본질을 전하는 '전달자' 
               Clean, Clear, Essence. 아이덴티티커피랩 
 			  
               에디터/포토 지우탁 
@@ -3766,12 +3619,15 @@ export const initData = async (nextSeq) => {
 			  
 			        아이덴티티커피랩은 현재 서교동에 위치한 카페 공간과 일산에 자리를 잡은 로스팅 공장으로 구성되어 있다. 팀원도 매장을 전담하는 팀과 공장에서 생산에 주력하는 팀이 따로 있어 각자의 위치에서
               맡은 역할을 수행하고 있다고.
-              
-              `,
-          },
-          {
-            d2: `
-              나를 표현하기 위한 수단, 아이덴티티 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-02.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         나를 표현하기 위한 수단, 아이덴티티 
               이들이 본래 직장 동료로 서로를 처음 만났다. 근무를 하던 도중 각자의 사유로 퇴사를 하게 됐는데, 당시 생두사업팀에서 근무를 했던 윤원균 로스터의 권유로 함께 커피를 하게 됐다. 
 			  
               “둘 다 자신을 표현할 수 있는 수단이 필요했던 것 같아요. 그 선택이 바로 카페였던 거죠. 윤원균 대표는 자신의 커피를 표현할 공간이 필요했고 저 또한 제가 당시 생각하던 것들을 보여줄 공간이
@@ -3779,33 +3635,44 @@ export const initData = async (nextSeq) => {
 			  
 			        브랜드의 이름인 아이덴티티 또한 '우리의 아이덴티티를 만들어 나가 보자'라는 생각이 모든 것의 시작이었기 때문에 그대로 사용했다. 어떤 조직 안에서가 아니라 우리만의 공간과 브랜드에서 각자의
               아이덴티티를 찾고 표현해 보자라는 생각이었다. 그리고 이런 생각은 점차 커피에도 스며들었다.
-              `,
-          },
-          {
-            d3: `
-			        lean, Clear, Essence 
-			        "다양한 매장에서 동일한 종류의 커피를 취급하고 있더라도, 그 커피를 아이덴티티커피랩에서 마셨을 때는 누가 마시더라도 ‘이건 아이덴티티 커피네’라는 생각이 들 정도로 확고한 스타일이 완성될
-              수 있는 커피를 만들려고 했어요. 커피와 함께 저희가 표현하고자 하는 바를 분명하게 전달하고자 한 거죠. 커피 자체에 대해서도 커피를 마시면서 커피에 대한 설명을 읽었을 때, 그 아이덴티티가
-              공감이 될 수 있는 방향을 추구하고 있어요." 
-			  
-			        제조업을 본격적으로 시작하면서 슬로건으로 Clean, Clear, Essence라는 세 가지 목표를 정하고 브랜드의 방향성을 잡았다. 단순히 브랜드뿐만 아니라 커피 또한 이러한 방향에 맞춰 선보이고 있다.
-              Clean은 맛적인 부분에서는 물론, 맛에 민감하지 않은 이들이라도 깨끗하다는 인상을 받을 수 있을 정도의 커피를 추구함을 의미한다. 여기에 커피를 사람들에게 전달하는 과정에 있어서도 투명함을
-              잃지 않겠다는 의지도 담고 있다.
-			
-              `,
-          },
-          {
-            d4: `
-			        명확함을 의미하는 Clear는 직관적인 뉘앙스의 명확함 보다는 목적과 의도를 분명히 한다는 뜻에 가깝다. 생두를 선택할 때나, 로스팅 프로파일을 설계할 때, 혹은 추출에 임할 때 등 어떤 경우에서도
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-03.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         lean, Clear, Essence 
+         "다양한 매장에서 동일한 종류의 커피를 취급하고 있더라도, 그 커피를 아이덴티티커피랩에서 마셨을 때는 누가 마시더라도 ‘이건 아이덴티티 커피네’라는 생각이 들 정도로 확고한 스타일이 완성될
+         수 있는 커피를 만들려고 했어요. 커피와 함께 저희가 표현하고자 하는 바를 분명하게 전달하고자 한 거죠. 커피 자체에 대해서도 커피를 마시면서 커피에 대한 설명을 읽었을 때, 그 아이덴티티가
+         공감이 될 수 있는 방향을 추구하고 있어요." 
+   
+         제조업을 본격적으로 시작하면서 슬로건으로 Clean, Clear, Essence라는 세 가지 목표를 정하고 브랜드의 방향성을 잡았다. 단순히 브랜드뿐만 아니라 커피 또한 이러한 방향에 맞춰 선보이고 있다.
+         Clean은 맛적인 부분에서는 물론, 맛에 민감하지 않은 이들이라도 깨끗하다는 인상을 받을 수 있을 정도의 커피를 추구함을 의미한다. 여기에 커피를 사람들에게 전달하는 과정에 있어서도 투명함을
+         잃지 않겠다는 의지도 담고 있다.
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-04.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         명확함을 의미하는 Clear는 직관적인 뉘앙스의 명확함 보다는 목적과 의도를 분명히 한다는 뜻에 가깝다. 생두를 선택할 때나, 로스팅 프로파일을 설계할 때, 혹은 추출에 임할 때 등 어떤 경우에서도
               목적과 의도를 분명히 함으로써 소비자들이 이에 충분히 공감할 수 있는 것을 지향한다. 마지막 Essence는 의미부터가 본질을 가리키는 단어이면서 브랜드의 이름인 아이덴티티와 일맥상통한다. 이
               모든 것을 종합해 보면, 자신들의 정체성이 고스란히 표현되도록 분명한 의도와 목적으로 만든 커피를 경험할 수 있는 곳이 아이덴티티커피랩이다. 
 			        "또 아이덴티티커피랩의 모든 구성원들이 스페셜티커피를 무척 좋아해요. 그런 스페셜티커피의 가치가 온전하게 전달이 될 수 있도록, 또 계속 즐겁게 스페셜티커피를 전하고 이어가기 위해서는
               지속가능한 것도 중요하다고 생각하고요."
-              `,
-          },
-          {
-            d5: `
-              이를 실천할 수 있도록 지금의 위치에서 할 수 있는 역할에 충실해야 한다고 생각했다. 단순하게 맛있는 커피를 소개하고 전달하는 것에서 나아가 매해 옥션에도 참가하고 랏을 구매하기도 한다. 이는
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-05.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         이를 실천할 수 있도록 지금의 위치에서 할 수 있는 역할에 충실해야 한다고 생각했다. 단순하게 맛있는 커피를 소개하고 전달하는 것에서 나아가 매해 옥션에도 참가하고 랏을 구매하기도 한다. 이는
               희소하고 특별한 맛의 커피를 구매하기 위해서라기보다는 이러한 옥션도 스페셜티커피 문화 중 하나라고 생각하기 때문에 이를 애정하는 입장에서 다양한 스페셜티커피 문화의 가치를 소비하는
               것이다. 그리고 이를 통해 스페셜티커피 문화를 지속하는데 도움이 되는 방향을 추구한다. 
 			
@@ -3813,11 +3680,15 @@ export const initData = async (nextSeq) => {
 			  
 			        "하이엔드 커피라고 하면 보통 뭔가 고가의 커피라고 생각하곤 하는데, 그런 요소들만으로 하이엔드라는 타이틀을 붙인 것은 아니에요. 앞서 언급했던 것처럼 저희가 추구하는 커피는 아이덴티티가
               분명한 커피였기 때문에 커피를 선택할 때도 농장의 스토리가 분명한, 자신들만의 신념이나 가치가 분명해서 소개하고 싶어질 정도인 농장들의 커피를 하이엔드 타이틀로 소개하고 있어요."
-              `,
-          },
-          {
-            d6: `
-              최선의 선택과 투자의 결과 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-06.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         최선의 선택과 투자의 결과 
               첫 시작을 포함해 아이덴티티커피랩은 이번에 새롭게 이전을 함으로써 다섯 번째 오픈을 하게 됐다. 이들이 처음부터 카페 브랜드를 만들어야겠다는 구체적인 계획을 가지고 움직인 것은 아니었다.
               카페를 오픈한 이유가 앞서 언급했던 자신을 표현할 수단을 마련하기 위함도 있었지만, 일종의 돌파구 역할이 필요했었다고. 당시의 상황과 조건에 맞춰 그때 그때 할 수 있는 최선의 선택과 투자를
               거듭해 온 것이다. 다양한 조건을 고려하여 최적의 환경으로 이전을 하면, 점차 브랜드가 성장하면서 더 넓은 공간 혹은 한적한 위치 등이 필요해졌고, 그러면 다시 조건에 맞는 공간을 찾아 이전을
@@ -3825,60 +3696,31 @@ export const initData = async (nextSeq) => {
 			  
               "거래처는 점점 늘어나는데 로스터기가 그 주문량을 감당하기에는 무리가 있다던가 하는 식으로 좋게 보면 감사한 일들로 인해서 어쩔 수 없이 이전을 결정한 것도 있어요. 그 외에 외부적인
               요인들에 영향을 받기도 했죠."
-			  
-              `,
-          },
-          {
-            d7: `
-              어떻게 보면 아이덴티티커피랩이 빠른 시간 안에 착실한 성장을 거듭했기에 비교적 잦은 이전이 필요했던 것은 아닐까라는 생각이 들었다. 여건에 따라 빠르게 판단을 내리고 이를 실천에 옮기는 것은
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/identity-07.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         어떻게 보면 아이덴티티커피랩이 빠른 시간 안에 착실한 성장을 거듭했기에 비교적 잦은 이전이 필요했던 것은 아닐까라는 생각이 들었다. 여건에 따라 빠르게 판단을 내리고 이를 실천에 옮기는 것은
               의사결정의 주체가 현실적이면서도 추진력이 있다는 의미로 풀이할 수 있지 않을까. 5년이라는 기간 동안 브랜드를 지속해 오고, 많은 이들로부터 신뢰받는 브랜드로 성장한 것은 그 판단과 추진력이
               결코 틀린 방향을 향한 것이 아니었음을 증명한다. 
-
-              아이덴티티커피랩 
-              서울 마포구 동교로 139 1층 
-              @identity_coffeelab 
-              `,
-          },
-        ],
+         </pre>
+       </div>
+         `,
         type: 'magazine',
         extra: {
+          name: '아이덴티티커피랩',
+          social: '@identity_coffeelab',
+          address: '서울 마포구 동교로 139 1층',
+          coordinates: { lat: '37.5554112242628', lng: '126.917486143443' },
           articleType: 'FIENDLY',
-          mainImages: [
-            {
-              url: `/files/identity-01.webp`,
-              name: 'identity-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/identity-01.webp`,
-              name: 'identity-01.webp',
-            },
-            {
-              url: `/files/identity-02.webp`,
-              name: 'identity-02.webp',
-            },
-            {
-              url: `/files/identity-03.webp`,
-              name: 'identity-03.webp',
-            },
-            {
-              url: `/files/identity-04.webp`,
-              name: 'identity-04.webp',
-            },
-            {
-              url: `/files/identity-05.webp`,
-              name: 'identity-05.webp',
-            },
-            {
-              url: `/files/identity-06.webp`,
-              name: 'identity-06.webp',
-            },
-            {
-              url: `/files/identity-07webp`,
-              name: 'identity-01.webp',
-            },
-          ],
+          mainImages: {
+            name: 'identity-01.webp',
+            path: `/files/03-OGC/identity-01.webp`,
+          },
         },
         views: 100,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -3887,32 +3729,43 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: `하와이 해변에서 즐기는 커피 한 잔? '키헤이커피'`,
-        content: [
-          {
-            d1: `
-              이국적인 공간에서 마주하는 이국의 커피 
-              좋은 기억을 위한 공간, 키헤이커피 
-			  
-              에디터/포토 지우탁 
-			  
-			        키헤이는 하와이 마우이 남서부에 위치한 지역명이다. 하와이의 찬란한 날씨 아래 약 10km에 달하는 해변이 펼쳐진 지역은 아름다운 자연부터 백사장, 파란 바다에 붉게 물드는 석양까지 그 특유의
-              매력으로 하와이를 방문한 이들이라면 꼭 한번 방문해야 하는 곳으로 꼽히는 여행지다.그런 지역의 이름을 고스란히 사용한 키헤이커피 또한 커피인들 사이에서는 꼭 한 번은 가볼 만한 카페로
-              언급되곤 하는 곳이다. 외관에서부터 느낄 수 있는 해변과 석양, 온화한 기후의 이미지는 내부로 들어서면 더욱 선명하게 경험할 수 있다. 여기에 은은하게 퍼지는 커피향이 더해지면서 이국적인
-              개성이 완성된다. 
-              `,
-          },
-          {
-            d2: `
-              키헤이커피는 2020년 12월에 오픈한 3년 차 카페로, 이곳을 만든 김범준 대표는 과거 이월로스터스에서 근무를 했었다. 4년 반 정도의 근무기간 동안 회사의 전반적인 운영관리 등을 맡아서 했는데,
+        content: `
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-01.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         이국적인 공간에서 마주하는 이국의 커피 
+         좋은 기억을 위한 공간, 키헤이커피 
+   
+         에디터/포토 지우탁 
+   
+         키헤이는 하와이 마우이 남서부에 위치한 지역명이다. 하와이의 찬란한 날씨 아래 약 10km에 달하는 해변이 펼쳐진 지역은 아름다운 자연부터 백사장, 파란 바다에 붉게 물드는 석양까지 그 특유의
+         매력으로 하와이를 방문한 이들이라면 꼭 한번 방문해야 하는 곳으로 꼽히는 여행지다.그런 지역의 이름을 고스란히 사용한 키헤이커피 또한 커피인들 사이에서는 꼭 한 번은 가볼 만한 카페로
+         언급되곤 하는 곳이다. 외관에서부터 느낄 수 있는 해변과 석양, 온화한 기후의 이미지는 내부로 들어서면 더욱 선명하게 경험할 수 있다. 여기에 은은하게 퍼지는 커피향이 더해지면서 이국적인
+         개성이 완성된다. 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-02.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         키헤이커피는 2020년 12월에 오픈한 3년 차 카페로, 이곳을 만든 김범준 대표는 과거 이월로스터스에서 근무를 했었다. 4년 반 정도의 근무기간 동안 회사의 전반적인 운영관리 등을 맡아서 했는데,
               그중 3년은 로스팅을 맡았다. 커피를 하는 많은 이들이 자신만의 카페 창업을 꿈꾸는 것처럼, 김대표 또한 카페 창업에 대한 꿈을 꾸고 있었다. 
 			  
               “회사를 다니면서 일과 공부를 병행하고, 쉬는 날에도 다양한 카페를 찾아다녔어요. 그런 과정을 인스타그램이나 블로그에 꾸준히 기록해 왔고요. 사진 같은 것도 최대한 예쁘게 찍으려고 노력했죠.
               주로 커피를 좀 진정성 있게 하는 카페를 찾으려고 노력했었는데, 이런 경험이나 기록들이 실제로 키헤이커피를 준비하고 오픈할 때도 정말 많은 도움이 많이 됐어요.” 
-              `,
-          },
-          {
-            d3: `
-			        하와이에서의 추억을 담은 공간 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-03.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         하와이에서의 추억을 담은 공간 
 			        이곳의 이름인 키헤이는 하와이 마우이에 있는 작은 마을의 이름이다. 김대표는 와이프랑 결혼하기 전 키헤이로 여행을 갔었는데, 이곳에서의 경험이 무척 좋은 추억들로 남았다. 그 기억은 기반으로
               이후 카페 오픈을 준비하면서 키헤이라는 이름을 그대로 브랜드 명으로 사용했다. 
 			  
@@ -3921,26 +3774,38 @@ export const initData = async (nextSeq) => {
 			        키헤이커피 김범준 대표의 말처럼 외부에서부터 어딘가 백사장을 연상할 수 있는 콘셉트는 문 손잡이부터 내부 조명, 사소한 소품들에까지도 녹아 있는 듯했다. 조명부터가 키헤이의 다채로운 햇살을
               연상할 수 있도록 그라데이션 톤을 활용했고, 곳곳에 해변의 느낌을 주기 위한 장치도 마련했다. 실제로 키헤이커피에서 제공되는 종이컵에는 햇살, 석양을 연상할 수 있는 그라데이션이 들어가 있다.
               여기에는 색다른 재미를 주기도 했는데, 스탠다드로 사용하는 주황색 외에 봄에는 핑크색, 여름에는 하늘색 그라데이션 컵을 시즌 이벤트로 제공하기도 하면서 리프레쉬된 느낌을 주고 있다.
-              `,
-          },
-          {
-            d4: `
-			        특히 공간을 관통하는 바의 한 부분에 꾸며진 백사장 연출은 레고를 비롯한 아기자기한 소품들과 어우러져 방문하는 이들에게 사소한 즐거움을 주고 있기도 했다. 계절이나 크리스마스 같은 시즌에
-              따라 조금씩 다른 콘셉트로 연출하고 있는데 생각보다 많은 고객들이 이 변화를 지켜보면서 즐거움을 느끼고 있다고. 
-			        “손님들이 보시고 재미있다고 느껴주시길 바란 것도 있는데, 저희 개인적으로도 조금 정체된다는 느낌을 받을 때 나름대로의 재미도 찾고 새로움을 추구하기 위한 것도 있어요. 여러모로 긍정적인
-              역할을 해주고 있는 셈이죠.”
-              `,
-          },
-          {
-            d5: `
-              이전체적인 콘셉트의 틀은 유지하되 소소하지만 확실한 변화를 줌으로써 주기적으로 공간을 찾는 이들에게 브랜드를 다채롭게 전달하고 있었다. 단순히 디자인이 다른 종이컵, 예쁜 조명, 소품 등이라고
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-04.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         특히 공간을 관통하는 바의 한 부분에 꾸며진 백사장 연출은 레고를 비롯한 아기자기한 소품들과 어우러져 방문하는 이들에게 사소한 즐거움을 주고 있기도 했다. 계절이나 크리스마스 같은 시즌에
+         따라 조금씩 다른 콘셉트로 연출하고 있는데 생각보다 많은 고객들이 이 변화를 지켜보면서 즐거움을 느끼고 있다고. 
+         “손님들이 보시고 재미있다고 느껴주시길 바란 것도 있는데, 저희 개인적으로도 조금 정체된다는 느낌을 받을 때 나름대로의 재미도 찾고 새로움을 추구하기 위한 것도 있어요. 여러모로 긍정적인
+         역할을 해주고 있는 셈이죠.”
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-05.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         이전체적인 콘셉트의 틀은 유지하되 소소하지만 확실한 변화를 줌으로써 주기적으로 공간을 찾는 이들에게 브랜드를 다채롭게 전달하고 있었다. 단순히 디자인이 다른 종이컵, 예쁜 조명, 소품 등이라고
               생각할 수 있지만 전체적인 결 안에서 변화를 주는 것은 명확한 브랜딩이 선행되지 않으면 결코 쉬운 일이 아니다. 그리고 이는 많은 이들이 키헤이커피를 찾고, 이국적인 분위기 속에서 즐긴 커피 한
               잔에 긍정적인 후기를 남기는 이유이기도 하다.
-              `,
-          },
-          {
-            d6: `
-              탄탄한 기본기, 커피와 쿠키의 조합
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-06.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         탄탄한 기본기, 커피와 쿠키의 조합
               키헤이커피에서 제공되는 전체 메뉴는 약 20개 정도다. 이 중에서 브루잉 커피의 라인업은 변동이 있을 수 있지만 보통 3종류 정도를 선택할 수 있다. 여기에 오늘의 커피가 메뉴판에 있는데, 이는
               매장이 바쁜 점심시간에 브루잉 커피를 마시기 위해 찾은 손님들이 기다릴 필요 없이 간단하게 브루잉 커피를 즐길 수 있도록 배치 브루(Batch Brew)로 추출한 커피다. 쉽게 스타벅스 오늘의 커피와
               같은 개념으로, 한 번에 15잔 정도 분량을 내려서 제공하고 있는데, 많은 고객들이 믿고 선택하는 메뉴라고. 
@@ -3948,51 +3813,30 @@ export const initData = async (nextSeq) => {
               “논커피나 티 종류는 많지 않아요. 커피에 집중한 브랜드라고 생각해 주시면 될 것 같아요. 커피와 함께 즐길 수 있는 디저트로는 쿠키를 제공하고 있어요. 와이프가 매일 아침마다 직접 새로
               구워서 제공하는데, 총 8종류의 쿠키를 준비하고 있어요. 라인업은 분기별로 변화를 주어서 새로운 쿠키를 제공하고요. 8가지 쿠키를 분기마다 새로운 구성으로 만나볼 수 있는 셈이죠. 시즌이나
               날씨에 따라 그에 맞는 쿠키를 커피와 함께 즐길 수 있어요.”
-              `,
-          },
-          {
-            d7: ``,
-          },
-        ],
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/kihei-07.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+          Mon - Fri : 08:30 - 18:30(L.0 18:00)
+          Sat  - Sun : OFF
+         </pre>
+       </div>
+          `,
         type: 'magazine',
         extra: {
+          name: '키헤이커피',
+          social: '@kihei_coffee',
+          address: '서울시 강남구 봉은사로 78길 15, 1층',
+          coordinates: { lat: '37.5118320645968', lng: '127.053194780969' },
           articleType: 'FIENDLY',
-          mainImages: [
-            {
-              url: `/files/kihei-01.webp`,
-              name: 'kihei-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/kihei-01.webp`,
-              name: 'kihei-01.webp',
-            },
-            {
-              url: `/files/kihei-02.webp`,
-              name: 'kihei-02.webp',
-            },
-            {
-              url: `/files/kihei-03.webp`,
-              name: 'kihei-03.webp',
-            },
-            {
-              url: `/files/kihei-04.webp`,
-              name: 'kihei-04.webp',
-            },
-            {
-              url: `/files/kihei-05.webp`,
-              name: 'kihei-05.webp',
-            },
-            {
-              url: `/files/kihei-06.webp`,
-              name: 'kihei-06.webp',
-            },
-            {
-              url: `/files/kihei-07.webp`,
-              name: 'kihei-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'kihei-01.webp',
+            path: `/files/03-OGC/kihei-01.webp`,
+          },
         },
         views: 1,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -4001,36 +3845,47 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '커피와 나를 이어주기 위해 탄생한 공간, 폰트(PONT)',
-        content: [
-          {
-            d1: `
-              커피와 나를 이어주기 위해 탄생한 공간
-              사람과 커피, 산업과 소비자를 잇는 중개자, 폰트(PONT) 
-			  
-              에디터/포토 지우탁 
-			  
-			        인터뷰에 앞서 폰트에 대해 알아보면서 가장 먼저 그리고 많이 받은 인상은 마치 활발하게 활동을 이어가고 있는 신생 기업, 브랜드를 보는 것 같다는 것이었다. 
-			        커피에 대한 전문성은 물론, 독특하지만 친숙하고 포근한 컨셉의 매장에서는 커피를 좀 더 많은 이들에게 친숙하게 소개하기 위한 다양한 이벤트들이 진행되기도 했다. 
-			        처음부터 로스팅 오피스를 마련할 정도로 다양한 라인업에 커피들이 폰트의 이름으로 소개 및 판매되고 있었고, 직접 방문한 산지를 비롯한 커피 업계 자체에 대한 정보들도 꾸준히 전해오고 있었다. 
+        content: `
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-01.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         커피와 나를 이어주기 위해 탄생한 공간
+         사람과 커피, 산업과 소비자를 잇는 중개자, 폰트(PONT) 
+   
+         에디터/포토 지우탁 
+   
+         인터뷰에 앞서 폰트에 대해 알아보면서 가장 먼저 그리고 많이 받은 인상은 마치 활발하게 활동을 이어가고 있는 신생 기업, 브랜드를 보는 것 같다는 것이었다. 
+         커피에 대한 전문성은 물론, 독특하지만 친숙하고 포근한 컨셉의 매장에서는 커피를 좀 더 많은 이들에게 친숙하게 소개하기 위한 다양한 이벤트들이 진행되기도 했다. 
+         처음부터 로스팅 오피스를 마련할 정도로 다양한 라인업에 커피들이 폰트의 이름으로 소개 및 판매되고 있었고, 직접 방문한 산지를 비롯한 커피 업계 자체에 대한 정보들도 꾸준히 전해오고 있었다. 
 
-			        대개 이런 인상을 받게 되는 브랜드, 기업들은 분명한 목표와 방향성을 설정하고 움직이기 마련이고, 세심하게 준비한 브랜딩은 다른 누구도 아닌 소비자들의 반응을 가장 먼저 이끌어낸다. 
-			        실제로 폰트를 방문한 이들은 커피를 비롯한 메뉴들의 퀄리티와 구성은 물론, 공간에 대한 이야기와 구성원들의 친절한 서비스에 대해서도 호평만 가득했다. 
-			        탄탄한 기본기에 세세한 부분들까지 깔끔하게 잘 다듬어진 브랜드는 어떤 손길을 거쳐 탄생하게 됐을까?
-              `,
-          },
-          {
-            d2: `
-              폰트(PONT)의 강호영 대표는 유명 커피 브랜드인 테라로사 커피에서 서울과 경기권 바리스들의 교육을 담당했었다. 이후 프릳츠 커피 컴퍼니 로스팅 공장에서 경험을 쌓고 
+         대개 이런 인상을 받게 되는 브랜드, 기업들은 분명한 목표와 방향성을 설정하고 움직이기 마련이고, 세심하게 준비한 브랜딩은 다른 누구도 아닌 소비자들의 반응을 가장 먼저 이끌어낸다. 
+         실제로 폰트를 방문한 이들은 커피를 비롯한 메뉴들의 퀄리티와 구성은 물론, 공간에 대한 이야기와 구성원들의 친절한 서비스에 대해서도 호평만 가득했다. 
+         탄탄한 기본기에 세세한 부분들까지 깔끔하게 잘 다듬어진 브랜드는 어떤 손길을 거쳐 탄생하게 됐을까?
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-02.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         폰트(PONT)의 강호영 대표는 유명 커피 브랜드인 테라로사 커피에서 서울과 경기권 바리스들의 교육을 담당했었다. 이후 프릳츠 커피 컴퍼니 로스팅 공장에서 경험을 쌓고 
 			        이 모든 것들을 바탕으로 현재의 폰트 만들고 운영하고 있다.  
 			  
               "폰트는 저와 함께 오랜 시간 커피업계에 종사하고 있는 서기문 대표님과 공동창업으로 탄생한 브랜드예요. 운영도 물론 함께 하고 있고요. 
 			        사실 폰트는 카페로만 운영되고 있는 건 아니에요. 어떤 커피를 소비자들에게 판매할 것인가를 자체적으로 결정하고 싶었어요. 
 			        그러기 위해서는 좋은 품질의 커피를 직접 고르고 또 볶아야 했죠." 
-              `,
-          },
-          {
-            d3: `
-			        '생존'을 목표로 선택한 방향 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-03.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         '생존'을 목표로 선택한 방향 
 			        시작부터 브랜드의 방향성을 뚜렷하게 정했던 그들은 자연스럽게 로스팅과 원두 납품까지 함께 할 수 있는 공간을 찾았다. 그렇게 2020년 6월 25일에 로스팅 오피스를 오픈한 이후, 
 			        같은 해 8월 11일에는 용산점을, 그리고 작년 2월 1일에 2호점인 문래점까지 오픈하는 등 차근차근 영향력을 확장해나가고 있다. 얼핏 들으면 평탄해 보이는 브랜드 스토리지만, 
 			        이들이 공간을 오픈하고 인지도를 쌓아온 시기는 코로나로 인해 소비 심리가 얼어붙고 사회적 거리 두기가 시행되는 등 여러 악재들이 겹쳐서 일어나던 때다. 
@@ -4042,19 +3897,26 @@ export const initData = async (nextSeq) => {
 			        이건 회사를 운영하는 대표를 포함해 그 회사를 이루는 구성원들과 회사와 연결된 많은 업체들, 공동체들의 삶을 풍요롭게 하고, 
 			        동시에 좋은 품질의 커피를 구매할 수 있는 능력을 지속적으로 키우고, 상품을 매력적으로 보이게 만드는 등 우리의 공간을 다시 찾을 수 있게 해야만 가능해요. 
 			        그래야만 우리가 사랑하는 이 일을 지속 가능하게 만들 수 있다고 생각합니다. 그렇게 하려면 카페를 벗어나 ‘커피를 다루는 회사’로 방향을 잡아야 한다고 생각했어요."
-			
-              `,
-          },
-          {
-            d4: `
-			        최근에는 다소 주춤하는 듯 보이지만 좁은 골목길에도 하루가 멀다 하고 생기고 없어지길 반복하는 개인카페들과 비교했을 때, 그들의 출발점과 폰트의 출발점은 확연한 차이가 있었던 셈이다. 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-04.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         최근에는 다소 주춤하는 듯 보이지만 좁은 골목길에도 하루가 멀다 하고 생기고 없어지길 반복하는 개인카페들과 비교했을 때, 그들의 출발점과 폰트의 출발점은 확연한 차이가 있었던 셈이다. 
 			        물론 대표들의 경험이나 역량, 목적에 차이가 있을 수 있을 수도 있지만 창업에 앞서 현실적이면서도 명확한 목표와 방향성을 설정하는 것은 어떻게 보면 분야에 상관없이 당연한 것이라고 할 수 있다. 
 			        똑같이 작은 공간에서 시작하더라도 이를 바라보는 마음가짐이나 브랜딩을 통해 그 결과는 현저하게 차이가 날 수 있는 것이다. 어떻게 보면 폰트의 스토리에 지금 시기에 창업을 준비하고 있는 이들이라면 반드시 생각해봐야 할 것들이 담겨 있다는 생각이 들었다.
-              `,
-          },
-          {
-            d5: `
-			        커피와 사람을 잇는 역할 'PONT' 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-05.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         커피와 사람을 잇는 역할 'PONT' 
 			        'PONT'는 불어로 다리나 교량을 뜻하는데, 비유적인 표현으로 중개 역할이나 매개자의 의미로 사용되기도 한다고. 
 			  
               이"커피는 각성제의 역할을 하던 이전과는 달리, 이제 현대인의 삶에서 빠질 수 없는 음료가 되었습니다. 소비자들은 더 빠르게 마실 수 있는 것보다 더 맛있게 마실 수 있는 것을 찾죠. 
@@ -4063,77 +3925,57 @@ export const initData = async (nextSeq) => {
 			        그는 이어서 "또한 산업과 소비자와의 거리를 좁힐 수 있는 중간자 역할을 할 수 있는 전문가 집단이 지속적으로 필요하다."라며, 
 			        "폰트는 이러한 산업의 요구에 맞춰 만들어진 로스터리"라고 덧붙였다. 카페를 둘러싼 소비 트렌드를 파악하고 그 안에서 브랜드의 역할로 일종의 중개인, 다리의 역할을 선택했다는 의미였다. 
 			        스페셜티커피의 대중화는 꽤 이전부터 꾸준히 화두가 되어 오고 있는, 커피 업계에서는 누구나 한 번쯤 떠올렸을 미션이라고도 할 수 있다. 폰트는 브랜드의 이름에서부터 그러한 미션, 자신들이 지향하는 바를 충실하게 담은 셈이다.
-              `,
-          },
-          {
-            d6: `
-              "커피를 찾는 이들에게 좋은 품질의 커피를 널리 알리고, 그 수익이 선순환으로 이어지면서 폰트와 연결되어 있는 모든 사람들의 삶의 질을 높일 수 있도록 하는 가치 있는 소비를 만들고 있어요. 
-			        타 산업과 다르게 부가가치가 낮은 산업이 가지는 약점 중 하나가 그 사슬에 엮여 있는 사람들의 삶의 질을 높이기 어렵다는 것입니다. 
-			        부가가치가 높은 산업으로 발전하게 만드는 열쇠는 좋은 품질의 커피에 대한 소비자들의 인식을 개선하고 양질의 서비스를 제공하는 방법밖에 없어요. 
-			        더 높은 가격을 지불하는 것이 더욱 가치 있는 소비를 했다는 자부심이나 만족감을 줄 수 있어야 한다고 생각합니다." 
-			  
-              부가가치를 높이기 위해서는 소비자들의 인식을 바꿀 필요가 있고, 그러기 위해서는 보다 양질의 커피를 발굴하고 이를 더 원활하게 전달하기 위한 서비스 또한 선행되어야 한다는 뜻으로 해석할 수 있다. 
-			        단순히 브랜드의 인지도를 올리기 위한, 매출을 올리기 위한 방향보다는 커피 산업 전체의 파이를 키우는, 고부가가치 산업으로 끌어올리기 위한 고민의 결가가 폰트라는 브랜드를 통해 표현되고 있다는 느낌을 받았다. 
-			        그런 생각으로 시선을 달리하니 원두의 납품부터 산지 출장, 메뉴의 라인업 등 폰트의 운영방식에서 그들이 나아가고자 하는 방향이 보이는 듯한 느낌이 들기도 했다.
-              `,
-          },
-          {
-            d7: `
-			        폰트를 한 줄로 표현해 달라는 요청에 강대표는 "언제든 편하게 커피 한 잔 마시고 싶다면"이라고 답했다. 인터뷰 초반, 폰트의 의미와 창업의 배경으로부터 이어진 방향성과 체계적인 운영 
-			        그리고 목표가 분명했기에 가능한 답변이 아니었을까? 또한 강대표는 폰트가 나아가고자 하는 방향에 대한 질문에 ‘잘 먹고 잘 사는 것’이라고 답했는데, 이를 좀 더 풀어보면 
-			        폰트에서 가장 중요한 가치 중 하나가 지속가능성이라는 의미다. 
-			  
-			        '생존'이라는 목표를 가지고 '잘 먹고 잘 사는' 방향으로 나아가고 있는 그들이 찾은 해답은 결국 그들의 커피를 마시는 소비자들에게 있었던 것이 아니었을까? 
-			        다른 화려한 목표에 여러 수식어로 자신들의 비전을 표현하는 브랜드들에 비하면 단순하고 현실적이라고 보일 수 있겠지만 그래서 오히려 사람들이 폰트에 보내는 애정은 더욱 선명하고 진하다.
-			  
-			        "단순히 돈을 많이 벌어서 큰 성장을 이루는 것이 목표는 아닙니다. 돈은 손님들에게 폰트가 지속적으로 선택받을 수 있게 하는 힘을 만들고, 구성원들의 삶을 영위할 수 있도록 하는 수단으로 사용될 거예요. 
-			        많은 분들께서 사랑해 주신 덕에 잘 살아남았습니다. 앞으로도 최선을 다해 살아남겠습니다. 감사합니다."			  
-			        폰트(PONT) 
-			        로스팅 오피스 | 서울 영등포구 도림로139길 21 
-			        용산점 | 서울 용산구 한강대로15길 19-16 1층 
-			        문래점 | 서울 영등포구 경인로77가길 6 1층 
-              `,
-          },
-        ],
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-06.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         "커피를 찾는 이들에게 좋은 품질의 커피를 널리 알리고, 그 수익이 선순환으로 이어지면서 폰트와 연결되어 있는 모든 사람들의 삶의 질을 높일 수 있도록 하는 가치 있는 소비를 만들고 있어요. 
+         타 산업과 다르게 부가가치가 낮은 산업이 가지는 약점 중 하나가 그 사슬에 엮여 있는 사람들의 삶의 질을 높이기 어렵다는 것입니다. 
+         부가가치가 높은 산업으로 발전하게 만드는 열쇠는 좋은 품질의 커피에 대한 소비자들의 인식을 개선하고 양질의 서비스를 제공하는 방법밖에 없어요. 
+         더 높은 가격을 지불하는 것이 더욱 가치 있는 소비를 했다는 자부심이나 만족감을 줄 수 있어야 한다고 생각합니다." 
+   
+         부가가치를 높이기 위해서는 소비자들의 인식을 바꿀 필요가 있고, 그러기 위해서는 보다 양질의 커피를 발굴하고 이를 더 원활하게 전달하기 위한 서비스 또한 선행되어야 한다는 뜻으로 해석할 수 있다. 
+         단순히 브랜드의 인지도를 올리기 위한, 매출을 올리기 위한 방향보다는 커피 산업 전체의 파이를 키우는, 고부가가치 산업으로 끌어올리기 위한 고민의 결가가 폰트라는 브랜드를 통해 표현되고 있다는 느낌을 받았다. 
+         그런 생각으로 시선을 달리하니 원두의 납품부터 산지 출장, 메뉴의 라인업 등 폰트의 운영방식에서 그들이 나아가고자 하는 방향이 보이는 듯한 느낌이 들기도 했다.
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/pont-07.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         폰트를 한 줄로 표현해 달라는 요청에 강대표는 "언제든 편하게 커피 한 잔 마시고 싶다면"이라고 답했다. 인터뷰 초반, 폰트의 의미와 창업의 배경으로부터 이어진 방향성과 체계적인 운영 
+         그리고 목표가 분명했기에 가능한 답변이 아니었을까? 또한 강대표는 폰트가 나아가고자 하는 방향에 대한 질문에 ‘잘 먹고 잘 사는 것’이라고 답했는데, 이를 좀 더 풀어보면 
+         폰트에서 가장 중요한 가치 중 하나가 지속가능성이라는 의미다. 
+   
+         '생존'이라는 목표를 가지고 '잘 먹고 잘 사는' 방향으로 나아가고 있는 그들이 찾은 해답은 결국 그들의 커피를 마시는 소비자들에게 있었던 것이 아니었을까? 
+         다른 화려한 목표에 여러 수식어로 자신들의 비전을 표현하는 브랜드들에 비하면 단순하고 현실적이라고 보일 수 있겠지만 그래서 오히려 사람들이 폰트에 보내는 애정은 더욱 선명하고 진하다.
+   
+         "단순히 돈을 많이 벌어서 큰 성장을 이루는 것이 목표는 아닙니다. 돈은 손님들에게 폰트가 지속적으로 선택받을 수 있게 하는 힘을 만들고, 구성원들의 삶을 영위할 수 있도록 하는 수단으로 사용될 거예요. 
+         많은 분들께서 사랑해 주신 덕에 잘 살아남았습니다. 앞으로도 최선을 다해 살아남겠습니다. 감사합니다."			  
+          
+         로스팅 오피스 | 서울 영등포구 도림로139길 21 
+         용산점 | 서울 용산구 한강대로15길 19-16 1층 
+         문래점 | 서울 영등포구 경인로77가길 6 1층 
+         </pre>
+       </div>
+          `,
         type: 'magazine',
         extra: {
+          name: '폰트(PONT)',
+          social: '@pont_official_',
+          address: '서울시 용산구 한강대로15길 19-16 1층',
+          coordinates: { lat: '37.5257905975656', lng: '126.96285650643' },
           articleType: 'FIENDLY',
-          mainImages: [
-            {
-              url: `/files/pont-01.webp`,
-              name: 'pont-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/pont-01.webp`,
-              name: 'pont-01.webp',
-            },
-            {
-              url: `/files/pont-02.webp`,
-              name: 'pont-02.webp',
-            },
-            {
-              url: `/files/pont-03.webp`,
-              name: 'pont-03.webp',
-            },
-            {
-              url: `/files/pont-04.webp`,
-              name: 'pont-04.webp',
-            },
-            {
-              url: `/files/pont-05.webp`,
-              name: 'pont-05.webp',
-            },
-            {
-              url: `/files/pont-06.webp`,
-              name: 'pont-06.webp',
-            },
-            {
-              url: `/files/pont-07.webp`,
-              name: 'pont-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'pont-01.webp',
+            path: `/files/03-OGC/pont-01.webp`,
+          },
         },
         views: 111,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -4142,10 +3984,13 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: 'Higher Standard Solid System, 스탠다드시스템',
-        content: [
-          {
-            d1: `
-              품질에 대한 고집 
+        content: `
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-01.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         품질에 대한 고집 
 			        이를 실현하는 치밀함으로 완성한 순환 
               Higher Standard Solid System, 스탠다드시스템 
 			  
@@ -4155,11 +4000,15 @@ export const initData = async (nextSeq) => {
 			        특히 여러 해외 매체를 통해 알려지면서 해외에서도 찾아오는 손님들이 차지하는 비중이 절반에 가까운 곳이기도 하다. 공간 자체는 큰 규모라고 할 수 없지만 그만큼 압축된 개성으로 더욱 
 			        선명하게 사람들에게 이름을 알리고 있는 곳인 셈이다. 청담동 골목 작은 공간에 자리하면서도 이처럼 확고하게 입지를 다져나갈 수 있었던 까닭은 무엇일까? 2023년을 마무리하는 12월, 
 			        스탠다드시스템 이지혜 디렉터를 만나 이야기를 들어봤다.
-              `,
-          },
-          {
-            d2: `
-              스탠다드시스템은 온오프라인 모두에서 일종의 확고한 틀을 느낄 수 있다. 이름에서부터 느껴지는 철저함은 인테리어, 커피의 구성, 각종 패키지들과 바의 동선 등 디테일한 부분에서도 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-02.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         스탠다드시스템은 온오프라인 모두에서 일종의 확고한 틀을 느낄 수 있다. 이름에서부터 느껴지는 철저함은 인테리어, 커피의 구성, 각종 패키지들과 바의 동선 등 디테일한 부분에서도 
 			        발견할 수 있다. 사전에 철저한 브랜딩과 기획이 있었음을 짐작할 수 있는 부분으로 브랜드의 완성도를 높이는 조건이라고 할 수 있다.  
 			  
 			        변화의 흐름에 올라타다 
@@ -4167,105 +4016,91 @@ export const initData = async (nextSeq) => {
 			        할 수 있어요." 
 			  
               일산커피공장은 2007년 설립 이후 '완벽한 한 모금을 만든다'라는 신념으로 커피를 선보이고 있는 원두커피 전문 브랜드다. 일산커피공장 정강진 대표는 23년 경력의 커피인이기도 하다.
-              `,
-          },
-          {
-            d3: `
-			        "국내에 본격적으로 커피가 보급되기 시작한 이후 한국의 커피 문화와 스타일은 변화와 다각화를 거듭했어요. 최근에는 스페셜티커피가 가장 대중적인 키워드로 자리 잡으면서 다양하게 파생되고 있는 모습이고요. 
-			        이러한 변화를 고려했을 때 우리도 기존의 브랜드와 다른 분위기와 모습으로 고객분들과 만날 수 있다면 좋겠다는 생각이 들었죠." 
-			  
-			        전 세계 커피 시장 중에서도 전례 없이 빠른 속도로 변화해 온 한국의 커피 시장은 해외에서도 주목할 정도로 다양한 트렌드가 생기고 사라지기를 반복하고 있다. 특히 소비자들의 커피 수준이 
-			        지속적으로 향상되면서 그들이 소비를 하는 기준 또한 더 다양해지고 있는 것이 최근의 흐름 중 하나. 이 시점에서 새롭게 유입되는 고객층이라고 할 수 있는 젊은 세대의 취향에 맞춰 마련한 
-			        공간이 바로 스탠다드시스템인 것이다.
-			
-              `,
-          },
-          {
-            d4: `
-			        소통의 창구
-			        이미 오랜 기간 누적해 온 노하우와 기술력을 보유한 만큼 제조와 관련된 모든 것들은 일산커피공장에서 맡는다. 반면 스탠다드시스템에서는 로스팅을 따로 진행하지 않는 대신 추출에 더 중점을 두고 있는 형태다. 
-			  
-			        "최고의 한잔을 내려서 고객분들에게 더 특별한 커피 경험을 제공하는 것에 집중하고 있어요. 이를 위해서 새로운 메뉴를 개발하기도 하고 서비스를 기획하고 있고요. 카페이면서도 쇼룸의 성격도 있다고 할 수 있죠. 
-			        기존의 공장이라는 형태에서는 할 수 없었던 것들도 다양하게 시도해 볼 수 있고, 직접적으로 저희의 커피에 대한 반응을 현장에서 생생하게 들을 수 있다는 부분도 무척 매력적이고요."
-			  `,
-          },
-          {
-            d5: `
-			        Higher Standard Solid System 
+         </pre>
+       </div>
 
-			        스탠다드시스템의 슬로건은 Higher Standard Solid System. 브랜드의 이름은 다르지만 그 시작점이 일산커피공장인 만큼 본질이나 방향성을 공유한다. 일산커피공장의 슬로건은 
-			        ‘완벽한 한잔을 위하여’인데, 원두 하나하나의 품질까지 체크를 할 정도로 체계적인 관리가 이루어지고 있다고. 실제로 일산커피공장에서 생산되는 원두 중 로스팅 포인트에서 조금이라도 
-			        벗어나는 결과물들은 폐기한다. 그만큼 품질 관리에 무척 까다롭다. 
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-03.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         "국내에 본격적으로 커피가 보급되기 시작한 이후 한국의 커피 문화와 스타일은 변화와 다각화를 거듭했어요. 최근에는 스페셜티커피가 가장 대중적인 키워드로 자리 잡으면서 다양하게 파생되고 있는 모습이고요. 
+         이러한 변화를 고려했을 때 우리도 기존의 브랜드와 다른 분위기와 모습으로 고객분들과 만날 수 있다면 좋겠다는 생각이 들었죠." 
+   
+         전 세계 커피 시장 중에서도 전례 없이 빠른 속도로 변화해 온 한국의 커피 시장은 해외에서도 주목할 정도로 다양한 트렌드가 생기고 사라지기를 반복하고 있다. 특히 소비자들의 커피 수준이 
+         지속적으로 향상되면서 그들이 소비를 하는 기준 또한 더 다양해지고 있는 것이 최근의 흐름 중 하나. 이 시점에서 새롭게 유입되는 고객층이라고 할 수 있는 젊은 세대의 취향에 맞춰 마련한 
+         공간이 바로 스탠다드시스템인 것이다.
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-04.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         소통의 창구
+         이미 오랜 기간 누적해 온 노하우와 기술력을 보유한 만큼 제조와 관련된 모든 것들은 일산커피공장에서 맡는다. 반면 스탠다드시스템에서는 로스팅을 따로 진행하지 않는 대신 추출에 더 중점을 두고 있는 형태다. 
+   
+         "최고의 한잔을 내려서 고객분들에게 더 특별한 커피 경험을 제공하는 것에 집중하고 있어요. 이를 위해서 새로운 메뉴를 개발하기도 하고 서비스를 기획하고 있고요. 카페이면서도 쇼룸의 성격도 있다고 할 수 있죠. 
+         기존의 공장이라는 형태에서는 할 수 없었던 것들도 다양하게 시도해 볼 수 있고, 직접적으로 저희의 커피에 대한 반응을 현장에서 생생하게 들을 수 있다는 부분도 무척 매력적이고요."
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-05.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         Higher Standard Solid System 
+
+         스탠다드시스템의 슬로건은 Higher Standard Solid System. 브랜드의 이름은 다르지만 그 시작점이 일산커피공장인 만큼 본질이나 방향성을 공유한다. 일산커피공장의 슬로건은 
+         ‘완벽한 한잔을 위하여’인데, 원두 하나하나의 품질까지 체크를 할 정도로 체계적인 관리가 이루어지고 있다고. 실제로 일산커피공장에서 생산되는 원두 중 로스팅 포인트에서 조금이라도 
+         벗어나는 결과물들은 폐기한다. 그만큼 품질 관리에 무척 까다롭다. 
+   
+         “또 몇 년 전에 생두 가격이 폭등했을 때를 포함해서 회사를 창립한 이후로 가격을 인상한 적이 한 번도 없어요. 그럼에도 제공하는 원두에 관해서는 품질을 포기하지 않았고요. 대표님의 커피 경력이 23년 정도 되셨는데, 
+         처음 시작했을 때부터 지금까지 변함없는 자세로 커피를 하고 계세요. 그리고 이 장인정신을 고스란히 보여주는 브랜드가 일산커피공장이라면, 스탠다드시스템은 보다 현대적으로 풀어서 표현한 브랜드라고
+         할 수 있죠."
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-06.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         높은 기준을 통해 본질에 집중한 커피를 품질의 저하 없이 꾸준하게 제공하기 위해서는 이를 지속할 수 있는 시스템이 필요했고, 이것이 슬로건에 등장하는 솔리드 시스템이다. 
 			  
-              “또 몇 년 전에 생두 가격이 폭등했을 때를 포함해서 회사를 창립한 이후로 가격을 인상한 적이 한 번도 없어요. 그럼에도 제공하는 원두에 관해서는 품질을 포기하지 않았고요. 대표님의 커피 경력이 23년 정도 되셨는데, 
-			        처음 시작했을 때부터 지금까지 변함없는 자세로 커피를 하고 계세요. 그리고 이 장인정신을 고스란히 보여주는 브랜드가 일산커피공장이라면, 스탠다드시스템은 보다 현대적으로 풀어서 표현한 브랜드라고
-			        할 수 있죠."
-			  `,
-          },
-          {
-            d6: `
-              높은 기준을 통해 본질에 집중한 커피를 품질의 저하 없이 꾸준하게 제공하기 위해서는 이를 지속할 수 있는 시스템이 필요했고, 이것이 슬로건에 등장하는 솔리드 시스템이다. 
-			  
-              “보통 아침에 오픈하고 1시간 정도 커피 퀄리티를 체크하면서 조정해요. 에스프레소, 아메리카노, 라떼 등 메뉴를 각각 따로 체크를 하고, 따뜻한 음료와 시원한 음료로 제공되는 메뉴들의 경우에는 온도별 퀄리티도 모두 테스트를 진행해요. 제공되는 모든 잔에 대해 최고의 한 잔을 내리기 위해서 자체적으로 정한 기준에 적합한 지 확인하는 거죠. 
-			        하루 동안만 해도 오픈 전을 비롯해서 중간에도 수시로 QC(Quality Check)를 할 정도로 커피 품질의 유지를 무척 중요하게 생각하고 실제로도 까다롭게 하고 있어요."
-			  
-              `,
-          },
-          {
-            d7: `
-			        직관적인 전달을 위해 
+         “보통 아침에 오픈하고 1시간 정도 커피 퀄리티를 체크하면서 조정해요. 에스프레소, 아메리카노, 라떼 등 메뉴를 각각 따로 체크를 하고, 따뜻한 음료와 시원한 음료로 제공되는 메뉴들의 경우에는 온도별 퀄리티도 모두 테스트를 진행해요. 제공되는 모든 잔에 대해 최고의 한 잔을 내리기 위해서 자체적으로 정한 기준에 적합한 지 확인하는 거죠. 
+         하루 동안만 해도 오픈 전을 비롯해서 중간에도 수시로 QC(Quality Check)를 할 정도로 커피 품질의 유지를 무척 중요하게 생각하고 실제로도 까다롭게 하고 있어요."
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/standard-07.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         직관적인 전달을 위해 
 			        “사실 커피라는 게 좀 추상적이라고 할 수 있잖아요. 같은 커피를 마시고 나서도 느끼는 점들이 모두 제각각이 될 수 있는 것처럼요. 
 			        그래서 어떤 분들이 드시더라도 저희가 보여드리고자 하는 맛을 공통적으로 전달할 수 있으면 좋겠다는 생각을 했어요.” 
 			  
               스탠다드시스템에는 이러한 생각을 실현하기 위한 여러 장치들을 마련했는데, 그중 가장 눈에 띄며 직관적이라고 할 수 있는 것이 바로 원두의 정보가 담긴 인포메이션 카드다. 과거에 비하면 최근에는 브랜드마다의 개성을 
               필터 삼아 커피를 설명한 원두 카드를 커피와 함께 제공하는 모습을 어렵지 않게 마주할 수 있다. 그리고 스탠다드시스템의 카드는 주관적이기보다는 직관적이고 명확하다. 서로 다른 입맛, 취향을 지닌 이들이더라도 커피와 함께 
               접했을 때 그들이 전달하고자 하는 커피의 맛을 명료하게 이해할 수 있기를 바랐기 때문인데, 내부적으로 커피를 평가할 때 기준으로 하는 6가지 항목의 그래프를 삽입한 의도 또한 커피의 맛에 대해 보다 구체적으로 전하고 소통하기 위함이다. 
-			  
-              스탠다드시스템 
-              서울 강남구 선릉로148길 48-5 
-              @standardsystem.coffee 
-              `,
-          },
-        ],
+         </pre>
+       </div>
+          `,
         type: 'magazine',
         extra: {
+          name: '스탠다드시스템',
+          social: '@standardsystem.coffee',
+          address: '서울 강남구 선릉로148길 48-5 ',
+          coordinates: { lat: '37.5225715544949', lng: '127.043565625531' },
           articleType: 'FRIENDLY',
-          mainImages: [
-            {
-              url: `/files/standard-01.webp`,
-              name: 'standard-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/standard-01.webp`,
-              name: 'standard-01.webp',
-            },
-            {
-              url: `/files/standard-02.webp`,
-              name: 'standard-02.webp',
-            },
-            {
-              url: `/files/standard-03.webp`,
-              name: 'standard-03.webp',
-            },
-            {
-              url: `/files/standard-04.webp`,
-              name: 'standard-04.webp',
-            },
-            {
-              url: `/files/standard-05.webp`,
-              name: 'standard-05.webp',
-            },
-            {
-              url: `/files/standard-06.webp`,
-              name: 'standard-06.webp',
-            },
-            {
-              url: `/files/standard-07.webp`,
-              name: 'standard-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'standard-01.webp',
+            path: `/files/03-OGC/standard-01.webp`,
+          },
         },
         views: 112,
         createdAt: getTime(-41, -60 * 60 * 2),
@@ -4274,120 +4109,119 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('posts'),
         title: '영도의 새로운 랜드마크, P.ARK(피아크)',
-        content: [
-          {
-            d1: `
-              바다와 도시를 품은 공간 
-			        로컬을 넘어 한국의 문화를 담다 
-              영도의 새로운 랜드마크, P.ARK(피아크) 
-			  
-              에디터/포토 지우탁 
-			  
-			        부산에서도 현재 커피로 가장 뜨거운 주목을 받고 있는 지역이 바로 영도다. 다른 지역에 비해 비교적 사람들의 관심도, 유동인구도 적던 지역이었지만 
-              최근 빠르게 활기를 띄고 있는 것. 커피 축제가 열리는 등 다양한 요소들로 인해 사람들의 이목이 쏠리고 있는데 그중 가장 많은 관심과 시선을 받고 있는 곳이 바로 P.ARK(피아크)다. 
-              
-              영도에 마치 하나의 거대한 배가 연상되는 형태로 자리잡고 있는 피아크. 이 거대한 공간은 어떤 의도에서, 사유를 통해 탄생하게 됐을까? 매일 셀 수 없이 많은 자리가 꽉 들어찰 정도로 인기를 끌고 있는 이유는 무엇일까?
-              `,
-          },
-          {
-            d2: `
-			        거대한 방주이자 열린 공원 
-              피아크(P.ARK)는 지난 21년 5월 오픈한 복합문화공간이다. F&B를 비롯해 문화와 예술, 전시, 액티비티 등 지금 시대가 주목하는 라이프 스타일을 기반으로 로컬 크리에이터와 브랜드 콘텐츠를 경험할 수 있다. 
-              최근에는 ‘2023 코리아 유니크 베뉴(KUV)’에 선정되며 대한민국 대표 관광지로 입지를 다지고 있다. 
-              피아크는 플랫폼의 ‘P’와 방주를 뜻하는 단어 ‘아크(Ark)’를 합쳐 창작자들을 위한 방주(Platform of Ark for Creator)이자 모두에게 열린 공원(Park)을 지향한다. 그런 만큼 공용 공간을 넓게 짓고 다양한 F&B, 라이프스타일, 아트, 컬처 등의 문화 예술 콘텐츠를 계절별로 담아내고 있다.  
-              `,
-          },
-          {
-            d3: `
-              총 3,000평 규모의 피아크는 △다채로운 문화 콘텐츠와 잔디 테라스로 구성된 800평 규모의 ‘오션 가든’ △파노라마 오션뷰와 갓 구운 빵, 커피를 함께 맛보는 ‘피아크 카페&베이커리’, △트렌디한 식문화가 펼쳐지는 ‘어반 테이스티’, △독립된 공간에서 만들어내는 프라이빗한 경험 ‘루프탑 라운지’ 등으로 구성돼 있다. 특히 4층에 위치한 피아크 카페&베이커리는 건물 내 가장 큰 규모로 자리하고 있으며, 전면 유리 통창으로 펼쳐지는 가장 부산스러운 뷰를 만나볼 수 있는 매력적인 스팟. 파티셰와 바리스타 등 수십 명의 분야별 전문가들이 매일 아침 갓 구운 100여 종의 베이커리와 디저트, 30종이 넘는 커피와 음료를 제공하고 있다. 
-              카페 내에서 판매되는 빵과 커피는 베이커리 팩토리와 로스팅 팩토리 등을 통해 모두 직접 제조, 생산하며 제품의 퀄리티 유지 및 향상에 힘쓰고 있는 점에서 신뢰가 간다.
-              `,
-          },
-          {
-            d4: `
-              영도를 다시 뛰게 만든 랜드마크 
-              피아크를 오픈하기에 앞서 여러 시설들을 방문한 결과, 이들은 공공에서 운영하는 공간은 편의시설이 부족하고 민간에서 운영하는 대형 카페는 문화 공간이 부족하다는 점을 발견했다.
-              이러한 여러 가지 단점을 보완하는 최고의 편의시설을 갖춘 복합문화공간을 영도에 만들고 싶다는 생각으로 이어졌다. 그렇게 피아크는 생명력이 짧은 단순한 빌딩보다 지역의 랜드마크를 짓자는 것에서 시작했다. 
-              궁극적으로는 부산 사람이나 관광객 모두 찾을 수 있는 문화 공간이 있다면 영도는 물론이고 부산을 대표하는 랜드마크가 될 수 있다고 본 것이다. 
-              
-              "부산 영도는 섬 전체가 하나의 행정구로, 조선업 쇠퇴와 함께 인구 소멸로 활기를 잃어 가던 지역입니다. 인적이 드물던 거리가 여행자들로 북적이며 동네 풍경이 바뀌기 시작한 것은 지역 특성을 매개로 
-              새로운 가치를 창출하려는 청년 창업자나 지역 기업이 버려진 폐공장 등을 활용해 카페 등 개성 있는 문화 공간을 만들며 영도에 젊은 기운을 불어넣으면서부터로, 그 변화의 중심에 초대형 복합문화공간 
-              피아크(P.ARK)가 있습니다. 옛 조선 수리 공장 일대에 자리한 피아크는 부산을 기반으로 성장한 선박 수리 회사 제일에스알(SR) 그룹이 조선업 침체로 공터가 된 부지를 사서 지역 발전의 바람을 담아 
-              만든 공간입니다."
-			  `,
-          },
-          {
-            d5: `
-              피아크 외부 건축물은 모기업인 제일그룹의 선박 아이덴티티를 반영하고자 거대한 크루즈선의 모습을 형상화했다. 일반적으로 배의 선실에 해당하는 곳은 카페와 복합문화공간, 
-              갑판 부분은 아이들이 뛰어놀 수 있는 가든으로 구성했고, 화물을 싣는 아래 공간은 넓은 주차장을 만들어 방문객의 편의성을 높였다.  
+        content: `
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-01.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         바다와 도시를 품은 공간 
+         로컬을 넘어 한국의 문화를 담다 
+         영도의 새로운 랜드마크, P.ARK(피아크) 
+   
+         에디터/포토 지우탁 
+   
+         부산에서도 현재 커피로 가장 뜨거운 주목을 받고 있는 지역이 바로 영도다. 다른 지역에 비해 비교적 사람들의 관심도, 유동인구도 적던 지역이었지만 
+         최근 빠르게 활기를 띄고 있는 것. 커피 축제가 열리는 등 다양한 요소들로 인해 사람들의 이목이 쏠리고 있는데 그중 가장 많은 관심과 시선을 받고 있는 곳이 바로 P.ARK(피아크)다. 
+         
+         영도에 마치 하나의 거대한 배가 연상되는 형태로 자리잡고 있는 피아크. 이 거대한 공간은 어떤 의도에서, 사유를 통해 탄생하게 됐을까? 매일 셀 수 없이 많은 자리가 꽉 들어찰 정도로 인기를 끌고 있는 이유는 무엇일까?
+         </pre>
+       </div>
 
-              "피아크의 실내 인테리어 컨셉은 조화로움입니다. 영도의 자연적 특성을 보여주는 구름, 돌, 물방울 등의 형태와 재료를 사용하여 주변의 전망과 어우러지도록 했습니다. 
-              구름의 형상을 닮은 조명, 물방울 같은 모양의 계단 스툴 가구, 영도 태종대의 암석을 상징하는 돌의 재질, 색을 닮은 가구와 오브제들을 구역별로 다르게 사용했습니다."
-			  `,
-          },
-          {
-            d6: `
-              공간을 보다 온전히 경험할 수 있도록 
-              앞서 언급한 것처럼 피아크에 방문한 손님들은 베이커리와 디저트는 100여 종, 커피와 음료는 30여 종에 달하는 메뉴를 선택할 수 있다. 
-              각 파트별 전문가들이 매일 세심하게 준비하기 때문에 피아크를 더 특별하게 경험할 수 있는 베이스가 된다. 
-              
-              고훈민 로스터는 추천 메뉴로 피아크 대표 메뉴인 하버블렌드 아메리카노를 추천했다. 고소하면서도 묵직하고 단맛이 좋은 커피로 호불호 없이 누구나 편안하게 마실 수 있으며, 
-              피아크의 다양한 베이커리와 최고의 밸런스를 이루기 때문. 
-			  
-              "또 다른 추천 메뉴는 갤리블렌드 아메리카노입니다. 하버가 고소함과 초콜릿 한 커피라면 갤리블렌드는 다양한 향을 가진 커피로, 때로는 꽃향기가 나고 베리와 같은 과일향이 
-			        나면서 과일의 단맛을 느낄 수 있는 커피입니다. 서로 다른 두 가지 블렌드 커피를 즐겨 보는 것도 커피를 경험하는 재미가 될 것 같습니다."			  
-              `,
-          },
-          {
-            d7: `
-              이세환 바리스타는 시그니처 커피인 마일드 블루 돌체라떼를 추천했는데, 피아크의 오션뷰와 부산항의 전경을 음료로 표현한 메뉴로, 
-              푸른 색감의 돌체 베이스 위에 하버블렌드 에스프레소가 플로팅 되어 마치 손 안에서 피아크를 통째로 즐기는 듯한 경험을 느낄 수 있다. 
-              
-              "커피를 드시지 못하는 분들께는 히비스커스 패션후르츠 아이스티를 추천합니다. 패션후르츠청의 새콤달콤함에 은은하게 퍼지는 히비스커스 향이 조화를 이루어 남녀노소 부담 없이 즐길 수 있습니다. 
-              또 베이커리는 피아크 고구만주를 추천합니다. 부드러운 만주피와 달콤한 고구마 앙금이 피아크의 어떤 음료와도 잘 어울리는 만능 제품이라고 생각합니다. 특히 조선시대, 고구마의 최초 시배지가 영도였다는
-              스토리를 생각하며 고구만주를 즐겨보는 것도 뜻깊을 것 같습니다." 
-              `,
-          },
-        ],
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-02.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         거대한 방주이자 열린 공원 
+         피아크(P.ARK)는 지난 21년 5월 오픈한 복합문화공간이다. F&B를 비롯해 문화와 예술, 전시, 액티비티 등 지금 시대가 주목하는 라이프 스타일을 기반으로 로컬 크리에이터와 브랜드 콘텐츠를 경험할 수 있다. 
+         최근에는 ‘2023 코리아 유니크 베뉴(KUV)’에 선정되며 대한민국 대표 관광지로 입지를 다지고 있다. 
+         피아크는 플랫폼의 ‘P’와 방주를 뜻하는 단어 ‘아크(Ark)’를 합쳐 창작자들을 위한 방주(Platform of Ark for Creator)이자 모두에게 열린 공원(Park)을 지향한다. 그런 만큼 공용 공간을 넓게 짓고 다양한 F&B, 라이프스타일, 아트, 컬처 등의 문화 예술 콘텐츠를 계절별로 담아내고 있다.  
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-03.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         총 3,000평 규모의 피아크는 △다채로운 문화 콘텐츠와 잔디 테라스로 구성된 800평 규모의 ‘오션 가든’ △파노라마 오션뷰와 갓 구운 빵, 커피를 함께 맛보는 ‘피아크 카페&베이커리’, △트렌디한 식문화가 펼쳐지는 ‘어반 테이스티’, △독립된 공간에서 만들어내는 프라이빗한 경험 ‘루프탑 라운지’ 등으로 구성돼 있다. 특히 4층에 위치한 피아크 카페&베이커리는 건물 내 가장 큰 규모로 자리하고 있으며, 전면 유리 통창으로 펼쳐지는 가장 부산스러운 뷰를 만나볼 수 있는 매력적인 스팟. 파티셰와 바리스타 등 수십 명의 분야별 전문가들이 매일 아침 갓 구운 100여 종의 베이커리와 디저트, 30종이 넘는 커피와 음료를 제공하고 있다. 
+         카페 내에서 판매되는 빵과 커피는 베이커리 팩토리와 로스팅 팩토리 등을 통해 모두 직접 제조, 생산하며 제품의 퀄리티 유지 및 향상에 힘쓰고 있는 점에서 신뢰가 간다. 
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-04.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         영도를 다시 뛰게 만든 랜드마크 
+         피아크를 오픈하기에 앞서 여러 시설들을 방문한 결과, 이들은 공공에서 운영하는 공간은 편의시설이 부족하고 민간에서 운영하는 대형 카페는 문화 공간이 부족하다는 점을 발견했다.
+         이러한 여러 가지 단점을 보완하는 최고의 편의시설을 갖춘 복합문화공간을 영도에 만들고 싶다는 생각으로 이어졌다. 그렇게 피아크는 생명력이 짧은 단순한 빌딩보다 지역의 랜드마크를 짓자는 것에서 시작했다. 
+         궁극적으로는 부산 사람이나 관광객 모두 찾을 수 있는 문화 공간이 있다면 영도는 물론이고 부산을 대표하는 랜드마크가 될 수 있다고 본 것이다. 
+         
+         "부산 영도는 섬 전체가 하나의 행정구로, 조선업 쇠퇴와 함께 인구 소멸로 활기를 잃어 가던 지역입니다. 인적이 드물던 거리가 여행자들로 북적이며 동네 풍경이 바뀌기 시작한 것은 지역 특성을 매개로 
+         새로운 가치를 창출하려는 청년 창업자나 지역 기업이 버려진 폐공장 등을 활용해 카페 등 개성 있는 문화 공간을 만들며 영도에 젊은 기운을 불어넣으면서부터로, 그 변화의 중심에 초대형 복합문화공간 
+         피아크(P.ARK)가 있습니다. 옛 조선 수리 공장 일대에 자리한 피아크는 부산을 기반으로 성장한 선박 수리 회사 제일에스알(SR) 그룹이 조선업 침체로 공터가 된 부지를 사서 지역 발전의 바람을 담아 
+         만든 공간입니다."
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-05.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         피아크 외부 건축물은 모기업인 제일그룹의 선박 아이덴티티를 반영하고자 거대한 크루즈선의 모습을 형상화했다. 일반적으로 배의 선실에 해당하는 곳은 카페와 복합문화공간, 
+         갑판 부분은 아이들이 뛰어놀 수 있는 가든으로 구성했고, 화물을 싣는 아래 공간은 넓은 주차장을 만들어 방문객의 편의성을 높였다.  
+
+         "피아크의 실내 인테리어 컨셉은 조화로움입니다. 영도의 자연적 특성을 보여주는 구름, 돌, 물방울 등의 형태와 재료를 사용하여 주변의 전망과 어우러지도록 했습니다. 
+         구름의 형상을 닮은 조명, 물방울 같은 모양의 계단 스툴 가구, 영도 태종대의 암석을 상징하는 돌의 재질, 색을 닮은 가구와 오브제들을 구역별로 다르게 사용했습니다."
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-06.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         공간을 보다 온전히 경험할 수 있도록 
+         앞서 언급한 것처럼 피아크에 방문한 손님들은 베이커리와 디저트는 100여 종, 커피와 음료는 30여 종에 달하는 메뉴를 선택할 수 있다. 
+         각 파트별 전문가들이 매일 세심하게 준비하기 때문에 피아크를 더 특별하게 경험할 수 있는 베이스가 된다. 
+         
+         고훈민 로스터는 추천 메뉴로 피아크 대표 메뉴인 하버블렌드 아메리카노를 추천했다. 고소하면서도 묵직하고 단맛이 좋은 커피로 호불호 없이 누구나 편안하게 마실 수 있으며, 
+         피아크의 다양한 베이커리와 최고의 밸런스를 이루기 때문. 
+   
+         "또 다른 추천 메뉴는 갤리블렌드 아메리카노입니다. 하버가 고소함과 초콜릿 한 커피라면 갤리블렌드는 다양한 향을 가진 커피로, 때로는 꽃향기가 나고 베리와 같은 과일향이 
+         나면서 과일의 단맛을 느낄 수 있는 커피입니다. 서로 다른 두 가지 블렌드 커피를 즐겨 보는 것도 커피를 경험하는 재미가 될 것 같습니다."	
+         </pre>
+       </div>
+
+       <div className="magazin-cover">
+         <img className="magazine-desc-img" src="https://market-lion.koyeb.app/api/files/03-OGC/p_ark-07.webp" alt="카페 상세 사진" />
+       </div>
+       <div className="magazine-desc-paragraph-cover">
+         <pre className="magazine-desc-paragraph">
+         이세환 바리스타는 시그니처 커피인 마일드 블루 돌체라떼를 추천했는데, 피아크의 오션뷰와 부산항의 전경을 음료로 표현한 메뉴로, 
+         푸른 색감의 돌체 베이스 위에 하버블렌드 에스프레소가 플로팅 되어 마치 손 안에서 피아크를 통째로 즐기는 듯한 경험을 느낄 수 있다. 
+         
+         "커피를 드시지 못하는 분들께는 히비스커스 패션후르츠 아이스티를 추천합니다. 패션후르츠청의 새콤달콤함에 은은하게 퍼지는 히비스커스 향이 조화를 이루어 남녀노소 부담 없이 즐길 수 있습니다. 
+         또 베이커리는 피아크 고구만주를 추천합니다. 부드러운 만주피와 달콤한 고구마 앙금이 피아크의 어떤 음료와도 잘 어울리는 만능 제품이라고 생각합니다. 특히 조선시대, 고구마의 최초 시배지가 영도였다는
+         스토리를 생각하며 고구만주를 즐겨보는 것도 뜻깊을 것 같습니다." 
+         </pre>
+       </div>
+         `,
         type: 'magazine',
         extra: {
+          name: 'P.ARK(피아크)',
+          social: '@p.ark_official',
+          address: '부산광역시 영도구 해양로195번길 180',
+          coordinates: { lat: '35.0863911924487', lng: '129.076725991167' },
           articleType: 'JOYFUL',
-          mainImages: [
-            {
-              url: `/files/p_ark-01.webp`,
-              name: 'p_ark-01.webp',
-            },
-          ],
-          detailImages: [
-            {
-              url: `/files/p_ark-01.webp`,
-              name: 'p_ark-01.webp',
-            },
-            {
-              url: `/files/p_ark-02.webp`,
-              name: 'p_ark-02.webp',
-            },
-            {
-              url: `/files/p_ark-03.webp`,
-              name: 'p_ark-03.webp',
-            },
-            {
-              url: `/files/p_ark-04.webp`,
-              name: 'p_ark-04.webp',
-            },
-            {
-              url: `/files/p_ark-05.webp`,
-              name: 'p_ark-05.webp',
-            },
-            {
-              url: `/files/p_ark-06.webp`,
-              name: 'p_ark-06.webp',
-            },
-            {
-              url: `/files/p_ark-07.webp`,
-              name: 'p_ark-07.webp',
-            },
-          ],
+          mainImages: {
+            name: 'p_ark-01.webp',
+            path: `/files/03-OGC/p_ark-01.webp`,
+          },
         },
         views: 119,
         createdAt: getTime(-41, -60 * 60 * 2),

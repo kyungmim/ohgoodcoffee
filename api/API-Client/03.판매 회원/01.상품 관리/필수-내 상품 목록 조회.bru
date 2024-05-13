@@ -5,9 +5,14 @@ meta {
 }
 
 get {
-  url: {{url}}/seller/products
+  url: {{url}}/products?limit=10&page=4
   body: none
   auth: bearer
+}
+
+query {
+  limit: 10
+  page: 4
 }
 
 auth:bearer {

@@ -13,7 +13,6 @@ function MagazineList() {
       const res = await axios.get('/posts?type=magazine');
       setData(res.data.item);
     } catch (err) {
-      // console.error(err);
       if (err.response?.data.message) {
         openModal({
           content: err.response?.data.message,

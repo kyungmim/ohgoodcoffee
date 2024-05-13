@@ -921,8 +921,7 @@ body {
   flex-direction: column;
   align-items: center;
   gap: 70px;
-  padding: 50px 0 70px;
-  border-bottom: 1px solid var(--color-gray-30);
+  padding: 50px 0 50px;
 }
 
 .magazin-cover {
@@ -1873,6 +1872,40 @@ body {
 
 .test {
   background-color: black;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@ pagination @@@@@@@@@@@@@@@@@@@@@@ */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 50px;
+}
+
+.pagination .is_active {
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@ map @@@@@@@@@@@@@@@@@@@@@@ */
+
+.map {
+  border: 1px solid var(--color-gray-20);
+}
+
+.map-text {
+  text-align: right;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--color-gray-30);
+  font-weight: 500;
+}
+
+.map-name {
+  font-size: 18px;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/

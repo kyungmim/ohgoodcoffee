@@ -30,6 +30,10 @@ function Mainpage() {
     fetchData();
   }, []);
 
+  const contents = (index) => {
+    const fullText = story && story[index]?.content;
+    return fullText?.slice(430);
+  };
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -90,16 +94,16 @@ function Mainpage() {
                 <div className="coverstory-list-cover">
                   <img
                     className="coverstory-list-cover-src"
-                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[2].extra.detailImages[0].name}`}
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[4].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
                 <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title">#{story && story[2].title}</h2>
-                  <pre className="coverstorylist-list-description">{story && story[2].content[0].d1}</pre>
+                  <h2 className="coverstory-list-title">#{story && story[4].title}</h2>
+                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(4) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(2)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[4]._id)}>
                     MORE
                   </button>
                 </div>
@@ -109,16 +113,16 @@ function Mainpage() {
                 <div className="coverstory-list-cover">
                   <img
                     className="coverstory-list-cover-src"
-                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[3].extra.detailImages[0].name}`}
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[5].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
                 <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title">#{story && story[3].title}</h2>
-                  <pre className="coverstorylist-list-description">{story && story[3].content[0].d1}</pre>
+                  <h2 className="coverstory-list-title">#{story && story[5].title}</h2>
+                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(5) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(3)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[5]._id)}>
                     MORE
                   </button>
                 </div>
@@ -128,16 +132,16 @@ function Mainpage() {
                 <div className="coverstory-list-cover">
                   <img
                     className="coverstory-list-cover-src"
-                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[6].extra.detailImages[0].name}`}
+                    src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[6].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
                 <div className="coverstory-list-item">
                   <h2 className="coverstory-list-title">#{story && story[6].title}</h2>
-                  <pre className="coverstorylist-list-description">{story && story[6].content[0].d1}</pre>
+                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(6) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(6)}>
+                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[6]._id)}>
                     MORE
                   </button>
                 </div>

@@ -28,7 +28,7 @@ function MagazineListItem({ item }) {
       <li>
         <Link className="card" to="/magazine/detail" onClick={onclick}>
           <div className="card-cover">
-            <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.extra.detailImages[0].name}`} alt="카페 전경 사진" />
+            <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.extra.mainImages.name}`} alt="카페 전경 사진" />
           </div>
           <div className="card-contents">
             <div className="card-contents-item">
