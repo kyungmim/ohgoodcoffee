@@ -4,20 +4,30 @@ import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useEffect, useMemo, useState } from 'react';
 import moment from 'moment';
+import Pagination from '@components/Pagination';
+import Loading from '@components/Loading';
+import { useSearchParams } from 'react-router-dom';
 
 function MarketList() {
   const axios = useCustomAxios();
   const [sortProductList, setSortProductList] = useState([]);
   const [sortType, setSortType] = useState('new');
+  const [searchParams] = useSearchParams();
 
-  const { data } = useQuery({
+  const { data, isLoading, refetch } = useQuery({
     queryKey: ['products'],
-    queryFn: () => axios.get('/products'),
-    select: (response) => response.data.item,
+    queryFn: () => axios.get('/products', { params: { page: searchParams.get('page'), limit: 8 } }),
+    select: (response) => response.data,
+    suspense: true,
   });
 
   useEffect(() => {
-    setSortProductList(data);
+    refetch();
+    window.scrollTo(0, 0);
+  }, [searchParams.toString()]);
+
+  useEffect(() => {
+    setSortProductList(data.item);
   }, [data]);
 
   const sortData = (data, sortType) => {
@@ -43,10 +53,10 @@ function MarketList() {
     });
   };
 
-  //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
+  // //data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
   const sortedData = useMemo(() => {
     if (!data) return [];
-    return sortData([...data], sortType);
+    return sortData([...data.item], sortType);
   }, [data, sortType]);
 
   useEffect(() => {
@@ -54,11 +64,9 @@ function MarketList() {
   }, [sortedData]);
 
   useEffect(() => {
-    if (!data) {
-      return;
-    }
+    if (!data) return;
     setSortProductList(() => {
-      return sortData([...data], sortType);
+      return sortData([...data.item], sortType);
     });
   }, [data, sortType]);
 
@@ -91,13 +99,9 @@ function MarketList() {
             </div>
           </div>
 
-          <div className="section-grid">
-            <ul className="grid">
-              {sortProductList?.map((item) => (
-                <MarketListItem key={item._id} item={item} />
-              ))}
-            </ul>
-          </div>
+          <div className="section-grid">{isLoading ? <Loading /> : <ul className="grid">{itemList}</ul>}</div>
+
+          <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>
       </section>
     </>
