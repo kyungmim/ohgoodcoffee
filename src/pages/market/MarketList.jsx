@@ -5,20 +5,26 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useEffect, useMemo, useState } from 'react';
 import moment from 'moment';
 import Pagination from '@components/Pagination';
+import Loading from '@components/Loading';
+import { useSearchParams } from 'react-router-dom';
 
 function MarketList() {
   const axios = useCustomAxios();
-  const [sortProductList, setSortProductList] = useState();
+  const [sortProductList, setSortProductList] = useState([]);
   const [sortType, setSortType] = useState('new');
+  const [searchParams] = useSearchParams();
 
-  const { data } = useQuery({
+  const { data, isLoading, refetch } = useQuery({
     queryKey: ['products'],
-    queryFn: () => axios.get('/products'),
+    queryFn: () => axios.get('/products', { params: { page: searchParams.get('page'), limit: 8 } }),
     select: (response) => response.data,
     suspense: true,
   });
 
-  console.log(data.pagination);
+  useEffect(() => {
+    refetch();
+    window.scrollTo(0, 0);
+  }, [searchParams.toString()]);
 
   useEffect(() => {
     setSortProductList(data.item);
@@ -93,15 +99,9 @@ function MarketList() {
             </div>
           </div>
 
-          <div className="section-grid">
-            <ul className="grid">
-              {sortProductList?.map((item) => (
-                <MarketListItem key={item._id} item={item} />
-              ))}
-            </ul>
-          </div>
+          <div className="section-grid">{isLoading ? <Loading /> : <ul className="grid">{itemList}</ul>}</div>
 
-          <Pagination totalCount={data?.pagination.total} currentPage={data?.pagination.page} Link="market" />
+          <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>
       </section>
     </>

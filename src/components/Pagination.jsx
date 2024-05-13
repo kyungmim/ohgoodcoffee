@@ -2,13 +2,13 @@ import PropTypes from 'prop-types';
 import { Link, useSearchParams } from 'react-router-dom';
 
 Pagination.propTypes = {
-  totalPage: PropTypes.number,
-  current: PropTypes.number,
+  totalCount: PropTypes.number,
+  currentPage: PropTypes.number,
+  page: PropTypes.number,
 };
 
-function Pagination({ totalCount, currentPage, Link }) {
+function Pagination({ totalCount, currentPage }) {
   const [searchParams] = useSearchParams();
-  // const limit = ;
 
   const pageList = [];
 
@@ -16,16 +16,15 @@ function Pagination({ totalCount, currentPage, Link }) {
     searchParams.set('page', page);
     let search = searchParams.toString();
     pageList.push(
-      <li key={page}>
-        <Link to={`${Link}?${search}`}>{page}</Link>
+      <li key={page} className={`${page === +currentPage ? 'is_active' : ''}`}>
+        <Link to={`/market?${search}`}>{page}</Link>
       </li>,
     );
   }
 
   return (
     <div>
-      <ul>{pageList}</ul>
-      {/* <ul>1</ul> */}
+      <ul className="pagination">{pageList}</ul>
     </div>
   );
 }
