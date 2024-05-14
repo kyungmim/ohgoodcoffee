@@ -460,9 +460,10 @@ body {
   border: 1px solid var(--color-gray-30);
 }
 
-.type-magarzin-btn {
-  margin-top: 30px;
-  margin-left: auto;
+.magarzin-btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .type-sales {
@@ -958,9 +959,9 @@ body {
   margin-bottom: 100px;
 }
 
-.form-group {
+.form-textarea {
   border: 1px solid var(--color-gray-30);
-  height: 160px;
+  height: 100px;
   font-weight: var(--fw-regular);
   display: flex;
   padding: 20px;
@@ -1886,6 +1887,38 @@ body {
 .pagination .is_active {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@ reply @@@@@@@@@@@@@@@@@@@@@@ */
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.comment-item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-gray-20);
+}
+
+.comment-info {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.comment-user {
+  font-weight: 500;
+}
+
+.comment-time {
+  color: var(--color-gray-30);
+  font-size: 12px;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@ map @@@@@@@@@@@@@@@@@@@@@@ */
