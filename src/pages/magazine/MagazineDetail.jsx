@@ -1,8 +1,9 @@
 import Location from '@components/Map';
+import ReplyList from '@components/reply/ReplyList';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
 function MagazineDetail() {
@@ -58,8 +59,13 @@ function MagazineDetail() {
             <p className="map-title">{data?.extra?.address}</p>
           </div>
 
+          <ReplyList />
+
           <button className="button button-small type-magarzin-btn" onClick={() => navigate('/magazine')}>
             목록 보기
+          </button>
+          <button className="button button-small type-magarzin-btn" onClick={() => navigate('/magazine')}>
+            작성 하기
           </button>
         </div>
       </section>
