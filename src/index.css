@@ -1894,11 +1894,12 @@ body {
 .comment {
   display: flex;
   flex-direction: column;
-  gap: 20px;
-  margin: 30px 0;
+  gap: 30px;
+  margin: 0 0 30px;
 }
 
 .comment-item {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   gap: 10px;

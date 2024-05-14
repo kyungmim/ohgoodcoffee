@@ -12,6 +12,7 @@ function MagazineDetail() {
   const { itemId } = useUserStore();
   const { pathname } = useLocation();
   const openModal = useModalStore((state) => state.openModal);
+  const { user } = useUserStore();
 
   const fetchData = async () => {
     try {
@@ -57,8 +58,7 @@ function MagazineDetail() {
             <p className="map-social">{data?.extra?.social}</p>
             <p className="map-title">{data?.extra?.address}</p>
           </div>
-
-          <ReplyList />
+          {user && <ReplyList />}
         </div>
       </section>
     </>
