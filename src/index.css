@@ -214,6 +214,22 @@ body {
   align-items: center;
 }
 
+.cart-icon {
+  position: relative;
+  vertical-align: middle;
+}
+
+.cart-count {
+  padding: 0 6px;
+  position: absolute;
+  background-color: var(--color-white);
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  top: -6px;
+  right: -6px;
+}
+
 .l_wrapper {
   max-width: 1200px;
   width: auto;

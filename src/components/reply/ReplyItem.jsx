@@ -5,7 +5,7 @@ ReplyItem.propTypes = {
 };
 
 function ReplyItem({ item }) {
-  const detailDate = (a) => {
+  const date = (a) => {
     const milliSeconds = new Date() - a;
     const seconds = milliSeconds / 1000;
     if (seconds < 60) return `방금 전`;
@@ -23,8 +23,7 @@ function ReplyItem({ item }) {
     return `${Math.floor(years)}년 전`;
   };
 
-  //api에 있는 detailPost.createdAt를 바꿔주는 것
-  const nowDate = detailDate(new Date(item?.createdAt));
+  const nowDate = date(new Date(item?.createdAt));
 
   return (
     <div className="comment-item">
