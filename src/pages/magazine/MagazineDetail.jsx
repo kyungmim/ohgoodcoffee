@@ -1,17 +1,18 @@
 import Location from '@components/Map';
+import ReplyList from '@components/reply/ReplyList';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
-import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function MagazineDetail() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
   const { itemId } = useUserStore();
-  const navigate = useNavigate();
   const { pathname } = useLocation();
   const openModal = useModalStore((state) => state.openModal);
+  const { user } = useUserStore();
 
   const fetchData = async () => {
     try {
@@ -36,9 +37,9 @@ function MagazineDetail() {
     fetchData();
   }, []);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [pathname]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
 
   const codes = data?.content;
 
@@ -57,10 +58,7 @@ function MagazineDetail() {
             <p className="map-social">{data?.extra?.social}</p>
             <p className="map-title">{data?.extra?.address}</p>
           </div>
-
-          <button className="button button-small type-magarzin-btn" onClick={() => navigate('/magazine')}>
-            목록 보기
-          </button>
+          {user && <ReplyList />}
         </div>
       </section>
     </>
