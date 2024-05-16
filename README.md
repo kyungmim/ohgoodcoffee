@@ -21,7 +21,7 @@
 
 > 🗝️ **OGC 배포 링크 및 테스트 계정**
 
-👉 [OGC 시작하기](https://ohgoodcoffe.netlify.app)
+👉 [OGC 시작하기](https://ohgoodcoffee.netlify.app)
 
 ```md
 <user 로그인>
