@@ -1,14 +1,36 @@
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
-  const { user } = useUserStore();
+  const axios = useCustomAxios();
+  const { user, cart, setCart } = useUserStore();
   const openModal = useModalStore((state) => state.openModal);
   const clearUserIdStorage = useUserStore.persist.clearStorage;
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
+
+  useEffect(() => {
+    if (user) {
+      fetchCartCount();
+    }
+  }, [user]);
+
+  const fetchCartCount = async () => {
+    try {
+      const response = await axios.get('/carts');
+      if (response.data && response.data.item && Array.isArray(response.data.item)) {
+        const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+        setCart(totalQuantity);
+      } else {
+        throw new Error('Invalid data structure or empty data');
+      }
+    } catch (error) {
+      console.error('Error fetching cart count:', error);
+    }
+  };
 
   const clickLogin = (e) => {
     e.preventDefault();
@@ -72,8 +94,9 @@ function Header() {
                   My
                 </Link>
               </li>
-              <li>
+              <li className="cart-icon">
                 <Link to="/carts">Cart</Link>
+                <span className="cart-count">{cart}</span>
               </li>
             </ul>
             <div className="hamburgerMenu">
