@@ -214,6 +214,22 @@ body {
   align-items: center;
 }
 
+.cart-icon {
+  position: relative;
+  vertical-align: middle;
+}
+
+.cart-count {
+  padding: 0 6px;
+  position: absolute;
+  background-color: var(--color-white);
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  top: -6px;
+  right: -6px;
+}
+
 .l_wrapper {
   max-width: 1200px;
   width: auto;
@@ -460,9 +476,10 @@ body {
   border: 1px solid var(--color-gray-30);
 }
 
-.type-magarzin-btn {
-  margin-top: 30px;
-  margin-left: auto;
+.magarzin-btn-box {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
 }
 
 .type-sales {
@@ -958,9 +975,9 @@ body {
   margin-bottom: 100px;
 }
 
-.form-group {
+.form-textarea {
   border: 1px solid var(--color-gray-30);
-  height: 160px;
+  height: 100px;
   font-weight: var(--fw-regular);
   display: flex;
   padding: 20px;
@@ -1886,6 +1903,39 @@ body {
 .pagination .is_active {
   color: var(--color-primary);
   font-weight: 700;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@ reply @@@@@@@@@@@@@@@@@@@@@@ */
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 0 0 30px;
+}
+
+.comment-item {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-gray-20);
+}
+
+.comment-info {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.comment-user {
+  font-weight: 500;
+}
+
+.comment-time {
+  color: var(--color-gray-30);
+  font-size: 12px;
 }
 
 /* @@@@@@@@@@@@@@@@@@@@ map @@@@@@@@@@@@@@@@@@@@@@ */

@@ -5,8 +5,8 @@ Location.propTypes = {
   data: PropTypes.shape({
     extra: PropTypes.shape({
       coordinates: PropTypes.shape({
-        lat: PropTypes.number.isRequired,
-        lng: PropTypes.number.isRequired,
+        lat: PropTypes.string.isRequired,
+        lng: PropTypes.string.isRequired,
       }),
       address: PropTypes.string,
     }),
