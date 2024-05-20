@@ -66,54 +66,6 @@ function CartList() {
     setProductDetail(newCartArr);
   };
 
-  const handleSubmitOrder = async () => {
-    if (!user || !productDetails || productDetails.length === 0) {
-      openModal({
-        content: '구매할 상품을 선택해주세요',
-        callbackButton: {
-          확인: '',
-        },
-      });
-      return;
-    }
-
-    const orderForm = {
-      type: 'cart',
-      products: productDetails,
-      address: {
-        userName: user.name,
-        phone: user.phone,
-        address: user.address,
-      },
-    };
-
-    try {
-      openModal({
-        content: `선택한 ${productDetails.length}개의 상품을 주문 하시겠습니까?`,
-        callbackButton: {
-          확인: async () => {
-            const response = await axios.post('/orders', orderForm);
-            navigate('/orders', {
-              state: { from: location.pathname, orderResponse: response.data },
-            });
-            setSelectedCartItem([]);
-            setProductDetail([]);
-          },
-          취소: '',
-        },
-      });
-    } catch (err) {
-      if (err.response?.data.message) {
-        openModal({
-          content: err.response?.data.message,
-          callbackButton: {
-            확인: '',
-          },
-        });
-      }
-    }
-  };
-
   useEffect(() => {
     if (user) {
       fetchData();
@@ -224,6 +176,19 @@ function CartList() {
     setTotalOrderPrice();
   }, [selectedCartItem]);
 
+  const handleNavigate = () => {
+    if (!user || !productDetails || productDetails.length === 0) {
+      openModal({
+        content: '구매할 상품을 선택해주세요',
+        callbackButton: {
+          확인: '',
+        },
+      });
+      return;
+    }
+    navigate('/orders/confirm', { state: { from: 'cartlist', selectedCartItem, productDetails, orderPrice } });
+  };
+
   const itemList = items.map((item) => (
     <CartListItem
       key={item._id}
@@ -304,7 +269,10 @@ function CartList() {
               </div>
             </div>
 
-            <button className="button button-large btn-null btn-layout" onClick={handleSubmitOrder}>
+            {/* <button className="button button-large btn-null btn-layout" onClick={handleSubmitOrder}>
+              주문하기
+            </button> */}
+            <button className="button button-large btn-null btn-layout" onClick={handleNavigate}>
               주문하기
             </button>
 

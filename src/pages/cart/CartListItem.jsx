@@ -1,4 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
@@ -16,6 +17,7 @@ CartListItem.propTypes = {
 
 function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
   const axios = useCustomAxios();
+  const { setCartCount } = useUserStore();
   const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -38,10 +40,21 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     setTotalOrderPrice();
   }, [selectedCartItem, productQuantity]);
 
-  const handleAddQuantity = () => {
+  const fetchCartCountAndUpdate = async () => {
+    try {
+      const response = await axios.get('/carts');
+      const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+      setCartCount(totalQuantity);
+    } catch (error) {
+      console.error('Error fetching cart count:', error);
+    }
+  };
+
+  const handleAddQuantity = async () => {
     let realQuantity = item.product.quantity - item.product.buyQuantity;
     if (!isProcessing && productQuantity < realQuantity) {
       setProductQuantity((prev) => prev + 1);
+      await fetchCartCountAndUpdate();
     } else if (!isProcessing && productQuantity == 0) {
       openModal({
         content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
@@ -63,7 +76,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     }
   };
 
-  const handleReduceQuantity = () => {
+  const handleReduceQuantity = async () => {
     // isProcessing일 경우 handleRequest 함수의 사이클을 온전히 실행한 후 수량 조정을 위해
     if (!isProcessing && productQuantity > 0) {
       //카트에서 제품의 갯수가 1개일 때, 마이너스 버튼을 누르면 delete 요청
@@ -73,12 +86,14 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
           callbackButton: {
             확인: async () => {
               await handleDeleteItem(item._id);
+              await fetchCartCountAndUpdate();
             },
             취소: '',
           },
         });
       } else {
         setProductQuantity((prev) => prev - 1);
+        await fetchCartCountAndUpdate();
       }
     }
   };
@@ -89,6 +104,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
+      await fetchCartCountAndUpdate();
       setIsProcessing(false);
     }
   };
@@ -106,6 +122,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
+      await fetchCartCountAndUpdate();
     }
   };
 
