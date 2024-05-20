@@ -1,22 +1,25 @@
+import Loading from '@components/Loading';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import UserWishListItem from '@pages/mypage/user/UserWishListItem';
+import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 
 function UserWishList() {
   const axios = useCustomAxios();
-  const [data, setData] = useState();
+  const [wishList, setWishList] = useState([]);
+
+  const { data, isLoading } = useQuery({
+    queryKey: ['bookmarks'],
+    queryFn: () => axios.get('/bookmarks/product'),
+    select: (response) => response.data,
+    suspense: true,
+  });
 
   useEffect(() => {
-    fetchList();
-  }, []);
+    if (data) setWishList(data.item);
+  }, [data]);
 
-  const fetchList = async () => {
-    const res = await axios.get('/bookmarks/product');
-    const wishlist = res.data.item;
-    setData(wishlist);
-  };
-
-  const wishList = data?.map((item) => <UserWishListItem key={item._id} item={item} />);
+  const renderWishList = wishList && wishList.map((item) => <UserWishListItem key={item._id} item={item} />);
 
   return (
     <>
@@ -25,9 +28,7 @@ function UserWishList() {
           <p className="main-contents-title">위시리스트</p>
         </div>
         <div className="main-content">
-          <div className="card-container">
-            <ul className="grid">{wishList}</ul>
-          </div>
+          <div className="card-container">{isLoading ? <Loading /> : <ul className="grid">{renderWishList}</ul>}</div>
         </div>
       </div>
     </>
