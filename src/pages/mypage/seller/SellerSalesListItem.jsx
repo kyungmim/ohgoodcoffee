@@ -7,30 +7,31 @@ SellerSalesListItem.propTypes = {
 
 function SellerSalesListItem({ item }) {
   const { setItemId } = useUserStore();
-  console.log(item.mainImages);
+  console.log(item);
 
   const onClick = () => {
     setItemId(item._id, () => {
       item._id;
     });
   };
+
   return (
     <>
       <>
         <li className="click-item">
           <button className="button card type-info-card" onClick={onClick}>
             <div className="card-cover type-info-card-cover ">
-              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item?.mainImages[0]?.name}` || null} alt={`${item.name} 상품 사진`} />
+              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}${item?.mainImages[0].path}`} alt={`${item.name} 상품 사진`} />
             </div>
             <div className="card-contents">
               <div className="card-contents-item">
-                <span className="card-brand">{item.extra?.brand}</span>
-                <h4 className="card-title mini">{item.name}</h4>
+                <span className="card-brand">{item?.extra.brand}</span>
+                <h4 className="card-title mini">{item?.name}</h4>
               </div>
-              <p className="card-price">{item.price.toLocaleString('ko-KR')}원</p>
+              <p className="card-price">{item?.price.toLocaleString('ko-KR')}원</p>
               <div className="card-state">
-                {item.extra?.isBest ? <p className="card-state-item new">NEW</p> : null}
-                {item.extra?.isNew ? <p className="card-state-item best">BEST</p> : null}
+                {item?.extra.isBest ? <p className="card-state-item new">NEW</p> : null}
+                {item?.extra.isNew ? <p className="card-state-item best">BEST</p> : null}
               </div>
             </div>
           </button>

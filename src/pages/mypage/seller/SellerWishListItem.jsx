@@ -9,23 +9,28 @@ function SellerWishListItem({ item }) {
   const navigate = useNavigate();
 
   const onClick = () => {
-    navigate(`/market/detail/${item.product._id}`);
+    if (item) navigate(`/market/detail/${item.product._id}`);
   };
+
+  console.log(item);
+
   return (
     <>
       <li>
         <button className="card type-info-card" onClick={onClick}>
           <div className="card-cover type-info-card-cover">
-            <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product.image.name}`} alt="상품 사진" />
+            <img src={`${import.meta.env.VITE_API_SERVER}${item?.product.image.path}`} alt={item?.product.name} />
           </div>
           <div className="card-contents">
             <div className="card-contents-item">
-              <span className="card-brand">{item.product.extra.brand}</span>
-              <h4 className="card-product_name">{item.product.name}</h4>
+              <span className="card-brand">{item?.product.extra.brand}</span>
+              <h4 className="card-title mini">{item?.product.name}</h4>
             </div>
-            <p className="card-price">{item.product.price.toLocaleString('ko-KR')} 원</p>
+            <p className="card-price">{item?.product.price.toLocaleString('ko-KR')} 원</p>
+
             <div className="card-state">
-              <p className="card-state-item new">NEW</p>
+              {item?.product.extra.isNew ? <p className="card-state-item new">NEW</p> : ''}
+              {item?.product.extra.isBest ? <p className="card-state-item best">BEST</p> : ''}
             </div>
           </div>
         </button>
