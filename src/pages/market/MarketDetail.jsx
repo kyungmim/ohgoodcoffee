@@ -1,5 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
@@ -9,9 +9,8 @@ import HeartIcon from '@pages/market/HeartIcon';
 function MarketDetail() {
   const axios = useCustomAxios();
   const { _id } = useParams();
-  const { user } = useUserStore();
+  const { user, setCartCount } = useUserStore();
   const navigate = useNavigate();
-  const location = useLocation();
   const [productQuantity, setProductQuantity] = useState(1);
   const [isBookmarked, setIsBookmarked] = useState(false);
   const [bookmarkQuantity, setBookmarkQuantity] = useState(0);
@@ -114,6 +113,9 @@ function MarketDetail() {
     let cart = { product_id: Number(_id), quantity: productQuantity };
     if (user) {
       await axios.post('/carts', cart);
+      const response = await axios.get('/carts');
+      const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+      setCartCount(totalQuantity);
       openModal({
         content: '장바구니에 담겼습니다 :) <br />  장바구니로 이동하시겠습니까?',
         callbackButton: {
@@ -123,57 +125,6 @@ function MarketDetail() {
           취소: '',
         },
       });
-    } else {
-      openModal({
-        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
-        callbackButton: {
-          확인: () => {
-            navigate('/users/login', { state: { from: '/' } });
-          },
-          취소: '',
-        },
-      });
-      return;
-    }
-  };
-
-  const handleSubmitBuy = async () => {
-    let userData = user;
-    if (userData) {
-      let order = {
-        products: [
-          {
-            _id: Number(_id),
-            quantity: productQuantity,
-          },
-        ],
-        address: {
-          userName: user.name,
-          phone: user.phone,
-          address: user.address,
-        },
-      };
-      try {
-        openModal({
-          content: `${productQuantity}개의 ${item.name}제품을 구매하시겠습니까?`,
-          callbackButton: {
-            확인: async () => {
-              const response = await axios.post('/orders', order);
-              navigate('/orders', { state: { from: location.pathname, orderResponse: response.data } });
-            },
-            취소: '',
-          },
-        });
-      } catch (err) {
-        if (err.response?.data.message) {
-          openModal({
-            content: err.response?.data.message,
-            callbackButton: {
-              확인: '',
-            },
-          });
-        }
-      }
     } else {
       openModal({
         content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
@@ -203,6 +154,10 @@ function MarketDetail() {
     } else {
       setProductQuantity((prev) => prev + 1);
     }
+  };
+
+  const handleNavigate = () => {
+    navigate('/orders/confirm', { state: { from: 'marketdetail', _id, productQuantity, item } });
   };
 
   return (
@@ -252,7 +207,7 @@ function MarketDetail() {
                 </div>
               </div>
               <div className="selling-btns">
-                <button className="button button-large btn-Fill" type="submit" onClick={handleSubmitBuy}>
+                <button className="button button-large btn-Fill" type="submit" onClick={handleNavigate}>
                   Buying
                 </button>
                 <button className="button button-large btn-null" type="submit" onClick={handleSubmitCart}>

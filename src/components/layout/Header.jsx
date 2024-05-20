@@ -6,7 +6,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 function Header() {
   const axios = useCustomAxios();
-  const { user, cart, setCart } = useUserStore();
+  const { user, cartCount, setCartCount } = useUserStore();
   const openModal = useModalStore((state) => state.openModal);
   const clearUserIdStorage = useUserStore.persist.clearStorage;
   const navigate = useNavigate();
@@ -15,6 +15,8 @@ function Header() {
   useEffect(() => {
     if (user) {
       fetchCartCount();
+    } else {
+      setCartCount(null);
     }
   }, [user]);
 
@@ -23,7 +25,7 @@ function Header() {
       const response = await axios.get('/carts');
       if (response.data && response.data.item && Array.isArray(response.data.item)) {
         const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
-        setCart(totalQuantity);
+        setCartCount(totalQuantity);
       } else {
         throw new Error('Invalid data structure or empty data');
       }
@@ -96,7 +98,7 @@ function Header() {
               </li>
               <li className="cart-icon">
                 <Link to="/carts">Cart</Link>
-                <span className="cart-count">{cart}</span>
+                <span className="cart-count">{cartCount}</span>
               </li>
             </ul>
             <div className="hamburgerMenu">
