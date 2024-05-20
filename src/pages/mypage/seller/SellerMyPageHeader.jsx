@@ -1,10 +1,34 @@
 import profile from '@assets/profile.svg';
+import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store';
+import { useEffect, useState } from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 
 function SellerMyPageHeader() {
   const { user } = useUserStore();
   const url = useLocation().pathname;
+  const axios = useCustomAxios();
+  const [amount, setAmount] = useState([]);
+
+  const { data } = useQuery({
+    queryKey: ['orders'],
+    queryFn: () => axios.get('/seller/orders'),
+    select: (response) => response.data,
+    suspense: true,
+  });
+
+  useEffect(() => {
+    setAmount(data.item);
+  }, [data]);
+
+  const totalMoney =
+    amount &&
+    amount
+      .map((item) => {
+        return item?.cost?.total;
+      })
+      .reduce((acc, curr) => acc + curr, 0);
 
   return (
     <div className="container">
@@ -62,7 +86,7 @@ function SellerMyPageHeader() {
                   <p>
                     <strong>{user.name}</strong>님 안녕하세요 :)
                   </p>
-                  <p>누적 판매 금액 : 0원</p>
+                  <p>누적 판매 금액 : {totalMoney.toLocaleString('ko-KR')}원</p>
                 </div>
                 <p className="profile-type">{user.type}</p>
               </div>

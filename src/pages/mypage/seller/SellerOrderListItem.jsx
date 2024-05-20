@@ -1,14 +1,14 @@
 import PropTypes from 'prop-types';
-import UserOrderProductItem from '@pages/mypage/user/UserOrderProductItem';
 import { generateOrderNumber } from '@utils/date';
+import Loading from '@components/Loading';
+import SellerOrderProductItem from '@pages/mypage/seller/SellerOrderProductItem';
 
 SellerOrderListItem.propTypes = {
   item: PropTypes.object.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 };
 
-function SellerOrderListItem({ item }) {
-  const productsList = item.products.map((product) => <UserOrderProductItem key={product._id} product={item.products[0]} item={item} />);
-
+function SellerOrderListItem({ item, isLoading }) {
   const orderNumber = generateOrderNumber(item);
 
   return (
@@ -24,7 +24,7 @@ function SellerOrderListItem({ item }) {
               <p className="order-date">주문일자 {item.createdAt.split(' ')[0].replace(/\./g, '-')}</p>
             </div>
           </div>
-          <div className="order-list">{productsList}</div>
+          <div className="order-list">{isLoading ? <Loading /> : <SellerOrderProductItem item={item} isLoading={isLoading} />}</div>
           {/* 아코디언이 펼쳐진 상태일 때만 아래 내용을 렌더링 */}
         </div>
       </div>
