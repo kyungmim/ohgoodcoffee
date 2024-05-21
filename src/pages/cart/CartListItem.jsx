@@ -4,6 +4,7 @@ import useModalStore from '@zustand/useModalStore.mjs';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from '@pages/cart/Cart.module.css';
 
 CartListItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -13,9 +14,10 @@ CartListItem.propTypes = {
   mainCheck: PropTypes.bool.isRequired,
   setItems: PropTypes.func.isRequired,
   setTotalOrderPrice: PropTypes.func.isRequired,
+  refetch: PropTypes.func.isRequired,
 };
 
-function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
+function CartListItem({ item, refetch, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
   const axios = useCustomAxios();
   const { setCartCount } = useUserStore();
   const navigate = useNavigate();
@@ -45,6 +47,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       const response = await axios.get('/carts');
       const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
       setCartCount(totalQuantity);
+      refetch();
     } catch (error) {
       console.error('Error fetching cart count:', error);
     }
@@ -84,9 +87,9 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
         openModal({
           content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
           callbackButton: {
-            확인: async () => {
-              await handleDeleteItem(item._id);
-              await fetchCartCountAndUpdate();
+            확인: () => {
+              handleDeleteItem(item._id);
+              fetchCartCountAndUpdate();
             },
             취소: '',
           },
@@ -115,6 +118,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       callbackButton: {
         확인: async () => {
           await axios.delete(`/carts/${id}`);
+          refetch();
         },
         취소: '',
       },
@@ -155,35 +159,35 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   };
 
   return (
-    <div className="cart-item">
-      <div className="cart-check" onClick={() => handleCartCheck()}>
-        <div className="form-input-radio">
+    <div className={styles.cartItem}>
+      <div className={styles.cartCheck} onClick={() => handleCartCheck()}>
+        <div>
           <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
         </div>
       </div>
-      <div className="cart-layout type-cart-mo">
-        <div className="cart-item-info">
-          <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
+      <div className={styles.cartLayout}>
+        <div className={styles.cartItemInfo}>
+          <div className={styles.cartItemCover} onClick={() => navigate(`/market/detail/${item.product_id}`)}>
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
-          <p className="cart-item-title">{item.product?.name}</p>
+          <p className={styles.cartItemTitle}>{item.product?.name}</p>
         </div>
       </div>
-      <div className="cart-price-number">
-        <div className="cart-layout cart-quantity">
-          <div className="quantity-button" onClick={handleReduceQuantity}>
+      <div className={styles.cartPriceNumber}>
+        <div className={`${styles.cartLayout} ${styles.cartQuantity}`}>
+          <div className={styles.quantityButton} onClick={handleReduceQuantity}>
             -
           </div>
           <div>
             <p>{productQuantity}</p>
           </div>
-          <div className="quantity-button" onClick={handleAddQuantity}>
+          <div className={styles.quantityButton} onClick={handleAddQuantity}>
             +
           </div>
         </div>
-        <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+        <p className={`${styles.cartLayout} ${styles.cartPrice}`}>{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
       </div>
-      <p className="button type-btn-cart button-small type-cart-btn" onClick={() => handleDeleteItem(item._id)}>
+      <p className={`${styles.button} ${styles.typeBtnCart} ${styles.buttonSmall} ${styles.typeCartBtn}`} onClick={() => handleDeleteItem(item._id)}>
         삭제
       </p>
     </div>

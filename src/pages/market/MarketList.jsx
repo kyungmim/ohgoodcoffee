@@ -4,13 +4,14 @@ import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useEffect, useState } from 'react';
 import Pagination from '@components/Pagination';
-import Loading from '@components/Loading';
 import { useSearchParams } from 'react-router-dom';
+import styles from '@pages/market/Market.module.css';
 
 function MarketList() {
   const axios = useCustomAxios();
   const [sortType, setSortType] = useState('new');
   const [searchParams] = useSearchParams();
+  const [marketList, setMarketList] = useState([]);
 
   const getParams = (sortType) => {
     const params = {
@@ -28,7 +29,7 @@ function MarketList() {
     return params;
   };
 
-  const { data, isLoading, refetch } = useQuery({
+  const { data } = useQuery({
     queryKey: ['products', sortType, searchParams.get('page')],
     queryFn: () =>
       axios.get('/products', {
@@ -39,30 +40,29 @@ function MarketList() {
   });
 
   useEffect(() => {
-    refetch();
-    window.scrollTo(0, 0);
-  }, [searchParams.toString()]);
+    if (data) setMarketList(data.item);
+  }, [data]);
 
   const handleSelectChange = (e) => {
     setSortType(e.target.value);
   };
 
-  const itemList = data.item?.map((item) => <MarketListItem key={item._id} item={item} />);
+  const itemList = marketList?.map((item) => <MarketListItem key={item._id} item={item} />);
 
   return (
     <>
-      <section className="section type_market">
-        <div className="l_wrapper">
-          <div className="section-logo">
-            <img className="market-logo" src={TopLine} alt="손 모양 이미지" />
-            <span className="market-logo-slogan">COFFEE.HUMAN.LOVE LIFE</span>
+      <section className={`${styles.section} ${styles.typeMarket}`}>
+        <div className={styles.l_wrapper}>
+          <div className={styles.sectionLogo}>
+            <img className={styles.marketLogo} src={TopLine} alt="손 모양 이미지" />
+            <span className={styles.marketLogoSlogan}>COFFEE.HUMAN.LOVE LIFE</span>
           </div>
 
-          <div className="section-filter">
-            <p className="section-count">POSTING</p>
-            <span className="section-count num">{itemList?.length}</span>
-            <div className="section-aside">
-              <select className="drop-menu" id="type" onChange={handleSelectChange}>
+          <div className={styles.sectionFilter}>
+            <p className={styles.sectionCount}>POSTING</p>
+            <span className={`${styles.sectionCount} ${styles.num}`}>{itemList?.length}</span>
+            <div className={styles.sectionAside}>
+              <select className={styles.dropMenu} id="type" onChange={handleSelectChange}>
                 <option value="registration">등록순</option>
                 <option value="lowPrice">낮은가격순</option>
                 <option value="highPrice">높은가격순</option>
@@ -72,7 +72,9 @@ function MarketList() {
             </div>
           </div>
 
-          <div className="section-grid">{isLoading ? <Loading /> : <ul className="grid">{itemList}</ul>}</div>
+          <div className={styles.sectionGrid}>
+            <ul className="grid">{itemList}</ul>
+          </div>
 
           <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>

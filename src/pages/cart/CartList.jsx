@@ -6,6 +6,8 @@ import useUserStore from '@zustand/store';
 import CartListItem from '@pages/cart/CartListItem';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useModalStore from '@zustand/useModalStore.mjs';
+import { useQuery } from '@tanstack/react-query';
+import styles from '@pages/cart/Cart.module.css';
 
 function CartList() {
   const axios = useCustomAxios();
@@ -66,27 +68,16 @@ function CartList() {
     setProductDetail(newCartArr);
   };
 
-  useEffect(() => {
-    if (user) {
-      fetchData();
-    }
-  }, []);
+  const { data, refetch } = useQuery({
+    queryKey: ['carts'],
+    queryFn: () => axios.get('/carts'),
+    select: (response) => response.data,
+    suspense: true,
+  });
 
-  const fetchData = async () => {
-    try {
-      const productsResponse = await axios.get('/carts');
-      await setItems(productsResponse.data.item);
-    } catch (err) {
-      if (err.response?.data.message) {
-        openModal({
-          content: err.response?.data.message,
-          callbackButton: {
-            확인: '',
-          },
-        });
-      }
-    }
-  };
+  useEffect(() => {
+    if (data) setItems(data.item);
+  }, [data]);
 
   const handleDeleteSelectedItems = async () => {
     if (selectedCartItem.length > 0) {
@@ -123,7 +114,7 @@ function CartList() {
             취소: '',
           },
         });
-        await fetchData();
+        await refetch();
       } else {
         openModal({
           content: '삭제할 상품을 선택해주세요 :)',
@@ -194,6 +185,7 @@ function CartList() {
       key={item._id}
       id={item._id}
       item={item}
+      refetch={refetch}
       selectedCartItem={selectedCartItem}
       setSelectedCartItem={setSelectedCartItem}
       setMainCheck={setMainCheck}
@@ -205,78 +197,72 @@ function CartList() {
 
   return (
     <>
-      <div className="contents-cart">
-        <div className="l_wrapper">
-          <div className="cart">
-            <div className="cart-title">
-              <div className="cart-layout cart-check check-width" onClick={handleSelectAll}>
-                <div className="form-input-radio">
+      <div className={styles.contentsCart}>
+        <div className={styles.l_wrapper}>
+          <div className={styles.cart}>
+            <div className={styles.cartTitle}>
+              <div className={`${styles.cartTitle} ${styles.cartLayout} ${styles.cartCheck} ${styles.checkWidth}`} onClick={handleSelectAll}>
+                <div>
                   <input type="checkbox" checked={mainCheck} />
                 </div>
-                <p className="cart-text">전체선택</p>
+                <p>전체선택</p>
               </div>
-              <h3 className="cart-layout cart-procuct">상품 정보</h3>
-              <h3 className="cart-layout cart-quantity">수량</h3>
-              <h3 className="cart-layout cart-price">주문 금액</h3>
+              <h3 className={`${styles.cartLayout} ${styles.cartProcuct}`}>상품 정보</h3>
+              <h3 className={`${styles.cartLayout} ${styles.cartQuantity}`}>수량</h3>
+              <h3 className={`${styles.cartLayout} ${styles.cartPrice}`}>주문 금액</h3>
             </div>
             {itemList}
 
-            <div className="cart-button">
-              <button className="button button-small type-btn-cart" onClick={handleCleanUp}>
+            <div className={styles.cartButton}>
+              <button className={`${styles.button} ${styles.buttonSmall} ${styles.typeBtnCart}`} onClick={handleCleanUp}>
                 전체 삭제
               </button>
-              <button className="button button-small type-btn-cart" onClick={handleDeleteSelectedItems}>
+              <button className={`${styles.button} ${styles.buttonSmall} ${styles.typeBtnCart}`} onClick={handleDeleteSelectedItems}>
                 선택 삭제
               </button>
             </div>
 
-            <div className="cart-total">
+            <div className={styles.cartTotal}>
               {selectedCartItem.length > 0 ? (
-                <p className="cart-total-title">
-                  선택상품 : <span className="cart-total-point">{selectedCartItem.length}</span>개
+                <p className={styles.cartTotalTitle}>
+                  선택상품 : <span className={styles.cartTotalPoint}>{selectedCartItem.length}</span>개
                 </p>
               ) : (
-                <p className="cart-total-title">
-                  전체상품 : <span className="cart-total-point">{items.length}</span>개
+                <p className={styles.cartTotalTitle}>
+                  전체상품 : <span className={styles.cartTotalPoint}>{items.length}</span>개
                 </p>
               )}
 
-              {/* <p className="cart-total-title">총 주문 상태 {items?.length > 0 ? <span className="cart-total-point">{items.length}</span> : null}개</p> */}
-
-              <div className="cart-total-list">
-                <div className="cart-tota-item">
-                  <p className="cart-total-num">{orderPrice.toLocaleString('ko-KR')}원</p>
-                  <p className="cart-total-txt">상품 금액</p>
+              <div className={styles.cartTotalList}>
+                <div className={styles.cartTotalItem}>
+                  <p className={styles.cartTotalNum}>{orderPrice.toLocaleString('ko-KR')}원</p>
+                  <p className={styles.cartTotalTxt}>상품 금액</p>
                 </div>
 
-                <div className="cart-total-plus">
+                <div>
                   <img src={PlusIcon} alt="더하기" />
                 </div>
 
-                <div className="cart-tota-item">
-                  <p className="cart-total-num">{items?.length > 0 ? shippingFees.toLocaleString('ko-KR') : 0}원</p>
-                  <p className="cart-total-txt">배송비</p>
+                <div className={styles.cartTotalItem}>
+                  <p className={styles.cartTotalNum}>{items?.length > 0 ? shippingFees.toLocaleString('ko-KR') : 0}원</p>
+                  <p className={styles.cartTotalTxt}>배송비</p>
                 </div>
 
-                <div className="cart-total-equal">
+                <div>
                   <img src={EqualIcon} alt="합계" />
                 </div>
 
-                <div className="cart-tota-item">
-                  <p className="cart-total-num">{items?.length > 0 ? (orderPrice + shippingFees).toLocaleString('ko-KR') : 0}원</p>
-                  <p className="cart-total-txt">총 주문 금액</p>
+                <div className={styles.cartTotalItem}>
+                  <p className={styles.cartTotalNum}>{items?.length > 0 ? (orderPrice + shippingFees).toLocaleString('ko-KR') : 0}원</p>
+                  <p className={styles.cartTotalTxt}>총 주문 금액</p>
                 </div>
               </div>
             </div>
-
-            {/* <button className="button button-large btn-null btn-layout" onClick={handleSubmitOrder}>
-              주문하기
-            </button> */}
-            <button className="button button-large btn-null btn-layout" onClick={handleNavigate}>
+            <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnNull} ${styles.btnNull} ${styles.btnLayout}`} onClick={handleNavigate}>
               주문하기
             </button>
 
-            <Link to="/mainpage" className="cart-more">
+            <Link to="/mainpage" className={styles.cartMore}>
               계속 쇼핑하기
             </Link>
           </div>

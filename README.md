@@ -98,9 +98,12 @@ OGC는 **✨<u>커피를 사랑하는 소비자와 열정적인 카페 판매자
 
 ## 👩‍👩‍👧‍👦 **4. 역할 분담**
 
-- <a href="https://github.com/kyungmim">**이경민**</a> : **조장🐥** / 로그인/회원가입 페이지 / 헤더/푸터 / 유저∙셀러 마이페이지 / 메인 및 로딩페이지/ 에러 처리 / QA/QC
-- <a href="https://github.com/sulahhong">**홍설아**</a> : 스크럼 마스터 / 마켓/장바구니 마크업 및 기능구현 / db 데이터 문서화 / 에러 처리 / QA/QC
+- <a href="https://github.com/kyungmim">**이경민**</a> : **조장🐥** / 로그인/회원가입 페이지 / 헤더/푸터 / 유저∙셀러 마이페이지 / 메인 및 로딩페이지/ 에러 처리 / QA/QC / 지도API / 댓글 / 페이지네이션 / 무한스크롤
+  <br>
+- <a href="https://github.com/sulahhong">**홍설아**</a> : 스크럼 마스터 / 마켓/장바구니 마크업 및 기능구현 / db 데이터 문서화 / 에러 처리 / QA/QC / 결제프로세스 / CSS Module
+  <br>
 - <a href="https://github.com/Simhoyoung">**심호영**</a> : db 데이터 문서화 / 매거진 페이지 기능구현
+  <br>
 - <a href="https://github.com/HaeppyRi">**김해리**</a> : 기획 / 마켓/매거진 페이지 마크업 / 마켓/유저 마이페이지 기능구현 / db 데이터 문서화/ 리드미 문서화
 
 </br></br>
@@ -146,8 +149,9 @@ OGC는 **✨<u>커피를 사랑하는 소비자와 열정적인 카페 판매자
 
       return { isAlertModalOpen, alertModalHandler };
     }
-    </details>
     ```
+
+    </details>
 
 <br/>
 
@@ -160,8 +164,54 @@ OGC는 **✨<u>커피를 사랑하는 소비자와 열정적인 카페 판매자
 <br/>
 
 - **Swiper**
+
   - 메인페이지의 슬라이더 구현
   - 필요한 기능만을 로드하여 불필요한 자원을 최소화 하기때문에 로딩시간과 성능에 긍정적
+    <br/>
+
+- **React-Kakao-Maps-SDK**
+
+  - 매거진 페이지 해당 게시물 카페 위치 불러오기
+    <details>
+    <summary>Map.jsx 코드</summary>
+
+    ```js
+    import { Map, MapMarker, MapTypeControl, ZoomControl } from 'react-kakao-maps-sdk';
+
+    import PropTypes from 'prop-types';
+
+    Location.propTypes = {
+      data: PropTypes.shape({
+        extra: PropTypes.shape({
+          coordinates: PropTypes.shape({
+            lat: PropTypes.string.isRequired,
+            lng: PropTypes.string.isRequired,
+          }),
+          address: PropTypes.string,
+        }),
+      }),
+    };
+
+    function Location({ data }) {
+      if (!data || !data.extra || !data.extra.coordinates) {
+        return null;
+      }
+
+      const { lat, lng } = data.extra.coordinates;
+      return (
+        <>
+          <Map className="map" center={{ lat, lng }} style={{ width: '100%', height: '400px' }} level={1}>
+            <MapTypeControl position={'TOPRIGHT'} />
+            <ZoomControl position={'RIGHT'} />
+            <MapMarker position={{ lat, lng }}></MapMarker>
+          </Map>
+        </>
+      );
+    }
+    export default Location;
+    ```
+
+   </details>
 
 <br/><br/>
 
@@ -369,6 +419,7 @@ module.exports = {
 - Zustand를 사용하여 상태관리를 하였습니다.
 - React Query를 사용하여 데이터 캐싱 작업을 하였습니다.
 - 반응형 모바일/데스크탑 작업하였습니다.
+- 매거진 페이지에서 해당 게시물에 위치를 지도에 불러왔습니다.
 
 <br/>
 
@@ -519,50 +570,21 @@ export default useUserStore;
 **2. sort 정렬**
 
 ```js
-const sortData = (data, sortType) => {
-  switch (sortType) {
-    case 'lowPrice':
-      return [...data].sort((a, b) => a.price - b.price);
-    case 'highPrice':
-      return [...data].sort((a, b) => b.price - a.price);
-    case 'new':
-    case 'registration':
-      return sortDateDescending(data);
-    case 'sales':
-      return [...data].sort((a, b) => b.buyQuantity - a.buyQuantity);
+const getParams = (sortType) => {
+  const params = {
+    page: searchParams.get('page') || 1, // 페이지 파라미터가 없는 경우 기본값 1
+    limit: 8,
+  };
+
+  if (sortType === 'lowPrice' || sortType === 'highPrice') {
+    params.sort = JSON.stringify({ price: sortType === 'lowPrice' ? 1 : -1 });
+  } else if (sortType === 'isNew') {
+    params.custom = JSON.stringify({ 'extra.isNew': true });
+  } else if (sortType === 'isBest') {
+    params.custom = JSON.stringify({ 'extra.isBest': true });
   }
+  return params;
 };
-
-const sortDateDescending = (data) => {
-  let arr = [...data].map((item) => ({
-    ...item,
-    createdAt: item.createdAt.substring(0, 16),
-  }));
-  return arr.sort((a, b) => {
-    const dateA = moment(a.createdAt, 'YYYY.MM.DD HH:mm');
-    const dateB = moment(b.createdAt, 'YYYY.MM.DD HH:mm');
-    return dateA - dateB;
-  });
-};
-
-//data 나 sortType이 실제로 변경될 때만 정렬된 리스트를 다시 계산하도록 메모이제이션
-const sortedData = useMemo(() => {
-  if (!data) return [];
-  return sortData([...data], sortType);
-}, [data, sortType]);
-
-useEffect(() => {
-  setSortProductList(sortedData);
-}, [sortedData]);
-
-useEffect(() => {
-  if (!data) {
-    return;
-  }
-  setSortProductList((prevList) => {
-    return sortData([...data], sortType);
-  });
-}, [data, sortType]);
 ```
 
 **3. 카트 아이템 수량 조절 기능**
@@ -922,11 +944,11 @@ const handleRequest = async (cart) => {
 ## ♻️ 13. 추가하고 싶은 기능
 
 - 검색 기능
-- 댓글 기능
-- 페이지네이션
+- ~~댓글 기능~~ **완료**
+- ~~페이지네이션~~ **완료**
 - 챗봇 채팅 기능
 - 이니시스 API 사용하여 결제
-- 지도 API를 사용하여 카페 위치 안내
+- ~~지도 API를 사용하여 카페 위치 안내~~ **완료**
 - 관리자 계정 페이지 및 관리자 모드 개발
 - 마켓 리스트 페이지에서 페이지 이동없이 마우스 호버 시, 장바구니 or 구매하기
 

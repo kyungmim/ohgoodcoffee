@@ -1,8 +1,10 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from '@components/layout/Header.module.css';
 
 function Header() {
   const axios = useCustomAxios();
@@ -12,27 +14,36 @@ function Header() {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
 
+  // console.log(cartCount);
+
+  // const fetchCartCount = async () => {
+  //   try {
+  //     const response = await axios.get('/carts');
+  //     if (response.data && response.data.item && Array.isArray(response.data.item)) {
+  //       const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+  //       setCartCount(totalQuantity);
+  //     } else {
+  //       throw new Error('Invalid data structure or empty data');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error fetching cart count:', error);
+  //   }
+  // };
+
+  const { data } = useQuery({
+    queryKey: ['carts'],
+    queryFn: () => axios.get('/carts'),
+    select: (response) => response.data,
+    suspense: true,
+  });
+
   useEffect(() => {
     if (user) {
-      fetchCartCount();
+      setCartCount(data?.item.reduce((acc, item) => acc + item.quantity, 0));
     } else {
       setCartCount(null);
     }
-  }, [user]);
-
-  const fetchCartCount = async () => {
-    try {
-      const response = await axios.get('/carts');
-      if (response.data && response.data.item && Array.isArray(response.data.item)) {
-        const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
-        setCartCount(totalQuantity);
-      } else {
-        throw new Error('Invalid data structure or empty data');
-      }
-    } catch (error) {
-      console.error('Error fetching cart count:', error);
-    }
-  };
+  }, [data]);
 
   const clickLogin = (e) => {
     e.preventDefault();
@@ -74,46 +85,46 @@ function Header() {
 
   return (
     <>
-      <header className="header">
-        <div className="l_wrapper">
-          <div className="header-nav nav-box">
-            <ul className="pc-nav">
-              <li>
+      <header className={styles.header}>
+        <div className={styles.l_wrapper}>
+          <div>
+            <ul className={styles.pcNav}>
+              <li className={styles.pcNavLi}>
                 <Link to="/about">About</Link>
               </li>
-              <li>
+              <li className={styles.pcNavLi}>
                 <Link to="/magazine">Magazine</Link>
               </li>
-              <li>
+              <li className={styles.pcNavLi}>
                 <Link to="/market">Market</Link>
               </li>
-              <li className="logo pc">
+              <li className={`${styles.pcNavLi} ${styles.logo} ${styles.pc}`}>
                 <Link to="/mainpage">Oh Good Coffee</Link>
               </li>
-              <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
-              <li>
+              <li className={styles.pcNavLi}>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+              <li className={styles.pcNavLi}>
                 <Link onClick={(e) => clickLogin(e)} to="/mypage">
                   My
                 </Link>
               </li>
-              <li className="cart-icon">
+              <li className={`${styles.cartIcon} ${styles.pcNavLi}`}>
                 <Link to="/carts">Cart</Link>
-                <span className="cart-count">{cartCount}</span>
+                <span className={styles.cartCount}>{cartCount === 0 ? null : cartCount}</span>
               </li>
             </ul>
-            <div className="hamburgerMenu">
-              <div className="hamburger-nomal">
-                <Link to="/mainpage" className="logo mo">
+            <div className={styles.hamburgerMenu}>
+              <div className={styles.hamburgerNomal}>
+                <Link to="/mainpage" className={`${styles.logo} ${styles.mo}`}>
                   Oh Good Coffee
                 </Link>
-                <button className="menuopen" onClick={hadlemenu}>
-                  버튼
+                <button className={styles.menuOpen} onClick={hadlemenu}>
+                  <span className="hidden">버튼</span>
                 </button>
               </div>
               {menu && (
-                <ul className="mo-nav" onClick={hadlemenu}>
+                <ul className={styles.moNav} onClick={hadlemenu}>
                   <li>
-                    <button className="menuclose" onClick={hadlemenu}>
+                    <button className={styles.menuClose} onClick={hadlemenu}>
                       닫기
                     </button>
                   </li>
@@ -129,10 +140,10 @@ function Header() {
                   <li>
                     <Link to="/carts">Cart</Link>
                   </li>
-                  <div className="hamburger-footer">
+                  <div className={styles.hamburgerFooter}>
                     <li>
                       {user ? (
-                        <button className="logout" onClick={onClickLogout}>
+                        <button className={styles.logout} onClick={onClickLogout}>
                           Logout
                         </button>
                       ) : (
