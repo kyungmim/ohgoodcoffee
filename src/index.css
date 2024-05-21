@@ -203,7 +203,23 @@ body {
   cursor: pointer;
 }
 
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.hidden {
+  text-indent: -99999px;
+}
+
+
 /* @@@@@@@@@@@@@@@@@@@@ header, footer @@@@@@@@@@@@@@@@@@@@ */
+
 .header {
   background-color: var(--color-primary);
   max-height: 80px;
@@ -774,8 +790,11 @@ body {
 
 .accordion-contents {
   background-color: var(--color-white);
-  /* display: none; */
+  /* display: none;   */
 }
+ 
+  
+
 
 .accordion-item.active .accordion-contents {
   display: block;
@@ -843,7 +862,7 @@ body {
   box-sizing: border-box;
   cursor: pointer;
   border-bottom: solid 1px var(--color-gray-30);
-}
+} 
 
 /* @@@@@@@@@@@@@@@@@@@@ user, seller - wishlist @@@@@@@@@@@@@@@@@@@@ */
 
@@ -1659,7 +1678,7 @@ body {
 }
 
 .contents-signup {
-  margin: 50px 0;
+  margin: 50px 0; 
   /* display: none; */
 }
 
@@ -2137,6 +2156,7 @@ body {
     width: 450px;
     height: 450px;
   }
+
   .market-overview-top {
     flex-direction: column;
     align-items: center;

@@ -1,0 +1,173 @@
+.grid {
+  display: grid;
+  gap: 20px;
+  row-gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.section.typeMagazine {
+  margin: 70px 0;
+}
+
+.sectionFilter {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  margin-bottom: 30px;
+}
+
+.sectionCount {
+  color: var(--color-gray-30);
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  margin-right: 10px;
+}
+
+.sectionCount.num {
+  font-weight: var(--fw-medium);
+}
+
+.section.typeMagazineDesc {
+  margin: 70px 0;
+}
+
+.magazineDescHeaderTitle {
+  font-size: 28px;
+  font-weight: var(--fw-medium);
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.magazineDescHeaderDate {
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+  color: var(--color-gray-30);
+  text-align: left;
+}
+
+.magazineDescContents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 70px;
+  padding: 50px 0 50px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 416px;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.cardCover {
+  object-fit: contain;
+  overflow: hidden;
+  background-color: var(--color-gray-20);
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.cardCover.typeInfoCardCover {
+  width: 210px;
+  height: 210px;
+}
+
+.cardCoverSrc {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardTitle {
+  font-weight: 700;
+}
+
+.cardContents {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.cardContentsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 54px;
+  justify-content: center;
+}
+
+.cardType {
+  color: var(--color-yellow);
+}
+.cardType.green {
+  color: var(--color-green);
+}
+
+.cardFooter {
+  color: var(--color-gray-30);
+  font-weight: var(--fw-regular);
+}
+
+.mapText {
+  text-align: right;
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px solid var(--color-gray-30);
+  font-weight: 500;
+}
+
+.mapName {
+  font-size: 18px;
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 1024px) {
+
+	.grid {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+	.cardCover {
+    width: 340px;
+    height: 340px;
+  }
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardCover {
+    width: 400px;
+    height: 400px;
+  }
+
+}

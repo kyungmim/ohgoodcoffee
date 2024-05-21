@@ -5,6 +5,7 @@ import { useEffect, useState } from 'react';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import HeartIcon from '@pages/market/HeartIcon';
+import styles from '@pages/market/Market.module.css';
 
 function MarketDetail() {
   const axios = useCustomAxios();
@@ -162,69 +163,69 @@ function MarketDetail() {
 
   return (
     <>
-      <section className="section type_market-desc">
-        <div className="l_wrapper">
-          <div className="market-overview-top">
-            <div className="card-cover type-card-detail">
-              <img className="card-cover-src" src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />
+      <section className={`${styles.section} ${styles.typeMarketDesc}`}>
+        <div className={styles.l_wrapper}>
+          <div className={styles.marketOverviewTop}>
+            <div className={`${styles.cardCover} ${styles.typeCardDetail}`}>
+              <img className={styles.cardCoverSrc} src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />
             </div>
 
-            <div className="market-overview-desc">
-              <div className="overview-header">
-                <p className="overview-title">{item.name}</p>
-                <div className="overview-row">
-                  <p className="overview-price">{item.price.toLocaleString('ko-KR')}원</p>
-                  <div className="overview-wishlist">
-                    <div className="wishlist-box" onClick={handleToggleBookmark}>
-                      <div className="wishlist-icon">
+            <div className={styles.marketOverviewDesc}>
+              <div className={styles.overviewHeader}>
+                <p className={styles.overviewTitle}>{item.name}</p>
+                <div className={styles.overviewRow}>
+                  <p className={styles.overviewPrice}>{item.price.toLocaleString('ko-KR')}원</p>
+                  <div className={styles.overviewWishlist}>
+                    <div className={styles.wishlistBox} onClick={handleToggleBookmark}>
+                      <div className={styles.wishlistIcon}>
                         <HeartIcon fill={isBookmarked ? '#FF0000' : '#AAAAAA'} />
                       </div>
-                      <p className="wishlist-count">{bookmarkQuantity}</p>
+                      <p className={styles.wishlistCount}>{bookmarkQuantity}</p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <pre className="overview-contents">{item.content[0]}</pre>
+              <pre className={styles.overviewContents}>{item.content[0]}</pre>
 
-              <div className="overview-selling-count">
-                <p className="overview-selling-title">수량</p>
+              <div className={styles.overviewSellingCount}>
+                <p className={styles.overviewSellingTitle}>수량</p>
                 <div>
-                  <div className="selling-row">
-                    <div className="quantity-row">
-                      <div className="quantity-button" onClick={handleReduceQuantity}>
+                  <div className={styles.sellingRow}>
+                    <div className={styles.quantityRow}>
+                      <div className={styles.quantityButton} onClick={handleReduceQuantity}>
                         -
                       </div>
                       <div>
-                        <p className="selling-pick">{productQuantity}</p>
+                        <p className={styles.sellingPick}>{productQuantity}</p>
                       </div>
-                      <div className="quantity-button" onClick={handleCheckQuantity}>
+                      <div className={styles.quantityButton} onClick={handleCheckQuantity}>
                         +
                       </div>
                     </div>
-                    <p className="selling-price">{(item.price * productQuantity).toLocaleString('ko-KR')}원</p>
+                    <p className={styles.sellingPrice}>{(item.price * productQuantity).toLocaleString('ko-KR')}원</p>
                   </div>
                 </div>
               </div>
-              <div className="selling-btns">
-                <button className="button button-large btn-Fill" type="submit" onClick={handleNavigate}>
+              <div className={styles.sellingBtns}>
+                <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} `} type="submit" onClick={handleNavigate}>
                   Buying
                 </button>
-                <button className="button button-large btn-null" type="submit" onClick={handleSubmitCart}>
+                <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnNull} `} type="submit" onClick={handleSubmitCart}>
                   Cart
                 </button>
               </div>
             </div>
           </div>
-          <div className="market-overview-bottom">
-            <div className="market-overview-bottom-cover">
+          <div className={styles.marketOverviewBottom}>
+            <div className={styles.marketOverviewBottomCover}>
               {<img
-                className="market-overview-bottom-src"
+                className={styles.marketOverviewBottomSrc}
                 src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[1]?.name}`}
                 alt={`${item.name} 상품 사진`}
               /> ? (
                 <img
-                  className="market-overview-bottom-src"
+                  className={styles.marketOverviewBottomSrc}
                   src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[1]?.name}`}
                   alt={`${item.name} 상품 사진`}
                 />
@@ -232,17 +233,17 @@ function MarketDetail() {
                 ''
               )}
             </div>
-            <div className="market-overview-bottom-desc">
-              <pre className="market-overview-bottom-text">{item.content[1] ? item.content[1] : ''}</pre>
+            <div className={styles.marketOverviewBottomDesc}>
+              <pre className={styles.marketOverviewBottomText}>{item.content[1] ? item.content[1] : ''}</pre>
             </div>
-            <div className="market-overview-bottom-cover">
+            <div className={styles.marketOverviewBottomCover}>
               {<img
-                className="market-overview-bottom-src"
+                className={styles.marketOverviewBottomSrc}
                 src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[2]?.name}`}
                 alt={`${item.name} 상품 사진`}
               /> ? (
                 <img
-                  className="market-overview-bottom-src"
+                  className={styles.marketOverviewBottomSrc}
                   src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[2]?.name}`}
                   alt={`${item.name} 상품 사진`}
                 />
@@ -250,8 +251,8 @@ function MarketDetail() {
                 ''
               )}
             </div>
-            <div className="market-overview-bottom-desc">
-              <pre className="market-overview-bottom-text">{item.content[2] ? item.content[2] : ''}</pre>
+            <div className={styles.marketOverviewBottomDesc}>
+              <pre className={styles.marketOverviewBottomText}>{item.content[2] ? item.content[2] : ''}</pre>
             </div>
           </div>
         </div>

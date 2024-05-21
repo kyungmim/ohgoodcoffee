@@ -3,6 +3,7 @@ import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import styles from '@pages/mypage/seller/SellerMypage.module.css';
 
 function SellerInfoEdit() {
   const axios = useCustomAxios();
@@ -47,15 +48,15 @@ function SellerInfoEdit() {
   };
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-content">
-          <form onSubmit={handleSubmit(onSubmit)} className="signup_form">
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="name">
-                Name <span className="signup-required-point">*</span>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainContent}>
+          <form onSubmit={handleSubmit(onSubmit)} className={styles.signupForm}>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="name">
+                Name <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     type="text"
                     id="name"
@@ -68,16 +69,16 @@ function SellerInfoEdit() {
                     })}
                   />
                 </div>
-                {errors.name && <p className="err-text">{errors.name.message}</p>}
+                {errors.name && <p className={styles.errText}>{errors.name.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="email">
-                Email <span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="email">
+                Email <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     type="text"
                     id="email"
@@ -90,17 +91,17 @@ function SellerInfoEdit() {
                     })}
                   />
                 </div>
-                {errors.email && <p className="err-text">{errors.email.message}</p>}
+                {errors.email && <p className={styles.errText}>{errors.email.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="phone">
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="phone">
                 Phone Number
-                <span className="signup-required-point">*</span>
+                <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     type="text"
                     id="phone"
@@ -113,16 +114,16 @@ function SellerInfoEdit() {
                     })}
                   />
                 </div>
-                {errors.phone && <p className="err-text">{errors.phone.message}</p>}
+                {errors.phone && <p className={styles.errText}>{errors.phone.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="address">
-                Address <span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="address">
+                Address <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     type="text"
                     id="address"
@@ -135,11 +136,11 @@ function SellerInfoEdit() {
                     })}
                   />
                 </div>
-                {errors.address && <p className="err-text">{errors.address.message}</p>}
+                {errors.address && <p className={styles.errText}>{errors.address.message}</p>}
               </div>
             </fieldset>
 
-            <button className="button button-large btn-Fill btn-layout" type="submit">
+            <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.btnLayout}`} type="submit">
               수정하기
             </button>
           </form>
