@@ -78,9 +78,10 @@
 
 .menuOpen,
 .menuClose {
+  flex-shrink: 0;
   width: 30px;
   height: 30px;
-  background-image: url('/src/menuopen-icon.svg');
+  background-image: url('/src/assets/menuopen-icon.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px;
@@ -93,7 +94,7 @@
   width: 20px;
   height: 20px;
   display: block;
-  background-image: url('/src/menuclose-icon.svg');
+  background-image: url('/src/assets/menuclose-icon.svg');
   position: absolute;
   right: 20px;
   top: 20px;
@@ -187,7 +188,4 @@
     display: block;
   }
 
-  .menuOpen {
-    box-shadow: inset 0 0 20px blue;
-  }
 }
