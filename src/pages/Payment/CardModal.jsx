@@ -2,7 +2,6 @@ import { useForm } from 'react-hook-form';
 import PropTypes from 'prop-types';
 import styles from '@pages/payment/CardModal.module.css';
 
-
 const CardModal = ({ isOpen, onClose, onSubmit }) => {
   const {
     register,
