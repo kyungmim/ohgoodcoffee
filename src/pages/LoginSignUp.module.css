@@ -1,0 +1,266 @@
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-black-30);
+  border-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+.buttonLarge {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.btnFill {
+  background-color: var(--color-black-10);
+  border: 2px solid var(--color-black-10);
+  color: var(--color-white);
+}
+
+
+.btnNull {
+  border: 2px solid var(--color-black-10);
+  box-sizing: border-box;
+}
+
+.btnLayout {
+  margin-top: 30px;
+}
+
+.typeMargin {
+  margin-top: 30px;
+}
+
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.contentsLogin {
+  margin: auto 0;
+}
+
+.contentTitle {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.errText {
+  font-size: 14px;
+  color: var(--color-warning);
+}
+
+
+.login,
+.signup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.loginInputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+}
+
+.login-find {
+  text-align: right;
+  color: var(--color-gray-30);
+  text-decoration: underline;
+  font-size: 14px;
+}
+
+.contentsSignup {
+  margin: 50px 0;
+  /* display: none; */
+}
+
+.contentsHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contentsHeaderLine {
+  width: 900px;
+  margin-bottom: 50px;
+}
+
+.typeStart {
+  align-items: flex-start;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.signupLayout {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+}
+
+.signupSubTitle {
+  width: 350px;
+  font-size: 18px;
+}
+
+.signupRequiredPoint {
+  color: var(--color-warning);
+}
+
+.signupType {
+  max-width: 700px;
+  width: 100%;
+  display: flex;
+  gap: 10rem;
+}
+
+.signupTypeItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.signupSelectBox {
+  display: flex;
+  gap: 8px;
+  max-width: 500px;
+}
+
+.signupSelectBoxItem {
+  position: relative;
+  width: 150px;
+  padding: 10px 0 10px 10px;
+  border: 1px solid var(--color-gray-10);
+  background-color: var(--color-white);
+  background-image: url(assets/dropdown_icon.svg);
+  background-repeat: no-repeat;
+  background-size: 16px;
+  background-position: right 10px center;
+}
+
+.signup-password-box {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formInput {
+  display: flex;
+  flex-grow: 1;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-10);
+  padding: 10px 1rem;
+  box-sizing: border-box;
+}
+
+.typeTextarea {
+  height: 120px;
+}
+
+.signupForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.7rem;
+  max-width: 900px;
+  width: 100%;
+}
+
+.signupInputBox {
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.signupRequiredPoint {
+  color: var(--color-warning);
+}
+
+.select {
+  width: inherit;
+  height: inherit;
+  background: transparent;
+  border: 0 none;
+  outline: 0 none;
+}
+
+.quantity-button {
+  display: flex;
+
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.quantity-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-grow: 1;
+}
+
+.product-main-content-text {
+  font-size: 14px;
+  color: var(--color-gray-30);
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  .signupLayout {
+    flex-direction: column;
+  }
+
+  .signupSubTitle {
+    margin-bottom: 20px;
+  }
+
+  .formInput,
+  .signupInputBox {
+    width: 100%;
+  }
+}

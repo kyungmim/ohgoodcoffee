@@ -1,0 +1,26 @@
+.errorText {
+  position: absolute;
+  top: 50%;
+  left: 400px;
+  transform: translateY(-70%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: 'Anton', sans-serif;
+  width: 500px;
+}
+
+.errorCode {
+  color: var(--color-warning);
+  font-size: 120px;
+}
+
+.errorTextItem {
+  font-size: 70px;
+  margin-top: -20px;
+}
+
+.typeErrorSmall {
+  font-size: 30px;
+  margin-top: 0;
+}

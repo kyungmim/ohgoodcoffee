@@ -1,0 +1,218 @@
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-black-30);
+  border-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+.buttonSmall {
+  text-align: center;
+  padding: 8px 0;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.buttonLarge {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.btnFill {
+  background-color: var(--color-black-10);
+  border: 2px solid var(--color-black-10);
+  color: var(--color-white);
+}
+
+.btnNull {
+  border: 2px solid var(--color-black-10);
+  box-sizing: border-box;
+}
+
+.btnLayout {
+  margin-top: 30px;
+}
+
+.typeSmallBtn {
+  width: 100px;
+}
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  row-gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.mainHeader {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.mainCover {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainCoverSrc {
+  object-fit: contain;
+}
+
+.mainContents {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 100px;
+  background-color: #fff8ef;
+}
+
+.projectInfo {
+  padding: 50px;
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 70px;
+  text-align: center;
+  background-color: #c8d6ed;
+}
+
+
+.contentsHeader {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3rem;
+}
+
+.contentTitle {
+  font-size: 30px;
+  font-weight: 900;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.mainCoverstory {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-bottom: 70px;
+}
+
+.coverstoryList {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.coverstoryList:nth-child(even) {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+.coverstoryList:nth-child(even) .coverstorylistListDescription {
+  text-align: right;
+}
+
+.coverstoryList:nth-child(even) .coverstoryListItem {
+  align-items: flex-end;
+}
+
+.coverstoryListCover {
+  width: 400px;
+  height: 400px;
+  flex-shrink: 0;
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+}
+
+.coverstoryListCoverSrc {
+  object-fit: cover;
+  max-width: none;
+}
+
+.coverstoryListItem {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.coverstoryListTitle {
+  font-size: 18px;
+  font-weight: var(--fw-bold);
+}
+
+.coverstorylistListDescription {
+  text-align: left;
+  font-weight: var(--fw-regular);
+  line-height: 1.8rem;
+  height: 200px;
+  display: -webkit-box;
+  -webkit-line-clamp: 7;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 1024px) {
+  .coverstoryList,
+  .coverstoryList:nth-child(even) {
+    flex-direction: column;
+    width: 100%;
+  }
+  .coverstoryList:nth-child(even) {
+    text-align: left;
+  }
+
+  .coverstoryListItem {
+    align-items: center;
+  }
+
+  .coverstoryListDescription {
+    text-align: center;
+  }
+
+  .coverstoryList:nth-child(even) .coverstoryListDescription {
+    text-align: center;
+  }
+
+	.grid {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -71,10 +71,10 @@ function MarketList() {
               </select>
             </div>
           </div>
-
           <div className={styles.sectionGrid}>
             <ul className="grid">{itemList}</ul>
           </div>
+
 
           <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>

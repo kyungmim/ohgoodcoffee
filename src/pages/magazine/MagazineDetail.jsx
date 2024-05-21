@@ -11,7 +11,6 @@ function MagazineDetail() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
   const { itemId } = useUserStore();
-  const { pathname } = useLocation();
   const openModal = useModalStore((state) => state.openModal);
   const { user } = useUserStore();
 
@@ -41,6 +40,7 @@ function MagazineDetail() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
 
   const codes = data?.content;
 

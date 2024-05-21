@@ -4,6 +4,7 @@ import UserOrderListItem from '@pages/mypage/user/UserOrderListItem';
 import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store';
 import { useEffect, useState } from 'react';
+import styles from '@pages/mypage/user/UserMypage.module.css';
 
 function UserOrderList() {
   const axios = useCustomAxios();
@@ -25,11 +26,11 @@ function UserOrderList() {
 
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">주문 내역 조회</p>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainTitle}>
+          <p className={styles.mainContentsTitle}>주문 내역 조회</p>
         </div>
-        <div className="main-content">{isLoading ? <Loading /> : <div className="order">{renderOrderList}</div>}</div>
+        <div className={styles.mainContent}>{isLoading ? <Loading /> : <div className={styles.order}>{renderOrderList}</div>}</div>
       </div>
     </>
   );

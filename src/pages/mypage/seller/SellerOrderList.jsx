@@ -4,6 +4,7 @@ import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store';
 import { useEffect } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import styles from '@pages/mypage/seller/SellerMypage.module.css';
 
 function SellerOrderList() {
   const axios = useCustomAxios();
@@ -25,12 +26,12 @@ function SellerOrderList() {
 
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">주문 내역 조회</p>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainTitle}>
+          <p className={styles.mainContentsTitle}>주문 내역 조회</p>
         </div>
-        <div className="main-content">
-          <div className="order">{orderList}</div>
+        <div className={styles.mainContent}>
+          <div className={styles.order}>{orderList}</div>
         </div>
       </div>
     </>

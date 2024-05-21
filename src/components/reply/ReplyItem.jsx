@@ -1,3 +1,4 @@
+import styles from '@components/reply/Reply.module.css';
 import PropTypes from 'prop-types';
 
 ReplyItem.propTypes = {
@@ -26,12 +27,12 @@ function ReplyItem({ item }) {
   const nowDate = date(new Date(item?.createdAt));
 
   return (
-    <div className="comment-item">
-      <div className="comment-info">
-        <p className="comment-user">{item?.user.name}</p>
-        <p className="comment-time">{nowDate}</p>
+    <div className={styles.commentItem}>
+      <div className={styles.commentInfo}>
+        <p className={styles.commentUser}>{item?.user.name}</p>
+        <p className={styles.commentTime}>{nowDate}</p>
       </div>
-      <p className="comment-detail">{item?.content}</p>
+      <p className={styles.commentDetail}>{item?.content}</p>
     </div>
   );
 }

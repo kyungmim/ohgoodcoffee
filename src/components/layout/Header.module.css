@@ -1,0 +1,191 @@
+.header {
+  background-color: var(--color-primary);
+  max-height: 80px;
+  height: 100%;
+  padding: 1rem 0;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+}
+
+.cartIcon {
+  position: relative;
+  vertical-align: middle;
+}
+
+.cartCount {
+  padding: 0 6px;
+  position: absolute;
+  background-color: var(--color-white);
+  font-size: 12px;
+  border-radius: 50%;
+  text-align: center;
+  top: -6px;
+  right: -6px;
+}
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.pcNav {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  color: var(--color-black-10);
+  font-weight: 500;
+}
+
+.pcNavLi {
+  flex-basis: 80px;
+  text-align: center;
+}
+
+.pcNav > li {
+  flex-basis: 80px;
+  text-align: center;
+}
+
+.hamburgerMenu {
+  color: var(--color-black-10);
+  display: flex;
+  align-items: center;
+  width: 100%;
+  display: none;
+}
+
+.hamburgerNomal {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+
+.logo.mo {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 0;
+  text-align: center;
+  text-align: center;
+}
+
+.menuOpen,
+.menuClose {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  background-image: url('/src/assets/menuopen-icon.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px;
+  /* text-indent: -99999px; */
+  /* font-size: 0; */
+  display: none;
+}
+
+.menuClose {
+  width: 20px;
+  height: 20px;
+  display: block;
+  background-image: url('/src/assets/menuclose-icon.svg');
+  position: absolute;
+  right: 20px;
+  top: 20px;
+}
+
+.moNav {
+  background-color: var(--color-white);
+  position: fixed;
+  z-index: 5;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  padding-top: 70px;
+}
+
+.moNav > li {
+  cursor: pointer;
+  width: 100%;
+  border-bottom: 1px solid var(--color-gray-20);
+  display: flex;
+}
+
+.moNav > li > a {
+  padding: 20px;
+  width: 100%;
+}
+
+.moNavLink {
+  padding: 20px;
+  width: 100%;
+}
+
+.logo.pc,
+.logo.mo {
+  flex-basis: 250px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin: 0 auto;
+  font-size: 36px;
+  font-family: serif;
+  font-weight: bold;
+  font-family: 'Anton', sans-serif;
+}
+
+.logo.mo {
+  display: none;
+}
+
+.hamburgerFooter {
+  margin-top: auto;
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+  padding: 20px;
+  border-top: 1px solid var(--color-gray-20);
+}
+
+.logout {
+  cursor: pointer;
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 1024px) {
+  .pcNav > li {
+    font-size: 14px;
+    flex-basis: 62px;
+  }
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  /* .l_wrapper {
+    box-shadow: inset 0 0 10px blue;
+  } */
+
+  .hamburgerMenu {
+    display: block;
+  }
+
+  .pcNav {
+    display: none;
+  }
+
+  .logo.pc {
+    display: none;
+  }
+
+  .logo.mo,
+  .menuOpen {
+    display: block;
+  }
+
+}

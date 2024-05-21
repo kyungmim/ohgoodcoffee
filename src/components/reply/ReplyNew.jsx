@@ -4,6 +4,7 @@ import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import styles from '@components/reply/Reply.module.css';
 
 function ReplyNew() {
   const openModal = useModalStore((state) => state.openModal);
@@ -39,16 +40,16 @@ function ReplyNew() {
 
   return (
     <>
-      <div className="comment-input">
+      <div className={styles.commentInput}>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="form-textarea">
+          <div className={styles.formTextarea}>
             <textarea id="content" type="text" placeholder="댓글을 입력하세요" {...register('content')}></textarea>
           </div>
-          <div className="magarzin-btn-box">
-            <button type="button" className="button button-small type-magarzin-btn" onClick={() => navigate('/magazine')}>
+          <div className={styles.magarzinBtnBox}>
+            <button type="button" className={`${styles.button} ${styles.buttonSmall} ${styles.typeMagarzinBtn}`} onClick={() => navigate('/magazine')}>
               목록 보기
             </button>
-            <button type="submit" className="button button-small type-magarzin-btn">
+            <button type="submit" className={`${styles.button} ${styles.buttonSmall} ${styles.typeMagarzinBtn}`}>
               작성 하기
             </button>
           </div>
