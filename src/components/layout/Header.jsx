@@ -1,4 +1,5 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
@@ -13,27 +14,36 @@ function Header() {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
 
+  // console.log(cartCount);
+
+  // const fetchCartCount = async () => {
+  //   try {
+  //     const response = await axios.get('/carts');
+  //     if (response.data && response.data.item && Array.isArray(response.data.item)) {
+  //       const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+  //       setCartCount(totalQuantity);
+  //     } else {
+  //       throw new Error('Invalid data structure or empty data');
+  //     }
+  //   } catch (error) {
+  //     console.error('Error fetching cart count:', error);
+  //   }
+  // };
+
+  const { data } = useQuery({
+    queryKey: ['carts'],
+    queryFn: () => axios.get('/carts'),
+    select: (response) => response.data,
+    suspense: true,
+  });
+
   useEffect(() => {
     if (user) {
-      fetchCartCount();
+      setCartCount(data?.item.reduce((acc, item) => acc + item.quantity, 0));
     } else {
       setCartCount(null);
     }
-  }, [user]);
-
-  const fetchCartCount = async () => {
-    try {
-      const response = await axios.get('/carts');
-      if (response.data && response.data.item && Array.isArray(response.data.item)) {
-        const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
-        setCartCount(totalQuantity);
-      } else {
-        throw new Error('Invalid data structure or empty data');
-      }
-    } catch (error) {
-      console.error('Error fetching cart count:', error);
-    }
-  };
+  }, [data]);
 
   const clickLogin = (e) => {
     e.preventDefault();

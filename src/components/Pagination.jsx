@@ -13,11 +13,15 @@ function Pagination({ totalCount, currentPage }) {
 
   const pageList = [];
 
+  const handleClick = () => {
+    window.scrollTo(0, 0);
+  };
+
   for (let page = 1; page <= totalCount; page++) {
     searchParams.set('page', page);
     let search = searchParams.toString();
     pageList.push(
-      <li key={page} className={`${page === +currentPage ? 'is_active' : ''}`}>
+      <li key={page} className={`${page === +currentPage ? 'is_active' : ''}`} onClick={handleClick}>
         <Link to={`/market?${search}`}>{page}</Link>
       </li>,
     );

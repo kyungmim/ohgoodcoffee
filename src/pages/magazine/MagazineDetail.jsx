@@ -4,6 +4,7 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import styles from '@pages/magazine/Magazine.module.css';
 
 function MagazineDetail() {
@@ -35,6 +36,11 @@ function MagazineDetail() {
   useEffect(() => {
     fetchData();
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
 
   const codes = data?.content;
 
