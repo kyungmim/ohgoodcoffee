@@ -3,13 +3,14 @@ import ReplyList from '@components/reply/ReplyList';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
-import { useEffect, useState } from 'react';
-import styles from '@pages/magazine/Magazine.module.css';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation } from 'react-router-dom';
 
 function MagazineDetail() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
   const { itemId } = useUserStore();
+  const { pathname } = useLocation();
   const openModal = useModalStore((state) => state.openModal);
   const { user } = useUserStore();
 
@@ -36,22 +37,26 @@ function MagazineDetail() {
     fetchData();
   }, []);
 
+  // useEffect(() => {
+  //   window.scrollTo(0, 0);
+  // }, [pathname]);
+
   const codes = data?.content;
 
   return (
     <>
-      <section className={`${styles.section} ${styles.typeMagazineDesc}`}>
-        <div className={styles.l_wrapper}>
-          <div className={styles.magazineDescHeader}>
-            <h2 className={styles.magazineDescHeaderTitle}>{data && data.title}</h2>
-            <p className={styles.magazineDescHeaderDate}>{date}</p>
+      <section className="section type_magazine-desc">
+        <div className="l_wrapper">
+          <div className="magazine-desc-header">
+            <h2 className="magazine-desc-header-title">{data && data.title}</h2>
+            <p className="magazine-desc-header-date">{date}</p>
           </div>
-          <div className={styles.magazineDescContents} dangerouslySetInnerHTML={{ __html: codes }}></div>
+          <div className="magazine-desc-contents" dangerouslySetInnerHTML={{ __html: codes }}></div>
           <Location data={data} />
-          <div className={styles.mapText}>
-            <p className={styles.mapName}>{data?.extra?.name}</p>
-            <p className={styles.mapSocial}>{data?.extra?.social}</p>
-            <p className={styles.mapTitle}>{data?.extra?.address}</p>
+          <div className="map-text">
+            <p className="map-name">{data?.extra?.name}</p>
+            <p className="map-social">{data?.extra?.social}</p>
+            <p className="map-title">{data?.extra?.address}</p>
           </div>
           {user && <ReplyList />}
         </div>

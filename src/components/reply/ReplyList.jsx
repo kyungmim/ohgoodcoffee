@@ -6,6 +6,7 @@ import InfiniteScroll from 'react-infinite-scroller';
 import _ from 'lodash';
 import Loading from '@components/Loading';
 import useUserStore from '@zustand/store';
+import styles from '@components/reply/Reply.module.css';
 
 function ReplyList() {
   const axios = useCustomAxios();
@@ -45,7 +46,7 @@ function ReplyList() {
 
   return (
     <>
-      <div className="comment">
+      <div className={styles.comment}>
         <InfiniteScroll pageStart={1} loadMore={fetchNextPage} hasMore={!isFetching && hasNext} loader={<Loading key="0" />}>
           {list}
         </InfiniteScroll>

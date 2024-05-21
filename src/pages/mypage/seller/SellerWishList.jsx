@@ -4,6 +4,7 @@ import SellerWishListItem from '@pages/mypage/seller/SellerWishListItem';
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
+import styles from '@pages/mypage/seller/SellerMypage.module.css';
 
 function SellerWishList() {
   const axios = useCustomAxios();
@@ -27,13 +28,13 @@ function SellerWishList() {
 
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">위시리스트</p>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainTitle}>
+          <p className={styles.mainContentsTitle}>위시리스트</p>
         </div>
-        <div className="main-content">
-          <div className="card-container">
-            <ul className="grid">{renderWishList}</ul>
+        <div className={styles.mainContent}>
+          <div className={styles.cardContainer}>
+            <ul className={styles.grid}>{renderWishList}</ul>
           </div>
         </div>
       </div>

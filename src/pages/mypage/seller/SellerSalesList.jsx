@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import SellerSalesListEdit from './SellerSalesListEdit';
 import { useQuery } from '@tanstack/react-query';
 import Loading from '@components/Loading';
+import styles from '@pages/mypage/seller/SellerMypage.module.css';
 
 function SellerSalesList() {
   const axios = useCustomAxios();
@@ -44,22 +45,22 @@ function SellerSalesList() {
     <>
       {edit ? (
         <>
-          <div className="item-wrapper">
-            <div className="main-title">
-              <p className="main-contents-title">상품 목록 조회</p>
-              <div className="sales-button">
-                <button className="button button-small type-btn-cart" onClick={clickEdit}>
+          <div className={styles.itemWrapper}>
+            <div className={styles.mainTitle}>
+              <p className={styles.mainContentsTitle}>상품 목록 조회</p>
+              <div className={styles.salesButton}>
+                <button className={`${styles.button} ${styles.buttonSmall} ${styles.typeBtnCart}`} onClick={clickEdit}>
                   상품 수정
                 </button>
               </div>
             </div>
           </div>
-          <div className="main-content">
-            <div className="card-container">
+          <div className={styles.mainContent}>
+            <div className={styles.cardContainer}>
               {isLoading ? (
                 <Loading />
               ) : (
-                <ul className="grid" onClick={menuClick}>
+                <ul className={styles.grid} onClick={menuClick}>
                   {renderedSalesList}
                 </ul>
               )}

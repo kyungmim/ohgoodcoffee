@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Link, useSearchParams } from 'react-router-dom';
+import styles from '@components/Pagination.module.css';
 
 Pagination.propTypes = {
   totalCount: PropTypes.number,
@@ -24,7 +25,7 @@ function Pagination({ totalCount, currentPage }) {
 
   return (
     <div>
-      <ul className="pagination">{pageList}</ul>
+      <ul className={styles.pagination}>{pageList}</ul>
     </div>
   );
 }

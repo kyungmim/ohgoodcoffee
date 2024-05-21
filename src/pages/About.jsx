@@ -1,15 +1,17 @@
 import boram from '@assets/boram.jpg';
+import styles from '@pages/About.module.css';
+
 function About() {
   return (
-    <div className="l_wrapper">
-      <h2 className="about-title">보람3조가 최고임.. 아무튼 체고~</h2>
-      <div className="about">
-        <div className="about-cover">
-          <img className="about-cover-src" src={boram} alt="보람3조" />
+    <div className={styles.l_wrapper}>
+      <h2 className={styles.aboutTitle}>보람3조가 최고임.. 아무튼 체고~</h2>
+      <div className={styles.about}>
+        <div className={styles.aboutCover}>
+          <img className={styles.aboutCoverSrc} src={boram} alt="보람3조" />
         </div>
-        <div className="about-contents">
-          <div className="about-text">
-            <p className="about-descripton">
+        <div className={styles.aboutContents}>
+          <div className={styles.aboutText}>
+            <p className={styles.aboutDescripton}>
               <pre>
                 한달 동안 저희 다 멀리사는데 매일 만나서 프로젝트 하느라 정말 고생많았고, <br />
                 열심히 노력했으니까 후회는 없길 바라요!!!ㅎㅎㅎ <br />

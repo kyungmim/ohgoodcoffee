@@ -3,7 +3,6 @@ import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import styles from '@components/layout/Header.module.css';
 
 function Header() {
   const axios = useCustomAxios();
@@ -75,46 +74,46 @@ function Header() {
 
   return (
     <>
-      <header className={styles.header}>
-        <div className={styles.l_wrapper}>
-          <div>
-            <ul className={styles.pcNav}>
-              <li className={styles.pcNavLi}>
+      <header className="header">
+        <div className="l_wrapper">
+          <div className="header-nav nav-box">
+            <ul className="pc-nav">
+              <li>
                 <Link to="/about">About</Link>
               </li>
-              <li className={styles.pcNavLi}>
+              <li>
                 <Link to="/magazine">Magazine</Link>
               </li>
-              <li className={styles.pcNavLi}>
+              <li>
                 <Link to="/market">Market</Link>
               </li>
-              <li className={`${styles.pcNavLi} ${styles.logo} ${styles.pc}`}>
+              <li className="logo pc">
                 <Link to="/mainpage">Oh Good Coffee</Link>
               </li>
-              <li className={styles.pcNavLi}>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
-              <li className={styles.pcNavLi}>
+              <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+              <li>
                 <Link onClick={(e) => clickLogin(e)} to="/mypage">
                   My
                 </Link>
               </li>
-              <li className={`${styles.cartIcon} ${styles.pcNavLi}`}>
+              <li className="cart-icon">
                 <Link to="/carts">Cart</Link>
-                <span className={styles.cartCount}>{cartCount === 0 ? null : cartCount}</span>
+                <span className="cart-count">{cartCount}</span>
               </li>
             </ul>
-            <div className={styles.hamburgerMenu}>
-              <div className={styles.hamburgerNomal}>
-                <Link to="/mainpage" className={`${styles.logo} ${styles.mo}`}>
+            <div className="hamburgerMenu">
+              <div className="hamburger-nomal">
+                <Link to="/mainpage" className="logo mo">
                   Oh Good Coffee
                 </Link>
-                <button className={styles.menuOpen} onClick={hadlemenu}>
-                  <span className="hidden">버튼</span>
+                <button className="menuopen" onClick={hadlemenu}>
+                  버튼
                 </button>
               </div>
               {menu && (
-                <ul className={styles.moNav} onClick={hadlemenu}>
+                <ul className="mo-nav" onClick={hadlemenu}>
                   <li>
-                    <button className={styles.menuClose} onClick={hadlemenu}>
+                    <button className="menuclose" onClick={hadlemenu}>
                       닫기
                     </button>
                   </li>
@@ -130,10 +129,10 @@ function Header() {
                   <li>
                     <Link to="/carts">Cart</Link>
                   </li>
-                  <div className={styles.hamburgerFooter}>
+                  <div className="hamburger-footer">
                     <li>
                       {user ? (
-                        <button className={styles.logout} onClick={onClickLogout}>
+                        <button className="logout" onClick={onClickLogout}>
                           Logout
                         </button>
                       ) : (

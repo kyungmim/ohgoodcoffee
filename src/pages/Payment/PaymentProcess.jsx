@@ -6,7 +6,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { formatPhoneNumber } from '@utils/date';
 import { useEffect, useState } from 'react';
 import useModalStore from '@zustand/useModalStore.mjs';
-import CardModal from '@pages/Payment/CardModal';
+import CardModal from '@pages/payment/CardModal';
+import styles from '@pages/payment/Payment.module.css';
 
 function PaymentProcess() {
   const axios = useCustomAxios();
@@ -152,51 +153,51 @@ function PaymentProcess() {
 
   return (
     <>
-      <div className="l_wrapper">
-        <div className="container">
-          <div className="user-info-section">
-            <div className="user-infomation">
-              <p className="info-title-main">배송지 정보</p>
-              <div className="info-detail">
+      <div className={styles.l_wrapper}>
+        <div className={styles.processContainer}>
+          <div className={styles.userInfoSection}>
+            <div className={styles.userInfo}>
+              <p className={styles.infoTitle}>배송지 정보</p>
+              <div className={styles.infoDetail}>
                 <p>{user.name}</p>
                 <p>{formatPhoneNumber(user.phone)}</p>
                 <p>{user.address}</p>
               </div>
             </div>
-            <div className="user-infomation">
-              <p className="info-title-main">결제 방법</p>
-              <div className="payment-info-card">
-                <div className="card-infomation">
+            <div className={styles.userInfo}>
+              <p className={styles.infoTitle}>결제 방법</p>
+              <div className={styles.paymentInfoCard}>
+                <div className={styles.cardInfo}>
                   <label>
                     <input type="radio" id="option1" value="option1" checked={selectedOption === 'option1'} />
                   </label>
-                  <div className="card-icon">
+                  <div className={styles.cardIcon}>
                     <img src={masterIcon} />
                   </div>
                   <div>5409 4700 **** 2000</div>
                 </div>
-                <div className="add-new-card" onClick={handleAddNewCard}>
-                  <div className="plus-icon">
+                <div className={styles.addNewCard} onClick={handleAddNewCard}>
+                  <div className={styles.plusIcon}>
                     <img src={plus} />
                   </div>
                   <div>카드 추가</div>
                 </div>
               </div>
             </div>
-            <div className="user-infomation">
-              <p className="info-title-main">상품 리스트</p>
+            <div className={styles.userInfo}>
+              <p className={styles.infoTitle}>상품 리스트</p>
               <div>
                 {orderItems.length > 0 ? (
-                  <div className="orderItemList">
+                  <div className={styles.orderItemList}>
                     {orderItems.map((item) => (
-                      <div key={item._id} className="orderItem">
-                        <div className="orderItem-img">
+                      <div key={item._id} className={styles.orderItem}>
+                        <div className={styles.orderItemImg}>
                           <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product.image.name}`} />
                         </div>
                         <div>
-                          <p className="orderItem-info">{item.product.name}</p>
-                          <p className="orderItem-info">수량 : {item.quantity} 개</p>
-                          <p className="orderItem-info">금액 : {(item.product.price * item.quantity).toLocaleString('ko-KR')}원</p>
+                          <p className={styles.orderItemInfo}>{item.product.name}</p>
+                          <p className={styles.orderItemInfo}>수량 : {item.quantity} 개</p>
+                          <p className={styles.orderItemInfo}>금액 : {(item.product.price * item.quantity).toLocaleString('ko-KR')}원</p>
                         </div>
                       </div>
                     ))}
@@ -205,25 +206,25 @@ function PaymentProcess() {
               </div>
             </div>
           </div>
-          <div className="payment-info-section">
+          <div className={styles.paymentInfoSection}>
             <div>
-              <p className="info-title-main">결제내역</p>
+              <p className={styles.infoTitle}>결제내역</p>
               <div>
-                <div className="orderprice-item">
-                  <p className="orderprice-item-title">총 상품 금액</p>
+                <div className={styles.orderpriceItem}>
+                  <p className={styles.orderpriceItemTitle}>총 상품 금액</p>
                   <p>{productPrice ? productPrice.toLocaleString('ko-KR') : '0'}원</p>
                 </div>
-                <div className="orderprice-item">
-                  <p className="orderprice-item-title">배송비</p>
+                <div className={styles.orderpriceItem}>
+                  <p className={styles.orderpriceItemTitle}>배송비</p>
                   <p>{shippingFees > 0 ? shippingFees.toLocaleString('ko-KR') + '원' : 0 + '원'}</p>
                 </div>
               </div>
             </div>
-            <div className="orderprice-total">
-              <p className="orderprice-item-title">총 합계</p>
+            <div className={styles.orderpriceTotal}>
+              <p className={styles.orderpriceItemTitle}>총 합계</p>
               <p>{(productPrice + shippingFees).toLocaleString('ko-KR')}원</p>
             </div>
-            <button className="button button-large btn-Fill btn-layout" onClick={handleSubmitOrder}>
+            <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.btnLayout}`} onClick={handleSubmitOrder}>
               결제하기
             </button>
           </div>

@@ -1,0 +1,53 @@
+/* @@@@@@@@@@@@@@@@@@@@ header, footer @@@@@@@@@@@@@@@@@@@@ */
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.footer {
+  background-color: #c8d6ed;
+  color: var(--color-white);
+  font-weight: 300;
+  max-height: 180px;
+  height: 100%;
+  font-size: 14px;
+  margin-top: auto;
+}
+
+.footerInner {
+  display: flex;
+  padding: 2rem 0;
+}
+
+.footerText {
+  margin-right: auto;
+}
+
+.footerTextCompany {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+.footerTextBold {
+  font-weight: 500;
+}
+
+.footerCopyright {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 0.8rem;
+}

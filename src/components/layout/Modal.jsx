@@ -1,4 +1,5 @@
 import useModalStore from '@zustand/useModalStore.mjs';
+import styles from '@components/layout/Modal.module.css';
 
 const Modal = () => {
   const { content, callbackButton } = useModalStore.getState();
@@ -21,13 +22,13 @@ const Modal = () => {
   return (
     <>
       {isOpen && (
-        <div className="modal-popup">
-          <div className="modal">
-            <div className="modal-contents">
-              <p className="modal-text" dangerouslySetInnerHTML={{ __html: content }} />
+        <div className={styles.modalPopup}>
+          <div className={styles.modal}>
+            <div className={styles.modalContents}>
+              <p className={styles.modalText} dangerouslySetInnerHTML={{ __html: content }} />
             </div>
 
-            <div className="button-box">{buttons}</div>
+            <div className={styles.buttonBox}>{buttons}</div>
           </div>
         </div>
       )}

@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import styles from '@pages/mypage/user/UserMypage.module.css';
 
 UserReviewItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -7,12 +8,12 @@ UserReviewItem.propTypes = {
 function UserReviewItem({ item }) {
   return (
     <>
-      <div className="review">
-        <div className="review-contents">
+      <div className={styles.review}>
+        <div className={styles.reviewContents}>
           <p>{item.user.name}</p>
-          <p className="review-content-time">{item.createdAt.split(' ')[0].replace(/\./g, '-')}</p>
+          <p className={styles.reviewContentTime}>{item.createdAt.split(' ')[0].replace(/\./g, '-')}</p>
         </div>
-        <p className="review-content-desc">{item.content}</p>
+        <p className={styles.reviewContentDesc}>{item.content}</p>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import styles from '@pages/mypage/seller/SellerMypage.module.css';
 
 function SellerUploadProduct() {
   const {
@@ -80,18 +81,18 @@ function SellerUploadProduct() {
 
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">상품 등록</p>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainTitle}>
+          <p className={styles.mainContentsTitle}>상품 등록</p>
         </div>
-        <div className="main-content">
-          <form className="signup_form" onSubmit={handleSubmit(onSubmit)}>
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="name">
-                Product Name<span className="signup-required-point">*</span>
+        <div className={styles.mainContent}>
+          <form className={styles.signupForm} onSubmit={handleSubmit(onSubmit)}>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="name">
+                Product Name<span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     placeholder="상품 이름을 입력해주세요."
                     id="name"
@@ -105,16 +106,16 @@ function SellerUploadProduct() {
                     })}
                   />
                 </div>
-                {errors.name && <p className="err-text">{errors.name.message}</p>}
+                {errors.name && <p className={styles.errText}>{errors.name.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="price">
-                Price<span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="price">
+                Price<span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     placeholder="가격을 입력해주세요."
                     id="price"
@@ -128,16 +129,16 @@ function SellerUploadProduct() {
                     })}
                   />
                 </div>
-                {errors.price && <p className="err-text">{errors.price.message}</p>}
+                {errors.price && <p className={styles.errText}>{errors.price.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="quantity">
-                Quantity <span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="quantity">
+                Quantity <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     placeholder="수량을 입력해주세요."
                     id="quantity"
@@ -151,16 +152,16 @@ function SellerUploadProduct() {
                     })}
                   />
                 </div>
-                {errors.quantity && <p className="err-text">{errors.quantity.message}</p>}
+                {errors.quantity && <p className={styles.errText}>{errors.quantity.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="shippingFees">
-                ShippingFees <span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="shippingFees">
+                ShippingFees <span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="signup-input-box">
-                <div className="form-input">
+              <div className={styles.signupInputBox}>
+                <div className={styles.formInput}>
                   <input
                     placeholder="배송비를 입력해주세요."
                     id="shippingFees"
@@ -174,18 +175,18 @@ function SellerUploadProduct() {
                     })}
                   />
                 </div>
-                {errors.shippingFees && <p className="err-text">{errors.shippingFees.message}</p>}
+                {errors.shippingFees && <p className={styles.errText}>{errors.shippingFees.message}</p>}
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="type">
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="type">
                 Category
               </label>
 
-              <div className="signup-select-box">
-                <div className="signup-select-box-item">
-                  <select className="select" id="type" {...register('type')}>
+              <div className={styles.signupSelectBox}>
+                <div className={styles.signupSelectBoxItem}>
+                  <select className={styles.select} id="type" {...register('type')}>
                     <option value="new">New</option>
                     <option value="best">Best</option>
                   </select>
@@ -193,15 +194,15 @@ function SellerUploadProduct() {
               </div>
             </fieldset>
 
-            <fieldset className="signup-layout">
-              <label className="signup-sub-title" htmlFor="content">
-                Product Content<span className="signup-required-point">*</span>
+            <fieldset className={styles.signupLayout}>
+              <label className={styles.signupSubTitle} htmlFor="content">
+                Product Content<span className={styles.signupRequiredPoint}>*</span>
               </label>
-              <div className="product-layout">
-                <p className="product-main-content-text">Main Contents</p>
+              <div className={styles.productLayout}>
+                <p className={styles.productMainContentText}>Main Contents</p>
 
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       multiple
                       id="mainImages"
@@ -211,13 +212,13 @@ function SellerUploadProduct() {
                       })}
                     />
                   </div>
-                  {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
+                  {errors.mainImages && <p className={styles.errText}>{errors.mainImages.message}</p>}
                 </div>
 
-                <div className="signup-input-box">
-                  <div className="form-input ">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <textarea
-                      className="type-textarea"
+                      className={styles.typeTextarea}
                       placeholder="상품 설명을 입력해주세요."
                       id="content"
                       type="text"
@@ -230,12 +231,12 @@ function SellerUploadProduct() {
                       })}
                     />
                   </div>
-                  {errors.content && <p className="err-text">{errors.content.message}</p>}
+                  {errors.content && <p className={styles.errText}>{errors.content.message}</p>}
                 </div>
 
-                <div className="product-sub-layout">
-                  <div className="product-layout">
-                    <p className="product-main-content-text">Sub Contents</p>
+                <div className={styles.productSubLayout}>
+                  <div className={styles.productLayout}>
+                    <p className={styles.productMainContentText}>Sub Contents</p>
 
                     {/* <div className="signup-input-box">
                       <div className="form-input">
@@ -250,10 +251,10 @@ function SellerUploadProduct() {
                       {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
                     </div> */}
 
-                    <div className="signup-input-box">
-                      <div className="form-input ">
+                    <div className={styles.signupInputBox}>
+                      <div className={styles.formInput}>
                         <textarea
-                          className="type-textarea"
+                          className={styles.typeTextarea}
                           placeholder="상품 설명을 입력해주세요."
                           id="content"
                           type="text"
@@ -266,12 +267,12 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.content && <p className="err-text">{errors.content.message}</p>}
+                      {errors.content && <p className={styles.errText}>{errors.content.message}</p>}
                     </div>
                   </div>
                 </div>
-                <div className="product-sub-layout">
-                  <div className="product-layout">
+                <div className={styles.productSubLayout}>
+                  <div className={styles.productLayout}>
                     {/* <div className="signup-input-box">
                       <div className="form-input">
                         <input
@@ -285,10 +286,10 @@ function SellerUploadProduct() {
                       {errors.mainImages && <p className="err-text">{errors.mainImages.message}</p>}
                     </div> */}
 
-                    <div className="signup-input-box">
-                      <div className="form-input ">
+                    <div className={styles.signupInputBox}>
+                      <div className={styles.formInput}>
                         <textarea
-                          className="type-textarea"
+                          className={styles.typeTextarea}
                           placeholder="상품 설명을 입력해주세요."
                           id="content"
                           type="text"
@@ -301,14 +302,14 @@ function SellerUploadProduct() {
                           })}
                         />
                       </div>
-                      {errors.content && <p className="err-text">{errors.content.message}</p>}
+                      {errors.content && <p className={styles.errText}>{errors.content.message}</p>}
                     </div>
                   </div>
                 </div>
               </div>
             </fieldset>
 
-            <button className="button button-large btn-Fill btn-layout" type="submit">
+            <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.btnLayout}`} type="submit">
               등록하기
             </button>
           </form>
