@@ -4,7 +4,6 @@ import { useQuery } from '@tanstack/react-query';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import { useEffect, useState } from 'react';
 import Pagination from '@components/Pagination';
-import Loading from '@components/Loading';
 import { useSearchParams } from 'react-router-dom';
 import styles from '@pages/market/Market.module.css';
 
@@ -12,6 +11,7 @@ function MarketList() {
   const axios = useCustomAxios();
   const [sortType, setSortType] = useState('new');
   const [searchParams] = useSearchParams();
+  const [marketList, setMarketList] = useState([]);
 
   const getParams = (sortType) => {
     const params = {
@@ -29,7 +29,7 @@ function MarketList() {
     return params;
   };
 
-  const { data, isLoading, refetch } = useQuery({
+  const { data } = useQuery({
     queryKey: ['products', sortType, searchParams.get('page')],
     queryFn: () =>
       axios.get('/products', {
@@ -40,15 +40,14 @@ function MarketList() {
   });
 
   useEffect(() => {
-    refetch();
-    window.scrollTo(0, 0);
-  }, [searchParams.toString()]);
+    if (data) setMarketList(data.item);
+  }, [data]);
 
   const handleSelectChange = (e) => {
     setSortType(e.target.value);
   };
 
-  const itemList = data.item?.map((item) => <MarketListItem key={item._id} item={item} />);
+  const itemList = marketList?.map((item) => <MarketListItem key={item._id} item={item} />);
 
   return (
     <>
@@ -72,8 +71,10 @@ function MarketList() {
               </select>
             </div>
           </div>
+          <div className={styles.sectionGrid}>
+            <ul className="grid">{itemList}</ul>
+          </div>
 
-          <div className={styles.sectionGrid}>{isLoading ? <Loading /> : <ul className="grid">{itemList}</ul>}</div>
 
           <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>

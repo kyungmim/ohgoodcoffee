@@ -14,9 +14,10 @@ CartListItem.propTypes = {
   mainCheck: PropTypes.bool.isRequired,
   setItems: PropTypes.func.isRequired,
   setTotalOrderPrice: PropTypes.func.isRequired,
+  refetch: PropTypes.func.isRequired,
 };
 
-function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
+function CartListItem({ item, refetch, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
   const axios = useCustomAxios();
   const { setCartCount } = useUserStore();
   const navigate = useNavigate();
@@ -46,6 +47,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       const response = await axios.get('/carts');
       const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
       setCartCount(totalQuantity);
+      refetch();
     } catch (error) {
       console.error('Error fetching cart count:', error);
     }
@@ -85,9 +87,9 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
         openModal({
           content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
           callbackButton: {
-            확인: async () => {
-              await handleDeleteItem(item._id);
-              await fetchCartCountAndUpdate();
+            확인: () => {
+              handleDeleteItem(item._id);
+              fetchCartCountAndUpdate();
             },
             취소: '',
           },
@@ -116,6 +118,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       callbackButton: {
         확인: async () => {
           await axios.delete(`/carts/${id}`);
+          refetch();
         },
         취소: '',
       },

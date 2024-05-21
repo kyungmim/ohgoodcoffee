@@ -6,6 +6,7 @@ import useUserStore from '@zustand/store';
 import CartListItem from '@pages/cart/CartListItem';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useModalStore from '@zustand/useModalStore.mjs';
+import { useQuery } from '@tanstack/react-query';
 import styles from '@pages/cart/Cart.module.css';
 
 function CartList() {
@@ -67,27 +68,16 @@ function CartList() {
     setProductDetail(newCartArr);
   };
 
-  useEffect(() => {
-    if (user) {
-      fetchData();
-    }
-  }, []);
+  const { data, refetch } = useQuery({
+    queryKey: ['carts'],
+    queryFn: () => axios.get('/carts'),
+    select: (response) => response.data,
+    suspense: true,
+  });
 
-  const fetchData = async () => {
-    try {
-      const productsResponse = await axios.get('/carts');
-      await setItems(productsResponse.data.item);
-    } catch (err) {
-      if (err.response?.data.message) {
-        openModal({
-          content: err.response?.data.message,
-          callbackButton: {
-            확인: '',
-          },
-        });
-      }
-    }
-  };
+  useEffect(() => {
+    if (data) setItems(data.item);
+  }, [data]);
 
   const handleDeleteSelectedItems = async () => {
     if (selectedCartItem.length > 0) {
@@ -124,7 +114,7 @@ function CartList() {
             취소: '',
           },
         });
-        await fetchData();
+        await refetch();
       } else {
         openModal({
           content: '삭제할 상품을 선택해주세요 :)',
@@ -195,6 +185,7 @@ function CartList() {
       key={item._id}
       id={item._id}
       item={item}
+      refetch={refetch}
       selectedCartItem={selectedCartItem}
       setSelectedCartItem={setSelectedCartItem}
       setMainCheck={setMainCheck}
