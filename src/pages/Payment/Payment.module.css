@@ -24,12 +24,10 @@
   color: var(--color-white);
 }
 
-
 .btnNull {
   border: 2px solid var(--color-black-10);
   box-sizing: border-box;
 }
-
 
 .btnLayout {
   margin-top: 30px;
@@ -106,6 +104,7 @@
 }
 
 .processContainer {
+  margin-top: 70px;
   display: flex;
   justify-content: space-between;
   gap: 40px;
@@ -127,7 +126,7 @@
   box-sizing: border-box;
 }
 
-.infoTitle{
+.infoTitle {
   font-weight: var(--fw-bold);
   margin-bottom: 1rem;
 }
@@ -137,7 +136,6 @@
   flex-direction: column;
   gap: 0.5rem;
 }
-
 
 .paymentInfoSection {
   flex: 0 0 30%;
@@ -192,16 +190,16 @@
 }
 
 .orderItemImg {
-  width: 120px; 
-  height: auto; 
-  aspect-ratio: 1 / 1; 
-  overflow: hidden; 
+  width: 120px;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
 }
 
 .orderItemImg img {
   width: 100%;
   height: 100%;
-  object-fit: cover; 
+  object-fit: cover;
 }
 .orderItemInfo {
   margin-bottom: 0.5rem;
@@ -228,6 +226,4 @@
   font-weight: var(--fw-medium);
   display: flex;
   justify-content: space-between;
-
 }
-

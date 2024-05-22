@@ -98,3 +98,33 @@
   font-size: 12px;
   margin-top: 5px;
 }
+
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-black-30);
+  border-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+.buttonLarge {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.btnFill {
+  background-color: var(--color-black-10);
+  border: 2px solid var(--color-black-10);
+  color: var(--color-white);
+}
+
+.btnLayout {
+  margin-top: 30px;
+}
