@@ -76,7 +76,7 @@ function CartList() {
   });
 
   useEffect(() => {
-    if (data) setItems(data.item);
+    if (user && data) setItems(data.item);
   }, [data]);
 
   const handleDeleteSelectedItems = async () => {
