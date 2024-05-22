@@ -162,7 +162,7 @@ function CartListItem({ item, refetch, selectedCartItem, setSelectedCartItem, se
     <div className={styles.cartItem}>
       <div className={styles.cartCheck} onClick={() => handleCartCheck()}>
         <div>
-          <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
+          <input type="checkbox" defaultChecked={cartItemCheck()} onChange={(e) => handleChange(e)} />
         </div>
       </div>
       <div className={styles.cartLayout}>

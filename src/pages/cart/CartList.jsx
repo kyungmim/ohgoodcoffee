@@ -198,12 +198,12 @@ function CartList() {
   return (
     <>
       <div className={styles.contentsCart}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.cart}>
             <div className={styles.cartTitle}>
               <div className={`${styles.cartTitle} ${styles.cartLayout} ${styles.cartCheck} ${styles.checkWidth}`} onClick={handleSelectAll}>
                 <div>
-                  <input type="checkbox" checked={mainCheck} />
+                  <input type="checkbox" defaultChecked={mainCheck} />
                 </div>
                 <p>전체선택</p>
               </div>

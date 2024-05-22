@@ -1,5 +1,4 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
-import { useQuery } from '@tanstack/react-query';
 import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
@@ -14,36 +13,27 @@ function Header() {
   const navigate = useNavigate();
   const [menu, setMenu] = useState(false);
 
-  // console.log(cartCount);
-
-  // const fetchCartCount = async () => {
-  //   try {
-  //     const response = await axios.get('/carts');
-  //     if (response.data && response.data.item && Array.isArray(response.data.item)) {
-  //       const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
-  //       setCartCount(totalQuantity);
-  //     } else {
-  //       throw new Error('Invalid data structure or empty data');
-  //     }
-  //   } catch (error) {
-  //     console.error('Error fetching cart count:', error);
-  //   }
-  // };
-
-  const { data } = useQuery({
-    queryKey: ['carts'],
-    queryFn: () => axios.get('/carts'),
-    select: (response) => response.data,
-    suspense: true,
-  });
-
   useEffect(() => {
     if (user) {
-      setCartCount(data?.item.reduce((acc, item) => acc + item.quantity, 0));
+      fetchCartCount();
     } else {
       setCartCount(null);
     }
-  }, [data]);
+  }, [user]);
+
+  const fetchCartCount = async () => {
+    try {
+      const response = await axios.get('/carts');
+      if (response.data && response.data.item && Array.isArray(response.data.item)) {
+        const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+        setCartCount(totalQuantity);
+      } else {
+        throw new Error('Invalid data structure or empty data');
+      }
+    } catch (error) {
+      console.error('Error fetching cart count:', error);
+    }
+  };
 
   const clickLogin = (e) => {
     e.preventDefault();
@@ -86,28 +76,28 @@ function Header() {
   return (
     <>
       <header className={styles.header}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div>
             <ul className={styles.pcNav}>
-              <li className={styles.pcNavLi}>
+              <li>
                 <Link to="/about">About</Link>
               </li>
-              <li className={styles.pcNavLi}>
+              <li>
                 <Link to="/magazine">Magazine</Link>
               </li>
-              <li className={styles.pcNavLi}>
+              <li>
                 <Link to="/market">Market</Link>
               </li>
-              <li className={`${styles.pcNavLi} ${styles.logo} ${styles.pc}`}>
+              <li className={`${styles.logo} ${styles.pc}`}>
                 <Link to="/mainpage">Oh Good Coffee</Link>
               </li>
-              <li className={styles.pcNavLi}>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
-              <li className={styles.pcNavLi}>
+              <li>{user ? <button onClick={onClickLogout}>Logout</button> : <Link to="/users/login">Login</Link>}</li>
+              <li>
                 <Link onClick={(e) => clickLogin(e)} to="/mypage">
                   My
                 </Link>
               </li>
-              <li className={`${styles.cartIcon} ${styles.pcNavLi}`}>
+              <li className={styles.cartIcon}>
                 <Link to="/carts">Cart</Link>
                 <span className={styles.cartCount}>{cartCount === 0 ? null : cartCount}</span>
               </li>
@@ -125,7 +115,7 @@ function Header() {
                 <ul className={styles.moNav} onClick={hadlemenu}>
                   <li>
                     <button className={styles.menuClose} onClick={hadlemenu}>
-                      닫기
+                      <span className="hidden">닫기</span>
                     </button>
                   </li>
                   <li>
