@@ -158,13 +158,26 @@ function MarketDetail() {
   };
 
   const handleNavigate = () => {
-    navigate('/orders/confirm', { state: { from: 'marketdetail', _id, productQuantity, item } });
+    if (user) {
+      navigate('/orders/confirm', { state: { from: 'marketdetail', _id, productQuantity, item } });
+    } else {
+      openModal({
+        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+      return;
+    }
   };
 
   return (
     <>
       <section className={`${styles.section} ${styles.typeMarketDesc}`}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.marketOverviewTop}>
             <div className={`${styles.cardCover} ${styles.typeCardDetail}`}>
               <img className={styles.cardCoverSrc} src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]?.name}`} alt={`${item.name} 상품 사진`} />

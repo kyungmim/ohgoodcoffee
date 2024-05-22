@@ -34,7 +34,7 @@ function MagazineList() {
   return (
     <>
       <section className={`${styles.section} ${styles.typeMagazine}`}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.sectionFilter}>
             <p className={styles.sectionCount}>POSTING</p>
             <span className={`${styles.sectionCount} ${styles.num}`}>{data?.length}</span>

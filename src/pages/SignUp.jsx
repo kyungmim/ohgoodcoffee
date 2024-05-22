@@ -71,7 +71,7 @@ function SignUp() {
   return (
     <>
       <div className={styles.contentsSignup}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.signup}>
             <div className={styles.contentsHeader}>
               <h2 className={styles.contentTitle}>SIGN UP</h2>

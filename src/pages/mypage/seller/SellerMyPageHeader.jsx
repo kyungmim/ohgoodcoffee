@@ -33,7 +33,7 @@ function SellerMyPageHeader() {
 
   return (
     <div className={styles.container}>
-      <div className={styles.l_wrapper}>
+      <div className="l_wrapper">
         <div className={styles.mainContainer}>
           <div className={styles.sidebar}>
             <ul className={styles.menuList}>

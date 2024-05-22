@@ -13,6 +13,7 @@ function MagazineDetail() {
   const { itemId } = useUserStore();
   const openModal = useModalStore((state) => state.openModal);
   const { user } = useUserStore();
+  const { pathname } = useLocation();
 
   const fetchData = async () => {
     try {
@@ -41,13 +42,12 @@ function MagazineDetail() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-
   const codes = data?.content;
 
   return (
     <>
       <section className={`${styles.section} ${styles.typeMagazineDesc}`}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.magazineDescHeader}>
             <h2 className={styles.magazineDescHeaderTitle}>{data && data.title}</h2>
             <p className={styles.magazineDescHeaderDate}>{date}</p>
