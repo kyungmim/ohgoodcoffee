@@ -1,0 +1,233 @@
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-black-30);
+  border-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+.buttonLarge {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.btnFill {
+  background-color: var(--color-black-10);
+  border: 2px solid var(--color-black-10);
+  color: var(--color-white);
+}
+
+
+.btnNull {
+  border: 2px solid var(--color-black-10);
+  box-sizing: border-box;
+}
+
+
+.btnLayout {
+  margin-top: 30px;
+}
+
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.completeContainer {
+  max-width: 600px;
+  width: 100%;
+  margin: 70px auto 0 auto;
+}
+
+.completeMain {
+  background-color: var(--color-white);
+  padding: 30px 30px 50px 30px;
+  font-size: 18px;
+}
+
+.completeHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.completeTitle {
+  font-size: 28px;
+}
+
+.completeDesc {
+  font-size: 24px;
+}
+
+.paymentForm {
+  display: flex;
+  margin-top: 30px;
+  padding-bottom: 10px;
+  border-bottom: solid 2px var(--color-gray-20);
+}
+
+.paymentTitle {
+  flex-basis: 200px;
+  flex-shrink: 0;
+}
+
+.paymentFormInner.with_paddingbottom {
+  padding-bottom: 20px;
+}
+
+.paymentFormInner.typeGray {
+  color: var(--color-gray-30);
+}
+
+.paymentFormBottom {
+  display: flex;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 100%;
+  margin-top: 50px;
+  color: var(--color-black-20);
+}
+
+.processContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.userInfoSection {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.userInfo {
+  background-color: var(--color-white);
+  border: 1px solid var(--color-gray-20);
+  padding: 1rem;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.infoTitle{
+  font-weight: var(--fw-bold);
+  margin-bottom: 1rem;
+}
+
+.infoDetail {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+
+.paymentInfoSection {
+  flex: 0 0 30%;
+  border: 1px solid var(--color-gray-20);
+  padding: 1rem;
+  align-self: flex-start;
+  background-color: var(--color-white);
+}
+
+.paymentInfoCard {
+  padding: 0.5rem 0;
+}
+
+.cardInfo {
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+
+.cardIcon {
+  width: 2rem;
+}
+
+.plusIcon {
+  width: 1rem;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.addNewCard {
+  padding-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  color: var(--color-gray-30);
+  cursor: pointer;
+}
+
+.orderItem {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray-20);
+}
+
+.orderItem:last-child {
+  border: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.orderItemImg {
+  width: 120px; 
+  height: auto; 
+  aspect-ratio: 1 / 1; 
+  overflow: hidden; 
+}
+
+.orderItemImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+}
+.orderItemInfo {
+  margin-bottom: 0.5rem;
+}
+
+.orderpriceItem {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.orderpriceItem:last-child {
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--color-gray-20);
+}
+
+.orderpriceItemTitle {
+  font-weight: var(--fw-medium);
+}
+
+.orderpriceTotal {
+  font-weight: var(--fw-medium);
+  display: flex;
+  justify-content: space-between;
+
+}
+

@@ -1,5 +1,6 @@
 import Lottie from 'lottie-react';
 import LoadingIcon from '@assets/Loading.json';
+import styles from '@components/Loading.module.css';
 
 function Loading() {
   const defaultOptions = {
@@ -7,8 +8,8 @@ function Loading() {
     autoplay: true,
   };
   return (
-    <div className="loading-box">
-      <div className="loading">
+    <div className={styles.loadingBox}>
+      <div className={styles.loading}>
         <Lottie options={defaultOptions} animationData={LoadingIcon} height={100} width={100} />
       </div>
     </div>

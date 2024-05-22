@@ -1,8 +1,10 @@
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
+import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import styles from '@pages/cart/Cart.module.css';
 
 CartListItem.propTypes = {
   item: PropTypes.object.isRequired,
@@ -12,10 +14,12 @@ CartListItem.propTypes = {
   mainCheck: PropTypes.bool.isRequired,
   setItems: PropTypes.func.isRequired,
   setTotalOrderPrice: PropTypes.func.isRequired,
+  refetch: PropTypes.func.isRequired,
 };
 
-function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
+function CartListItem({ item, refetch, selectedCartItem, setSelectedCartItem, setMainCheck, mainCheck, setItems, setTotalOrderPrice }) {
   const axios = useCustomAxios();
+  const { setCartCount } = useUserStore();
   const navigate = useNavigate();
   const [productQuantity, setProductQuantity] = useState(item.quantity);
   const [isProcessing, setIsProcessing] = useState(false);
@@ -38,10 +42,22 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     setTotalOrderPrice();
   }, [selectedCartItem, productQuantity]);
 
-  const handleAddQuantity = () => {
+  const fetchCartCountAndUpdate = async () => {
+    try {
+      const response = await axios.get('/carts');
+      const totalQuantity = response.data.item.reduce((acc, item) => acc + item.quantity, 0);
+      setCartCount(totalQuantity);
+      refetch();
+    } catch (error) {
+      console.error('Error fetching cart count:', error);
+    }
+  };
+
+  const handleAddQuantity = async () => {
     let realQuantity = item.product.quantity - item.product.buyQuantity;
     if (!isProcessing && productQuantity < realQuantity) {
       setProductQuantity((prev) => prev + 1);
+      await fetchCartCountAndUpdate();
     } else if (!isProcessing && productQuantity == 0) {
       openModal({
         content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
@@ -63,7 +79,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     }
   };
 
-  const handleReduceQuantity = () => {
+  const handleReduceQuantity = async () => {
     // isProcessing일 경우 handleRequest 함수의 사이클을 온전히 실행한 후 수량 조정을 위해
     if (!isProcessing && productQuantity > 0) {
       //카트에서 제품의 갯수가 1개일 때, 마이너스 버튼을 누르면 delete 요청
@@ -71,14 +87,16 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
         openModal({
           content: '해당 상품을 장바구니에서 삭제하시겠습니까?',
           callbackButton: {
-            확인: async () => {
-              await handleDeleteItem(item._id);
+            확인: () => {
+              handleDeleteItem(item._id);
+              fetchCartCountAndUpdate();
             },
             취소: '',
           },
         });
       } else {
         setProductQuantity((prev) => prev - 1);
+        await fetchCartCountAndUpdate();
       }
     }
   };
@@ -89,6 +107,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
+      await fetchCartCountAndUpdate();
       setIsProcessing(false);
     }
   };
@@ -99,6 +118,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
       callbackButton: {
         확인: async () => {
           await axios.delete(`/carts/${id}`);
+          refetch();
         },
         취소: '',
       },
@@ -106,6 +126,7 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
     const response = await axios.get('/carts');
     if (response.data.item) {
       setItems(response.data.item);
+      await fetchCartCountAndUpdate();
     }
   };
 
@@ -138,35 +159,35 @@ function CartListItem({ item, selectedCartItem, setSelectedCartItem, setMainChec
   };
 
   return (
-    <div className="cart-item">
-      <div className="cart-check" onClick={() => handleCartCheck()}>
-        <div className="form-input-radio">
-          <input type="checkbox" checked={cartItemCheck()} onChange={(e) => handleChange(e)} />
+    <div className={styles.cartItem}>
+      <div className={styles.cartCheck} onClick={() => handleCartCheck()}>
+        <div>
+          <input type="checkbox" defaultChecked={cartItemCheck()} onChange={(e) => handleChange(e)} />
         </div>
       </div>
-      <div className="cart-layout type-cart-mo">
-        <div className="cart-item-info">
-          <div className="cart-item-cover" onClick={() => navigate(`/market/detail/${item.product_id}`)}>
+      <div className={styles.cartLayout}>
+        <div className={styles.cartItemInfo}>
+          <div className={styles.cartItemCover} onClick={() => navigate(`/market/detail/${item.product_id}`)}>
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product?.image.name}`} alt="커피이미지" />
           </div>
-          <p className="cart-item-title">{item.product?.name}</p>
+          <p className={styles.cartItemTitle}>{item.product?.name}</p>
         </div>
       </div>
-      <div className="cart-price-number">
-        <div className="cart-layout cart-quantity">
-          <div className="quantity-button" onClick={handleReduceQuantity}>
+      <div className={styles.cartPriceNumber}>
+        <div className={`${styles.cartLayout} ${styles.cartQuantity}`}>
+          <div className={styles.quantityButton} onClick={handleReduceQuantity}>
             -
           </div>
           <div>
             <p>{productQuantity}</p>
           </div>
-          <div className="quantity-button" onClick={handleAddQuantity}>
+          <div className={styles.quantityButton} onClick={handleAddQuantity}>
             +
           </div>
         </div>
-        <p className="cart-layout cart-price">{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
+        <p className={`${styles.cartLayout} ${styles.cartPrice}`}>{(item.product.price * productQuantity).toLocaleString('ko-KR')}</p>
       </div>
-      <p className="button type-btn-cart button-small type-cart-btn" onClick={() => handleDeleteItem(item._id)}>
+      <p className={`${styles.button} ${styles.typeBtnCart} ${styles.buttonSmall} ${styles.typeCartBtn}`} onClick={() => handleDeleteItem(item._id)}>
         삭제
       </p>
     </div>

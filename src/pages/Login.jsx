@@ -3,6 +3,7 @@ import useUserStore from '@zustand/store.js';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { Link, useNavigate } from 'react-router-dom';
+import styles from '@pages/LoginSignUp.module.css';
 
 function Login() {
   const {
@@ -54,17 +55,17 @@ function Login() {
 
   return (
     <>
-      <div className="contents-login">
+      <div className={styles.contentsLogin}>
         <div className="l_wrapper">
-          <div className="login">
-            <div className="contents-header">
-              <h2 className="content-title">LOGIN</h2>
+          <div className={styles.login}>
+            <div className={styles.contentsHeader}>
+              <h2 className={styles.contentTitle}>LOGIN</h2>
             </div>
 
-            <form onSubmit={handleSubmit(onSubmit)} className="login_form">
-              <div className="login-input-section">
-                <div className="signup-input-box">
-                  <div className="form-input">
+            <form onSubmit={handleSubmit(onSubmit)} className={styles.loginForm}>
+              <div className={styles.loginInputSection}>
+                <div className={styles.loginInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="이메일"
                       type="text"
@@ -78,10 +79,10 @@ function Login() {
                       })}
                     />
                   </div>
-                  {errors.email && <p className="err-text">{errors.email.message}</p>}
+                  {errors.email && <p className={styles.errText}>{errors.email.message}</p>}
                 </div>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="비밀번호"
                       type="password"
@@ -95,16 +96,16 @@ function Login() {
                       })}
                     />
                   </div>
-                  {errors.password && <p className="err-text">{errors.password.message}</p>}
+                  {errors.password && <p className={styles.errText}>{errors.password.message}</p>}
                 </div>
               </div>
               {/* <div className="login-find">
                 <Link to="#">아이디/비밀번호 찾기</Link>
               </div> */}
-              <button className="button button-large btn-Fill type-margin" type="submit">
+              <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.typeMargin}`} type="submit">
                 LOGIN
               </button>
-              <Link to="/users/signup" className="button button-large btn-null" type="button">
+              <Link to="/users/signup" className={`${styles.button} ${styles.buttonLarge} ${styles.btnNull}`} type="button">
                 SIGN UP
               </Link>
             </form>

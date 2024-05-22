@@ -1,6 +1,7 @@
 import useUserStore from '@zustand/store';
 import { useState } from 'react';
 import UserInfoEdit from './UserInfoEdit';
+import styles from '@pages/mypage/user/UserMypage.module.css';
 
 function SellerInfo() {
   const { user } = useUserStore();
@@ -12,40 +13,40 @@ function SellerInfo() {
 
   return (
     <>
-      <div className="item-wrapper">
-        <div className="main-title">
-          <p className="main-contents-title">회원정보</p>
+      <div className={styles.itemWrapper}>
+        <div className={styles.mainTitle}>
+          <p className={styles.mainContentsTitle}>회원정보</p>
         </div>
         {info ? (
           <>
-            <div className="main-content">
-              <div className="profile-settings">
-                <div className="profile-setting">
-                  <div className="profile-item">
-                    <h1 className="profile-item-title">Type</h1>
+            <div className={styles.mainContent}>
+              <div className={styles.profileSettings}>
+                <div className={styles.profileSetting}>
+                  <div className={styles.profileItem}>
+                    <h1 className={styles.profileItemTitle}>Type</h1>
                     <p>{user.type}</p>
                   </div>
-                  <div className="profile-item">
-                    <h1 className="profile-item-title">Name</h1>
+                  <div className={styles.profileItem}>
+                    <h1 className={styles.profileItemTitle}>Name</h1>
                     <p>{user.name}</p>
                   </div>
-                  <div className="profile-item">
-                    <h1 className="profile-item-title">Email</h1>
+                  <div className={styles.profileItem}>
+                    <h1 className={styles.profileItemTitle}>Email</h1>
                     <p>{user.email}</p>
                   </div>
-                  <div className="profile-item">
-                    <h1 className="profile-item-title">Phone Number</h1>
+                  <div className={styles.profileItem}>
+                    <h1 className={styles.profileItemTitle}>Phone Number</h1>
                     <p>{user.phone}</p>
                   </div>
-                  <div className="profile-item">
-                    <h1 className="profile-item-title">Address</h1>
+                  <div className={styles.profileItem}>
+                    <h1 className={styles.profileItemTitle}>Address</h1>
                     <p>{user.address}</p>
                   </div>
                 </div>
               </div>
             </div>
-            <div className="button-info-box">
-              <button onClick={onClick} className="button button-large btn-Fill btn-layout" type="button">
+            <div className={styles.buttonInfoBox}>
+              <button onClick={onClick} className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.btnLayout}`} type="button">
                 수정하기
               </button>
             </div>

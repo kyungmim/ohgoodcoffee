@@ -24,9 +24,10 @@ import SellerInfo from '@pages/mypage/seller/SellerInfo';
 
 import { createBrowserRouter } from 'react-router-dom';
 import CartList from '@pages/cart/CartList';
-import PaymentComplete from '@pages/PaymentComplete';
+import PaymentComplete from '@pages/payment/PaymentComplete';
 import SellerOrderList from '@pages/mypage/seller/SellerOrderList';
 import SellerWishList from '@pages/mypage/seller/SellerWishList';
+import PaymentProcess from '@pages/payment/PaymentProcess';
 const router = createBrowserRouter([
   {
     path: '/',
@@ -76,6 +77,10 @@ const router = createBrowserRouter([
       {
         path: 'orders',
         element: <PaymentComplete />,
+      },
+      {
+        path: 'orders/confirm',
+        element: <PaymentProcess />,
       },
       {
         path: 'mypage',

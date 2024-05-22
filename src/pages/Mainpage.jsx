@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import useUserStore from '@zustand/store';
+import styles from '@pages/Mainpage.module.css';
 
 function Mainpage() {
   const axios = useCustomAxios();
@@ -57,27 +58,27 @@ function Mainpage() {
 
   return (
     <>
-      <main className="main">
+      <main className={styles.main}>
         <div>
-          <Swiper className="main-header" modules={[Pagination, Autoplay]} spaceBetween={0} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
-            <SwiperSlide className="main-cover">
-              <img className="main-cover-src" src={coverImg_1} alt="커피 커버 이미지" />
+          <Swiper className={styles.mainHeader} modules={[Pagination, Autoplay]} spaceBetween={0} slidesPerView={1} autoplay={{ delay: 3000, disableOnInteraction: false }}>
+            <SwiperSlide className={styles.mainCover}>
+              <img className={styles.mainCoverSrc} src={coverImg_1} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide className="main-cover">
-              <img className="main-cover-src" src={coverImg_2} alt="커피 커버 이미지" />
+            <SwiperSlide className={styles.mainCover}>
+              <img className={styles.mainCoverSrc} src={coverImg_2} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide className="main-cover">
-              <img className="main-cover-src" src={coverImg_3} alt="커피 커버 이미지" />
+            <SwiperSlide className={styles.mainCover}>
+              <img className={styles.mainCoverSrc} src={coverImg_3} alt="커피 커버 이미지" />
             </SwiperSlide>
-            <SwiperSlide className="main-cover">
-              <img className="main-cover-src" src={coverImg_4} alt="커피 커버 이미지" />
+            <SwiperSlide className={styles.mainCover}>
+              <img className={styles.mainCoverSrc} src={coverImg_4} alt="커피 커버 이미지" />
             </SwiperSlide>
           </Swiper>
         </div>
 
-        <div className="main-contents">
-          <div className="project-info">
-            <p className="project-info-text">
+        <div className={styles.mainContents}>
+          <div className={styles.projectInfo}>
+            <p className={styles.projectInfoText}>
               " This site was created by combining 3 days in Sinchon, <br /> 10 days in Gwanghwamun,
               <br /> and 5 days in Wangsimni. Why does time pass so quickly..? <br />
               Our team members worked hard... <br />
@@ -85,74 +86,74 @@ function Mainpage() {
             </p>
           </div>
           <div className="l_wrapper">
-            <div className="contents-header">
-              <h2 className="content-title">COVER STORY</h2>
+            <div className={styles.contentsHeader}>
+              <h2 className={styles.contentTitle}>COVER STORY</h2>
             </div>
 
-            <div className="main-coverstory">
-              <section className="coverstory-list">
-                <div className="coverstory-list-cover">
+            <div className={styles.mainCoverstory}>
+              <section className={styles.coverstoryList}>
+                <div className={styles.coverstoryListCover}>
                   <img
-                    className="coverstory-list-cover-src"
+                    className={styles.coverstoryListCoverSrc}
                     src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[4].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
-                <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title">#{story && story[4].title}</h2>
-                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(4) }}></pre>
+                <div className={styles.coverstoryListItem}>
+                  <h2 className={styles.coverstoryListTitle}>#{story && story[4].title}</h2>
+                  <pre className={styles.coverstorylistListDescription} dangerouslySetInnerHTML={{ __html: contents(4) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[4]._id)}>
+                  <button className={`${styles.button} ${styles.buttonSmall} ${styles.btnNull} ${styles.typeSmallBtn}`} type="button" onClick={() => onNav(story[4]._id)}>
                     MORE
                   </button>
                 </div>
               </section>
 
-              <section className="coverstory-list">
-                <div className="coverstory-list-cover">
+              <section className={styles.coverstoryList}>
+                <div className={styles.coverstoryListCover}>
                   <img
-                    className="coverstory-list-cover-src"
+                    className={styles.coverstoryListCoverSrc}
                     src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[5].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
-                <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title">#{story && story[5].title}</h2>
-                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(5) }}></pre>
+                <div className={styles.coverstoryListItem}>
+                  <h2 className={styles.coverstoryListTitle}>#{story && story[5].title}</h2>
+                  <pre className={styles.coverstorylistListDescription} dangerouslySetInnerHTML={{ __html: contents(5) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[5]._id)}>
+                  <button className={`${styles.button} ${styles.buttonSmall} ${styles.btnNull} ${styles.typeSmallBtn}`} type="button" onClick={() => onNav(story[5]._id)}>
                     MORE
                   </button>
                 </div>
               </section>
 
-              <section className="coverstory-list">
-                <div className="coverstory-list-cover">
+              <section className={styles.coverstoryList}>
+                <div className={styles.coverstoryListCover}>
                   <img
-                    className="coverstory-list-cover-src"
+                    className={styles.coverstoryListCoverSrc}
                     src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${story && story[6].extra.mainImages.name}`}
                     alt="커피이미지"
                   />
                 </div>
 
-                <div className="coverstory-list-item">
-                  <h2 className="coverstory-list-title">#{story && story[6].title}</h2>
-                  <pre className="coverstorylist-list-description" dangerouslySetInnerHTML={{ __html: contents(6) }}></pre>
+                <div className={styles.coverstoryListItem}>
+                  <h2 className={styles.coverstoryListTitle}>#{story && story[6].title}</h2>
+                  <pre className={styles.coverstorylistListDescription} dangerouslySetInnerHTML={{ __html: contents(6) }}></pre>
 
-                  <button className="button button-small btn-null type-small-btn" type="button" onClick={() => onNav(story[6]._id)}>
+                  <button className={`${styles.button} ${styles.buttonSmall} ${styles.btnNull} ${styles.typeSmallBtn}`} type="button" onClick={() => onNav(story[6]._id)}>
                     MORE
                   </button>
                 </div>
               </section>
             </div>
 
-            <div className="section-grid">
-              <div className="contents-header">
-                <h2 className="content-title">NEW PRODUCT</h2>
+            <div className={styles.sectionGrid}>
+              <div className={styles.contentsHeader}>
+                <h2 className={styles.contentTitle}>NEW PRODUCT</h2>
               </div>
-              <ul className="grid">{itemList}</ul>
+              <ul className={styles.grid}>{itemList}</ul>
             </div>
           </div>
         </div>

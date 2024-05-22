@@ -3,6 +3,7 @@ import TopLine from '@assets/ogc-top-line.svg';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
+import styles from '@pages/LoginSignUp.module.css';
 
 function SignUp() {
   const {
@@ -69,45 +70,45 @@ function SignUp() {
 
   return (
     <>
-      <div className="contents-signup">
+      <div className={styles.contentsSignup}>
         <div className="l_wrapper">
-          <div className="signup">
-            <div className="contents-header">
-              <h2 className="content-title">SIGN UP</h2>
-              <div className="contents-header-line">
+          <div className={styles.signup}>
+            <div className={styles.contentsHeader}>
+              <h2 className={styles.contentTitle}>SIGN UP</h2>
+              <div className={styles.contentsHeaderLine}>
                 <img src={TopLine} alt="긴 팔 모양" />
               </div>
             </div>
 
-            <form onSubmit={handleSubmit(onSignup)} className="signup_form">
-              <div className="signup-layout">
-                <label className="signup-sub-title" htmlFor="profileImage">
+            <form onSubmit={handleSubmit(onSignup)} className={styles.signupForm}>
+              <div className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="profileImage">
                   Profile
                 </label>
-                <div className="form-input">
+                <div className={styles.formInput}>
                   <input type="file" id="profileImage" {...register('profileImage')} />
                 </div>
               </div>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="type">
-                  Type <span className="signup-required-point">*</span>
+              <fieldset className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="type">
+                  Type <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-select-box">
-                  <div className="signup-select-box-item">
-                    <select className="select" id="type" {...register('type')}>
+                <div className={styles.signupSelectBox}>
+                  <div className={styles.signupSelectBoxItem}>
+                    <select className={styles.select} id="type" {...register('type')}>
                       <option value="user">User</option>
                       <option value="seller">Seller</option>
                     </select>
                   </div>
                 </div>
               </fieldset>
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="email">
-                  Email <span className="signup-required-point">*</span>
+              <fieldset className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="email">
+                  Email <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="이메일을 입력해주세요."
                       type="text"
@@ -121,16 +122,16 @@ function SignUp() {
                       })}
                     />
                   </div>
-                  {errors.email && <p className="err-text">{errors.email.message}</p>}
+                  {errors.email && <p className={styles.errText}>{errors.email.message}</p>}
                 </div>
               </fieldset>
 
-              <fieldset className="signup-layout type_start">
-                <label className="signup-sub-title" htmlFor="password">
-                  Password <span className="signup-required-point">*</span>
+              <fieldset className={`${styles.signupLayout} ${styles.typeStart}`}>
+                <label className={styles.signupSubTitle} htmlFor="password">
+                  Password <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="비밀번호를 입력해주세요."
                       type="password"
@@ -144,16 +145,16 @@ function SignUp() {
                       })}
                     />
                   </div>
-                  {errors.password && <p className="err-text">{errors.password.message}</p>}
+                  {errors.password && <p className={styles.errText}>{errors.password.message}</p>}
                 </div>
               </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="name">
-                  Name <span className="signup-required-point">*</span>
+              <fieldset className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="name">
+                  Name <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="이름을 입력해주세요."
                       type="text"
@@ -167,17 +168,17 @@ function SignUp() {
                       })}
                     />
                   </div>
-                  {errors.name && <p className="err-text">{errors.name.message}</p>}
+                  {errors.name && <p className={styles.errText}>{errors.name.message}</p>}
                 </div>
               </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="phone">
+              <fieldset className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="phone">
                   Phone Number
-                  <span className="signup-required-point">*</span>
+                  <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="전화번호를 입력해주세요."
                       type="text"
@@ -191,16 +192,16 @@ function SignUp() {
                       })}
                     />
                   </div>
-                  {errors.phone && <p className="err-text">{errors.phone.message}</p>}
+                  {errors.phone && <p className={styles.errText}>{errors.phone.message}</p>}
                 </div>
               </fieldset>
 
-              <fieldset className="signup-layout">
-                <label className="signup-sub-title" htmlFor="address">
-                  Address <span className="signup-required-point">*</span>
+              <fieldset className={styles.signupLayout}>
+                <label className={styles.signupSubTitle} htmlFor="address">
+                  Address <span className={styles.signupRequiredPoint}>*</span>
                 </label>
-                <div className="signup-input-box">
-                  <div className="form-input">
+                <div className={styles.signupInputBox}>
+                  <div className={styles.formInput}>
                     <input
                       placeholder="주소를 입력해주세요."
                       type="text"
@@ -214,11 +215,11 @@ function SignUp() {
                       })}
                     />
                   </div>
-                  {errors.address && <p className="err-text">{errors.address.message}</p>}
+                  {errors.address && <p className={styles.errText}>{errors.address.message}</p>}
                 </div>
               </fieldset>
 
-              <button className="button button-large btn-Fill btn-layout" type="submit">
+              <button className={`${styles.button} ${styles.buttonLarge} ${styles.btnFill} ${styles.btnLayout}`} type="submit">
                 SIGN UP
               </button>
             </form>

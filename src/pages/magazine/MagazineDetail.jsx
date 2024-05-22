@@ -1,17 +1,19 @@
 import Location from '@components/Map';
+import ReplyList from '@components/reply/ReplyList';
 import useCustomAxios from '@hooks/useCustomAxios.mjs';
 import useUserStore from '@zustand/store';
 import useModalStore from '@zustand/useModalStore.mjs';
 import { useEffect, useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import styles from '@pages/magazine/Magazine.module.css';
 
 function MagazineDetail() {
   const [data, setData] = useState();
   const axios = useCustomAxios();
   const { itemId } = useUserStore();
-  const navigate = useNavigate();
-  const { pathname } = useLocation();
   const openModal = useModalStore((state) => state.openModal);
+  const { user } = useUserStore();
+  const { pathname } = useLocation();
 
   const fetchData = async () => {
     try {
@@ -44,23 +46,20 @@ function MagazineDetail() {
 
   return (
     <>
-      <section className="section type_magazine-desc">
+      <section className={`${styles.section} ${styles.typeMagazineDesc}`}>
         <div className="l_wrapper">
-          <div className="magazine-desc-header">
-            <h2 className="magazine-desc-header-title">{data && data.title}</h2>
-            <p className="magazine-desc-header-date">{date}</p>
+          <div className={styles.magazineDescHeader}>
+            <h2 className={styles.magazineDescHeaderTitle}>{data && data.title}</h2>
+            <p className={styles.magazineDescHeaderDate}>{date}</p>
           </div>
-          <div className="magazine-desc-contents" dangerouslySetInnerHTML={{ __html: codes }}></div>
+          <div className={styles.magazineDescContents} dangerouslySetInnerHTML={{ __html: codes }}></div>
           <Location data={data} />
-          <div className="map-text">
-            <p className="map-name">{data?.extra?.name}</p>
-            <p className="map-social">{data?.extra?.social}</p>
-            <p className="map-title">{data?.extra?.address}</p>
+          <div className={styles.mapText}>
+            <p className={styles.mapName}>{data?.extra?.name}</p>
+            <p className={styles.mapSocial}>{data?.extra?.social}</p>
+            <p className={styles.mapTitle}>{data?.extra?.address}</p>
           </div>
-
-          <button className="button button-small type-magarzin-btn" onClick={() => navigate('/magazine')}>
-            목록 보기
-          </button>
+          {user && <ReplyList />}
         </div>
       </section>
     </>

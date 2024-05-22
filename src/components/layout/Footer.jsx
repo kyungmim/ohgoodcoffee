@@ -1,24 +1,25 @@
 import kakaoIcon from '@assets/kakao_icon.svg';
 import instaIcon from '@assets/insta_icon.svg';
+import styles from '@components/layout/Footer.module.css';
 
 function Footer() {
   return (
     <>
-      <footer className="footer">
+      <footer className={styles.footer}>
         <div className="l_wrapper">
-          <div className="footer-inner">
-            <div className="footer-text">
-              <p className="footer-text-company">주식회사 OGC</p>
+          <div className={styles.footerInner}>
+            <div className={styles.footerText}>
+              <p className={styles.footerTextCompany}>주식회사 OGC</p>
               <p>
-                <span className="footer-text-bold">대표자</span> : 김해리, 심호영 ,이경민 ,홍설아
+                <span className={styles.footerTextBold}>대표자</span> : 김해리, 심호영 ,이경민 ,홍설아
               </p>
               <p>
-                <span className="footer-text-bold">사업자등록번호</span> : 123-45-6789
+                <span className={styles.footerTextBold}>사업자등록번호</span> : 123-45-6789
               </p>
             </div>
 
-            <div className="footer-copyright">
-              <ul className="footer-social">
+            <div className={styles.footerCopyright}>
+              <ul className={styles.footerSocial}>
                 <li>
                   <a href="#">
                     <img src={kakaoIcon} alt="카카오톡" />

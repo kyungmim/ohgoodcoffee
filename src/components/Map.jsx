@@ -1,12 +1,13 @@
 import { Map, MapMarker, MapTypeControl, ZoomControl } from 'react-kakao-maps-sdk';
 import PropTypes from 'prop-types';
+import styles from '@components/Map.module.css';
 
 Location.propTypes = {
   data: PropTypes.shape({
     extra: PropTypes.shape({
       coordinates: PropTypes.shape({
-        lat: PropTypes.number.isRequired,
-        lng: PropTypes.number.isRequired,
+        lat: PropTypes.string.isRequired,
+        lng: PropTypes.string.isRequired,
       }),
       address: PropTypes.string,
     }),
@@ -21,7 +22,7 @@ function Location({ data }) {
   const { lat, lng } = data.extra.coordinates;
   return (
     <>
-      <Map className="map" center={{ lat, lng }} style={{ width: '100%', height: '400px' }} level={1}>
+      <Map className={styles.map} center={{ lat, lng }} style={{ width: '100%', height: '400px' }} level={1}>
         <MapTypeControl position={'TOPRIGHT'} />
         <ZoomControl position={'RIGHT'} />
         <MapMarker position={{ lat, lng }}></MapMarker>

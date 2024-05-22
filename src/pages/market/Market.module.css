@@ -1,0 +1,414 @@
+.l_wrapper {
+  max-width: 1200px;
+  width: auto;
+  margin: 0 auto;
+  padding: 0 50px;
+  flex-direction: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+  row-gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
+.section.typeMarket {
+  margin: 70px 0;
+}
+
+.sectionLogo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.marketLogoSlogan {
+  font-size: 44px;
+  font-weight: var(--fw-bold);
+}
+
+.sectionFilter {
+  display: flex;
+  align-items: center;
+  margin-left: 2px;
+  margin-bottom: 30px;
+}
+
+.sectionCount {
+  color: var(--color-gray-30);
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+  margin-right: 10px;
+}
+
+.sectionCount.num {
+  font-weight: var(--fw-medium);
+}
+
+.sectionAside {
+  margin-left: auto;
+}
+
+.dropMenu {
+  background-image: url('/src/assets/drop-menu-arrow.png');
+  background-repeat: no-repeat;
+  background-size: 10px 6px;
+  background-position: right 10px center;
+  padding: 10px;
+  min-width: 100px;
+  font-size: 12px;
+  font-weight: var(--fw-regular);
+}
+
+.section.typeMarketDesc {
+  display: flex;
+  margin: 70px 0;
+}
+
+.marketOverviewTop {
+  display: flex;
+  gap: 50px;
+}
+
+.marketOverviewBottomCover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marketOverviewDesc {
+  max-width: 660px;
+  flex-grow: 1;
+  flex-shrink: 1;
+  font-weight: var(--fw-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.overviewHeader {
+  border-bottom: 1px solid var(--color-gray-30);
+  padding-bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.overviewTitle {
+  font-size: 20px;
+}
+
+.overviewPrice {
+  font-size: 1.2rem;
+}
+
+.overviewRow {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+}
+
+.overviewWishlist {
+  display: flex;
+  margin-left: auto;
+  margin-right: 8px;
+  gap: 8px;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.wishlistBox {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+  font-weight: 400;
+}
+
+.wishlistIcon {
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.overviewContents {
+  text-align: left;
+  margin: 30px 0;
+  font-size: 18px;
+  font-weight: var(--fw-regular);
+  color: var(--color-black-30);
+}
+
+.overviewSellingCount {
+  background-color: #f1f1f1;
+  padding: 15px 30px;
+  font-weight: var(--fw-regular);
+}
+
+.overviewSellingTitle {
+  font-size: 16px;
+  padding: 0 10px 10px 10px;
+  border-bottom: 2px solid var(--color-gray-20);
+}
+
+.sellingRow {
+  display: flex;
+  flex-direction: row;
+  padding: 10px 10px 0 10px;
+}
+
+.quantityRow {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantityButton {
+  display: flex;
+
+  width: 26px;
+  height: 26px;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+.sellingPick {
+  font-size: 18px;
+}
+
+.sellingIcon {
+  display: flex;
+  flex-direction: row;
+  width: 16px;
+  height: 16px;
+  align-items: center;
+  gap: 10px;
+}
+
+.sellingPrice {
+  margin-left: auto;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.sellingBtns {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.button {
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--color-black-30);
+  border-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+.buttonLarge {
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.btnFill {
+  background-color: var(--color-black-10);
+  border: 2px solid var(--color-black-10);
+  color: var(--color-white);
+}
+
+.btnNull {
+  border: 2px solid var(--color-black-10);
+  box-sizing: border-box;
+}
+
+.marketOverviewBottom {
+  padding: 70px 0;
+  margin-top: 70px;
+  border-top: 1px solid var(--color-gray-20);
+  border-bottom: 1px solid var(--color-gray-20);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.marketOverviewBottomCover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  min-height: 416px;
+  gap: 10px;
+  font-size: 12px;
+}
+
+.cardCover {
+  object-fit: contain;
+  overflow: hidden;
+  background-color: var(--color-gray-20);
+  width: 260px;
+  height: 260px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 1 / 1;
+}
+
+.typeCardDetail {
+  flex-shrink: 0;
+  width: 450px;
+  height: 450px;
+}
+
+.cardCover.typeInfoCardCover {
+  width: 210px;
+  height: 210px;
+}
+
+.cardCoverSrc {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.cardTitle {
+  font-weight: 700;
+}
+
+.cardContents {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+.cardContentsItem {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 54px;
+  justify-content: center;
+}
+
+.cardBrand {
+  font-weight: var(--fw-regular);
+}
+
+.cardPrice {
+  color: var(--color-primary);
+}
+
+.cardState {
+  display: flex;
+  gap: 6px;
+  margin-top: auto;
+  font-size: 12px;
+  align-items: center;
+}
+
+.cardStateItem {
+  padding: 2px 6px;
+}
+
+.new {
+  color: var(--color-white);
+  border: 1px solid var(--color-black-10);
+  background-color: var(--color-black-10);
+}
+
+.best {
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.soldout {
+  border: 1px solid var(--color-black-30);
+  background-color: var(--color-black-30);
+  color: var(--color-white);
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ taplet @@@@@@@@@@@@@@@@@@@@@@*/
+@media (max-width: 1024px) {
+	.grid {
+    gap: 40px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cardCover {
+    width: 340px;
+    height: 340px;
+  }
+
+  .typeCardDetail {
+    width: 450px;
+    height: 450px;
+  }
+  
+  .marketOverviewTop {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .marketOverviewDesc {
+    width: 100%;
+  }
+
+  .cardCover.typeInfoCardCover {
+    width: 360px;
+    height: 360px;
+  }
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@ mobile @@@@@@@@@@@@@@@@@@@@@@*/
+
+@media (max-width: 768px) {
+  .hamburgerMenu {
+    display: block;
+  }
+
+	.grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cardCover {
+    width: 400px;
+    height: 400px;
+  }
+
+  .typeCardDetail {
+    width: 450px;
+    height: 450px;
+  }
+
+  .marketLogoSlogan {
+    font-size: 40px;
+  }
+
+}
