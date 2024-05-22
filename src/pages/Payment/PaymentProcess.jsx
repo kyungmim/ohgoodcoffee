@@ -6,8 +6,8 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { formatPhoneNumber } from '@utils/date';
 import { useEffect, useState } from 'react';
 import useModalStore from '@zustand/useModalStore.mjs';
-import CardModal from '@pages/Payment/CardModal';
-import styles from '@pages/Payment/Payment.module.css';
+import CardModal from '@pages/payment/CardModal';
+import styles from '@pages/payment/Payment.module.css';
 
 function PaymentProcess() {
   const axios = useCustomAxios();
