@@ -85,7 +85,7 @@ function Mainpage() {
               Thanks to you, I think I'm getting this result... As always, thank you...."
             </p>
           </div>
-          <div className={styles.l_wrapper}>
+          <div className="l_wrapper">
             <div className={styles.contentsHeader}>
               <h2 className={styles.contentTitle}>COVER STORY</h2>
             </div>

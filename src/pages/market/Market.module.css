@@ -8,6 +8,14 @@
   box-sizing: border-box;
 }
 
+.grid {
+  display: grid;
+  gap: 20px;
+  row-gap: 60px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+
 .section.typeMarket {
   margin: 70px 0;
 }
@@ -49,7 +57,7 @@
 }
 
 .dropMenu {
-  background-image: url(assets/drop-menu-arrow.png);
+  background-image: url('/src/assets/drop-menu-arrow.png');
   background-repeat: no-repeat;
   background-size: 10px 6px;
   background-position: right 10px center;

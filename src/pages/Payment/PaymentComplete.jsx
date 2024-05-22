@@ -13,7 +13,7 @@ function PaymentComplete() {
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.completeContainer}>
             <div className={styles.completeHeader}>
               <h1 className={styles.completeTitle}>주문완료</h1>

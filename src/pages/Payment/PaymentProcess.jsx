@@ -153,7 +153,7 @@ function PaymentProcess() {
 
   return (
     <>
-      <div className={styles.l_wrapper}>
+      <div className="l_wrapper">
         <div className={styles.processContainer}>
           <div className={styles.userInfoSection}>
             <div className={styles.userInfo}>

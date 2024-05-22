@@ -3,7 +3,7 @@ import styles from '@pages/About.module.css';
 
 function About() {
   return (
-    <div className={styles.l_wrapper}>
+    <div className="l_wrapper">
       <h2 className={styles.aboutTitle}>보람3조가 최고임.. 아무튼 체고~</h2>
       <div className={styles.about}>
         <div className={styles.aboutCover}>
