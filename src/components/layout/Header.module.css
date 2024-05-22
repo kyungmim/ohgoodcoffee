@@ -34,6 +34,7 @@
   box-sizing: border-box;
 }
 
+
 .pcNav {
   width: 100%;
   display: flex;
@@ -45,6 +46,7 @@
 }
 
 .pcNavLi {
+  flex-shrink: 0;
   flex-basis: 80px;
   text-align: center;
 }
@@ -85,12 +87,13 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: 30px;
-  /* text-indent: -99999px; */
+  text-indent: -99999px;
   /* font-size: 0; */
   display: none;
 }
 
 .menuClose {
+  flex-shrink: 0;
   width: 20px;
   height: 20px;
   display: block;

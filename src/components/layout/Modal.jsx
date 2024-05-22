@@ -8,7 +8,7 @@ const Modal = () => {
 
   const buttons = Object.keys(callbackButton).map((buttonName, index) => (
     <button
-      className="button button-small btn-Fill type-modal-btn"
+      className={`${styles.button} ${styles.buttonSmall} ${styles.btnFill} ${styles.typeModalBtn}`}
       type="button"
       key={index}
       onClick={() => {

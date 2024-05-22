@@ -52,7 +52,7 @@ function MarketList() {
   return (
     <>
       <section className={`${styles.section} ${styles.typeMarket}`}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.sectionLogo}>
             <img className={styles.marketLogo} src={TopLine} alt="손 모양 이미지" />
             <span className={styles.marketLogoSlogan}>COFFEE.HUMAN.LOVE LIFE</span>
@@ -72,9 +72,8 @@ function MarketList() {
             </div>
           </div>
           <div className={styles.sectionGrid}>
-            <ul className="grid">{itemList}</ul>
+            <ul className={styles.grid}>{itemList}</ul>
           </div>
-
 
           <Pagination totalCount={data?.pagination.totalPages} currentPage={data?.pagination.page} />
         </div>

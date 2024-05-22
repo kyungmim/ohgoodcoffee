@@ -56,7 +56,7 @@ function Login() {
   return (
     <>
       <div className={styles.contentsLogin}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.login}>
             <div className={styles.contentsHeader}>
               <h2 className={styles.contentTitle}>LOGIN</h2>

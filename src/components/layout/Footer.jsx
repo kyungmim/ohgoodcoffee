@@ -6,7 +6,7 @@ function Footer() {
   return (
     <>
       <footer className={styles.footer}>
-        <div className={styles.l_wrapper}>
+        <div className="l_wrapper">
           <div className={styles.footerInner}>
             <div className={styles.footerText}>
               <p className={styles.footerTextCompany}>주식회사 OGC</p>
