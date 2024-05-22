@@ -1,6 +1,6 @@
 import { useLocation, useNavigate } from 'react-router-dom';
 import { generateOrderNumber, formatPhoneNumber } from '@utils/date';
-import styles from '@pages/payment/Payment.module.css';
+import styles from '@pages/Payment/Payment.module.css';
 
 function PaymentComplete() {
   const location = useLocation();

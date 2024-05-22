@@ -54,6 +54,23 @@ function Header() {
     }
   };
 
+  const clickCart = (e) => {
+    e.preventDefault();
+    if (user == null) {
+      openModal({
+        content: '로그인 후 이용 가능합니다.<br/>로그인 페이지로 이동하시겠습니까?',
+        callbackButton: {
+          확인: () => {
+            navigate('/users/login', { state: { from: '/' } });
+          },
+          취소: '',
+        },
+      });
+    } else {
+      navigate('/carts');
+    }
+  };
+
   const onClickLogout = () => {
     if (user) {
       openModal({
@@ -98,7 +115,9 @@ function Header() {
                 </Link>
               </li>
               <li className={styles.cartIcon}>
-                <Link to="/carts">Cart</Link>
+                <Link onClick={(e) => clickCart(e)} to="/carts">
+                  Cart
+                </Link>
                 <span className={styles.cartCount}>{cartCount === 0 ? null : cartCount}</span>
               </li>
             </ul>
